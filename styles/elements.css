@@ -1506,7 +1506,7 @@ legend .form-label-bold {
 
 @media (min-width: 641px) {
   .form-control {
-    width: 80%;
+    width: 50%;
   }
 }
 
