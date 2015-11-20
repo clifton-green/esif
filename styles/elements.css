@@ -135,17 +135,6 @@ a:hover, .action--tertiary:hover {
     text-decoration: underline;
 }
 
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-input, textarea,
-table, caption, tbody, tfoot, thead, tr, th, td {
-  font-size: inherit;
-  font-family: inherit;
-  line-height: inherit;
-  font-weight: normal;
-}
-
 h1,
 h2,
 h3,

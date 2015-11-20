@@ -3507,12 +3507,12 @@ input[type="submit"]:focus {
 .breadcrumbs a, .breadcrumbs .action--tertiary {
     color: #0b0c0c;
     padding-right: 1em;
-    background: url("../images/breadcrumb-arrow.png") no-repeat 100% 70%;
+    background: url("../images/separator.png") no-repeat 100% 70%;
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
     .breadcrumbs a, .breadcrumbs .action--tertiary {
-        background: url("../images/breadcrumb-arrow-2x.png") no-repeat 95% 45%;
+        background: url("../images/separator-2x.png") no-repeat 95% 45%;
         background-size: 6px 11px;
     }
 }
