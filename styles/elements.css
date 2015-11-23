@@ -1412,6 +1412,7 @@ textarea {
   .form-label {
     font-size: 19px;
     line-height: 1.3157894737;
+    width: 100%;
   }
 }
 
@@ -1486,6 +1487,21 @@ legend .form-label-bold {
   border: 1px solid #bfc1c3;
 }
 
+.form-nocontrol {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "nta", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 400;
+  text-transform: none;
+  width: 100%;
+  padding: 4px;
+  background-color: #fff;
+  border: 1px solid #bfc1c3;
+}
+
 @media (min-width: 641px) {
   .form-control {
     font-size: 19px;
@@ -1496,6 +1512,19 @@ legend .form-label-bold {
 @media (min-width: 641px) {
   .form-control {
     width: 50%;
+  }
+}
+
+@media (min-width: 641px) {
+  .form-nocontrol {
+    font-size: 19px;
+    line-height: 1.3157894737;
+  }
+}
+
+@media (min-width: 641px) {
+  .form-nocontrol {
+    width: 100%;
   }
 }
 
@@ -1782,7 +1811,7 @@ input[type=number] {
 table {
   border-collapse: collapse;
   border-spacing: 0;
-  width: 100%;
+  width: 90%;
 }
 
 table th,

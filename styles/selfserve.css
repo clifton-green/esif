@@ -1385,8 +1385,8 @@ input,
 textarea,
 .terms--box {
     padding: 0.5em 0.75em;
-    background-color: #F9F9F9;
-    border: 1px solid #A2A2A2;
+    background-color: #FFFFFF;
+    border: 1px solid #f8f8f8;
     max-width: 560px;
 }
 
@@ -1420,7 +1420,7 @@ b input[type="submit"] {
 
 textarea,
 .terms--box {
-    min-height: 10em;
+    min-height: 5em;
     padding-top: .5em;
     overflow: auto;
     vertical-align: top;
