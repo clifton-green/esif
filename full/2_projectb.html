@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Application overview</title>
+    <title>Application for call reference OC04R15P0002</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="../styles/selfserve.css" media="all" rel="stylesheet" type="text/css">
@@ -51,7 +51,7 @@
     <div class="page-wrapper">
       <div class="user-header">
         <p class="phase">
-          <span class="phase__tag">alpha</span><span class="phase__message">This is a new service – <a href="#">help us improve it.</a></span>
+          <span class="phase__tag">alpha</span><span class="phase__message">This is a new service – your feedback will <a href="#">help improve it.</a></span>
         </p>
         <ul class="user-menu">
         
@@ -71,12 +71,13 @@
           <ol class="breadcrumbs">
             
               <li class="breadcrumbs__item"><a href="#">Dashboard</a></li>
-              <li class="breadcrumbs__item"><a href="#">Call List</a></li>
-              <li class="breadcrumbs__item"><a href="#">Call Details</a></li>
-              <li class="breadcrumbs__item"><a href="#">Application Overview</a></li>
+              <li class="breadcrumbs__item"><a href="#">Search for a call</a></li>
+              <li class="breadcrumbs__item"><a href="#">Call details</a></li>
+              <li class="breadcrumbs__item"><a href="#">Application overview</a></li>
             
           </ol>
-                   <div class="page-header__wrapper">
+          
+          <div class="page-header__wrapper">
           	<h1>Application for call OC04R15P0002</h1>
             <h3 class="page-header__subtitle">Step 2</h3>
             
@@ -89,80 +90,76 @@
   <div class="two-thirds">
     
     <div class="form-group">
-	    <h3>About the project</h3>	
-    	    <div class="form-group">
-			    <label class="form-label" for="project-name">Project name</label>
-			    <input class="form-nocontrol" id="project-name" name="project-name" type="text">
-    	    </div>
-			<div class="form-group">
-			    <label class="form-label" for="proposed-start-date">Proposed start date</label>
-			    <input class="form-nocontrol" id="proposed-start-date" name="proposed-start-date" type="text">
-			</div>
-			<div class="form-group">
-			    <label class="form-label" for="proposed-completion-date">Proposed financial completion date</label>
-			    <input class="form-nocontrol" id="proposed-completion-date" name="proposed-completion-date" type="text">
-			</div>
-			<div class="form-group">
-			    <label class="form-label" for="proposed-practical-date">Proposed activity end date</label>
-			    <input class="form-nocontrol" id="proposed-practical-date" name="proposed-practical-date" type="text">
-			</div>
-				
-	    	
+	    <h3>About the project</h3>	    	
+			    <!--
+			    <div class="form-group">
+				    <label class="form-label" for="business-case">What is the project? (100 words or less) <ol class="list-bullet"><li>What is it going to do?</li><li>What will it achieve?</li></ol> </label>
+				    <textarea class="form-nocontrol" id="business-case" name="business-case" type="text"></textarea>
+				</div>
+				-->
 				<div class="form-group">
 					<label class="form-label" for="summary-project">Summary of the project</label>
 					<textarea class="form-nocontrol" id="summary-project" name="summary-project" type="text"></textarea>
 				</div>
+							    <div class="form-group">
+				    <label class="form-label" for="business-case">What are the project’s objectives?</label>
+				    <textarea class="form-nocontrol" id="business-case" name="business-case" type="text"></textarea>
+				</div>
+
+				<div class="form-group">
+					<label class="form-label" for="activities-control">What  are the project's main activities?</label>
+					<textarea class="form-nocontrol" id="activities-control" name="activities-control" type="text"></textarea>
+				</div>
+				<div class="form-group">
+					<label class="form-label" for="target-beneficiaries">Who will benefit from the project?</label>
+					<textarea class="form-nocontrol" id="target-beneficiaries" name="target-beneficiaries" type="text"></textarea>
+				</div>
+				<div class="form-group">
+					<label class="form-label" for="activities-location">Where's the project located?</label>
+					<textarea class="form-nocontrol" id="activities-location" name="activities-location" type="text"></textarea>
+				</div>
+				<div class="form-group">
+					<label class="form-label" for="summary-project">How will  the project be evaluated?</label>
+					<textarea class="form-nocontrol" id="summary-project" name="summary-project" type="text"></textarea>
+				</div>
+				<div class="form-group">
+					<label class="form-label" for="conditions-explanation">List any conditions made in your outline application endorsement and describe how you've met it.
+				</div>
+				
+				<div class="form-group">
+          <table width="100%" border="1" bordercolor="#cccccc" cellpadding="5" cellspacing="5">
+    
+            <tr> 
+                 <th>Condition</th>
+                 <th>How it's been met</th>
+                 
+            </tr>
+             <tr>
+                 <td style="padding-top: 21px; font-size: 19px;">Condition 1</td>
+                 <td><input class="form-nocontrol" id="summary-condition" name="summary-condition" type="text"></td>
+            </tr>
+            <tr>
+                 <td style="padding-top: 21px; font-size: 19px;">Condition 2</td>
+                 <td><input class="form-nocontrol" id="summary-condition" name="summary-condition" type="text"></td>
+            </tr>
+            <tr>
+                 <td style="padding-top: 21px; font-size: 19px;">Condition</td>
+                 <td><input class="form-nocontrol" id="summary-condition" name="summary-condition" type="text"></td>
+            </tr>
+          </table>
+					<p style='margin: 8px 8px 0px 0px; float: right'><a href='#'>+ add another</a></p>
+				</div>	 
+	    	
+
+				<!--
 				<div class="form-group">
 					<label class="form-label" for="activities-control">What specific activities will be undertaken as part of the project?</label>
 					<textarea class="form-nocontrol" id="activities-control" name="activities-control" type="text"></textarea>
 				</div>
-				<div class="form-group">
-					<label class="form-label" for="target-beneficiaries">Who are the project's target beneficiaries?</label>
-					<textarea class="form-nocontrol" id="target-beneficiaries" name="target-beneficiaries" type="text"></textarea>
-				</div>
-				<div class="form-group">
-					<label class="form-label" for="activities-location">Where will the project activity take place?</label>
-					<textarea class="form-nocontrol" id="activities-location" name="activities-location" type="text"></textarea>
-				</div>
-				<div class="form-group">
-					<label class="form-label" for="conditions-explanation">Briefly explain how you have addressed each of the conditions made at the Outline Application endorsement stage.</label>
-					<textarea class="form-nocontrol" id="conditions-explanation" name="conditions-explanation" type="text"></textarea>
-				</div>
-				
+				-->
 
- 
 				
-		<h3>Schedule</h3>
-				<p>Include this information for each key milestone within this project.</p>
 				
-				<div class="form-group">
-					<table width="100%" border="1" bordercolor="#cccccc" cellpadding="5" cellspacing="5">
-		
-						<tr> 
-						     <th>Milestone description</th>
-						     <th>Anticipated date of milestone</th>
-						     
-				 		</tr>
-						 <tr>
-						     <td><input class="form-nocontrol" id="summary-condition" name="summary-condition" type="text"></td>
-						     <td><input class="form-nocontrol" id="summary-condition" name="summary-condition" type="text"></td>
-						</tr>
-					</table>
-				<div class="form-group">	
-				<p><a href="#">Add another</a></p>
-				</div>
-				</div>
-
- 		<!--
-				
-		<h3>Confidential information</h3>
-				<p>If there is confidential information within your organisation's application that it would prefer the LEP area ESIF committee not to see, please provide details here. As a public body, the managing authority is bound by the Freedom of Information Act and may have to disclose information if asked.</p>
-				
-				<div class="form-group">	
-				<textarea class="form-nocontrol" id="activities-control" name="activities-control" type="text"></textarea>
-				</div>
-				
-		-->	
 				
 				
 	    	
@@ -174,8 +171,8 @@
 	    
 		<div class="form-steps">
 	        <div class="form-steps">
-	        <a href="#" rel="external" data-transaction-slug="#" class="button">Save and Quit</a>
-	        <a href="#" rel="external" data-transaction-slug="#" class="button disabled">Save and Go to next section</a>
+	        <a href="#" rel="external" data-transaction-slug="#" class="button">Save and quit</a>
+	        <a href="#" rel="external" data-transaction-slug="#" class="button disabled">Save and continue</a>
 	        <p>
 		    	<a href="../full-application" id="backButton" class="link-back">Back</a>
 			</p> 
@@ -197,17 +194,17 @@
       <dt>Created</dt>
       <dd>07 November 2015</dd>
       <dt>Progress</dt>
-      <dd>4 of 8 sections complete</dd>
+      <dd>4 of 8 sections completed</dd>
       <dt>Status</dt>
-      <dd>Incomplete</dd>
+      <dd>Not ready to submit</dd>
     </dl><!-- .meta -->
 
     <div class="links">
       <h3>Your dashboard</h3>
       <ul class="links-list">
-        <li class="links-list__item"><a href="#">My tasks</a></li>
-        <li class="links-list__item"><a href="#">Existing applications</a></li>
-        <li class="links-list__item"><a href="#">Projects</a></li>
+        <li class="links-list__item"><a href="#">Your tasks</a></li>
+        <li class="links-list__item"><a href="#">Your applications</a></li>
+        <li class="links-list__item"><a href="#">Your projects</a></li>
       </ul>
     </div><!-- .links -->
 
@@ -221,8 +218,8 @@
     <div class="global-footer">
       <div class="global-footer__wrapper">
         <ul class="global-footer__links">
-          <li class="global-footer__link"><a href="#">Terms and conditions</a></li>
-          <li class="global-footer__link"><a href="#">Privacy policy</a></li>
+          <li class="global-footer__link"><a href="../terms.html">Terms and conditions</a></li>
+          <li class="global-footer__link"><a href="../privacy.html">Privacy policy</a></li>
           <li class="global-footer__link"><a href="#">Feedback</a></li>
           <li class="global-footer__link"><a href="#">Cymraeg</a></li>
           <li class="global-footer__link">Built by <a href="#">DCLG and DWP</a></li>
