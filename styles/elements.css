@@ -1811,7 +1811,7 @@ input[type=number] {
 table {
   border-collapse: collapse;
   border-spacing: 0;
-  width: 90%;
+  width: 100%;
 }
 
 table th,
@@ -1865,6 +1865,10 @@ table td.numeric {
 
 @-o-viewport {
   width: device-width;
+}
+
+.tabletop {
+	margin-top: 1em;
 }
 
 .grid-row:after, #global-breadcrumb:after, #content:after, fieldset:after, .form-group:after, .form-block:after, .panel-indent:after {

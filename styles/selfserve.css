@@ -3275,7 +3275,7 @@ input[type="submit"]:focus {
 .page-header {
     position: relative;
     margin-top: 3em;
-    margin-bottom: 2.5em;
+    margin-bottom: 1em;
 }
 
 @media (max-width: 640px) {
@@ -3332,6 +3332,17 @@ input[type="submit"]:focus {
 @media (max-width: 640px) {
     .page-header__text {
         margin-top: 15px;
+    }
+}
+
+.page-header__wrapper {
+    position: relative;
+    margin-bottom: 2em;
+}
+
+@media (max-width: 640px) {
+    .page-header__wrapper {
+        margin-bottom: 1em;
     }
 }
 

@@ -13,8 +13,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="styles/selfserve.css" media="all" rel="stylesheet" type="text/css">
     <link href="styles/elements.css" media="all" rel="stylesheet" type="text/css">
-    <link href="styles/patterns.css" media="all" rel="stylesheet" type="text/css">
-    <link href="styles/examples.css" media="all" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="js/selfserve.js"></script>
     <!--[if IE]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -34,13 +32,11 @@
           <ul class="proposition-nav">
             
               
-                <li class="proposition-nav__item"><a href="#">Login</a></li>
+                <li class="proposition-nav__item"><a href="#">Home</a></li>
                 <li class="proposition-nav__item"><a href="#">Search</a></li>
-                <li class="proposition-nav__item"><a href="#">Register</a></li>
-              
-              
-              
-              
+                <li class="proposition-nav__item"><a href="#">Manage users</a></li>
+                <li class="proposition-nav__item"><a href="#">My account</a></li>
+                
             
           </ul>
         </div>
@@ -54,48 +50,82 @@
         <p class="phase">
           <span class="phase__tag">alpha</span><span class="phase__message">This is a new service – <a href="#">help us improve it.</a></span>
         </p>
+        <ul class="user-menu">
+	        <li class="user-menu__item">Firstname Surname, <b>Company Name</b></li>
+			<li class="user-menu__item"><a href="index.html">Sign out</a></li>
+        </ul>
       </div><!-- end .user-header -->
 
       <div id="main" role="main" class="styleguide">
         <div class="page-header">
           
-          <div class="page-header__wrapper">
-            <h1>E-CLAIMS Login</h1>
-          </div><!-- .page-header__wrapper -->
-          <p>You can <a href="#" target="_blank" data-sso="false" rel="external">register for an E-CLAIMS account<span class="visuallyhidden">link opens in a new window</span></a> to manage your ESIF projects.</p>
-        </div><!-- .page-header -->
+        <div class="page-header__wrapper">
+        	<h2>Welcome Firstname Surname,</h2>
+        </div><!-- .page-header__wrapper -->
+          
+        <div class="form-group">
+			<h3>New applications:</h3>
+			<p>To start a new application you will be asked to select the call to which your organisation wishes to apply. You can create, edit and save the draft application as many times as you need before submitting it for assessment.</p>
 
-        
+			<p><a href="call-list.html">View the call list</a></p>
+        </div>        
 
-  <div class="full-width border">
+		<div class="form-group">
+		<h3>Your current applications</h2>
     
-    <!-- Username -->
-    <div class="form-group">
-      <label class="form-label" for="username">User ID</label>
-      <input type="text" class="form-control" id="userid">
-    </div>
 
-    <!-- Password -->
-    <div class="form-group">
-      <label class="form-label" for="username">Password</label>
-      <input type="text" class="form-control" id="username">
-    </div>
-
-    <a href="dashboard.html" class="action--primary large">Login</a>
+		<table width="100%" border="0" bordercolor="#cccccc" cellpadding="5" cellspacing="5" class="tabletop">
+		
+		<tr> 
+		     <th>Project Name</th>
+		     <th>Call Reference</th>
+		     <th>Last Edited</th>
+		     <th>Status</th>
+		     <th>Type</th>
+		     <td></td>
+ 		</tr>
+		 <tr>
+		     <td>Test MP ERDF(F) 150930</td>
+		     <td>OC50R15P0013</td>
+		     <td>30/09/2015 10:15</td>
+		     <td>draft</td>
+		     <td>outline</td>
+		     <td><a href="#">Resume</a></td>
+		 </tr>
+		 <tr>
+		     <td>MP ERDF FullApp 151007</td>
+		     <td>OC50R15P0013</td>
+		     <td>07/10/2015 11:22</td>
+		     <td>outstanding query</td>
+		     <td>application</td>
+		     <td><a href="#">Resume</a></td>
+		 </tr>
+		 <tr>
+		     <td>DWP accessibility test</td>
+		     <td>OC09S15P0006</td>
+		     <td>15/09/2015 16:19</td>
+		     <td>evidence required</td>
+		     <td>claim</td>
+		     <td><a href="#">Resume</a></td>
+		 </tr>
+		 <tr>
+		     <td>Test MP ERDF(F) 150930</td>
+		     <td>OC50R15P0010</td>
+		     <td>07/10/2015 11:01</td>
+		     <td>draft</td>
+		     <td>application</td>
+		     <td><a href="#">Resume</a></td>
+		 </tr>
+		 <tfoot>
+			 <tr>
+				 <th colspan="6">Showing 1 to 4 of 4 entries</th>
+ 			</tr>
+		 </tfoot>
+	</table>
     
-	<header>
-	    <h2 class="heading-medium">
-			Problems signing in?
-    	</h2>
-    </header>
     
-    <ul class="action-list">
-            <li><a href="#" target="_blank" data-sso="false" rel="external">Forgotten user ID<span class="visuallyhidden">link opens in a new window</span></a></li>
-            <li><a href="#" target="_blank" data-sso="false" rel="external">Forgotten password<span class="visuallyhidden">link opens in a new window</span></a></li>
-           
-        </ul>
-    
-  </div><!-- .two-thirds -->
+	</div><!-- full width -->
+	</div>
 
 
 
