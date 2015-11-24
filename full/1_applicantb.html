@@ -68,22 +68,22 @@
         <div class="page-header">
           
           <ol class="breadcrumbs">
-	          
+            
               <li class="breadcrumbs__item"><a href="../dashboard.html">Dashboard</a></li>
               <li class="breadcrumbs__item"><a href="../call-list.html">Call List</a></li>
               <li class="breadcrumbs__item"><a href="../call-list.html">Call Details</a></li>
               <li class="breadcrumbs__item"><a href="../full-application.html">Application Overview</a></li>
             
           </ol>
-
+          
+          
         </div><!-- .page-header -->
 
         
 
   <div class="two-thirds">
 	  
-          
-          <div class="page-header__wrapper">
+	  <div class="page-header__wrapper">
             <h1>Application for call OC04R15P0002</h1>
             <h3 class="page-header__subtitle">Step 1</h3>
             
@@ -108,37 +108,48 @@
 		
 	    <!-- End of Introduction -->
 	  
-		<h3>About your organisation</h3>
+		<h3>About your organisation - contact details</h3>
 	    	
-			    <div class="form-group">
-				    <label class="form-label" for="organisation-name">Organisation name</label>
-				    <input class="form-control" id="organisation-name" name="organisation-name" type="text">
+				<fieldset>
+				<div class="form-group">
+				    <label class="form-label" for="address-1">Address</label>
+				    <input class="form-control" id="address-line-1" name="address-line-1" type="text">
+				    <input class="form-control" id="address-line-2" name="address-line-2" type="text">
+				    <input class="form-control" id="address-line-3" name="address-line-3" type="text">
 				</div>
 				<div class="form-group">
-					<label class="form-label" for="organisation-type">Organisation type</label>
-					<input class="form-control" id="organisation-type" name="organisation-type" type="text">
+				    <label class="form-label" for="town-city-1">Town or city</label>
+				    <input class="form-control" id="town-city-1" name="town-city-1" type="text">
+				</div>
+				<div class="form-group">
+				    <label class="form-label" for="county-1">County</label>
+				    <input class="form-control" id="fcounty-1" name="county-1" type="text">
+				</div>
+				<div class="form-group">
+				    <label class="form-label" for="postcode-1">Postcode</label>
+				    <input class="form-control" id="postcode-1" name="postcode-1" type="text">
+				</div>
+				</fieldset>
+								<div class="form-group">
+					<label class="form-label" for="website">Website</label>
+					<input class="form-control" id="website" name="website" type="text">
 				</div>
 				
-				<p>Is this a small- or medium-sized enterprise?</p>
-		    									<fieldset class="inline">
-		
-		      		<legend class="visuallyhidden">Is the organisation a small or medium-sized enterprise (SME)?</legend>
-		
-			      	<div class="form-group">
-					    <label class="block-label" for="radio-inline-3">
-						<input id="radio-inline-3" type="radio" name="radio-inline-group" value="Yes">Yes</label>
-						<label class="block-label" for="radio-inline-4">
-						<input id="radio-inline-4" type="radio" name="radio-inline-group" value="No">No</label>
-			      	</div>
-		
-		    	</fieldset>
-		    	<div class="form-group">
-				    <label class="form-label" for="company-charity-number">Company or charity registration number</label>
-				    <input class="form-control" id="company-charity-number" name="company-charity-number" type="text">
+				<div class="form-group">
+				    <label class="form-label" for="main-contact-name">Name of main contact</label>
+				    <input class="form-control" id="main-contact-name" name="main-contact-name" type="text">
 				</div>
 				<div class="form-group">
-					<label class="form-label" for="vat-number">VAT number (if applicable)</label>
-					<input class="form-control" id="vat-number" name="vat-number" type="text">
+					<label class="form-label" for="position-organisation">Position in organisation</label>
+					<input class="form-control" id="position-organisation" name="position-organisation" type="text">
+				</div>
+				<div class="form-group">
+					<label class="form-label" for="contact-email">Email address</label>
+					<input class="form-control" id="contact-email" name="contact-email" type="text">
+				</div>
+				<div class="form-group">
+				    <label class="form-label" for="telephone">Contact number</label>
+				    <input class="form-control" id="telephone" name="telephone" type="text">
 				</div>
 				
 
@@ -159,11 +170,13 @@
 	    
 	    
 		<div class="form-steps">
-	        <a href="../full-application.html" rel="external" data-transaction-slug="#" class="button">Save and Quit</a>
-	        <a href="#" rel="external" data-transaction-slug="#" class="button disabled">Save and Go to next section</a>
+	        <div class="form-steps">
+	        <a href="#" rel="external" data-transaction-slug="#" class="button">Save and quit</a>
+	        <a href="#" rel="external" data-transaction-slug="#" class="button disabled">Save and continue</a>
 	        <p>
 		    	<a href="../full-application" id="backButton" class="link-back">Back</a>
-			</p>
+			</p> 
+	    	</div>
 	    </div>
     
     </div>
@@ -181,7 +194,7 @@
       <dt>Created</dt>
       <dd>07 November 2015</dd>
       <dt>Progress</dt>
-      <dd>4 of 9 sections complete</dd>
+      <dd>4 of 8 sections complete</dd>
       <dt>Status</dt>
       <dd>Not ready to submit</dd>
     </dl><!-- .meta -->
