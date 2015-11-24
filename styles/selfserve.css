@@ -806,7 +806,7 @@ input.more-actions__button,
 .overview-item p, .search-result__extract p,
 .search-result__meta p,
 .progress p {
-    font-size: 16px;
+    font-size: 19px;
 }
 
 @media (max-width: 640px) {
@@ -4642,7 +4642,7 @@ dd {
 
 .overview-item h4 {
     float: left;
-    width: 40%;
+    width: 55%;
 }
 
 .overview-item p {
