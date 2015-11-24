@@ -494,7 +494,7 @@ main {
 
 @media (min-width: 641px) {
   .heading-large {
-    margin-top: 1.25em;
+    margin-top: 0em;
     margin-bottom: 0.5555555556em;
   }
 }
