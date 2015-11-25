@@ -71,9 +71,9 @@
           <ol class="breadcrumbs">
             
               <li class="breadcrumbs__item"><a href="../dashboard.html">Dashboard</a></li>
-              <li class="breadcrumbs__item"><a href="../call-list.html">Call List</a></li>
-              <li class="breadcrumbs__item"><a href="../call-list.html">Call Details</a></li>
-              <li class="breadcrumbs__item"><a href="../full-application.html">Application Overview</a></li>
+              <li class="breadcrumbs__item"><a href="../call-list.html">View calls</a></li>
+              <li class="breadcrumbs__item"><a href="../call-list.html">Call details</a></li>
+              <li class="breadcrumbs__item"><a href="../full-application.html">Application</a></li>
             
           </ol>
           
@@ -91,21 +91,36 @@
           </div><!-- .page-header__wrapper -->
     
     <div class="form-group">
-	    <h2>Strategy</h2>
-	    <h3>Justification</h3>	    	
+	    <h2>Strategy</h2>    	
 			    
-				<div class="form-group">
+				<!-- this is a repeat of an earlier question 
+        <div class="form-group">
 					<label class="form-label" for="why-esif">Why should the project receive ESIF funding?</label>
 					<textarea class="form-nocontrol" id="why-esif" name="why-esif" type="text"></textarea>
 				</div>
+      -->
+        <div class="form-group">
+          <label class="form-label" for="merit-funds">Why should the project receive funding?</label>
+          <textarea class="form-nocontrol" id="merit-funds" name="merit-funds" type="text"></textarea>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="impact-without-esif">What would be the impact on the project if it didn't get ESIF funding?</label>
+          <textarea class="form-nocontrol" id="impact-without-esif" name="impact-without-esif" type="text"></textarea>
+        </div>
 				<div class="form-group">
-					<label class="form-label" for="add-value">How will the project add value beyond existing or planned activity?</label>
-					<textarea class="form-nocontrol" id="add-value" name="add-value" type="text"></textarea>
+					<label class="form-label" for="add-value">Are there any planned or current activities that are similar to the project?</label>
+          <div class="form-group inline">
+            <label class="block-label" for="radio-inline-3">
+              <input id="radio-inline-3" type="radio" name="radio-inline-group" value="Yes">Yes</label>
+            <label class="block-label" for="radio-inline-4">
+              <input id="radio-inline-4" type="radio" name="radio-inline-group" value="No">No</label>
+          </div>
 				</div>
-				<div class="form-group">
-					<label class="form-label" for="impact-without-esif">What would be the impact on the project if it didn't receive ESIF funding?</label>
-					<textarea class="form-nocontrol" id="impact-without-esif" name="impact-without-esif" type="text"></textarea>
-				</div>	    	
+        <div class="form-group">
+          <label class="form-label" for="add-value">How will the project add value beyond these activities?</label>
+          <textarea class="form-nocontrol" id="add-value" name="add-value" type="text"></textarea>
+        </div>
+        <!--	    	
 				<div class="form-group">
 					<label class="form-label" for="reduced-funding">What would be the impact on the project if the funding level was reduced?</label>
 					<textarea class="form-nocontrol" id="reduced-funding" name="reduced-funding" type="text"></textarea>
@@ -114,6 +129,7 @@
 					<label class="form-label" for="delayed-funding">What would be the impact on the project if ESIF funding was delayed?</label>
 					<textarea class="form-nocontrol" id="delayed-funding" name="delayed-funding" type="text"></textarea>
 				</div>
+      -->
 				
 				
 				
