@@ -144,7 +144,6 @@ p {
     clear: both;
     margin: 0;
     font-weight: 700;
-    margin-bottom: .25em;
 }
 
 h1 {
@@ -1362,6 +1361,7 @@ textarea {
   float: left;
   width: 100%;
   margin-bottom: 15px;
+  font-size: 19px;
 }
 
 @media (min-width: 641px) {
