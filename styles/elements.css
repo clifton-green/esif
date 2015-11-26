@@ -1520,7 +1520,8 @@ legend .form-label-bold {
   width: 100%;
   padding: 4px;
   background-color: #fff;
-  border: 1px solid #bfc1c3;
+  border: 2px solid #6f777b;
+  margin-top: -10px;
 }
 
 @media (min-width: 641px) {
@@ -1627,6 +1628,10 @@ legend .form-label-bold {
   .form-control-1-8 {
     width: 12.5%;
   }
+}
+
+.add-another {
+	font-size: 16px;
 }
 
 .error {
@@ -1845,7 +1850,6 @@ table td {
   padding: 0.75em 1.25em 0.5625em 0;
   text-align: left;
   color: #0b0c0c;
-  border-bottom: 1px solid #bfc1c3;
 }
 
 @media (min-width: 641px) {
