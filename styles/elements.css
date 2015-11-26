@@ -541,6 +541,16 @@ main {
   margin-bottom: 0.5em;
 }
 
+.heading-medium-v2 {
+  font-family: "nta", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.2;
+  font-weight: 700;
+  text-transform: none;
+  margin-top: 0em;
+  margin-bottom: 0.5em;
+}
+
 @media (min-width: 641px) {
   .heading-medium {
     font-size: 24px;
@@ -551,6 +561,13 @@ main {
 @media (min-width: 641px) {
   .heading-medium {
     margin-top: 1.875em;
+    margin-bottom: 0.8333333333em;
+  }
+}
+
+@media (min-width: 641px) {
+  .heading-medium-v2 {
+    margin-top: 0em;
     margin-bottom: 0.8333333333em;
   }
 }
@@ -1038,6 +1055,10 @@ hr {
     padding: 0 0 0.5em 0;
     font-size: 19px;
     font-weight: 700;
+}
+
+.meta dd:first-child {
+	font-size: 24px;
 }
 
 .links {
