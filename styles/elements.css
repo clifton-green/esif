@@ -1416,7 +1416,7 @@ textarea {
 }
 
 label.form-label{
-	font-weight: 700;
+	font-weight: 400;
 }
 
 .form-label,
@@ -1429,7 +1429,7 @@ label.form-label{
   font-family: "nta", Arial, sans-serif;
   font-size: 16px;
   line-height: 1.7;
-  font-weight: 700;
+  font-weight: 400;
   text-transform: none;
   padding-bottom:0.25em;
 }
@@ -1440,6 +1440,10 @@ label.form-label{
     line-height: 1.3157894737;
     width: 100%;
   }
+}
+
+.form-label#header {
+	font-weight: 700;
 }
 
 .form-label-bold {
@@ -1870,7 +1874,7 @@ table td {
 }
 
 table th {
-  font-weight: 700;
+  font-weight: 400;
   padding-bottom: 0px !important;
 }
 

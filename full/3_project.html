@@ -98,7 +98,7 @@
 			    <input class="form-nocontrol" id="project-name" name="project-name" type="text">
     	    </div>
 			<div class="form-group">
-			    <label class="form-label" for="proposed-start-date">Project start date</label>
+			    <label class="form-label" for="proposed-start-date" id="header">Project start date</label>
  				<fieldset class="form-group">
                 <!-- <p>For example, 08 4 2014.</p> -->
                 <div class="form-date">            
@@ -118,7 +118,7 @@
               </fieldset>
 			</div>
 			<div class="form-group">
-			    <label class="form-label" for="proposed-completion-date">Financial completion date</label>
+			    <label class="form-label" for="proposed-completion-date" id="header">Financial completion date</label>
  				<fieldset class="form-group">
                 <!-- <p>For example, 08 4 2014.</p> -->
                 <div class="form-date">            
@@ -138,7 +138,7 @@
               </fieldset>
 			</div>
 			<div class="form-group">
-			    <label class="form-label" for="proposed-practical-date">Project end date</label>
+			    <label class="form-label" for="proposed-practical-date" id="header">Project end date</label>
  				<fieldset class="form-group">
                 <!-- <p>For example, 08 4 2014.</p> -->
                 <div class="form-date">            
@@ -160,9 +160,7 @@
 				
 
  
-				
-		<h3>Schedule</h3>
-				<p>List each project milestone.</p>
+				<p class="form-label" id="header">List each project milestone:</p>
 				
 				<div class="form-group">
 					<table width="100%" border="1" bordercolor="#cccccc" cellpadding="5" cellspacing="5">
@@ -271,6 +269,8 @@
       </div><!-- .global-footer-wrapper -->
     </div><!-- .global-footer -->
 
+
+	<script type="text/javascript" src="../js/application.js"></script>
   </body>
 </html>
 
