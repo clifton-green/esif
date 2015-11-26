@@ -1645,6 +1645,8 @@ legend .form-label-bold {
 
 .add-another {
 	font-size: 16px;
+	margin: 8px 8px 0px 0px;
+	float: right;
 }
 
 .error {
