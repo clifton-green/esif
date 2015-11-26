@@ -107,15 +107,24 @@
           <label class="form-label" for="impact-without-esif">What would be the impact on the project if it didn't get ESIF funding?</label>
           <textarea class="form-nocontrol" id="impact-without-esif" name="impact-without-esif" type="text"></textarea>
         </div>
-				<div class="form-group">
-					<label class="form-label" for="add-value">Are there any planned or current activities that are similar to the project?</label>
-          <div class="form-group inline">
-            <label class="block-label" for="radio-inline-3">
-              <input id="radio-inline-3" type="radio" name="radio-inline-group" value="Yes">Yes</label>
-            <label class="block-label" for="radio-inline-4">
-              <input id="radio-inline-4" type="radio" name="radio-inline-group" value="No">No</label>
-          </div>
-				</div>
+          
+			<fieldset class="inline">
+	    	    <p class="form-label">Are there any planned or current activities that are similar to the project?</p>
+		      	<legend class="visuallyhidden">Are there any planned or current activities that are similar to the project?</legend>
+				
+					<label class="block-label" data-target="example-planned-no" for="radio-indent-1">
+					<input id="radio-indent-1" type="radio" name="radio-indent-group" value="Yes">Yes</label>
+					<label class="block-label" for="radio-indent-2">
+					<input id="radio-indent-2" type="radio" name="radio-indent-group" value="No">No</label>
+					<div class="panel-indent js-hidden" id="example-planned-no">
+						<div class="form-group">
+							<label class="form-label" for="further-info" style="display: block">Please give details:</label>
+							<textarea class="form-nocontrol" id="further-info" name="further-info" type="text"></textarea>
+						</div>
+        			</div>
+        		
+        	</fieldset>
+        	
         <div class="form-group">
           <label class="form-label" for="add-value">How will the project add value beyond these activities?</label>
           <textarea class="form-nocontrol" id="add-value" name="add-value" type="text"></textarea>

@@ -1867,12 +1867,20 @@ table td {
   color: #0b0c0c;
 }
 
+.tabletop th {
+	font-weight: 700;
+}
+
 @media (min-width: 641px) {
   table th,
   table td {
     font-size: 19px;
     line-height: 1.25;
   }
+}
+
+table tr {
+	border-bottom: 1px solid #bfc1c3;
 }
 
 table th {
