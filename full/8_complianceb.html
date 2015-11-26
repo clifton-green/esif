@@ -51,7 +51,7 @@
     <div class="page-wrapper">
       <div class="user-header">
         <p class="phase">
-          <span class="phase__tag">alpha</span><span class="phase__message">This is a new service – <a href="#">help us improve it.</a></span>
+          <span class="phase__tag">alpha</span><span class="phase__message">This is a new service – <a href="#">help improve it.</a></span>
         </p>
         <ul class="user-menu">
         
@@ -83,21 +83,18 @@
         
 
   <div class="two-thirds">
-	  
-	  <div class="page-header__wrapper">
-            <h3 class="page-header__subtitle">Step 7</h3>
-            <h2>Compliance</h2>
-            
-          </div><!-- .page-header__wrapper -->
-    
-    <div class="form-group">
-	    
-	    <h3 class="heading-medium-v2">State aid</h3>	    	
-			    
+    <div class="page-header__wrapper">
+      <h3 class="page-header__subtitle">Step 7</h3>
+      <h2>Compliance - State Aid</h2>
+    </div><!-- .page-header__wrapper -->
+    <form>
+      <div class="form-group">	
+			   <!-- 
 				<div class="form-group">
-					<label class="form-label" for="stateaid-align">How does this project align with the State Aid regulations in terms of the ESIF funds it is seeking?</label>
+					<label class="form-label" for="stateaid-align">Does this application meet State Aid regulations?</label>
 					<textarea class="form-nocontrol" id="stateaid-align" name="stateaid-align" type="text"></textarea>
 				</div>
+        <<<<<<< Updated upstream
 				
 				<div class="form-group">
 					<label class="form-label" for="thirdparty-payments">How will any payments to third parties, for example delivery partners or contractors, be allowed under the State Aid regulations?</label>
@@ -135,20 +132,87 @@ If you intend to use the General Block Exemption Regulation (GBER) please confir
 	    
 	    </form>
 	    <!-- End of form -->
-	    
-	    
-		<div class="form-steps">
-	        <div class="form-steps">
-	        <a href="../full-application.html" rel="external" data-transaction-slug="#" class="button">Save and quit</a>
-	        <a href="9_dataprotection.html" rel="external" data-transaction-slug="#" class="button disabled">Save and continue</a>
-	        <p>
-		    	<a href="../full-application.html" id="backButton" class="link-back">Back</a>
-			</p> 
-	    	</div>
-	    </div>
-    
-    </div>
-    
+        <!-- this is about procurement
+        <div class="form-group">
+          <label class="form-label" for="procurement-comments">Does you procurement comply with ESIF procurement rules?</label>
+          <textarea class="form-nocontrol" id="procurement-comments" name="procurement-comments" type="text"></textarea>
+        </div>      
+          
+        <div class="form-group">
+          <label class="form-label" for="esif-publicity">Does the project meet ESIF publicity requirements?</label>
+          <textarea class="form-nocontrol" id="esif-publicity" name="esif-publicity" type="text"></textarea>
+        </div>
+        -->
+
+      <!-- End of form -->
+          <div class="form-group">
+            <label class="form-label" for="manage-systems">What systems will you have to manage any State Aid requirements?</label>
+            <textarea class="form-nocontrol" id="manage-systems" name="manage-systems" type="text"></textarea>
+          </div>
+          
+          <div class="form-group">
+            <label class="form-label" for="organisations-benefit">List any organisations you know of that may receive payments from the project</label>
+            <textarea class="form-nocontrol" id="organisations-benefit" name="organisations-benefit" type="text"></textarea>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="thirdparty-payments">Are payments to these organisations and your delivery partners allowed under State Aid regulations?</label>
+          <fieldset class="inline">
+              <label class="block-label" data-target="example-ni-no" for="radio-indent-1">
+                <input id="radio-indent-1" type="radio" name="radio-indent-group" value="Yes">
+                Yes
+              </label>
+
+              <label class="block-label" for="radio-indent-2">
+                <input id="radio-indent-2" type="radio" name="radio-indent-group" value="No">
+                No
+              </label>
+          </fieldset>
+          
+          <div class="form-group">
+            <label class="form-label" for="potential-beneficiary">Do all organisations that could receive payments meet the State Aid test?</label> 
+            <fieldset class="inline">
+              <label class="block-label" for="state-aid-1">
+                <input id="state-aid-1" type="radio" name="state-aid-group" value="Yes">
+                Yes
+              </label>
+
+              <label class="block-label" data-target="state-aid-test-no" for="state-aid-2">
+                <input id="state-aid-2" type="radio" name="state-aid-group" value="No">
+                No
+              </label>
+            </fieldset>
+          </div>
+          <div class="js-hidden" id="state-aid-test-no">
+            <div class="form-group">
+              <label class="form-label" for="potential-beneficiary">Are you using the General Block Exemption Regulation for beneficiaries that don't meet the test?</label> 
+              <fieldset class="inline">
+                <label class="block-label" for="block-exemption-1">
+                  <input id="block-exemption-1" type="radio" name="block-exemption-group" value="Yes">
+                  Yes
+                </label>
+                <label class="block-label" data-target="block-exemption-no" for="block-exemption-2">
+                  <input id="block-exemption-2" type="radio" name="block-exemption-group" value="No">
+                  No
+                </label>
+              </fieldset>
+            </div>
+            <div class="js-hidden" id="block-exemption-no">
+              <label class="form-label" for="potential-beneficiary">List any organisations you've mentioned that don't meet the test and explain why you think they don't have to .</label> 
+              <textarea class="form-nocontrol" id="potential-beneficiary" name="potential-beneficiary" type="text"></textarea>
+            </div>
+          </div>
+        </div>
+  		  <div class="form-steps">
+  	        <div class="form-steps">
+  	        <a href="../full-application.html" rel="external" data-transaction-slug="#" class="button">Save and quit</a>
+  	        <a href="9_dataprotection.html" rel="external" data-transaction-slug="#" class="button disabled">Save and continue</a>
+  	        <p>
+  		    	<a href="../full-application.html" id="backButton" class="link-back">Back</a>
+  			   </p>
+            </div>
+        </div>
+      </div>
+      </form>
   </div><!-- .two-thirds -->
 
 
@@ -179,8 +243,8 @@ If you intend to use the General Block Exemption Regulation (GBER) please confir
       <h3>Your dashboard</h3>
       <ul class="links-list">
         <li class="links-list__item"><a href="#">Your tasks</a></li>
-        <li class="links-list__item"><a href="#">Existing applications</a></li>
-        <li class="links-list__item"><a href="#">Projects</a></li>
+        <li class="links-list__item"><a href="#">Your applications</a></li>
+        <li class="links-list__item"><a href="#">Your projects</a></li>
       </ul>
     </div><!-- .links -->
 

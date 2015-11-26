@@ -71,9 +71,9 @@
           <ol class="breadcrumbs">
             
               <li class="breadcrumbs__item"><a href="../dashboard.html">Dashboard</a></li>
-              <li class="breadcrumbs__item"><a href="../call-list.html">Call List</a></li>
-              <li class="breadcrumbs__item"><a href="../call-list.html">Call Details</a></li>
-              <li class="breadcrumbs__item"><a href="../full-application.html">Application Overview</a></li>
+              <li class="breadcrumbs__item"><a href="../call-list.html">View calls</a></li>
+              <li class="breadcrumbs__item"><a href="../call-list.html">Call details</a></li>
+              <li class="breadcrumbs__item"><a href="../full-application.html">Application</a></li>
             
           </ol>
           
@@ -86,14 +86,12 @@
 	  
 	  <div class="page-header__wrapper">
             <h3 class="page-header__subtitle">Step 7</h3>
-            <h2>Compliance</h2>
+            <h2>Compliance - procurement</h2>
             
           </div><!-- .page-header__wrapper -->
-    
-    <div class="form-group">
-	    
-	    <h3 class="heading-medium-v2">Procurement</h3>	    	
-			    
+    <form>
+    <div class="form-group">    	
+			  <!--
 				<p>Confirm that you have completed the Procurement register, listing all contracts that will be used to provide goods, works or services to the project and which have already been awarded prior to this application</p>
 				
 				<div class="panel-indent panel-indent-info">
@@ -112,7 +110,6 @@
 				<div class="form-group">
 					<p>Confirm that you have completed the Procurement register, listing all the contracts that will need to be awarded to deliver the Project but which have not been awarded prior to this application.</p>
 				</div>
-				
 				<div class="form-group">
 					<label class="form-label" for="procurement-comments">Comments</label>
 					<textarea class="form-nocontrol" id="procurement-comments" name="procurement-comments" type="text"></textarea>
@@ -127,22 +124,44 @@
 				</ul>
 				<p>Ensure that all relevant documents are retained with a view to providing relevant information in the event of an audit or other investigation.</p>
 				<p>Please provide further information on any contracts you have referred in procurement sub section in which there has been a single tender action, the use of a framework or dynamic purchasing system (in particular if this has not been set up by the applicant) or where the contract has been extended.</p>
-				<p>Applicants should refer to the Procurement Law guidance which can be found on the www.gov.uk website which sets out national rules for procurements below the Public Contracts Regulations thresholds.</p>
-				
-				<div class="form-group">
-					<label class="form-label" for="procurement-comments">If this project will involve procurement, how will it comply with ESIF procurement rules? (Please note that these supersede your organisation's own procurement rules.)</label>
-					<textarea class="form-nocontrol" id="procurement-comments" name="procurement-comments" type="text"></textarea>
-				</div>
-			
-				
-		    	<fieldset class="inline">
-			    	<p>Are your procurement procedures documented?</p>
-			    	<legend class="visuallyhidden">Are your procurement procedures documented?</legend>
-			    	<label class="block-label" for="radio-inline-1">
-			    	<input id="radio-inline-1" type="radio" name="radio-inline-group" value="Yes">Yes</label>
-			    	<label class="block-label" for="radio-inline-2">
-			    	<input id="radio-inline-2" type="radio" name="radio-inline-group" value="No">No</label>
-			    </fieldset>
+        -->
+          <fieldset class="inline">
+            <label class="form-label" for="register-group">Have you filled in the <a href='#'>procurement register</a> with any contracts relating to the project?</label>
+            <div class="form-group">
+                 <label class="block-label" for="register-1">
+                <input id="register-1" type="radio" name="register-group" value="Yes">Yes</label>
+                <label class="block-label" for="register-2">
+                <input id="register-2" type="radio" name="register-group" value="No">No</label>
+            </div>
+          </fieldset>
+          <fieldset class="inline">
+            <label class="form-label" for="procurement-comments">Does your procurement comply with <a href='https://www.gov.uk/government/publications/european-structural-and-investment-funds-programme-guidance'>ESIF procurement rules</a>?</label>
+            <div class="form-group">
+              <label class="block-label" for="radio-inline-1">
+              <input id="radio-inline-1" type="radio" name="radio-inline-group" value="Yes">Yes</label>
+              <label class="block-label" for="radio-inline-2">
+              <input id="radio-inline-2" type="radio" name="radio-inline-group" value="No">No</label>
+            </div>
+          </fieldset>
+          <fieldset class="inline">
+            <label>Are your procurement procedures documented?</label>
+            <div class="form-group">
+              <label class="block-label" for="documents-1">
+              <input id="documents-1" type="radio" name="documents-group" value="Yes">Yes</label>
+              <label class="block-label" for="documents-2">
+              <input id="documents-2" type="radio" name="documents-group" value="No">No</label>
+            </div>
+          </fieldset>
+          <fieldset class="inline">
+            <label class="form-label" for="publicity-group">Has all procurement been advertised according to ESIF rules?</label>
+            <div class="form-group">
+                <label class="block-label" for="publicity-1">
+                <input id="publicity-1" type="radio" name="publicity-group" value="Yes">Yes</label>
+                <label class="block-label" for="publicity-2">
+                <input id="publicity-2" type="radio" name="publicity-group" value="No">No</label>
+            </div>
+          </fieldset>
+      </div>
 	    
 	    
 	    </form>
@@ -156,10 +175,8 @@
 	        <p>
 		    	<a href="../full-application.html" id="backButton" class="link-back">Back</a>
 			</p> 
-	    	</div>
 	    </div>
-    
-    </div>
+	    </div>
     
   </div><!-- .two-thirds -->
 
@@ -191,8 +208,8 @@
       <h3>Your dashboard</h3>
       <ul class="links-list">
         <li class="links-list__item"><a href="#">Your tasks</a></li>
-        <li class="links-list__item"><a href="#">Existing applications</a></li>
-        <li class="links-list__item"><a href="#">Projects</a></li>
+        <li class="links-list__item"><a href="#">Your applications</a></li>
+        <li class="links-list__item"><a href="#">Your projects</a></li>
       </ul>
     </div><!-- .links -->
 
