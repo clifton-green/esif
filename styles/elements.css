@@ -1415,6 +1415,10 @@ textarea {
   }
 }
 
+label.form-label{
+	font-weight: 700;
+}
+
 .form-label,
 .form-label-bold {
   display: block;
@@ -1842,11 +1846,11 @@ table {
 table th,
 table td {
   font-family: "nta", Arial, sans-serif;
-  font-size: 14px;
+  font-size: 19px;
   line-height: 1.1428571429;
   font-weight: 400;
   text-transform: none;
-  padding: 0.75em 1.25em 0.5625em 0;
+  padding: 0.5em 1.25em 0.5625em 0;
   text-align: left;
   color: #0b0c0c;
 }
@@ -1854,13 +1858,14 @@ table td {
 @media (min-width: 641px) {
   table th,
   table td {
-    font-size: 16px;
+    font-size: 19px;
     line-height: 1.25;
   }
 }
 
 table th {
   font-weight: 700;
+  padding-bottom: 0px !important;
 }
 
 table th.numeric {
