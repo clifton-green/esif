@@ -2083,6 +2083,10 @@ td.call, th.call {
 	width:50%;
 }
 
+td.condition {
+	padding-top: 21px;
+}
+
 details {
   display: block;
 }
