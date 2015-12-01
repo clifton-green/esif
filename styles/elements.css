@@ -135,6 +135,24 @@ a:hover, .action--tertiary:hover {
     text-decoration: underline;
 }
 
+.remove {
+    font-weight: 600;
+    padding: 4px 0 20px 20px;
+    background: url("../images/remove.png") no-repeat 0 0;
+    display: inline-block;
+    margin-top: 10px;
+	margin-left: 20px;
+    cursor: pointer;
+    background-size: 20px 20px;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 20 / 10), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+    .remove {
+        background: url("../images/remove-2x.png") no-repeat 0 0;
+        background-size: 20px 20px;
+    }
+}
+
 h1,
 h2,
 h3,
