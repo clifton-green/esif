@@ -1901,6 +1901,18 @@ table tr {
 	border-bottom: 1px solid #bfc1c3;
 }
 
+table tr.noborder {
+	border-bottom: none;
+}
+
+#total td {
+	font-weight: 700;
+}
+
+table.financial th, table.financial td {
+	font-size: 16px !important;
+}
+
 table th {
   font-weight: 400;
   padding-bottom: 0px !important;
