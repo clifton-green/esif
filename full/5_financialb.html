@@ -108,27 +108,93 @@
 	        
 	        
         <div class="form-group">
-          <label class="form-label" for="control-systems">Describe the project's financial management and control systems. Include details of the process used to compile and authorise ESIF payment claims.</label>
-          <textarea class="form-nocontrol" id="control-systems" name="control-systems" type="text"></textarea>
+          <label class="form-label" for="funding-type">Funding type?</label>
+          <select class="form-nocontrol" id="funding-type" name="funding-type" type="text">
+          	<option value="">Please select:</option>
+          	<option value="local-authority-funds">Local Authority Funds</option>
+		  	<option value="university-funds">University Funds</option>
+		  	<option value="bank-loan">Bank Loan</option>
+		  	<option value="private-sector-reserves">Private Sector Reserves</option>
+		  	<option value="public-sector-reserves">Public Sector Reserves</option>
+		  	<option value="regional-growth-fund">Regional Growth Fund</option>
+		  	<option value="growth-deal">Growth Deal</option>
+		  	<option value="project-incomes">Project Income</option>
+		  	<option value="sme-contributions">SME Contributions</option>
+		  	<option value="big-lottery-fund">Big Lottey Fund</option>
+		  	<option value="european-investment-bank">European Investment Bank</option>
+		  	<option value="private-sector-investment">Private Sector Investment</option>
+		  	<option value="health-service-funds">Health Service Funds</option>
+		  	<option value="renewable-energy-grants">Renewable Energy Grants</option>
+		  	<option value="renewable-energy-subsidy">Renewable Energy Subsidy</option>
+		  	<option value="third-sector-funds">Third Sector Funds</option>
+		  	<option value="ndpb-funds">NDPB Funds</option>
+		  	<option value="central-government-funds">Central Government Funds</option>
+		  	<option value="volunteer-time">Volunteer Time (In Kind Contribution)</option>
+		  	<option value="other">Other</option>
+          
+          </select>
         </div>
         <div class="form-group">
-          <label class="form-label" for="cashflow-management">How will the project's cashflow be managed?</label>
-          <textarea class="form-nocontrol" id="cashflow-management" name="cashflow-management" type="text"></textarea>
+          <label class="form-label" for="funding-source">Name of funding source?</label>
+          <input class="form-nocontrol" id="funding-source" name="funding-source" type="text">
         </div>
+        
+        <label class="form-label" for="funding-source">Capital or Revenue?</label>
+	    <legend class="visuallyhidden">Is your funding source Capital or Revenue?</legend>
+	    <div class="form-group">
+	        <label class="block-label" for="capital">
+	          <input id="capital" name="capital-or-revenue" type="radio" value="capital">
+	          Capital
+	        </label>
+	        <label class="block-label" for="revenue">
+	          <input id="revenue" name="capital-or-revenue" type="radio" value="revenue">
+	          Revenue
+	        </label>
+	    </div>
         
         
         <h3>Cost and funding allocation</h3>
 	        
-	        
-        <div class="form-group">
-          <label class="form-label" for="control-systems">Describe the project's financial management and control systems. Include details of the process used to compile and authorise ESIF payment claims.</label>
-          <textarea class="form-nocontrol" id="control-systems" name="control-systems" type="text"></textarea>
-        </div>
-        <div class="form-group">
-          <label class="form-label" for="cashflow-management">How will the project's cashflow be managed?</label>
-          <textarea class="form-nocontrol" id="cashflow-management" name="cashflow-management" type="text"></textarea>
-        </div>
-        
+	    <label class="form-label" for="funding-source">Priority axis:</label>
+	    <legend class="visuallyhidden">What is the Priority axis?</legend>
+	    <div class="form-group">
+	        <label class="block-label" for="priority-axis">
+	          <input id="priority-axis" name="lep-area" type="radio" value="priority-axis">
+	          PAR
+	        </label>
+	    </div>
+        <label class="form-label" for="investment-priority">Investment priority:</label>
+	    <legend class="visuallyhidden">What is the investment priority?</legend>
+	    <div class="form-group">
+	        <label class="block-label" for="investment-priority">
+	          <input id="investment-priority" name="lep-area" type="radio" value="investment-priority">
+	          IP1 - IP1
+	        </label>
+	    </div>
+        <label class="form-label" for="lep-area">LEP area:</label>
+	    <legend class="visuallyhidden">What is your LEP area?</legend>
+	    <div class="form-group">
+	        <label class="block-label" for="06-coventry-warwickshire">
+	          <input id="06-coventry-warwickshire" name="lep-area" type="radio" value="06-coventry-warwickshire">
+	          06 - Coventry and Warwickshire
+	        </label>
+	    </div>
+	    <label class="form-label" for="category-of=region">Category of region:</label>
+	    <legend class="visuallyhidden">What is your category of region?</legend>
+	    <div class="form-group">
+	        <label class="block-label" for="more-developed">
+	          <input id="more-developed" name="category-of-region" type="radio" value="more-developed">
+	          More developed
+	        </label>
+	        <label class="block-label" for="transitional">
+	          <input id="transitional" name="category-of-region" type="radio" value="transitional">
+	          Transitional
+	        </label>
+	        <label class="block-label" for="less-developed">
+	          <input id="less-developed" name="category-of-region" type="radio" value="less-developed">
+	          Less developed
+	        </label>
+	    </div>
         
         <h3>Financial Details Summary Tables</h3>
         
