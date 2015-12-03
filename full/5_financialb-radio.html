@@ -93,31 +93,83 @@
     <div class="form-group">
 	    <h3>Project costs</h3>
 	        
-	        
-        <div class="form-group">
-          <label class="form-label" for="cost-category">Cost Category?</label>
-          <select class="form-nocontrol" id="cost-category" name="cost-category" type="text">
-          	<option value="">Please select:</option>
-          	<option value="cap-building-aquisition">(Cap) Building Aquisition</option>
-		  	<option value="cap-building-construction">(Cap) Building and Construction</option>
-		  	<option value="cap-equipment">(Cap) Equipment</option>
-		  	<option value="cap-fees">(Cap) Fees</option>
-		  	<option value="cap-land-aquisition">(Cap) Land Aquisition</option>
-		  	<option value="cap-plant-machinery">(Cap) Plant and Machinery</option>
-		  	<option value="cap-premises">(Cap) Premises</option>
-		  	<option value="cap-other">(Cap) Other Capital</option>
-		  	
-		  	<option value="rev-consultancy">(Rev) Consultancy</option>
-		  	<option value="rev-marketing">(Rev) Marketing</option>
-		  	<option value="rev-office-costs">(Rev) Office Costs</option>
-		  	<option value="rev-overheads">(Rev) Overheads</option>
 		  	<option value="rev-professional-fees">(Rev) Professional Fees</option>
 		  	<option value="rev-rent">(Rev) Rent</option>
 		  	<option value="rev-salaries">(Rev) Salaries</option>
 		  	<option value="rev-flat-rate-indirect-costs">(Rev) Flat Rate Indirect Costs</option>    
-		  	<option value="rev-other-revenue">(Rev) Other Revenue</option>      
-          </select>
-        </div>
+		  	<option value="rev-other-revenue">(Rev) Other Revenue</option>  
+		  	
+		  	    
+        <label class="form-label" for="cost-category">Cost Category?</label>
+	    <legend class="visuallyhidden">Cost Category?</legend>
+	    <div class="form-group">
+	        <label class="block-label" for="cap-building-aquisition">
+	        <input id="cap-building-aquisition" name="cost-category" type="radio" value="cap-building-aquisition">(Cap) Building Aquisition</label>
+	    </div>
+	    <div class="form-group">
+	        <label class="block-label" for="cap-building-construction">
+	        <input id="cap-building-construction" name="cost-category" type="radio" value="cap-building-construction">(Cap) Building and Construction</label>
+	    </div>
+	    <div class="form-group">
+	        <label class="block-label" for="cap-equipment">
+	        <input id="cap-equipment" name="cost-category" type="radio" value="cap-equipment">(Cap) Equipment</label>
+	    </div>
+	    <div class="form-group">
+	        <label class="block-label" for="cap-fees">
+	        <input id="cap-fees" name="cost-category" type="radio" value="cap-fees">(Cap) Fees</label>
+	    </div>
+	    <div class="form-group">
+	        <label class="block-label" for="cap-land-aquisition">
+	        <input id="cap-land-aquisition" name="cost-category" type="radio" value="cap-land-aquisition">(Cap) Land Aquisition</label>
+	    </div>
+	    <div class="form-group">
+	        <label class="block-label" for="cap-plant-machinery">
+	        <input id="cap-plant-machinery" name="cost-category" type="radio" value="cap-plant-machinery">(Cap) Plant and Machinery</label>
+	    </div>
+	    <div class="form-group">
+	        <label class="block-label" for="cap-premises">
+	        <input id="cap-premises" name="cost-category" type="radio" value="cap-premises">(Cap) Premises</label>
+	    </div>
+	    <div class="form-group">
+	        <label class="block-label" for="cap-other">
+	        <input id="cap-other" name="cost-category" type="radio" value="cap-other">(Cap) Other Capital</label>
+	    </div>
+	    <div class="form-group">
+	        <label class="block-label" for="rev-consultancy">
+	        <input id="rev-consultancy" name="cost-category" type="radio" value="rev-consultancy">(Rev) Consultancy</label>
+	    </div>
+	    <div class="form-group">
+	        <label class="block-label" for="rev-marketing">
+	        <input id="rev-marketing" name="cost-category" type="radio" value="rev-marketing">(Rev) Marketing</label>
+	    </div>
+	    <div class="form-group">
+	        <label class="block-label" for="rev-office-costs">
+	        <input id="rev-office-costs" name="cost-category" type="radio" value="rev-office-costs">(Rev) Office Costs</label>
+	    </div>
+	    <div class="form-group">
+	        <label class="block-label" for="rev-overheads">
+	        <input id="rev-overheads" name="cost-category" type="radio" value="rev-overheads">(Rev) Overheads</label>
+	    </div>
+	    <div class="form-group">
+	        <label class="block-label" for="rev-professional-fees">
+	        <input id="rev-professional-fees" name="cost-category" type="radio" value="rev-professional-fees">(Rev) Professional Fees</label>
+	    </div>
+	    <div class="form-group">
+	        <label class="block-label" for="rev-rent">
+	        <input id="rev-rent" name="cost-category" type="radio" value="rev-rent">(Rev) Rent</label>
+	    </div>
+	    <div class="form-group">
+	        <label class="block-label" for="rev-salaries">
+	        <input id="rev-salaries" name="cost-category" type="radio" value="rev-salaries">(Rev) Salaries</label>
+	    </div>
+	    <div class="form-group">
+	        <label class="block-label" for="rev-flat-rate-indirect-costs">
+	        <input id="rev-flat-rate-indirect-costs" name="cost-category" type="radio" value="rev-flat-rate-indirect-costs">(Rev) Flat Rate Indirect Costs</label>
+	    </div>
+	    <div class="form-group">
+	        <label class="block-label" for="rev-other-revenue">
+	        <input id="rev-other-revenue" name="cost-category" type="radio" value="rev-other-revenue">(Rev) Other Revenue</label>
+	    </div>
         
         <div class="form-group">
           <label class="form-label bold-medium" for="cost-category-total">Value:</label>
@@ -135,38 +187,94 @@
 			     <td>0.00</td>
 			 </tr>
 			</table>
-        </div>
-        
+        </div>        
         
         <h3>Funding sources</h3>
 	        
 	        
-        <div class="form-group">
-          <label class="form-label" for="funding-type">Funding type?</label>
-          <select class="form-nocontrol" id="funding-type" name="funding-type" type="text">
-          	<option value="">Please select:</option>
-          	<option value="local-authority-funds">Local Authority Funds</option>
-		  	<option value="university-funds">University Funds</option>
-		  	<option value="bank-loan">Bank Loan</option>
-		  	<option value="private-sector-reserves">Private Sector Reserves</option>
-		  	<option value="public-sector-reserves">Public Sector Reserves</option>
-		  	<option value="regional-growth-fund">Regional Growth Fund</option>
-		  	<option value="growth-deal">Growth Deal</option>
-		  	<option value="project-incomes">Project Income</option>
-		  	<option value="sme-contributions">SME Contributions</option>
-		  	<option value="big-lottery-fund">Big Lottey Fund</option>
-		  	<option value="european-investment-bank">European Investment Bank</option>
-		  	<option value="private-sector-investment">Private Sector Investment</option>
-		  	<option value="health-service-funds">Health Service Funds</option>
-		  	<option value="renewable-energy-grants">Renewable Energy Grants</option>
-		  	<option value="renewable-energy-subsidy">Renewable Energy Subsidy</option>
-		  	<option value="third-sector-funds">Third Sector Funds</option>
-		  	<option value="ndpb-funds">NDPB Funds</option>
-		  	<option value="central-government-funds">Central Government Funds</option>
-		  	<option value="volunteer-time">Volunteer Time (In Kind Contribution)</option>
-		  	<option value="other">Other</option>
-          </select>
-        </div>
+        <label class="form-label" for="funding-type">Funding type?</label>
+	    <legend class="visuallyhidden">Funding type?</legend>
+	    <div class="form-group">
+	        <label class="block-label" for="local-authority-funds">
+	        <input id="local-authority-funds" name="funding-type" type="radio" value="local-authority-funds">Local Authority Funds</label>
+	    </div>
+	    <div class="form-group">
+	        <label class="block-label" for="university-funds">
+	        <input id="university-funds" name="funding-type" type="radio" value="university-funds">University Funds</label>
+	    </div>
+	    <div class="form-group">
+	        <label class="block-label" for="bank-loan">
+	        <input id="bank-loan" name="funding-type" type="radio" value="bank-loan">Bank Loan</label>
+	    </div>
+	    <div class="form-group">
+	        <label class="block-label" for="private-sector-reserves">
+	        <input id="private-sector-reserves" name="funding-type" type="radio" value="private-sector-reserves">Private Sector Reserves</label>
+	    </div>
+	    <div class="form-group">
+	        <label class="block-label" for="public-sector-reserves">
+	        <input id="public-sector-reserves" name="funding-type" type="radio" value="public-sector-reserves">Public Sector Reserves</label>
+	    </div>
+	    <div class="form-group">
+	        <label class="block-label" for="regional-growth-funds">
+	        <input id="regional-growth-funds" name="funding-type" type="radio" value="regional-growth-funds">Regional Growth Funds</label>
+	    </div>
+	    <div class="form-group">
+	        <label class="block-label" for="growth-deal">
+	        <input id="growth-deal" name="funding-type" type="radio" value="growth-deal">Growth Deal</label>
+	    </div>
+	    <div class="form-group">
+	        <label class="block-label" for="project-income">
+	        <input id="project-income" name="funding-type" type="radio" value="project-income">Project Income</label>
+	    </div>
+	    <div class="form-group">
+	        <label class="block-label" for="sme-contributions">
+	        <input id="sme-contributions" name="funding-type" type="radio" value="sme-contributions">SME Contributions</label>
+	    </div>
+	    <div class="form-group">
+	        <label class="block-label" for="big-lottery-fund">
+	        <input id="big-lottery-fund" name="funding-type" type="radio" value="big-lottery-fund">Big Lottery Fund</label>
+	    </div>
+	    <div class="form-group">
+	        <label class="block-label" for="european-investment-bank">
+	        <input id="european-investment-bank" name="funding-type" type="radio" value="european-investment-bank">European Investment Bank</label>
+	    </div>
+	    <div class="form-group">
+	        <label class="block-label" for="private-sector-investment">
+	        <input id="private-sector-investment" name="funding-type" type="radio" value="private-sector-investment">Private Sector Investment</label>
+	    </div>
+	    <div class="form-group">
+	        <label class="block-label" for="health-service-funds">
+	        <input id="health-service-funds" name="funding-type" type="radio" value="health-service-funds">Health Service Funds</label>
+	    </div>
+	    <div class="form-group">
+	        <label class="block-label" for="renewable-energy-grants">
+	        <input id="renewable-energy-grants" name="funding-type" type="radio" value="renewable-energy-grants">Renewable Energy Grants</label>
+	    </div>
+	    <div class="form-group">
+	        <label class="block-label" for="renewable-energy-subsidy">
+	        <input id="renewable-energy-subsidy" name="funding-type" type="radio" value="renewable-energy-subsidy">Renewable Energy Subsidy</label>
+	    </div>
+	    <div class="form-group">
+	        <label class="block-label" for="third-sector-funds">
+	        <input id="third-sector-funds" name="funding-type" type="radio" value="third-sector-funds">Third Sector Funds</label>
+	    </div>
+	    <div class="form-group">
+	        <label class="block-label" for="ndpb-funds">
+	        <input id="ndpb-funds" name="funding-type" type="radio" value="ndpb-funds">NDPB Funds</label>
+	    </div>
+	    <div class="form-group">
+	        <label class="block-label" for="volunteer-time">
+	        <input id="volunteer-time" name="funding-type" type="radio" value="volunteer-time">Volunteer Time (In Kind Contribution)</label>
+	    </div>
+	    <div class="form-group">
+	        <label class="block-label" for="other" data-target="funding-type-other">
+	        <input id="other" name="funding-type" type="radio" value="other">Other</label>
+	        
+	        <div class="panel-indent js-hidden" id="funding-type-other">
+	          <label class="form-label" for="funding-other">Funding type not listed:</label>
+	          <input class="form-control" name="funding-other" type="text" id="funding-other">
+	        </div>
+	    </div>
 	    
 	    
         <div class="form-group">
@@ -230,44 +338,6 @@
 	          Less developed
 	        </label>
 	    </div>
-        
-        <div class="form-group">
-          <label class="form-label bold-medium" for="cost-category-total">ERDF (Capital) (£)</label>
-          <input class="form-nocontrol" id="cost-category-total" name="cost-category-total" type="number" value="0.00">
-        </div>
-        
-        <div class="form-group">
-          <label class="form-label bold-medium" for="cost-category-total">ERDF (Revenue) (£)</label>
-          <input class="form-nocontrol" id="cost-category-total" name="cost-category-total" type="number" value="0.00">
-        </div>
-        
-        <div class="form-group">
-	        <table width="100%" border="0" bordercolor="#cccccc" cellpadding="5" cellspacing="5" class="tabletop financial">
-			<tr> 
-			     <th width="90%">Total (Capital) (£)</th>
-	 		</tr>
-			 <tr class="noborder" id="total">
-			     <td>0.00</td>
-			 </tr>
-			</table>
-			<table width="100%" border="0" bordercolor="#cccccc" cellpadding="5" cellspacing="5" class="tabletop financial">
-			<tr> 
-			     <th width="90%">Total (Revenue) (£)</th>
-	 		</tr>
-			 <tr class="noborder" id="total">
-			     <td>0.00</td>
-			 </tr>
-			</table>
-			<table width="100%" border="0" bordercolor="#cccccc" cellpadding="5" cellspacing="5" class="tabletop financial">
-			<tr> 
-			     <th width="90%">Total (£)</th>
-	 		</tr>
-			 <tr class="noborder" id="total">
-			     <td>0.00</td>
-			 </tr>
-			</table>
-			<p><a href="function update table">Update Summary</a></p>
-        </div>
         
         	    
 	    
