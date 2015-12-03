@@ -71,9 +71,9 @@
           <ol class="breadcrumbs">
             
               <li class="breadcrumbs__item"><a href="../dashboard.html">Dashboard</a></li>
-              <li class="breadcrumbs__item"><a href="../call-list.html">Call List</a></li>
-              <li class="breadcrumbs__item"><a href="../call-list.html">Call Details</a></li>
-              <li class="breadcrumbs__item"><a href="../full-application.html">Application Overview</a></li>
+              <li class="breadcrumbs__item"><a href="../call-list.html">View calls</a></li>
+              <li class="breadcrumbs__item"><a href="../call-list.html">Call details</a></li>
+              <li class="breadcrumbs__item"><a href="../full-application.html">Application</a></li>
             
           </ol>
           
@@ -83,76 +83,47 @@
         
 
   <div class="two-thirds">
-	  
-	  <div class="page-header__wrapper">
+        <div class="page-header__wrapper">
             <h3 class="page-header__subtitle">Step 10</h3>
-            <h2>Submission</h2>
-            
-          </div><!-- .page-header__wrapper -->
-    
-    <div class="form-group">
-	    
-	    <h3 class="heading-medium-v2">Data Protection Act</h3>
-	    		<div class="form-group">
-		    	
-		    	<div class="form-group">
-					<p>You must check the confirmation box below in order to progress this application.</p>
-				</div>
-				
+            <h2>Declaration</h2>
+        </div><!-- .page-header__wrapper -->
 				<div class="form-group">
-					<p><input id="checkbox-telephone-number" name="contact-by-text-phone" type="checkbox" value="true">
-						I declare that I have the authority to represent in making this application.</p>
+            <div class="form-group">
+              <label class="form-label" for="potential-beneficiary">Can all the information in this application be shared with the Local Enterprise Partner committee?</label> 
+              <fieldset class="inline">
+                <label class="block-label" for="block-exemption-1">
+                  <input id="block-exemption-1" type="radio" name="block-exemption-group" value="Yes">
+                  Yes
+                </label>
+                <label class="block-label" for="block-exemption-2"  data-target="withhold-yes">
+                  <input id="block-exemption-2" type="radio" name="block-exemption-group" value="No">
+                  No
+                </label>
+              </fieldset>
+            </div>
+            <div class="js-hidden" id="withhold-yes">
+              <label class="form-label" for="information">Explain what information you want to be withheld and why</label> 
+              <textarea class="form-nocontrol" id="information" name="potential-beneficiary" type="text"></textarea>
+            </div>
+        </div>
+        <div class="form-group">
+          <p>By sending this application you confirm that:</p>
+          <ul class='list-bullet'>
+            <li>information in this application can be used according to the <a href='../privacy.html'>privacy policy</a></li>
+            <li>you have the authority to make this application on behalf of the applicant organisation</li>
+            <li>the information in this application is accurate and complete as far as you know</li>
+            <li>you will report any change in circumstances that may affect this application promptly</li>
+            <li>any third parties mentioned in this application are aware that their information has been included and how it may be used</li>
+          </ul>
+          <p><strong>You may be prosecuted and funding withdrawn or have to be repaid if you make a false or misleading application.</strong></p>
+          <p>Any expenses you incur or contracts you enter into before your funding’s agreed are at your own financial risk.</p>
 				</div>
-				
-				<div class="form-group">
-					<p>I understand that acceptance of this Outline Application does not in any way signify that the project is eligible for ESI Funding support or that ESI funding has been approved towards it. On behalf of and having carried out full and proper inquiry, I confirm to the Department:</p>
-					<ul class="list-bullet">
-					    <li>has the legal authority to carry out the project and</li>
-					    <li>That the information provided in this application is accurate.</li>
-					</ul>
-				</div>
-				
-				<div class="form-group">
-					<p>I confirm to the Department:</p>
-					<ul class="list-bullet">
-					    <li>I have informed all persons in relation to whom I have provided personal information of the details of the personal information I have provided to you and of the purposes for which this information will be used and that I have the consent of the individuals concerned to pass this information to you for these purposes.</li>
-					    <li>I authorise the Department to process my personal information, in particular my sensitive personal information, for the purposes stated in this form;</li>
-					    <li>That I shall inform the Department if, prior to any ESI funding being legally committed to , I become aware of any further information which might reasonably be considered as material to the Department in deciding whether to fund the application.</li>
-					    <li>Match funding will be in place prior to any award of ESI funding.</li>
-					    <li>I am aware that if the information given in this application turns out to be false or misleading Department for Communities & Local Government (DCLG, for ERDF) and the Department for Work and Pensions (DWP, for ESF) may demand the repayment of funding and/or terminate a funding agreement pertaining to this Application.</li>
-					</ul>
-				</div>
-				
-				<div class="form-group">
-					<p><input id="checkbox-telephone-number" name="contact-by-text-phone" type="checkbox" value="true">I confirm that I am aware that checks can be made to the relevant authorities to verify this declaration and any person who knowingly or recklessly makes any false statement for the purpose of obtaining grant or for the purpose of assisting any person to obtain grant is liable to be prosecuted. A false or misleading statement will also mean that approval may be revoked and any grant may be withheld or recovered with interest.</p>
-				</div>
-				
-				<div class="form-group">
-					<p>You should not commence project activity, or enter in to any legal contracts, including the ordering or purchasing of any equipment or services before the formal approval of your project and you have signed an ERDF or ESF Funding Agreement. Any expenditure before the approval date is incurred at your own risk and may render the project ineligible for support.</p>
-				</div>
-					
-					<input id="checkbox-telephone-number" name="contact-by-text-phone" type="checkbox" value="true">
-					I confirm that I have read and agree to the above information regarding the data protection act
-				
-				</div>
-			
-				    
-	    
-	    </form>
-	    <!-- End of form -->
-	    
-	    
-		<div class="form-steps">
-	        <div class="form-steps">
-	        <a href="#" rel="external" data-transaction-slug="#" class="button">Save and quit</a>
-	        <a href="../full-application.html" rel="external" data-transaction-slug="#" class="button disabled">Save and continue</a>
-	        <p>
-		    	<a href="../full-application.html" id="backButton" class="link-back">Back</a>
-			</p> 
-	    	</div>
-	    </div>
-    
-    </div>
+        <div class="form-steps">
+  	        <a href="../full-application.html" rel="external" data-transaction-slug="#" class="button">You agree - send your application</a>
+  	        <p>
+  		    	<a href="../full-application.html" id="backButton" class="link-back">Back</a>
+  			    </p> 
+        </div>
     
   </div><!-- .two-thirds -->
 
@@ -176,7 +147,7 @@
     <details>
         <summary><span class="summary">Help with your application</span></summary>
         <div class="panel-indent">
-          <p>If an outline application is required for this call, don't complete a full application unless the Managing Authority has received your outline application and invited you to apply.</p>
+          <p>If an outline application is needed, don't complete a full application unless the Managing Authority has received your outline application and invited you to apply.</p>
           <p>Read guidance on <a href='https://www.gov.uk/government/publications/european-structural-and-investment-funds-full-application'>how to complete this application</a> if you're unsure about the process.</p>
         </div>
     </details>
@@ -184,8 +155,8 @@
       <h3>Your dashboard</h3>
       <ul class="links-list">
         <li class="links-list__item"><a href="#">Your tasks</a></li>
-        <li class="links-list__item"><a href="#">Existing applications</a></li>
-        <li class="links-list__item"><a href="#">Projects</a></li>
+        <li class="links-list__item"><a href="#">Your applications</a></li>
+        <li class="links-list__item"><a href="#">Your projects</a></li>
       </ul>
     </div><!-- .links -->
 
