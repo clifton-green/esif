@@ -73,7 +73,7 @@
               <li class="breadcrumbs__item"><a href="../dashboard.html">Dashboard</a></li>
               <li class="breadcrumbs__item"><a href="../call-list.html">View calls</a></li>
               <li class="breadcrumbs__item"><a href="../call-list.html">Call details</a></li>
-              <li class="breadcrumbs__item"><a href="../full-application.html">Application Overview</a></li>
+              <li class="breadcrumbs__item"><a href="../full-application.html">Application overview</a></li>
             
           </ol>
           
@@ -83,98 +83,83 @@
         
 
   <div class="two-thirds">
-	<div class="page-header__wrapper">
-            <h3 class="page-header__subtitle">Step 2</h3>
-            <h2>Delivery partner details</h2>
+    <div class="page-header__wrapper">
+      <h3 class="page-header__subtitle">Step 2</h3>
+      <h2>Delivery partners</h2>
     </div><!-- .page-header__wrapper -->
-    
     <div class="form-group">
-    
-		    <fieldset class="inline">
-	    	    <p class="form-label">Will the project involve delivery partners?</p>
-		      	<legend class="visuallyhidden">Will the project involve delivery partners?</legend>
-				<div class="form-group">
-					<label class="block-label" data-target="example-dp-no" for="radio-indent-1">
-					<input id="radio-indent-1" type="radio" name="radio-indent-group" value="Yes">Yes</label>
-					<label class="block-label" for="radio-indent-2">
-					<input id="radio-indent-2" type="radio" name="radio-indent-group" value="No">No</label>
-					<div class="panel-indent js-hidden" id="example-dp-no">
-						<div class="form-group">
-							<label class="form-label" for="organisation-name" style="display: block">Organisation name</label>
-							<input class="form-control" id="organisation-name" name="organisation-name" type="text">
-						</div>
-						<div class="form-group">
-						    <label class="form-label" for="county-1" style="display: block">Contact</label>
-						    <input class="form-control" id="fcounty-1" name="county-1" type="text">
-						</div>
-						<div class="form-group">
-							<p class="form-label">Do you have a memorandum of understanding?</p>
-					      	<div class="form-group">
-								    <label class="block-label" for="radio-inline-1">
-									<input id="radio-inline-1" type="radio" name="radio-inline-group" value="Yes">Yes</label>
-									<label class="block-label" for="radio-inline-2">
-									<input id="radio-inline-2" type="radio" name="radio-inline-group" value="No">No</label>
-									<p><a href="#" class="add-another">+ Add partner</a></p>
-					      	</div>
-						</div>
-        			</div>
- 		<table width="100%" border="0" bordercolor="#cccccc" cellpadding="5" cellspacing="5" class="tabletop">
-			<tr> 
-			     <th width="45%">Organisation Name</th>
-			     <th width="30%">Contact name</th>
-			     <th width="15%">M.o.U.</th>
-			     <th width="10%"></th>
-	 		</tr>
-			 <tr>
-			     <td>Department for Communities and Local Government</td>
-			     <td>Martin Price</td>
-			     <td>Yes</td>
-			     <td class="remove" alt="remove"></td>
-			 </tr>
-			 <tr>
-			     <td>Department of Work and Pensions</td>
-			     <td>Mark Hill</td>
-			     <td>Yes</td>
-			     <td class="remove" alt="remove"></td>
-			 </tr>
-		</table>
-        		</div>
-		
-        	</fieldset>
-				
-				
-		        <div class="form-group">
-				    <label class="form-label" for="business-partners-identified">How did you identify your delivery partners?</label>
-				    <textarea class="form-nocontrol" id="business-partners-identified" name="business-partners-identified" type="text"></textarea>
-				</div>
-				<div class="form-group">
-					<label class="form-label" for="partner-compliance">How will you ensure your partners comply with defrayal of expenditure requirements?</label>
-					<textarea class="form-nocontrol" id="partner-compliance" name="partner-compliance" type="text"></textarea>
-				</div>
-		    
-				
-				
-				
-				
-	    	
-	    <!-- End of Applicant details -->
-	    
-	    </form>
-	    <!-- End of form -->
-	    
-	    
-		<div class="form-steps">
-	        <div class="form-steps">
-	        <a href="../full-application.html" rel="external" data-transaction-slug="#" class="button">Save and quit</a>
-	        <a href="3_project.html" rel="external" data-transaction-slug="#" class="button disabled">Save and continue</a>
-	        <p>
-		    	<a href="../full-application.html" id="backButton" class="link-back">Back</a>
-			</p> 
-	    	</div>
-	    </div>
-    
+      <p class="form-label">Will the project have delivery partners?</p>
+      <legend class="visuallyhidden">Will the project have delivery partners?</legend>
+      <fieldset class="inline">
+        <div class="form-group">
+          <label class="block-label" data-target="example-dp-no" for="radio-indent-1">
+          <input id="radio-indent-1" type="radio" name="radio-indent-group" value="Yes">Yes</label>
+          <label class="block-label" for="radio-indent-2">
+          <input id="radio-indent-2" type="radio" name="radio-indent-group" value="No">No</label>
+        </div>
+        <div class="js-hidden" id="example-dp-no">
+          <div class="panel-indent">
+            <h3>Add delivery partner details</h3>
+            <div class="form-group">
+              <label class="form-label" for="organisation-name" style="display: block">Organisation name</label>
+              <input class="form-control" id="organisation-name" name="organisation-name" type="text">
+            </div>
+            <div class="form-group">
+                <label class="form-label" for="county-1" style="display: block">Contact</label>
+                <input class="form-control" id="fcounty-1" name="county-1" type="text">
+            </div>
+            <div class="form-group">
+              <p class="form-label">Do you have a memorandum of understanding?</p>
+              <div class="form-group">
+                <label class="block-label" for="radio-inline-1">
+                <input id="radio-inline-1" type="radio" name="radio-inline-group" value="Yes">Yes</label>
+                <label class="block-label" for="radio-inline-2"><input id="radio-inline-2" type="radio" name="radio-inline-group" value="No">No</label>
+                <p><a href="#" class="add-another">+ Add partner</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="form-group">
+            <h3>Your delivery partners</h3>
+            <table width="100%" border="0" bordercolor="#cccccc" cellpadding="5" cellspacing="5" class="tabletop">
+              <tr> 
+                <th width="45%">Delivery partner name</th>
+                <th width="30%">Contact name</th>
+                <th width="15%">MoU</th>
+                <th width="10%"></th>
+              </tr>
+              <tr>
+                <td>Department for Communities and Local Government</td>
+                <td>Martin Price</td>
+                <td>Yes</td>
+                <td class="remove" alt="remove"></td>
+              </tr>
+              <tr>
+                <td>Department of Work and Pensions</td>
+                <td>Mark Hill</td>
+                <td>Yes</td>
+                <td class="remove" alt="remove"></td>
+              </tr>
+            </table> 
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="business-partners-identified">How did you identify your delivery partners?</label>
+            <textarea class="form-nocontrol" id="business-partners-identified" name="business-partners-identified" type="text"></textarea>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="partner-compliance">How will you ensure your partners comply with defrayal of expenditure requirements?</label>
+            <textarea class="form-nocontrol" id="partner-compliance" name="partner-compliance" type="text"></textarea>
+          </div>
+        </div>
+      </fieldset>
+
+      <div class="form-steps">
+          <div class="form-steps">
+          <a href="../full-application.html" rel="external" data-transaction-slug="#" class="button">Save and quit</a>
+          <a href="3_project.html" rel="external" data-transaction-slug="#" class="button disabled">Save and continue</a>
+          <p><a href="../full-application.html" id="backButton" class="link-back">Back</a></p> 
+          </div>
+      </div>
     </div>
-    
   </div><!-- .two-thirds -->
 
 
