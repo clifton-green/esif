@@ -73,7 +73,7 @@
               <li class="breadcrumbs__item"><a href="../dashboard.html">Dashboard</a></li>
               <li class="breadcrumbs__item"><a href="../call-list.html">View calls</a></li>
               <li class="breadcrumbs__item"><a href="../call-list.html">Call details</a></li>
-              <li class="breadcrumbs__item"><a href="../full-application.html">Application Overview</a></li>
+              <li class="breadcrumbs__item"><a href="../full-application.html">Application overview</a></li>
             
           </ol>
           
@@ -104,13 +104,13 @@
           <textarea class="form-nocontrol" id="budget-spend" name="budget-spend" type="text"></textarea>
         </div>
         <div class="form-group">
-          <label class="form-label" for="estimation-certainty">What's the level of certainty for the project costs you've estimated?</label>
+          <label class="form-label" for="estimation-certainty">How accurate is your cost estimate?</label>
           <textarea class="form-nocontrol" id="estimation-certainty" name="estimation-certainty" type="text"></textarea>
         </div>
           
 			<fieldset class="inline">
-	    	    <p class="form-label">Will irrecoverable VAT be claimed?</p>
-		      	<legend class="visuallyhidden">Will irrecoverable VAT be claimed?</legend>
+	    	    <p class="form-label">Do you intend to reclaim irrecoverable VAT?</p>
+		      	<legend class="visuallyhidden">Do you intend to reclaim irrecoverable VAT?</legend>
 				
 					<label class="block-label" for="radio-vat-1">
 					<input id="radio-vat-1" type="radio" name="radio-vat-group" value="Yes">Yes</label>
@@ -120,13 +120,44 @@
         	</fieldset>
         	
         <div class="form-group">
-          <label class="form-label" for="add-value">Who is providing your match funding and is it confirmed? If not, when will it be confirmed?</label>
+          <label class="form-label" for="add-value">Who's providing match funding for the project?</label>
           <textarea class="form-nocontrol" id="add-value" name="add-value" type="text"></textarea>
         </div>
-          
-			<fieldset class="inline">
-	    	    <p class="form-label">Will the project generate income?</p>
-		      	<legend class="visuallyhidden">Will the project generate income?</legend>
+            <div class="form-group">
+              <label class="form-label" for="potential-beneficiary">Is match funding  confirmed?</label> 
+              <fieldset class="inline">
+                <label class="block-label" for="block-exemption-1">
+                  <input id="block-exemption-1" type="radio" name="block-exemption-group" value="Yes">
+                  Yes
+                </label>
+                <label class="block-label" for="block-exemption-2"  data-target="confirmed-no">
+                  <input id="block-exemption-2" type="radio" name="block-exemption-group" value="No">
+                  No
+                </label>
+              </fieldset>
+            <div class="js-hidden panel-indent" id="confirmed-no">
+              <label class="form-label" for="proposed-start-date" id="header">Expected match funding confirmation date</label>
+              <fieldset>
+                <!-- <p>For example, 08 4 2014.</p> -->
+                <div class="form-date">            
+                  <div class="form-group form-group-day">
+                    <label for="dob-day">Day</label>
+                    <input type="text" class="form-control" id="dob-day" name="work-dob-day">
+                  </div>
+                  <div class="form-group form-group-month">
+                    <label for="dob-month">Month</label>
+                    <input type="text" class="form-control" id="dob-month" name="work-dob-month">
+                  </div>
+                  <div class="form-group form-group-year">
+                    <label for="dob-year">Year</label>
+                    <input type="text" class="form-control" id="dob-year" name="work-dob-year">
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+            <fieldset class="inline">
+	    	    <p class="form-label">Do you expect the project to generate income?</p>
+		      	<legend class="visuallyhidden">Do you expect the project to generate income?</legend>
 				
 					<label class="block-label" for="radio-income-1">
 					<input id="radio-income-1" type="radio" name="radio-income-group" value="Yes">Yes</label>
@@ -134,7 +165,7 @@
 					<input id="radio-income-2" type="radio" name="radio-income-group" value="No">No</label>
         		
         	</fieldset>
-        	
+        	<!-- is this a financial question? Seems odd here? Moved to about the project
         	<fieldset class="inline">
 	    	    <p class="form-label">Does the project span several LEP area projects?</p>
 		      	<legend class="visuallyhidden">Does the project span several LEP area projects?</legend>
@@ -143,25 +174,20 @@
 					<input id="radio-lep-1" type="radio" name="radio-lep-group" value="Yes">Yes</label>
 					<label class="block-label" for="radio-lep-2">
 					<input id="radio-lep-2" type="radio" name="radio-lep-group" value="No">No</label>
-        		
         	</fieldset>
-				
-				
-				
-	    	
-	    
-	    
+           -->
+	       </div>
 	    </form>
 	    <!-- End of form -->
 	    
 	    
-		<div class="form-steps">
+		    <div class="form-steps">
 	        <div class="form-steps">
 	        <a href="../full-application.html" rel="external" data-transaction-slug="#" class="button">Save and quit</a>
-	        <a href="5_financialb.html" rel="external" data-transaction-slug="#" class="button disabled">Save and continue</a>
+	        <a href="5_financialb.html" rel="external" data-transaction-slug="#" class="button">Save and continue</a>
 	        <p>
 		    	<a href="../full-application.html" id="backButton" class="link-back">Back</a>
-			</p> 
+			   </p> 
 	    	</div>
 	    </div>
     
