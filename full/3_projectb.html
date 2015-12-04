@@ -73,7 +73,7 @@
               <li class="breadcrumbs__item"><a href="../dashboard.html">Dashboard</a></li>
               <li class="breadcrumbs__item"><a href="../call-list.html">View calls</a></li>
               <li class="breadcrumbs__item"><a href="../call-list.html">Call details</a></li>
-              <li class="breadcrumbs__item"><a href="../full-application.html">Application Overview</a></li>
+              <li class="breadcrumbs__item"><a href="../full-application.html">Application overview</a></li>
             
           </ol>
           
@@ -86,7 +86,7 @@
 	  
 	  <div class="page-header__wrapper">
             <h3 class="page-header__subtitle">Step 3</h3>
-            <h2>About your project</h2>
+            <h2>About your project - key dates</h2>
             
           </div><!-- .page-header__wrapper -->
     
@@ -98,59 +98,86 @@
 				    <textarea class="form-nocontrol" id="business-case" name="business-case" type="text"></textarea>
 				</div>
 				-->
-				<div class="form-group">
-					<label class="form-label" for="summary-project">Summary of the project</label>
-					<textarea class="form-nocontrol" id="summary-project" name="summary-project" type="text"></textarea>
-				</div>
-							    <div class="form-group">
-				    <label class="form-label" for="business-case">What are the project’s objectives?</label>
-				    <textarea class="form-nocontrol" id="business-case" name="business-case" type="text"></textarea>
-				</div>
-
-				<div class="form-group">
-					<label class="form-label" for="activities-control">What  are the project's main activities?</label>
-					<textarea class="form-nocontrol" id="activities-control" name="activities-control" type="text"></textarea>
-				</div>
-				<div class="form-group">
-					<label class="form-label" for="target-beneficiaries">Who will benefit from the project?</label>
-					<textarea class="form-nocontrol" id="target-beneficiaries" name="target-beneficiaries" type="text"></textarea>
-				</div>
-				<div class="form-group">
-					<label class="form-label" for="activities-location">Where's the project located?</label>
-					<textarea class="form-nocontrol" id="activities-location" name="activities-location" type="text"></textarea>
-				</div>
-				<div class="form-group">
-					<label class="form-label" for="summary-project">How will  the project be evaluated?</label>
-					<textarea class="form-nocontrol" id="summary-project" name="summary-project" type="text"></textarea>
-				</div>
-				<div class="form-group">
-					<label class="form-label" for="conditions-explanation">List any conditions made in your outline application endorsement and describe how you've met it.
-				</div>
-				
-				<div class="form-group">
+      <div class="form-group">
+          <label class="form-label" for="proposed-start-date" id="header">Project start date</label>
+        <fieldset class="form-group">
+                <!-- <p>For example, 08 4 2014.</p> -->
+                <div class="form-date">            
+                  <div class="form-group form-group-day">
+                    <label for="dob-day">Day</label>
+                    <input type="text" class="form-control" id="dob-day" name="work-dob-day">
+                  </div>
+                  <div class="form-group form-group-month">
+                    <label for="dob-month">Month</label>
+                    <input type="text" class="form-control" id="dob-month" name="work-dob-month">
+                  </div>
+                  <div class="form-group form-group-year">
+                    <label for="dob-year">Year</label>
+                    <input type="text" class="form-control" id="dob-year" name="work-dob-year">
+                  </div>
+                </div>
+              </fieldset>
+      </div>
+      <div class="form-group">
+          <label class="form-label" for="proposed-completion-date" id="header">Financial completion date</label>
+        <fieldset class="form-group">
+                <!-- <p>For example, 08 4 2014.</p> -->
+                <div class="form-date">            
+                  <div class="form-group form-group-day">
+                    <label for="dob-day">Day</label>
+                    <input type="text" class="form-control" id="dob-day" name="work-dob-day">
+                  </div>
+                  <div class="form-group form-group-month">
+                    <label for="dob-month">Month</label>
+                    <input type="text" class="form-control" id="dob-month" name="work-dob-month">
+                  </div>
+                  <div class="form-group form-group-year">
+                    <label for="dob-year">Year</label>
+                    <input type="text" class="form-control" id="dob-year" name="work-dob-year">
+                  </div>
+                </div>
+              </fieldset>
+      </div>
+      <div class="form-group">
+          <label class="form-label" for="proposed-practical-date" id="header">Project end date</label>
+        <fieldset class="form-group">
+                <!-- <p>For example, 08 4 2014.</p> -->
+                <div class="form-date">            
+                  <div class="form-group form-group-day">
+                    <label for="dob-day">Day</label>
+                    <input type="text" class="form-control" id="dob-day" name="work-dob-day">
+                  </div>
+                  <div class="form-group form-group-month">
+                    <label for="dob-month">Month</label>
+                    <input type="text" class="form-control" id="dob-month" name="work-dob-month">
+                  </div>
+                  <div class="form-group form-group-year">
+                    <label for="dob-year">Year</label>
+                    <input type="text" class="form-control" id="dob-year" name="work-dob-year">
+                  </div>
+                </div>
+              </fieldset>
+      </div>
+ 
+        <p class="form-label" id="header">List any project milestones and dates they'll be met.</p>
+        
+        <div class="form-group">
           <table width="100%" border="1" bordercolor="#cccccc" cellpadding="5" cellspacing="5">
     
             <tr> 
-                 <th>Condition</th>
-                 <th>How it's been met</th>
+                 <th>Milestone description</th>
+                 <th>Date</th>
                  
             </tr>
              <tr>
-                 <td class="condition">Condition 1</td>
                  <td><input class="form-nocontrol" id="summary-condition" name="summary-condition" type="text"></td>
-            </tr>
-            <tr>
-                 <td class="condition">Condition 2</td>
-                 <td><input class="form-nocontrol" id="summary-condition" name="summary-condition" type="text"></td>
-            </tr>
-            <tr>
-                 <td class="condition">Condition</td>
                  <td><input class="form-nocontrol" id="summary-condition" name="summary-condition" type="text"></td>
             </tr>
           </table>
-					<p class="add-another"><a href='#'>+ add another</a></p>
-				</div>	 
-	    	
+          <div class="form-group">  
+          <p><a href="#" class="add-another">Add another</a></p>
+          </div>
+        </div>
 
 				<!--
 				<div class="form-group">
@@ -173,7 +200,7 @@
 		<div class="form-steps">
 	        <div class="form-steps">
 	        <a href="../full-application.html" rel="external" data-transaction-slug="#" class="button">Save and quit</a>
-	        <a href="4_strategy.html" rel="external" data-transaction-slug="#" class="button disabled">Save and continue</a>
+	        <a href="4_strategy.html" rel="external" data-transaction-slug="#" class="button">Save and continue</a>
 	        <p>
 		    	<a href="../full-application.html" id="backButton" class="link-back">Back</a>
 			</p> 

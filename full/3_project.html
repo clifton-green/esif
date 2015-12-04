@@ -73,7 +73,7 @@
               <li class="breadcrumbs__item"><a href="../dashboard.html">Dashboard</a></li>
               <li class="breadcrumbs__item"><a href="../call-list.html">View calls</a></li>
               <li class="breadcrumbs__item"><a href="../call-list.html">Call details</a></li>
-              <li class="breadcrumbs__item"><a href="../full-application.html">Application Overview</a></li>
+              <li class="breadcrumbs__item"><a href="../full-application.html">Application overview</a></li>
             
           </ol>
           
@@ -97,89 +97,79 @@
 			    <label class="form-label" for="project-name">Project name</label>
 			    <input class="form-nocontrol" id="project-name" name="project-name" type="text">
     	    </div>
-			<div class="form-group">
-			    <label class="form-label" for="proposed-start-date" id="header">Project start date</label>
- 				<fieldset class="form-group">
-                <!-- <p>For example, 08 4 2014.</p> -->
-                <div class="form-date">            
-                  <div class="form-group form-group-day">
-                    <label for="dob-day">Day</label>
-                    <input type="text" class="form-control" id="dob-day" name="work-dob-day">
-                  </div>
-                  <div class="form-group form-group-month">
-                    <label for="dob-month">Month</label>
-                    <input type="text" class="form-control" id="dob-month" name="work-dob-month">
-                  </div>
-                  <div class="form-group form-group-year">
-                    <label for="dob-year">Year</label>
-                    <input type="text" class="form-control" id="dob-year" name="work-dob-year">
-                  </div>
-                </div>
+                  <div class="form-group">
+          <label class="form-label" for="summary-project">Summary of the project</label>
+          <textarea class="form-nocontrol" id="summary-project" name="summary-project" type="text"></textarea>
+        </div>
+        <!-- how are these two questions not covered by a summary
+        <div class="form-group">
+            <label class="form-label" for="business-case">What are the project’s objectives?</label>
+            <textarea class="form-nocontrol" id="business-case" name="business-case" type="text"></textarea>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="activities-control">What are the project's main activities?</label>
+          <textarea class="form-nocontrol" id="activities-control" name="activities-control" type="text"></textarea>
+        </div>
+        -->
+        <div class="form-group">
+          <label class="form-label" for="target-beneficiaries">Who will benefit from the project?</label>
+          <textarea class="form-nocontrol" id="target-beneficiaries" name="target-beneficiaries" type="text"></textarea>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="activities-location">Where's the project located?</label>
+          <textarea class="form-nocontrol" id="activities-location" name="activities-location" type="text"></textarea>
+        </div>
+        <div class="form-group">
+          <fieldset class="inline">
+            <p class="form-label">Does the project cover more than one LEP area project?</p>
+            <legend class="visuallyhidden">Does the project cover more than one LEP area projects?</legend>
+          <label class="block-label" for="radio-lep-1">
+          <input id="radio-lep-1" type="radio" name="radio-lep-group" value="Yes">Yes</label>
+          <label class="block-label" for="radio-lep-2">
+          <input id="radio-lep-2" type="radio" name="radio-lep-group" value="No">No</label>
+          </fieldset>
+        </div>
+        <div class="form-group">
+              <label class="form-label" for="potential-beneficiary">Did the approval of your outline application contain any conditions or recommendations?</label> 
+              <fieldset class="inline">
+                <label class="block-label" for="block-exemption-1"  data-target="condition-no">
+                  <input id="block-exemption-1" type="radio" name="block-exemption-group" value="Yes">
+                  Yes
+                </label>
+                <label class="block-label" for="block-exemption-2">
+                  <input id="block-exemption-2" type="radio" name="block-exemption-group" value="No">
+                  No
+                </label>
               </fieldset>
-			</div>
-			<div class="form-group">
-			    <label class="form-label" for="proposed-completion-date" id="header">Financial completion date</label>
- 				<fieldset class="form-group">
-                <!-- <p>For example, 08 4 2014.</p> -->
-                <div class="form-date">            
-                  <div class="form-group form-group-day">
-                    <label for="dob-day">Day</label>
-                    <input type="text" class="form-control" id="dob-day" name="work-dob-day">
-                  </div>
-                  <div class="form-group form-group-month">
-                    <label for="dob-month">Month</label>
-                    <input type="text" class="form-control" id="dob-month" name="work-dob-month">
-                  </div>
-                  <div class="form-group form-group-year">
-                    <label for="dob-year">Year</label>
-                    <input type="text" class="form-control" id="dob-year" name="work-dob-year">
-                  </div>
-                </div>
+            <div class="js-hidden panel-indent" id="condition-no">
+              <label class="form-label" for="proposed-start-date" id="header">List each condition and how it's been</label>
+              <fieldset>
+              <div class="form-group">
+                <table width="100%" border="1" bordercolor="#cccccc" cellpadding="5" cellspacing="5">
+          
+                  <tr> 
+                       <th>Condition</th>
+                       <th>How it's been met</th>
+                       
+                  </tr>
+                   <tr>
+                       <td class="condition">Condition 1</td>
+                       <td><input class="form-nocontrol" id="summary-condition" name="summary-condition" type="text"></td>
+                  </tr>
+                  <tr>
+                       <td class="condition">Condition 2</td>
+                       <td><input class="form-nocontrol" id="summary-condition" name="summary-condition" type="text"></td>
+                  </tr>
+                  <tr>
+                       <td class="condition">Condition...</td>
+                       <td><input class="form-nocontrol" id="summary-condition" name="summary-condition" type="text"></td>
+                  </tr>
+                </table>
+                <p class="add-another"><a href='#'>+ add another</a></p>
+              </div>   
               </fieldset>
-			</div>
-			<div class="form-group">
-			    <label class="form-label" for="proposed-practical-date" id="header">Project end date</label>
- 				<fieldset class="form-group">
-                <!-- <p>For example, 08 4 2014.</p> -->
-                <div class="form-date">            
-                  <div class="form-group form-group-day">
-                    <label for="dob-day">Day</label>
-                    <input type="text" class="form-control" id="dob-day" name="work-dob-day">
-                  </div>
-                  <div class="form-group form-group-month">
-                    <label for="dob-month">Month</label>
-                    <input type="text" class="form-control" id="dob-month" name="work-dob-month">
-                  </div>
-                  <div class="form-group form-group-year">
-                    <label for="dob-year">Year</label>
-                    <input type="text" class="form-control" id="dob-year" name="work-dob-year">
-                  </div>
-                </div>
-              </fieldset>
-			</div>
-				
-
- 
-				<p class="form-label" id="header">List each project milestone:</p>
-				
-				<div class="form-group">
-					<table width="100%" border="1" bordercolor="#cccccc" cellpadding="5" cellspacing="5">
-		
-						<tr> 
-						     <th>Milestone description</th>
-						     <th>Anticipated date of milestone</th>
-						     
-				 		</tr>
-						 <tr>
-						     <td><input class="form-nocontrol" id="summary-condition" name="summary-condition" type="text"></td>
-						     <td><input class="form-nocontrol" id="summary-condition" name="summary-condition" type="text"></td>
-						</tr>
-					</table>
-				<div class="form-group">	
-				<p><a href="#" class="add-another">Add another</a></p>
-				</div>
-				</div>
-
+            </div>
+          </div>
  		<!--
 				
 		<h3>Confidential information</h3>
@@ -202,7 +192,7 @@
 		<div class="form-steps">
 	        <div class="form-steps">
 	        <a href="../full-application.html" rel="external" data-transaction-slug="#" class="button">Save and quit</a>
-	        <a href="3_projectb.html" rel="external" data-transaction-slug="#" class="button disabled">Save and continue</a>
+          <a href="3_projectb.html" rel="external" data-transaction-slug="#" class="button">Save and continue</a>
 	        <p>
 		    	<a href="../full-application.html" id="backButton" class="link-back">Back</a>
 			</p> 
