@@ -10,7 +10,7 @@ module.exports = function(grunt) {
             },
             prototypeheroku: {
                 options: {
-                    remote: 'git@heroku.com:henrys-new-site.git',
+                    remote: 'git@heroku.com:name-of-heroku-app.git',
                     branch: 'master'
                 }
             },
