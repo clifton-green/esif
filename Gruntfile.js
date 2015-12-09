@@ -10,7 +10,7 @@ module.exports = function(grunt) {
             },
             prototypeheroku: {
                 options: {
-                    remote: 'git@heroku.com:esif.git',
+                    remote: 'git@heroku.com:esif-prototype.git',
                     branch: 'master'
                 }
             },
