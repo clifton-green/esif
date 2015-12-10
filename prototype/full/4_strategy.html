@@ -110,13 +110,34 @@
               <input id="radio-inline-4" type="radio" name="radio-inline-group" value="No">No</label>
           </div>
         </div>  	    
-          
+        <div>
+            <p class="form-label">Will the project have environmental benefits?</p>
+          <fieldset class="inline">
+            <legend class="visuallyhidden">Will the project have environmental benefits?</legend>
+            <div class='form-group'>
+              <label class="block-label" data-target="benefit-yes" for="radio-indent-1">
+              <input id="radio-indent-1" type="radio" name="radio-indent-group" value="Yes">Yes</label>
+              <label class="block-label" data-target="benefit-no" for="radio-indent-2">
+              <input id="radio-indent-2" type="radio" name="radio-indent-group" value="No">No</label>
+              <div class="panel-indent js-hidden" id="benefit-yes">
+                  <label class="form-label" for="further-info" style="display: block">Give details.</label>
+                  <textarea class="form-nocontrol" id="further-info" name="further-info" type="text"></textarea>
+              </div>
+              <div class="panel-indent js-hidden" id="benefit-no">
+                  <label class="form-label" for="further-info" style="display: block">How will you make sure the project's environmental impact is as small as possible?</label>
+                  <textarea class="form-nocontrol" id="further-info" name="further-info" type="text"></textarea>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        <!--
 				<div class="form-group">
 					<label class="form-label" for="maximise-environmental">How will the project benefit the environment or reduce any environmental impact?</label>
 					<textarea class="form-nocontrol" id="maximise-environmental" name="maximise-environmental" type="text"></textarea>
 				</div>
+      -->
 				<div class="form-group">
-					<label class="form-label" for="equality-diversity">How does the project take equality into account?
+					<label class="form-label" for="equality-diversity">How do you plan to ensure equality across the project?
 						<span class="form-hint">Include issues of sex, gender, race and religion if appropriate.</span>
 					</label>
 					<textarea class="form-nocontrol" id="equality-diversity" name="equality-diversity" type="text"></textarea>
