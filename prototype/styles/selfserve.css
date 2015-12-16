@@ -1386,8 +1386,8 @@ textarea,
 .terms--box {
     padding: 0.5em 0.75em;
     background-color: #FFFFFF;
-    border: 1px solid #f8f8f8;
-    max-width: 560px;
+    border: 2px solid #6f777b;
+    width: 100%;
 }
 
 input[type="radio"],

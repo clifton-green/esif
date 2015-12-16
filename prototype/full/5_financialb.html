@@ -14,6 +14,49 @@
     <link href="../styles/selfserve.css" media="all" rel="stylesheet" type="text/css">
     <link href="../styles/elements.css" media="all" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="../js/selfserve.js"></script>
+    <script type="text/javascript" src="../js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.select-to-autocomplete.js"></script>
+	<script>
+	  (function($){
+	    $(function(){
+	      $('select').selectToAutocomplete();
+	      $('form').submit(function(){
+	        alert( $(this).serialize() );
+	        return false;
+	      });
+	    });
+	  })(jQuery);
+	</script>
+	
+	<style>
+	  body {
+	    font-family: "nta", Arial, sans-serif;
+	    font-size: 18px;
+	  }
+    .ui-autocomplete {
+      padding: 0;
+      list-style: none;
+      background-color: #fff;
+      width: 218px;
+      border: 2px solid #6f777b;
+      max-height: 350px;
+      overflow-x: hidden;
+    }
+    .ui-autocomplete .ui-menu-item {
+      border-top: 2px solid #6f777b;
+      display: block;
+      padding: 4px 6px;
+      color: #0b0c0c;
+      cursor: pointer;
+    }
+    .ui-autocomplete .ui-menu-item:first-child {
+      border-top: none;
+    }
+    .ui-autocomplete .ui-menu-item.ui-state-focus {
+      background-color: #2E8ACA;
+      color: #0b0c0c;
+    }
+	</style>
     <!--[if IE]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -92,28 +135,38 @@
     
     <div class="form-group">
     	<legend>Add your project costs</legend>
+
+    	
+    	
+    	
+    	
+    
           <label class="form-label" for="cost-category">Cost category</label>
-          <select class="form-nocontrol" id="cost-category" name="cost-category" type="text">
-          	<option value="">Select</option>
-          	<option value="cap-building-aquisition">Building acquisition</option>
-		  	<option value="cap-building-construction">Building and construction</option>
-		  	<option value="cap-equipment">Equipment</option>
-		  	<option value="cap-fees">Fees</option>
-		  	<option value="cap-land-aquisition">Land acquisition</option>
-		  	<option value="cap-plant-machinery">Plant and machinery</option>
-		  	<option value="cap-premises"> Premises</option>
-		  	<option value="cap-other">Other capital costs</option>
-		  	
-		  	<option value="rev-consultancy">Consultancy</option>
-		  	<option value="rev-marketing">Marketing</option>
-		  	<option value="rev-office-costs">Office costs</option>
-		  	<option value="rev-overheads">Overheads</option>
-		  	<option value="rev-professional-fees">Professional fees</option>
-		  	<option value="rev-rent">Rent</option>
-		  	<option value="rev-salaries">Salaries</option>
-		  	<option value="rev-flat-rate-indirect-costs">Flat rate indirect costs</option>    
-		  	<option value="rev-other-revenue">Other revenue costs</option>      
+	      <select name="cost-category" id="cost-category" autofocus="autofocus" autocorrect="off" autocomplete="off" placeholder="Type your category" style="color: #0b0c0c;">
+		      
+          	<option value="" selected="selected">Cost Category</option>
+          	<option value="Building acquisition- Capital" data-alternative-spellings="BA Acquisition Building">Capital - Building acquisition</option>
+          	<option value="Building and construction- Capital" data-alternative-spellings="BC Construction">Capital - Building and construction</option>
+          	<option value="Equipment- Capital" data-alternative-spellings="E Equipment">Capital - Equipment</option>
+          	<option value="Fees- Capital" data-alternative-spellings="F Fees">Capital - Fees</option>
+          	<option value="Land acquisition- Capital" data-alternative-spellings="LA Acquisition">Capital - Land acquisition</option>
+          	<option value="Other capital- Capital" data-alternative-spellings="OC Other Capital">Capital - Other capital</option>
+          	<option value="Plant and machinery- Capital" data-alternative-spellings="PM Plant Machinery">Capital - Plant and machinery</option>
+          	<option value="Premises- Capital" data-alternative-spellings="P Prem">Capital - Premises</option>
+          	
+          	<option value="Consultancy - Revenue" data-alternative-spellings="CY Con">Revenue - Consultancy</option>
+          	<option value="Marketing - Revenue" data-alternative-spellings="MK Marketing">Revenue - Marketing</option>
+          	<option value="Office costs - Revenue" data-alternative-spellings="OC Office Costs">Revenue - Office costs</option>
+          	<option value="Overheads - Revenue" data-alternative-spellings="">Revenue - Overheads</option>
+          	<option value="Professional fees - Revenue" data-alternative-spellings="Professional Fees Fees">Revenue - Professional fees</option>
+          	<option value="Rent - Revenue" data-alternative-spellings="R Rent">Revenue - Rent</option>
+          	<option value="Salaries - Revenue" data-alternative-spellings="Salary Income S">Revenue - Salaries</option>
+          	<option value="Flat rate indirect costs - Revenue" data-alternative-spellings="Indirect Costs Flatrate FlatRate">Revenue - Flat rate indirect costs</option>
+          	     
           </select>
+    </div>
+          
+    <div class="form-group">      
           <label class="form-label bold-medium" for="cost-category-total">Value:</label>
           <input class="form-nocontrol" id="cost-category-total" name="cost-category-total" type="number" value="0.00">
         </div>
@@ -129,29 +182,32 @@
 	        
         <div class="form-group">
           <label class="form-label" for="funding-type">Funding source</label>
-          <select class="form-nocontrol" id="funding-type" name="funding-type" type="text">
-          	<option value="">Select</option>
-          	<option value="local-authority-funds">Local authority funds</option>
-		  	<option value="university-funds">University funds</option>
-		  	<option value="bank-loan">Bank loan</option>
-		  	<option value="private-sector-reserves">Private sector reserves</option>
-		  	<option value="public-sector-reserves">Public sector reserves</option>
-		  	<option value="regional-growth-fund">Regional Growth fund</option>
-		  	<option value="growth-deal">Growth deal</option>
-		  	<option value="project-incomes">Project income</option>
-		  	<option value="sme-contributions">Small Medium Enterprise contribution</option>
-		  	<option value="big-lottery-fund">Big Lottery fund</option>
-		  	<option value="european-investment-bank">European Investment Bank</option>
-		  	<option value="private-sector-investment">Private sector investment</option>
-		  	<option value="health-service-funds">Health Service funds</option>
-		  	<option value="renewable-energy-grants">Renewable Energy grant</option>
-		  	<option value="renewable-energy-subsidy">Renewable Energy subsidy</option>
-		  	<option value="third-sector-funds">Third sector funds</option>
-		  	<option value="ndpb-funds">NDPB funds</option>
-		  	<option value="central-government-funds">Central government funds</option>
-		  	<option value="volunteer-time">Volunteer time (in kind contribution)</option>
-		  	<option value="other">Other</option>
+	      <select name="funding-type" id="funding-type" autofocus="autofocus" autocorrect="off" autocomplete="off" placeholder="Select your funding type" style="color: #0b0c0c;">
+		      
+          	<option value="" selected="selected">Funding Type</option>
+          	<option value="Local Authority Funds" data-alternative-spellings="LAF Local Authority Fund">Local Authority Funds</option>
+          	<option value="University Funds" data-alternative-spellings="U Universty Fund">University Funds</option>
+          	<option value="Bank Loan" data-alternative-spellings="BL Bank Loan">Bank Loan</option>
+          	<option value="Private Sector Reserves" data-alternative-spellings="PSR Sector Private Reserve">Private Sector Reserves</option>
+          	<option value="Public Sector Reserves" data-alternative-spellings="PSR Reserves Public Sector">Public Sector Reserves</option>
+          	<option value="Regional Growth Fund" data-alternative-spellings="RGF">Regional Growth Fund</option>
+          	<option value="Growth Deal" data-alternative-spellings="GD Growth Deal">Growth Deal</option>
+          	<option value="Project Income" data-alternative-spellings="PI Income">Project Income</option>
+          	<option value="Small Medium Enterprise Contribution" data-alternative-spellings="SME Enterprise">Small Medium Enterprise Contribution</option>
+          	<option value="Big Lottery Fund" data-alternative-spellings="BLF Big Lottery Fund">Big Lottery Fund</option>
+          	<option value="European Investment Bank" data-alternative-spellings="EI Investment Bank">European Investment Bank</option>
+          	<option value="Private Sector Investment" data-alternative-spellings="PSI">Private Sector Investment</option>
+          	<option value="Health Service Funds" data-alternative-spellings="HSF">Health Service Funds</option>
+          	<option value="Renewable Energy Grant" data-alternative-spellings="REG">Renewable Energy Grant</option>
+          	<option value="Renewable Energy Subsidy" data-alternative-spellings="RES">Renewable Energy Subsidy</option>
+          	<option value="Third Sector Funds" data-alternative-spellings="TSF">Third Sector Funds</option>
+          	<option value="NDPB Funds" data-alternative-spellings="ND">NDPB Funds</option>
+          	<option value="Central Government Funds" data-alternative-spellings="CGF">Central Government Funds</option>
+          	<option value="Volunteer Time (in kind contribution)" data-alternative-spellings="VT">Volunteer Time (in kind contribution)</option>
+          	<option value="Other" data-alternative-spellings="O">Other</option>
+    
           </select>
+          
         </div>
         <div class="form-group">
           <label class="form-label" for="funding-source">Name of funding source</label>
