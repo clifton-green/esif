@@ -1,0 +1,70 @@
+/**
+ * Setup
+ *
+ * Setting up the grid and primary styles
+ *
+ **/
+
+body {
+  ff-body();
+  background: url(images/paper.png) repeat;
+  font-size: $baseFont;
+}
+
+h1,
+h2,
+h3 {
+  ff-title();
+  color: $primary;
+  a {
+    color: currentColor;
+  }
+}
+
+a {
+  color: $linkColor;
+  &:hover {
+    $linkHoverColor;
+  }
+}
+
+p {
+  line-height: $lineHeight;
+  margin-bottom: $lineHeight;
+}
+
+.skip-link {
+  position: absolute;
+  left: -100%;
+  top: -100%;
+}
+
+.wrapper {
+  +above(l) {
+   center(1280px);
+  }
+
+  
+}
+
+footer {
+  cf();
+  col(1);
+  text-align: center
+  color: darken($primary-con, 90%);
+  padding: 1rem;
+  background-color: lighten($primary, 20%);
+  +above(m) {
+    text-align: left;
+  }
+  a {
+    color: currentColor;
+  }
+  .copy {
+    stack();
+    +above(m) {
+      unstack();
+      float:right;
+    }
+  }
+}

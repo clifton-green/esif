@@ -1,0 +1,23 @@
+//basic button
+.o-btn {
+  cursor: pointer;
+  padding: 1rem;
+  color: $secondary;
+  background-color: $secondary-con;
+  border-radius: $brad;
+  font-weight: bold
+  &:hover {
+    background-color: $secondary;
+    color: $secondary-con;
+    a {
+      // In case class is on parent
+      color: $secondary-con
+    }
+  }
+
+  a {
+    // In case class is on parent
+    color: $secondary
+  }
+
+}
