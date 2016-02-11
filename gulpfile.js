@@ -8,13 +8,14 @@ var gulp = require('gulp')
     ,cssnano = require('gulp-cssnano')
     ,eslint = require('gulp-eslint')
     ,del = require('del')
+    ,replace = require('gulp-replace')
     ,stylus = require('gulp-stylus')
     ,jeet = require('jeet')
     ,rupture = require('rupture')
-    ,cmq = require('gulp-combine-media-queries');
-
-
-var reload     = browserSync.reload;
+    ,extReplace = require('gulp-ext-replace')
+    ,cmq = require('gulp-combine-media-queries')
+    ,nunjucks = require('gulp-nunjucks-html')
+    ,reload     = browserSync.reload;
 
 // watch files for changes and reload
 gulp.task('serve', function() {
@@ -23,7 +24,7 @@ gulp.task('serve', function() {
         proxy: 'esif.localhost'
     });
     // Perform the site init
-    gulp.start('styles', 'scripts');
+    gulp.start('clean', 'processHTML', 'styles', 'libs', 'scripts');
 
     // Compile Stylus
     gulp.watch('src/styles/**/*.styl', ['styles']);
@@ -31,7 +32,8 @@ gulp.task('serve', function() {
     // Compile Standard JS
     gulp.watch('src/scripts/*.js', ['scripts']);
 
-    gulp.watch('*.html', { cwd: 'src/html' }, reload);
+    // Compile HTML
+    gulp.watch('src/html/**/*.html', ['processHTML']);
 });
 
 // Combine styles
@@ -40,11 +42,20 @@ gulp.task('styles', function() {
     gulp.src('src/styles/core.styl')
         .pipe(stylus({use: [jeet(), rupture()]}))
         .pipe(plumber())
-        .pipe(concat('style.css'))
+        .pipe(concat('core.min.css'))
         .pipe(cssnano())
-        .pipe(gulp.dest('dist/wp-content/themes/clarity'))
+        .pipe(gulp.dest('dist/static/css'))
         .pipe(reload({stream:true}))
         .pipe(notify({ message: 'Styles task complete' }));
+});
+
+// Move libraries
+gulp.task('libs', function() {
+    'use strict';
+    return gulp.src('node_modules/jquery/dist/jquery.min.js')
+        .pipe(plumber())
+        .pipe(gulp.dest('dist/static/libs'))
+        .pipe(notify({ message: 'Libraries task complete' }));
 });
 
 // Combine JS
@@ -54,33 +65,58 @@ gulp.task('scripts', function() {
         .pipe(plumber())
         .pipe(eslint())
         .pipe(concat('core.min.js'))
-        .pipe(gulp.dest('dist/wp-content/themes/clarity/scripts'))
+        .pipe(gulp.dest('dist/static/scripts'))
         .pipe(reload({stream:true}))
         .pipe(notify({ message: 'Scripts task complete' }));
+});
+
+// Process nunjucks html files (.nj.html)
+gulp.task('nunjucks', function() {
+  'use strict';
+  return gulp.src('src/html/pages/**/*.nunjucks')
+    .pipe(plumber())
+    .pipe(nunjucks({
+      searchPaths: ['src/html/templates']
+    }))
+    .pipe(extReplace('.html'))
+    .pipe(gulp.dest('dist'))
+    .pipe(notify({ message: 'Nunjucks task complete' }));
 });
 
 // combine media queries (Not done by default, should be called before deployment to production)
 gulp.task('cmq', function () {
     'use strict';
-    gulp.src('dist/wp-content/themes/clarity/*.css')
+    gulp.src('dist/static/*.css')
         .pipe(cmq({
             log: true
         }))
-        .pipe(gulp.dest('dist/wp-content/themes/clarity'));
+        .pipe(gulp.dest('dist/static'));
+});
+
+// Replaces variables in the master page (layout.nunjucks)
+gulp.task('processHTML', ['nunjucks'], function () {
+  'use strict';
+  gulp.src(['dist/**/*.html'])
+   .pipe(replace('$$site_name$$', 'esif'))
+   .pipe(replace('$$site_url$$', 'localhost:3000'))
+   .pipe(replace('$$site_desc$$', 'To be added'))
+   .pipe(gulp.dest('dist'))
+   .pipe(reload({stream:true}))
+   .pipe(notify({ message: 'HTML processing complete' }));
 });
 
 // Some extra things should happen before the site is deployed.
 // this task performs those subtasks.
 gulp.task('deploy', function () {
     'use strict';
-    gulp.start('styles', 'scripts','images', 'cmq');
+    gulp.start('clean', 'processHTML', 'styles', 'libs', 'scripts','images', 'cmq');
 });
 
 // Compress and minify images to reduce their file size
 gulp.task('images', function() {
     'use strict';
     var  imgSrc = 'src/images/**/*'
-        ,imgDst = 'dist/wp-content/themes/clarity/images';
+        ,imgDst = 'dist/static/images';
 
     return gulp.src(imgSrc)
         .pipe(plumber())
@@ -92,8 +128,8 @@ gulp.task('images', function() {
         .pipe(gulp.dest(imgDst))
         .pipe(notify({ message: 'Images task complete' }));
 });
-
+// Deletes contents of dist folder
 gulp.task('clean', function(cb) {
     'use strict';
-    del(['dist/wp-content/themes/clarity/images', 'dist/wp-content/themes/clarity/scripts'], cb)
+    del(['dist/**/*.*'], cb)
 });

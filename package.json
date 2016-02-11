@@ -10,8 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/clifton-green/esif.git"
   },
-  "keywords": [
-  ],
+  "keywords": [],
   "author": "Alex Ward",
   "license": "ISC",
   "bugs": {
@@ -28,11 +27,13 @@
     "gulp-concat": "^2.4.3",
     "gulp-cssnano": "latest",
     "gulp-eslint": "latest",
+    "gulp-ext-replace": "^0.2.0",
     "gulp-imagemin": "^2.3.0",
     "gulp-json-lint": "^0.1.0",
     "gulp-notify": "^2.2.0",
+    "gulp-nunjucks-html": "^2.0.0",
     "gulp-plumber": "^0.6.6",
-    "gulp-rename": "^1.2.0",
+    "gulp-replace": "^0.5.4",
     "gulp-strip-debug": "^1.0.2",
     "gulp-stylus": "^2.0.5",
     "gulp-uglify": "^1.1.0",

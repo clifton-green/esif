@@ -1,0 +1,4 @@
+{% extends "layout.nunjucks" %}
+{% block content %}
+  <h1>Welcome to your new site!</h1>
+{% endblock %}
