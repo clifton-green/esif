@@ -33,7 +33,7 @@ gulp.task('serve', function() {
     gulp.watch('src/scripts/*.js', ['scripts']);
 
     // Compile HTML
-    gulp.watch('src/html/**/*.html', ['processHTML']);
+    gulp.watch('src/html/**/*.nunjucks', ['processHTML']);
 });
 
 // Combine styles
@@ -44,6 +44,14 @@ gulp.task('styles', function() {
         .pipe(plumber())
         .pipe(concat('core.min.css'))
         .pipe(cssnano())
+        .pipe(gulp.dest('dist/static/css'))
+    gulp.src('src/styles/print.styl')
+        .pipe(stylus({use: [jeet(), rupture()]}))
+        .pipe(plumber())
+        .pipe(concat('print.min.css'))
+        .pipe(cssnano())
+        .pipe(gulp.dest('dist/static/css'))
+    gulp.src('src/styles/fonts.css')
         .pipe(gulp.dest('dist/static/css'))
         .pipe(reload({stream:true}))
         .pipe(notify({ message: 'Styles task complete' }));
@@ -93,7 +101,7 @@ gulp.task('cmq', function () {
         .pipe(gulp.dest('dist/static'));
 });
 
-// Replaces variables in the master page (layout.nunjucks)
+// Replaces variables in the master page (layout.nunjucks) and adds a build timestamp
 gulp.task('processHTML', ['nunjucks'], function () {
   'use strict';
   gulp.src(['dist/**/*.html'])

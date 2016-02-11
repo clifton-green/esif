@@ -9,6 +9,7 @@ body {
   ff-body();
   background: url(images/paper.png) repeat;
   font-size: $baseFont;
+  color: $text-colour;
 }
 
 h1,
@@ -22,9 +23,9 @@ h3 {
 }
 
 a {
-  color: $linkColor;
+  color: $link-colour;
   &:hover {
-    $linkHoverColor;
+    $link-hover-colour;
   }
 }
 
@@ -42,29 +43,5 @@ p {
 .wrapper {
   +above(l) {
    center(1280px);
-  }
-
-  
-}
-
-footer {
-  cf();
-  col(1);
-  text-align: center
-  color: darken($primary-con, 90%);
-  padding: 1rem;
-  background-color: lighten($primary, 20%);
-  +above(m) {
-    text-align: left;
-  }
-  a {
-    color: currentColor;
-  }
-  .copy {
-    stack();
-    +above(m) {
-      unstack();
-      float:right;
-    }
   }
 }

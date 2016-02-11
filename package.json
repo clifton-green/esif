@@ -28,6 +28,7 @@
     "gulp-cssnano": "latest",
     "gulp-eslint": "latest",
     "gulp-ext-replace": "^0.2.0",
+    "gulp-header": "^1.7.1",
     "gulp-imagemin": "^2.3.0",
     "gulp-json-lint": "^0.1.0",
     "gulp-notify": "^2.2.0",
