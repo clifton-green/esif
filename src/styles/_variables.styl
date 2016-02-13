@@ -88,19 +88,25 @@ $error-background      = #fef7f7;       // Error background colour
 $primary   = $govuk-blue;
 $secondary = $dclg ;
 
-// Fonts
-$primaryFont   = 'Lucida Grande',Helvetica,Arial,sans-serif;
-$secondaryFont = 'fertigo_proregular','Lucida Grande',Helvetica,Arial,sans-serif;
-
 // Size defaults
-$baseFont   = 1.4rem;
-$lineHeight = 1.4;
+$baseFont   = 1rem;
+$lineHeight = $baseFont * 1.2 ;
 $brad       = 3px; //border-radius
 $spacing    = 1rem;
 $hspacing   = $spacing;
 $vspacing   = $spacing;
 
-$crust     = $baseFont * 5
-$mantle    = $baseFont * 1.8
-$outercore = $baseFont * 1.6
-$innercore = $baseFont * 1.1
+// Heading levels (names are abstracted)
+$crust     = $baseFont * 4.8
+$mantle    = $baseFont * 3.6
+$outerCore = $baseFont * 2.4
+$innerCore = $baseFont * 1.9
+
+// Standard Text
+$lead      = $baseFont * 2.4
+$bodyCopy  = $baseFont * 1.9
+$smallCopy  = $baseFont * 1.6
+
+// Rupture scales
+rupture.scale = 320px 410px 500px 720px 1020px 1280px 1700px
+rupture.scale-names = 'xxs' 'xs' 's' 'm' 'l' 'xl' 'xxl'

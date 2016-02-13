@@ -7,8 +7,6 @@
 
 body {
   ff-body();
-  background: url(images/paper.png) repeat;
-  font-size: $baseFont;
   color: $text-colour;
 }
 
@@ -22,8 +20,22 @@ h3 {
   }
 }
 
+h1 {
+  font-size: $crust;
+}
+h2 {
+  font-size: $mantle;
+}
+h3 {
+  font-size: $innerCore;
+}
+h4 {
+  font-size: $outerCore;
+}
+
 a {
   color: $link-colour;
+  text-decoration: underline;
   &:hover {
     $link-hover-colour;
   }
@@ -32,6 +44,9 @@ a {
 p {
   line-height: $lineHeight;
   margin-bottom: $lineHeight;
+  &.lead {
+    font-size: $lead;
+  }
 }
 
 .skip-link {
@@ -42,6 +57,6 @@ p {
 
 .wrapper {
   +above(l) {
-   center(1280px);
+   center(1020px);
   }
 }

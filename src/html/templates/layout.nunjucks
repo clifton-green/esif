@@ -38,11 +38,7 @@
     <meta property="og:site_name" content="$$site_name$$" />
 </head>
 <body>
-    <header class="c-global-header" role="banner">
-      <a href="#">
-
-      </a>
-    </header>
+    {% include "components/c-global-header.nunjucks" %}
     <div class="wrapper">
         <div class="main" role="main">
           {% block content %} {% endblock %}

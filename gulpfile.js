@@ -1,21 +1,22 @@
-var gulp = require('gulp')
+var gulp         = require('gulp')
     ,browserSync = require('browser-sync')
-    ,concat     = require('gulp-concat')
-    ,imagemin   = require('gulp-imagemin')
-    ,pngquant = require('imagemin-pngquant')
-    ,plumber    = require('gulp-plumber')
-    ,notify     = require('gulp-notify')
-    ,cssnano = require('gulp-cssnano')
-    ,eslint = require('gulp-eslint')
-    ,del = require('del')
-    ,replace = require('gulp-replace')
-    ,stylus = require('gulp-stylus')
-    ,jeet = require('jeet')
-    ,rupture = require('rupture')
-    ,extReplace = require('gulp-ext-replace')
-    ,cmq = require('gulp-combine-media-queries')
-    ,nunjucks = require('gulp-nunjucks-html')
-    ,reload     = browserSync.reload;
+    ,concat      = require('gulp-concat')
+    ,imagemin    = require('gulp-imagemin')
+    ,pngquant    = require('imagemin-pngquant')
+    ,plumber     = require('gulp-plumber')
+    ,notify      = require('gulp-notify')
+    ,cssnano     = require('gulp-cssnano')
+    ,eslint      = require('gulp-eslint')
+    ,del         = require('del')
+    ,replace     = require('gulp-replace')
+    ,stylus      = require('gulp-stylus')
+    ,jeet        = require('jeet')
+    ,rupture     = require('rupture')
+    ,csso        = require('gulp-csso')
+    ,extReplace  = require('gulp-ext-replace')
+    ,cmq         = require('gulp-combine-media-queries')
+    ,nunjucks    = require('gulp-nunjucks-html')
+    ,reload      = browserSync.reload;
 
 // watch files for changes and reload
 gulp.task('serve', function() {
@@ -24,7 +25,7 @@ gulp.task('serve', function() {
         proxy: 'esif.localhost'
     });
     // Perform the site init
-    gulp.start('clean', 'processHTML', 'styles', 'libs', 'scripts');
+    gulp.start('clean', 'processHTML', 'images', 'styles', 'libs', 'scripts', 'extrastyles');
 
     // Compile Stylus
     gulp.watch('src/styles/**/*.styl', ['styles']);
@@ -32,29 +33,51 @@ gulp.task('serve', function() {
     // Compile Standard JS
     gulp.watch('src/scripts/*.js', ['scripts']);
 
+    // Compile Standard JS
+    gulp.watch('src/images', ['images']);
+
     // Compile HTML
     gulp.watch('src/html/**/*.nunjucks', ['processHTML']);
 });
 
+var supportedBrowsers = [
+    'last 2 versions'
+    ,'safari >= 8'
+    ,'ie >= 10'
+    ,'ff >= 20'
+    ,'ios 6'
+    ,'android 4'
+]
+
 // Combine styles
 gulp.task('styles', function() {
-    'use strict';
-    gulp.src('src/styles/core.styl')
-        .pipe(stylus({use: [jeet(), rupture()]}))
-        .pipe(plumber())
-        .pipe(concat('core.min.css'))
-        .pipe(cssnano())
-        .pipe(gulp.dest('dist/static/css'))
-    gulp.src('src/styles/print.styl')
-        .pipe(stylus({use: [jeet(), rupture()]}))
-        .pipe(plumber())
-        .pipe(concat('print.min.css'))
-        .pipe(cssnano())
-        .pipe(gulp.dest('dist/static/css'))
-    gulp.src('src/styles/fonts.css')
-        .pipe(gulp.dest('dist/static/css'))
-        .pipe(reload({stream:true}))
-        .pipe(notify({ message: 'Styles task complete' }));
+  'use strict';
+  gulp.src('src/styles/core.styl')
+    .pipe(plumber())
+    .pipe(stylus({use: [jeet(), rupture()]}))
+    .pipe(concat('core.min.css'))
+    .pipe(cmq({
+        log: true
+    }))
+    .pipe(csso())
+    .pipe(cssnano({
+      autoprefixer: {browsers: supportedBrowsers, add: true}
+    }))
+    .pipe(gulp.dest('dist/static/css'))
+    .pipe(reload({stream:true}))
+    .pipe(notify({ message: 'Styles task complete' }));
+});
+
+// Process and move supplimentary CSS
+gulp.task('extrastyles', function() {
+  'use strict';
+  gulp.src('src/styles/print.styl')
+    .pipe(stylus({use: [jeet()]}))
+    .pipe(plumber())
+    .pipe(concat('print.min.css'))
+    .pipe(gulp.dest('dist/static/css'))
+  gulp.src('src/styles/fonts.css')
+    .pipe(gulp.dest('dist/static/css'))
 });
 
 // Move libraries
@@ -91,16 +114,6 @@ gulp.task('nunjucks', function() {
     .pipe(notify({ message: 'Nunjucks task complete' }));
 });
 
-// combine media queries (Not done by default, should be called before deployment to production)
-gulp.task('cmq', function () {
-    'use strict';
-    gulp.src('dist/static/*.css')
-        .pipe(cmq({
-            log: true
-        }))
-        .pipe(gulp.dest('dist/static'));
-});
-
 // Replaces variables in the master page (layout.nunjucks) and adds a build timestamp
 gulp.task('processHTML', ['nunjucks'], function () {
   'use strict';
@@ -117,7 +130,7 @@ gulp.task('processHTML', ['nunjucks'], function () {
 // this task performs those subtasks.
 gulp.task('deploy', function () {
     'use strict';
-    gulp.start('clean', 'processHTML', 'styles', 'libs', 'scripts','images', 'cmq');
+    gulp.start('clean', 'processHTML', 'styles', 'extrastyles', 'libs', 'scripts','images', 'processCSS');
 });
 
 // Compress and minify images to reduce their file size

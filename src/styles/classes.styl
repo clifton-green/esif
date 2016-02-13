@@ -1,3 +1,20 @@
+// Common classes
+.hide {
+  // This hides the content for everyone, even most screen readers
+  // won't see this
+  display none;
+}
+
+.vis-hide {
+  // This is only visually hidden screen readers will still be able
+  // to read this text
+  color: transparent;
+  background:none;
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+}
+
 //basic button
 .o-btn {
   cursor: pointer;
@@ -12,7 +29,7 @@
 
   a {
     // In case class is on parent
-    color: $secondary
+    color: $highlight-colour;
   }
 
 }
