@@ -143,8 +143,7 @@ gulp.task('build', function () {
     'extrastyles',
     'libs',
     'scripts',
-    'images',
-    'processCSS'
+    'images'
   );
 });
 
