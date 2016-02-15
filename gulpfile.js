@@ -134,7 +134,7 @@ gulp.task('processHTML', ['nunjucks'], function () {
 
 // Some extra things should happen before the site is deployed.
 // this task performs those subtasks.
-gulp.task('deploy', function () {
+gulp.task('build', function () {
   'use strict';
   gulp.start(
     'clean',
