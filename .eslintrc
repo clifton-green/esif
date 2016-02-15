@@ -12,7 +12,7 @@
     "camelcase": 2,
     "comma-style": [
       2,
-      "first"
+      "last"
     ],
     "curly": [
       2,
@@ -28,10 +28,7 @@
       2,
       "allow-null"
     ],
-    "global-strict": [
-      2,
-      "never"
-    ],
+    
     "guard-for-in": 2,
     "new-cap": 2,
     "no-bitwise": 2,
