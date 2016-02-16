@@ -1,7 +1,7 @@
 #ESIF Basic Prototype
 
 [![Build Status](https://travis-ci.org/BBQDigital/esif.svg?branch=master)](https://travis-ci.org/BBQDigital/esif)
-[![Dependency Status][depstat-image]][depstat-url]
+[![Dependency Status](https://gemnasium.com/BBQDigital/e-claims.svg)](https://gemnasium.com/BBQDigital/e-claims)
 
 ##Introduction
 Applying for and Managing ESIF applications for funding A joint GOV.UK project run by DWP and DCLG
