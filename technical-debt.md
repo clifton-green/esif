@@ -8,8 +8,6 @@ Any development tasks or optimisations which need to be made should be listed he
 
 ## Tasks:
 - Install Lodash
-- Add gulp-run-sequence
-- Replace all instances of gulp.start()
 - Set up tests
 
 ## Issues

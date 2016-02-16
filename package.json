@@ -1,20 +1,20 @@
 {
-  "name": "Esif",
+  "name": "E-Claims",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "gulpfile.js",
   "scripts": {
     "test": "karma start karma.conf.js --single-run"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/clifton-green/esif.git"
+    "url": "git+https://github.com/BBQDigital/e-claims.git"
   },
   "keywords": [],
   "author": "Alex Ward",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/clifton-green/esif/issues"
+    "url": "https://github.com/BBQDigital/e-claims/issues"
   },
   "homepage": "",
   "devDependencies": {
@@ -29,7 +29,6 @@
     "gulp-eslint": "latest",
     "gulp-ext-replace": "^0.2.0",
     "gulp-header": "^1.7.1",
-    "gulp-if": "^2.0.0",
     "gulp-imagemin": "^2.3.0",
     "gulp-json-lint": "^0.1.0",
     "gulp-merge-media-queries": "^0.2.1",
@@ -50,9 +49,11 @@
     "karma-spec-reporter": "0.0.24",
     "nib": "^1.1.0",
     "phantomjs-prebuilt": "^2.1.4",
+    "run-sequence": "^1.1.5",
+    "node-notifier": "^4.5.0",
     "rupture": "^0.6.1"
   },
   "dependencies": {
-    "node-notifier": "^4.5.0"
+
   }
 }

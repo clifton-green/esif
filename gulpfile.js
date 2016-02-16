@@ -14,7 +14,7 @@ jeet        = require('jeet'),
 rupture     = require('rupture'),
 csso        = require('gulp-csso'),
 extReplace  = require('gulp-ext-replace'),
-gulpif      = require('gulp-if'),
+runSequence = require('run-sequence'),
 cmq         = require('gulp-merge-media-queries'),
 nunjucks    = require('gulp-nunjucks-html'),
 path        = require('path'),
@@ -29,7 +29,7 @@ gulp.task('serve', function() {
       proxy: 'esif.localhost'
   });
   // Perform the site init
-  gulp.start('build:dev');
+  runSequence('build:dev');
 
   // Compile Stylus
   gulp.watch('src/styles/**/*.styl', ['styles']);
@@ -62,9 +62,9 @@ onError = function (err) {
 };
 
 // Combine styles
-gulp.task('styles', function() {
+gulp.task('styles', function(callback) {
   'use strict';
-  gulp.src('src/styles/core.styl')
+  return gulp.src('src/styles/core.styl')
     .pipe(plumber(
       { errorHandler: onError }
     ))
@@ -77,10 +77,11 @@ gulp.task('styles', function() {
     }))
     .pipe(gulp.dest('dist/static/css'))
     .pipe(reload({stream:true}))
+     callback();
 });
 
 // Process and move supplimentary CSS
-gulp.task('extrastyles', function() {
+gulp.task('extrastyles', function(callback) {
   'use strict';
   gulp.src('src/styles/print.styl')
     .pipe(plumber(
@@ -91,6 +92,7 @@ gulp.task('extrastyles', function() {
     .pipe(gulp.dest('dist/static/css'))
   gulp.src('src/styles/fonts.css')
     .pipe(gulp.dest('dist/static/css'))
+     callback();
 });
 
 // Move libraries
@@ -136,7 +138,7 @@ gulp.task('nunjucks', function() {
 // Replaces variables in the master page (layout.nunjucks) and adds a build timestamp
 gulp.task('processHTML', ['nunjucks'], function () {
   'use strict';
-  gulp.src(['dist/**/*.html'])
+  return gulp.src(['dist/**/*.html'])
    .pipe(replace('$$site_name$$', 'esif'))
    .pipe(replace('$$site_url$$', 'localhost:3000'))
    .pipe(replace('$$site_desc$$', 'To be added'))
@@ -145,28 +147,29 @@ gulp.task('processHTML', ['nunjucks'], function () {
 });
 
 // Perform Basic Build (note, don't call directly, use build:dev or build)
-gulp.task('build', function () {
+gulp.task('build', function (callback) {
   'use strict';
-  gulp.start(
+  runSequence(
     'processHTML',
     'styles',
     'extrastyles',
     'libs',
-    'scripts'
+    'scripts',
+    callback
   );
 });
 
 // Standard build - not deployment ready and doesn't perform a clean build
 gulp.task('build:dev', function() {
   'use strict';
-  gulp.start('build');
+  runSequence('build');
   notifier.notify({ title: 'Development Build', message: 'Completed', icon: 'http://cdn.volcaniccreations.com/topaz/passed.png' });
 })
 
 // Production Build - ready for deployment and cleans build first
-gulp.task('build:prod', ['clean'], function() {
+gulp.task('build:prod', function() {
   'use strict';
-  gulp.start('build', 'images');
+  runSequence('clean', ['build', 'images']);
   notifier.notify({ title: 'Production Build', message: 'Done', icon: 'http://cdn.volcaniccreations.com/topaz/passed.png' });
 })
 
