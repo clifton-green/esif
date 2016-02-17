@@ -8,7 +8,6 @@ notifier    = require('node-notifier'),
 cssnano     = require('gulp-cssnano'),
 eslint      = require('gulp-eslint'),
 del         = require('del'),
-replace     = require('gulp-replace'),
 stylus      = require('gulp-stylus'),
 jeet        = require('jeet'),
 rupture     = require('rupture'),
@@ -26,7 +25,7 @@ reload      = browserSync.reload;
 gulp.task('serve', function() {
   'use strict';
   browserSync({
-      proxy: 'esif.localhost'
+      proxy: 'eclaims.localhost'
   });
   // Perform the site init
   runSequence('build:dev');
@@ -40,8 +39,9 @@ gulp.task('serve', function() {
   // Compile Standard JS
   gulp.watch('src/images', ['images']);
 
-  // Compile HTML
-  gulp.watch('src/html/**/*.nunjucks', ['processHTML']);
+  // Compile HTML and JSON
+  gulp.watch(['src/html/**/*.nunjucks', 'src/model/**/*.json'], ['processHTML']);
+
 });
 
 var errors = 0,
@@ -80,7 +80,7 @@ gulp.task('styles', function(callback) {
      callback();
 });
 
-// Process and move supplimentary CSS
+// Process and move supplementary CSS
 gulp.task('extrastyles', function(callback) {
   'use strict';
   gulp.src('src/styles/print.styl')
@@ -118,8 +118,8 @@ gulp.task('scripts', function() {
     .pipe(reload({stream:true}))
 });
 
-// Process nunjucks html files (.nj.html)
-gulp.task('nunjucks', function() {
+// Process nunjucks html files (.nunjucks)
+gulp.task('processHTML', function() {
   'use strict';
   return gulp.src('src/html/pages/**/*.nunjucks')
     .pipe(plumber(
@@ -128,22 +128,15 @@ gulp.task('nunjucks', function() {
     .pipe(data(function(file) {
       return require('./src/model/' + path.basename(file.path) + '.json');
     }))
+    .pipe(data(function() {
+      return require('./src/model/globals.json');
+    }))
     .pipe(nunjucks({
       searchPaths: ['src/html/templates']
     }))
     .pipe(extReplace('.html'))
     .pipe(gulp.dest('dist'))
-});
-
-// Replaces variables in the master page (layout.nunjucks) and adds a build timestamp
-gulp.task('processHTML', ['nunjucks'], function () {
-  'use strict';
-  return gulp.src(['dist/**/*.html'])
-   .pipe(replace('$$site_name$$', 'esif'))
-   .pipe(replace('$$site_url$$', 'localhost:3000'))
-   .pipe(replace('$$site_desc$$', 'To be added'))
-   .pipe(gulp.dest('dist'))
-   .pipe(reload({stream:true}))
+    .pipe(reload({stream:true}))
 });
 
 // Perform Basic Build (note, don't call directly, use build:dev or build)
@@ -163,14 +156,14 @@ gulp.task('build', function (callback) {
 gulp.task('build:dev', function() {
   'use strict';
   runSequence('build');
-  notifier.notify({ title: 'Development Build', message: 'Completed', icon: 'http://cdn.volcaniccreations.com/topaz/passed.png' });
+  notifier.notify({ title: 'Development Build', message: 'Completed', icon: 'src/images/icons/apple-touch-icon.png' });
 })
 
 // Production Build - ready for deployment and cleans build first
 gulp.task('build:prod', function() {
   'use strict';
   runSequence('clean', ['build', 'images']);
-  notifier.notify({ title: 'Production Build', message: 'Done', icon: 'http://cdn.volcaniccreations.com/topaz/passed.png' });
+  notifier.notify({ title: 'Production Build', message: 'Done', icon: 'src/images/icons/apple-touch-icon.png' });
 })
 
 // Compress and minify images to reduce their file size

@@ -1,0 +1,17 @@
+<footer class="c-global-footer">
+  <div class="wrapper">
+    <nav>
+      <ul>
+        {% for nav in footer.navigation %}
+          <li><a href="{{nav.url}}">{{nav.label}}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+    <div class="copyright">
+      <img src="{{footer.copyright.imagePath}}" alt="footer.copyright.imageDesc" />
+      <a href="{{footer.copyright.link}}">
+        {{footer.copyright.text}}
+      </a>
+    </div>
+  </div>
+</footer>

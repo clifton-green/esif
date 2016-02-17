@@ -9,6 +9,7 @@ Any development tasks or optimisations which need to be made should be listed he
 ## Tasks:
 - Install Lodash
 - Set up tests
+- Add login/logout states and update nav accordingly
 
 ## Issues
-- There are currently no issues within this project
+- The build system ignores JSON updates on watch. It will only work with a manual build

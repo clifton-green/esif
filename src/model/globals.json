@@ -1,0 +1,80 @@
+{
+  "config" : {
+    "host" : "localhost:3000",
+    "siteName" : "E-Claims",
+    "phaseTag" : "<span class=\"phase__message phase__alpha\">This is a new service – <a href=\"#\">help us improve it.</a></span>"
+  },
+  "header" :
+    {
+      "propositionTitle" : "Apply for European Structural and Investment Funding",
+      "logo" :
+        {
+          "imagePath" : "static/images/gov.uk_logotype_crown.png",
+          "imageDesc" : "gov.uk crown logo",
+          "text" : "gov.uk",
+          "link" : "#"
+        },
+      "navigation" : [
+        {
+          "label" : "Home",
+          "url" : "/",
+          "state" : "all"
+        },
+        {
+          "label" : "Login",
+          "url" : "#",
+          "state" : "noAuth"
+        },
+        {
+          "label" : "Search",
+          "url" : "#",
+          "state" : "all"
+        },
+        {
+          "label" : "Register",
+          "url" : "#",
+          "state" : "noAuth"
+        },
+        {
+          "label" : "Manage Users",
+          "url" : "#",
+          "state" : "onlyAuth"
+        },
+        {
+          "label" : "My Account",
+          "url" : "#",
+          "state" : "onlyAuth"
+        }
+      ]
+    },
+    "footer" : {
+      "navigation" : [
+        {
+          "label" : "Terms and Conditions",
+          "url" : "#"
+        },
+        {
+          "label" : "Privacy Policy",
+          "url" : "#"
+        },
+        {
+          "label" : "Feedback",
+          "url" : "#"
+        },
+        {
+          "label" : "Cymraeg",
+          "url" : "#"
+        },
+        {
+          "label" : "Built by DCLG and DWP",
+          "url" : "#"
+        }
+      ],
+      "copyright" : {
+        "imagePath" : "static/images/footer-crest.png",
+        "imageDesc" : "The crown logo",
+        "text" : "&copy; Crown copyright",
+        "link" : "#"
+      }
+    }
+}

@@ -23,19 +23,19 @@
     <script src="static/libs/jquery.min.js"></script>
 
     <!-- SEO tags -->
-    <title>{{ pageTitle }} | $$site_name$$</title>
-    <link rel="canonical" href="$$site_url$$/index.html" />
-    <meta name="description" content="$$site_desc$$" />
+    <title>{{ meta.pageTitle }} | {{config.siteName}}</title>
+    <link rel="canonical" href="//{{config.host}}/{{meta.canonical}}" />
+    <meta name="description" content="{{meta.description}}" />
     <meta name="revisit-after" content="7 days">
 
     <!-- Facebook OpenGraph tags -->
     <meta property="og:locale" content="en_GB" />
     <meta property="og:type" content="website" />
-    <meta property="og:title" content="{{ pageTitle }} | $$site_name$$" />
-    <meta property="og:description" content="$$site_desc$$" />
-    <meta property="og:image" content="$$site_url$$/apple-touch-icon-152x152.png"/>
-    <meta property="og:url" content="$$site_url$$/index.html" />
-    <meta property="og:site_name" content="$$site_name$$" />
+    <meta property="og:title" content="{{ meta.pageTitle }} | {{config.siteName}}" />
+    <meta property="og:description" content="{{meta.description}}" />
+    <meta property="og:image" content="//{{config.host}}/apple-touch-icon-152x152.png"/>
+    <meta property="og:url" content="//{{config.host}}/index.html" />
+    <meta property="og:site_name" content="{{config.siteName}}" />
 </head>
 <body>
     {% include "components/c-global-header.nunjucks" %}
@@ -44,6 +44,7 @@
           {% block content %} {% endblock %}
         </div>
     </div>
+    {% include "components/c-global-footer.nunjucks" %}
     <script src="static/scripts/core.min.js"></script>
 </body>
 </html>
