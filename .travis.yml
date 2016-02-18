@@ -3,3 +3,11 @@ node_js: "stable"
 before_script:
   - npm install -g gulp
 script: gulp build:prod
+deploy:
+  provider: heroku
+  api_key:
+    secure: "c285ef6f-3c99-40cf-93fb-92971f4f3376"
+    local-dir: dist
+    app:
+      master: e-claims
+      stable: e-claims-stable
