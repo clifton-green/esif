@@ -4,17 +4,9 @@
       <img src="{{ header.logo.imagePath }}" alt="{{header.logo.imageDesc}}">
       {{ header.logo.text }}
     </a>
-    <h1>{{ header.propositionTitle }}</h1>
-    <nav>
-      <ul>
-        {# Loop through navigation and show those which match the current authentication state #}
-        {% for nav in header.navigation %}
-          {# TODO: This is fine for now but authentication will need to be implemented at a later date #}
-          {%if nav.state != 'onlyAuth' %}
-            <li><a href="{{nav.url}}">{{nav.label}}</a></li>
-          {% endif %}
-        {% endfor %}
-      </ul>
-    </nav>
+    <div class="col">
+      <h1>{{ header.propositionTitle }}</h1>
+      {% include "components/c-global-nav.nunjucks" %}
+    </div>
   </div>
 </header>

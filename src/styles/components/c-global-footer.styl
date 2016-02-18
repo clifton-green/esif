@@ -1,0 +1,34 @@
+.c-global-footer {
+  background-color $panel-colour
+  border-top 1px solid $border-colour
+  color $secondary-text-colour
+  margin-top $vspacing * 1.5
+  cf()
+  a {
+    display block
+    color $secondary-text-colour
+    font-size $baseFont * 1.6
+  }
+  nav {
+    col(4/5)
+    padding-top $vspacing*14
+    float left
+
+    li {
+      display inline-block
+    }
+
+    a {
+      margin-right $hspacing
+    }
+  }
+  .copyright {
+    col(1/5)
+    text-align center
+    padding $spacing
+    float right
+    img {
+      max-width 100%
+    }
+  }
+}

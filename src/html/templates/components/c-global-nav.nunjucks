@@ -1,0 +1,11 @@
+<nav class="c-global-nav">
+  <ul>
+    {# Loop through navigation and show those which match the current authentication state #}
+    {% for item in globalNavigation.item %}
+      {# TODO: This is fine for now but authentication will need to be implemented at a later date #}
+      {%if item.state != 'onlyAuth' %}
+        <li><a href="{{item.url}}">{{item.label}}</a></li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</nav>

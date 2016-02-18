@@ -17,6 +17,8 @@ DevTools = {
     dtb.on('click', this.showComponents.bind(this));
   },
 
+  // Outlines all components on a page and shows their classes.
+  // Note: If there are more than 12 components on a page then additional colours need to be added.
   showComponents: function() {
     'use strict';
     var colours = ['red', 'blue', 'orange', 'brown', 'pink', 'green', 'purple', 'deepPink', 'dodgerBlue', 'yellow', 'greenYellow', 'aqua' ];
