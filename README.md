@@ -1,6 +1,6 @@
 #ESIF Basic Prototype
 
-[![Build Status](https://travis-ci.org/BBQDigital/esif.svg?branch=master)](https://travis-ci.org/BBQDigital/esif)
+[![Build Status](https://travis-ci.org/BBQDigital/e-claims.svg?branch=master)](https://travis-ci.org/BBQDigital/esif)
 [![Dependency Status](https://gemnasium.com/BBQDigital/e-claims.svg)](https://gemnasium.com/BBQDigital/e-claims)
 
 ##Introduction

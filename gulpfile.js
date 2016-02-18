@@ -14,11 +14,11 @@ rupture     = require('rupture'),
 csso        = require('gulp-csso'),
 extReplace  = require('gulp-ext-replace'),
 runSequence = require('run-sequence'),
+uglify      = require('gulp-uglify'),
 cmq         = require('gulp-merge-media-queries'),
 nunjucks    = require('gulp-nunjucks-html'),
 path        = require('path'),
 data        = require('gulp-data'),
-Server      = require('karma').Server,
 reload      = browserSync.reload;
 
 // watch files for changes and reload
@@ -34,7 +34,7 @@ gulp.task('serve', function() {
   gulp.watch('src/styles/**/*.styl', ['styles']);
 
   // Compile Standard JS
-  gulp.watch('src/scripts/*.js', ['scripts']);
+  gulp.watch('src/scripts/*.js', ['scripts:dev']);
 
   // Compile Standard JS
   gulp.watch('src/images', ['images']);
@@ -98,17 +98,36 @@ gulp.task('extrastyles', function(callback) {
 // Move libraries
 gulp.task('libs', function() {
   'use strict';
-  return gulp.src('node_modules/jquery/dist/jquery.min.js')
+  return gulp.src([
+    'node_modules/jquery/dist/jquery.min.js',
+    'node_modules/lodash/lodash.js'
+    ])
     .pipe(plumber(
       { errorHandler: onError }
     ))
-    .pipe(gulp.dest('dist/static/libs'))
+    .pipe(concat('libs.min.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('dist/static/scripts'))
 });
 
 // Combine JS
-gulp.task('scripts', function() {
+gulp.task('scripts:prod', function() {
   'use strict';
-  return gulp.src('src/scripts/*.js')
+  return gulp.src(['src/scripts/**/*.js', '!src/scripts/**/dev.js'])
+    .pipe(plumber(
+      { errorHandler: onError }
+    ))
+    .pipe(eslint())
+    .pipe(concat('core.min.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('dist/static/scripts'))
+    .pipe(reload({stream:true}))
+});
+
+// Add Dev Javascript into the build
+gulp.task('scripts:dev', function() {
+  'use strict';
+  return gulp.src('src/scripts/**/*.js')
     .pipe(plumber(
       { errorHandler: onError }
     ))
@@ -117,6 +136,7 @@ gulp.task('scripts', function() {
     .pipe(gulp.dest('dist/static/scripts'))
     .pipe(reload({stream:true}))
 });
+
 
 // Process nunjucks html files (.nunjucks)
 gulp.task('processHTML', function() {
@@ -146,7 +166,6 @@ gulp.task('build', function (callback) {
     'styles',
     'extrastyles',
     'libs',
-    'scripts',
     'processHTML',
     callback
   );
@@ -155,7 +174,10 @@ gulp.task('build', function (callback) {
 // Standard build - not deployment ready and doesn't perform a clean build
 gulp.task('build:dev', function() {
   'use strict';
-  runSequence('build');
+  runSequence(
+    'build',
+    'scripts:dev'
+  );
   notifier.notify({ title: 'Development Build', message: 'Completed', icon: 'src/images/icons/apple-touch-icon.png' });
 })
 
@@ -164,6 +186,7 @@ gulp.task('build:prod', ['clean'], function() {
   'use strict';
   runSequence(
     'build',
+    'scripts:prod',
     'images'
   );
   notifier.notify({ title: 'Production Build', message: 'Done', icon: 'src/images/icons/apple-touch-icon.png' });

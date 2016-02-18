@@ -1,6 +1,6 @@
 <header class="c-global-header" role="banner">
   <div class="wrapper">
-    <a href="{header.logo.url}" class="logo">
+    <a href="{{header.logo.url}}" class="logo">
       <img src="{{ header.logo.imagePath }}" alt="{{header.logo.imageDesc}}">
       {{ header.logo.text }}
     </a>

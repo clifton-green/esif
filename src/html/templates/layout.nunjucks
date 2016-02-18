@@ -20,7 +20,7 @@
     <link rel="apple-touch-icon" sizes="152x152" href="static/images/icons/apple-touch-icon-152x152.png" />
 
     <!-- Initial JavaScript libraries-->
-    <script src="static/libs/jquery.min.js"></script>
+    <script src="static/scripts/libs.min.js"></script>
 
     <!-- SEO tags -->
     <title>{{ meta.pageTitle }} | {{config.siteName}}</title>

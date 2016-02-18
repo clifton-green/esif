@@ -12,4 +12,4 @@ Any development tasks or optimisations which need to be made should be listed he
 - Add login/logout states and update nav accordingly
 
 ## Issues
-- The build system ignores JSON updates on watch. It will only work with a manual build
+- The build system ignores JSON updates on watch. It will only work with a manual build.
