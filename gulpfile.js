@@ -143,11 +143,11 @@ gulp.task('processHTML', function() {
 gulp.task('build', function (callback) {
   'use strict';
   runSequence(
-    'processHTML',
     'styles',
     'extrastyles',
     'libs',
     'scripts',
+    'processHTML',
     callback
   );
 });
@@ -160,9 +160,12 @@ gulp.task('build:dev', function() {
 })
 
 // Production Build - ready for deployment and cleans build first
-gulp.task('build:prod', function() {
+gulp.task('build:prod', ['clean'], function() {
   'use strict';
-  runSequence('clean', ['build', 'images']);
+  runSequence(
+    'build',
+    'images'
+  );
   notifier.notify({ title: 'Production Build', message: 'Done', icon: 'src/images/icons/apple-touch-icon.png' });
 })
 
@@ -184,22 +187,5 @@ gulp.task('images', function() {
 // Deletes contents of dist folder
 gulp.task('clean', function(cb) {
     'use strict';
-    del(['dist/**/*.*'], cb)
-});
-
-// Run a single batch of tests
-gulp.task('test', function (done) {
-  'use strict';
-  return new Server({
-    configFile: __dirname + '/karma.conf.js',
-    singleRun: true
-  }, done).start();
-});
-
-// Run tests continiously
-gulp.task('tdd', function (done) {
-  'use strict';
-  return new Server({
-    configFile: __dirname + '/karma.conf.js',
-  }, done).start();
+    return del(['dist/**/*.*'], cb)
 });
