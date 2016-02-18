@@ -7,9 +7,9 @@ Any development tasks or optimisations which need to be made should be listed he
 **Note:** If there is a task/bug manager in place to cover this then this file will not be updated.
 
 ## Tasks:
-- Install Lodash
 - Set up tests
 - Add login/logout states and update nav accordingly
+- Use gulpif to create --prod and --dev states for styles, scripts and servers
 
 ## Issues
 - The build system ignores JSON updates on watch. It will only work with a manual build.

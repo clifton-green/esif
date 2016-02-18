@@ -30,11 +30,11 @@ gulp.task('serve', function() {
   // Perform the site init
   runSequence('build:dev');
 
-  // Compile Stylus
-  gulp.watch('src/styles/**/*.styl', ['styles']);
-
   // Compile Standard JS
   gulp.watch('src/scripts/*.js', ['scripts:dev']);
+
+  // Compile Stylus
+  gulp.watch('src/styles/**/*.styl', ['styles']);
 
   // Compile Standard JS
   gulp.watch('src/images', ['images']);
@@ -107,7 +107,7 @@ gulp.task('libs', function() {
     ))
     .pipe(concat('libs.min.js'))
     .pipe(uglify())
-    .pipe(gulp.dest('dist/static/scripts'))
+    .pipe(gulp.dest('dist/static/libs'))
 });
 
 // Combine JS
