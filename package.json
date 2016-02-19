@@ -52,7 +52,7 @@
     "rupture": "^0.6.1"
   },
   "dependencies": {
-    "node-static": "^0.7.7",
+    "express": "^4.13.4",
     "jquery": "^2.2.0",
     "lodash": "^4.5.0"
   }

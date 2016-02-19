@@ -1,16 +1,5 @@
-var static = require('node-static');
+var express = require('express');
+var app = express();
+app.use(express.static(__dirname + '/dist'));
 
-//
-// Create a node-static server instance to serve the './dist' folder
-//
-var file = new static.Server('./dist');
-
-require('http').createServer(function (request, response) {
-  'use strict';
-    request.addListener('end', function () {
-        //
-        // Serve files!
-        //
-        file.serve(request, response);
-    }).resume();
-}).listen(process.env.port || 5000);
+app.listen(process.env.PORT || 5000);
