@@ -31,16 +31,16 @@ gulp.task('serve', function() {
   runSequence('build:dev');
 
   // Compile Standard JS
-  gulp.watch('src/scripts/*.js', ['scripts:dev']);
+  gulp.watch('src/scripts/*.js', ['scripts:dev'], reload);
 
   // Compile Stylus
   gulp.watch('src/styles/**/*.styl', ['styles']);
 
   // Compile Standard JS
-  gulp.watch('src/images', ['images']);
+  gulp.watch('src/images', ['images'], reload);
 
   // Compile HTML and JSON
-  gulp.watch(['src/html/**/*.nunjucks', 'src/model/**/*.json'], ['processHTML']);
+  gulp.watch(['src/html/**/*.nunjucks', 'src/model/**/*.json'], ['processHTML'], reload);
 
 });
 
