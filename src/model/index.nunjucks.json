@@ -1,3 +1,8 @@
 {
-  "pageTitle" : "Welcome to the E-Claims Website"
+  "meta" : {
+    "pageTitle" : "Application overview",
+    "description" : "to be added",
+    "canonical" : "index.html"
+  }
+  
 }

@@ -1,10 +1,12 @@
 .c-global-header {
-  background-color: $text-colour;
+  cf()
+  background-color $text-colour
+  padding $spacing
   .logo {
     text-decoration none
-    ff-title();
-    text-transform: uppercase;
-    color: $white;
+    ff-title()
+    text-transform uppercase
+    color $white
     font-size $baseFont * 3
   }
   img {
@@ -12,5 +14,13 @@
     height 31px
     margin-right ($hspacing/2)
     vertical-align middle
+  }
+  h1 {
+    color #fff
+    font-size $baseFont*2.4
+  }
+  .col {
+    col(2/3)
+    float right
   }
 }

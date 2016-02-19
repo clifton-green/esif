@@ -1,20 +1,12 @@
 <header class="c-global-header" role="banner">
   <div class="wrapper">
-    <a href="#" class="logo">
-      <img src="static/images/gov.uk_logotype_crown.png" alt="gov.uk crown logo">
-      gov.uk
+    <a href="{{header.logo.url}}" class="logo">
+      <img src="{{ header.logo.imagePath }}" alt="{{header.logo.imageDesc}}">
+      {{ header.logo.text }}
     </a>
-    <h1>Apply for European Structural and Investment Funding</h1>
-    <nav>
-      <ul>
-        <li><a href="">Login</a></li>
-      </ul>
-      <ul>
-        <li><a href="">Search</a></li>
-      </ul>
-      <ul>
-        <li><a href="">Register</a></li>
-      </ul>
-    </nav>
+    <div class="col">
+      <h1>{{ header.propositionTitle }}</h1>
+      {% include "components/c-global-nav.nunjucks" %}
+    </div>
   </div>
 </header>

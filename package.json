@@ -1,53 +1,65 @@
 {
-  "name": "Esif",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "E-Claims",
+  "version": "0.0.1",
+  "engines": {
+    "node": "0.12.7",
+    "npm" : "2.11.3"
+  },
+  "description": "The e-claims website",
+  "main": "server.js",
   "scripts": {
-    "test": "karma start karma.conf.js --single-run"
+    "start" : "node server.js",
+    "test": "karma start karma.conf.js --single-run",
+    "postinstall" : "gulp build:prod"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/clifton-green/esif.git"
+    "url": "git+https://github.com/BBQDigital/e-claims.git"
   },
   "keywords": [],
   "author": "Alex Ward",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/clifton-green/esif/issues"
+    "url": "https://github.com/BBQDigital/e-claims/issues"
   },
   "homepage": "",
   "devDependencies": {
     "browser-sync": "^2.11.0",
-    "del": "^1.1.1",
+    "del": "latest",
     "gulp": "^3.9.0",
-    "gulp-cache": "^0.2.4",
-    "gulp-combine-media-queries": "^0.2.0",
+    "gulp-cache": "latest",
     "gulp-concat": "^2.4.3",
     "gulp-cssnano": "latest",
-    "gulp-csso": "^1.0.1",
+    "gulp-csso": "latest",
+    "gulp-data": "latest",
     "gulp-eslint": "latest",
     "gulp-ext-replace": "^0.2.0",
     "gulp-header": "^1.7.1",
     "gulp-imagemin": "^2.3.0",
     "gulp-json-lint": "^0.1.0",
+    "gulp-merge-media-queries": "^0.2.1",
     "gulp-notify": "^2.2.0",
     "gulp-nunjucks-html": "^2.0.0",
     "gulp-plumber": "^0.6.6",
-    "gulp-replace": "^0.5.4",
     "gulp-strip-debug": "^1.0.2",
     "gulp-stylus": "^2.0.5",
-    "gulp-uglify": "^1.1.0",
+    "gulp-uglify": "^1.5.2",
     "imagemin-pngquant": "^4.1.0",
     "jasmine-core": "^2.4.1",
     "jeet": "^6.1.2",
-    "jquery": "^2.2.0",
     "karma": "^0.13.21",
     "karma-jasmine": "^0.3.7",
     "karma-phantomjs-launcher": "^1.0.0",
     "karma-spec-reporter": "0.0.24",
     "nib": "^1.1.0",
+    "node-notifier": "^4.5.0",
     "phantomjs-prebuilt": "^2.1.4",
+    "run-sequence": "^1.1.5",
     "rupture": "^0.6.1"
+  },
+  "dependencies": {
+    "express": "^4.13.4",
+    "jquery": "^2.2.0",
+    "lodash": "^4.5.0"
   }
 }
