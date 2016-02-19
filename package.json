@@ -1,10 +1,16 @@
 {
   "name": "E-Claims",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "node": "0.12.7",
+    "npm" : "2.11.3"
+  },
+  "description": "The e-claims website",
   "main": "server.js",
   "scripts": {
-    "test": "karma start karma.conf.js --single-run"
+    "start" : "node server.js",
+    "test": "karma start karma.conf.js --single-run",
+    "postinstall" : "gulp build:prod"
   },
   "repository": {
     "type": "git",
