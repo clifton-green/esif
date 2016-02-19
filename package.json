@@ -2,9 +2,10 @@
   "name": "E-Claims",
   "version": "1.0.0",
   "description": "",
-  "main": "gulpfile.js",
+  "main": "index.js",
   "scripts": {
     "test": "karma start karma.conf.js --single-run"
+    
   },
   "repository": {
     "type": "git",

@@ -12,4 +12,3 @@ deploy:
     stable: e-claims-stable
   on:
     repo: BBQDigital/e-claims
-  local-dir: dist

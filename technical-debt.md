@@ -10,6 +10,8 @@ Any development tasks or optimisations which need to be made should be listed he
 - Set up tests
 - Add login/logout states and update nav accordingly
 - Use gulpif to create --prod and --dev states for styles, scripts and servers
+- Add namespacing to json files
 
 ## Issues
 - The build system ignores JSON updates on watch. It will only work with a manual build.
+- Heroku is building as a node app, work out how to build as regular apache app.
