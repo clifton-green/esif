@@ -3,12 +3,3 @@ node_js: stable
 before_script:
 - npm install -g gulp
 script: gulp build:prod
-deploy:
-  provider: heroku
-  api_key:
-    secure: NReYQdiyhfXzJ3DgfWoebssRbqfJuMtjIH6jDSURTGt26a6G6cUxB7IIEAttAiwvfBgSFNzdS6LT9bTK2TWMPrTeHJVvRWTTsq4NLKienlNz7bX1j7nEFRpL7QLM6WyJUo3ssjFa2awqyyURvjbjk7Ba5xfDabFIVxMrSa2wIuOzJ4nogYXfdznetqWMuoxpAnBUBryGDL9PVe1fX/05v4qCA10WKwcnGlWoRgjHIDHWUo4/bcL+lzffbpePw2QkheMPIiEdkcZIHaDHBR5/8o1rekBy0uCY8AP8cjcJLD6doe8dO1ImnUaX/m1ik9vd4YlEI6e92quZaWteu89wGUO0mVjRVzGDX6JSi4ayoIX7GuVKe3/HA9CycukgTm4V5cZTuwOjMpv3xH5VuCTaybnTGRv7QcnoqSk2VecwUjhVpAssxDRIo+Dlczho2RCRmWY1a4eVTJynKC6P66Am+9sizhaA7LvrteOm6qS+ZSAEZGdBwSKzmn+ptRe16Mth40FzMkMKMnHZPiEqGFPgs/vme3bdT4ElkkgEjLEKPbKAUi7A2FgJmmSkkilKcx3OrzuVNQArdnH0m63PW2izXPH1wSwXgaZ5JVqztOrKz7qfxoOMdcdO6B5ufmYSYEHy/a4kaSCMsxs4AbaNTr51SZXcqeEfpLZSDZjU8uOOw1c=
-  app:
-    master: e-claims
-    stable: e-claims-stable
-  on:
-    repo: BBQDigital/e-claims
