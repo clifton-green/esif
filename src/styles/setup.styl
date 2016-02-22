@@ -8,13 +8,17 @@
 body {
   ff-body();
   color: $text-colour;
+  background-color $panel-colour
+}
+
+.page-wrapper {
+  background-color #fff
 }
 
 h1,
 h2,
 h3 {
   ff-title();
-  color: $primary;
   a {
     color: currentColor;
   }
@@ -37,7 +41,10 @@ a {
   color: $link-colour;
   text-decoration: underline;
   &:hover {
-    $link-hover-colour;
+    color: $link-hover-colour;
+  }
+  &:focus {
+    background-color: $focus-colour
   }
 }
 

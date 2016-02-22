@@ -3,14 +3,14 @@
   "version": "0.0.1",
   "engines": {
     "node": "0.12.7",
-    "npm" : "2.11.3"
+    "npm": "2.11.3"
   },
   "description": "The e-claims website",
   "main": "server.js",
   "scripts": {
-    "start" : "node server.js",
+    "start": "node server.js",
     "test": "karma start karma.conf.js --single-run",
-    "postinstall" : "gulp build:prod"
+    "postinstall": "gulp build:prod"
   },
   "repository": {
     "type": "git",
@@ -25,6 +25,7 @@
   "homepage": "",
   "devDependencies": {
     "browser-sync": "^2.11.0",
+    "casperjs": "^1.1.0-beta5",
     "del": "latest",
     "gulp": "^3.9.0",
     "gulp-cache": "latest",
@@ -55,7 +56,8 @@
     "node-notifier": "^4.5.0",
     "phantomjs-prebuilt": "^2.1.4",
     "run-sequence": "^1.1.5",
-    "rupture": "^0.6.1"
+    "rupture": "^0.6.1",
+    "spooky": "^0.2.5"
   },
   "dependencies": {
     "express": "^4.13.4",

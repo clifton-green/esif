@@ -1,10 +1,12 @@
 .c-global-header {
-  cf()
+  cf();
   background-color $text-colour
-  padding $spacing
+  margin-bottom $spacing*5
+  height: $vspacing*8
   .logo {
     text-decoration none
     ff-title()
+    padding: 0 ($hspacing/2)
     text-transform uppercase
     color $white
     font-size $baseFont * 3
@@ -22,5 +24,43 @@
   .col {
     col(2/3)
     float right
+  }
+  .wrapper {
+    cf();
+    position relative
+    padding $vspacing ($hspacing*2)
+    height: 100%;
+    &:after {
+      position absolute
+      left:0;
+      bottom:-($vspacing);
+      height: $vspacing;
+      width: 100%;
+      background-color $primary
+    }
+  }
+  .phase {
+    position absolute
+    left:0;
+    bottom: -($vspacing*4.8)
+    width 100%
+    padding: ($spacing/2) 0
+    border-bottom 1px solid $border-colour;
+
+    &:before {
+      color: #fff;
+      font-size $smallCopy
+      font-weight bold
+      padding: 3px ($spacing/2) 0
+      margin-right ($hspacing/2)
+    }
+    &.alpha:before {
+      content "ALPHA"
+      background-color: $alpha-colour;
+    }
+    &.beta:before {
+      content "BETA"
+      background-color: $beta-colour;
+    }
   }
 }

@@ -1,0 +1,16 @@
+<section class="c-login-form">
+  <form class="#" action="index.html" method="post">
+    <fieldset>
+      <legend class="vishide">Please enter your login details</legend>
+      <div class="field-container">
+        <label for="login-username">User ID</label>
+        <input id="login-username" name="login-username" type="text" value="">
+      </div>
+      <div class="field-container">
+        <label for="login-password">Password</label>
+        <input id="login-password" name="login-password" type="text" value="">
+      </div>
+      <button type="submit" name="button">Login</button>
+    </fieldset>
+  </form>
+</section>

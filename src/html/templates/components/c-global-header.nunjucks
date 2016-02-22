@@ -1,12 +1,15 @@
 <header class="c-global-header" role="banner">
   <div class="wrapper">
-    <a href="{{header.logo.url}}" class="logo">
-      <img src="{{ header.logo.imagePath }}" alt="{{header.logo.imageDesc}}">
-      {{ header.logo.text }}
+    <a href="{{globalHeader.logo.url}}" class="logo">
+      <img src="{{ globalHeader.logo.imagePath }}" alt="{{globalHeader.logo.imageDesc}}">
+      {{ globalHeader.logo.text }}
     </a>
     <div class="col">
-      <h1>{{ header.propositionTitle }}</h1>
+      <h1>{{ globalHeader.propositionTitle }}</h1>
       {% include "components/c-global-nav.nunjucks" %}
+    </div>
+    <div class="phase alpha">
+      <span>This is a new service &ndash; <a href="">help us improve it.</a></span>
     </div>
   </div>
 </header>

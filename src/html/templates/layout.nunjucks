@@ -38,13 +38,15 @@
     <meta property="og:site_name" content="{{config.siteName}}" />
 </head>
 <body>
+  <div class="page-wrapper">
     {% include "components/c-global-header.nunjucks" %}
-    <div class="wrapper">
-        <div class="main" role="main">
-          {% block content %} {% endblock %}
-        </div>
+    <div class="main" role="main">
+      <div class="wrapper">
+        {% block content %} {% endblock %}
+      </div>
     </div>
     {% include "components/c-global-footer.nunjucks" %}
-    <script src="static/scripts/core.min.js"></script>
+  </div>
+  <script src="static/scripts/core.min.js"></script>
 </body>
 </html>

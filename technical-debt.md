@@ -7,12 +7,11 @@ Any development tasks or optimisations which need to be made should be listed he
 **Note:** If there is a task/bug manager in place to cover this then this file will not be updated.
 
 ## Tasks:
-- Set up tests
+- Set up tests (jasmine and casperjs/spooky)
 - Add login/logout states and update nav accordingly
 - Use gulpif to create --prod and --dev states for styles, scripts and servers
-- Add namespacing to json files
+- Separate login form and index page into components
 
 ## Issues
 - The build system ignores JSON updates on watch. It will only work with a manual build.
-- Heroku is building as a node app, work out how to build as regular apache app.
-- What will happen if there is more than one of the same component on a page?
+- What will happen if there is more than one of the same component on a page? (Looks like this is a limitation)

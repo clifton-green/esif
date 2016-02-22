@@ -4,7 +4,7 @@
     "siteName" : "E-Claims",
     "phaseTag" : "<span class=\"phase__message phase__alpha\">This is a new service – <a href=\"#\">help us improve it.</a></span>"
   },
-  "header" : {
+  "globalHeader" : {
     "componentClass" : "c-global-header",
     "propositionTitle" : "Apply for European Structural and Investment Funding",
     "logo" :
@@ -50,7 +50,7 @@
       }
     ]
   },
-  "footer" : {
+  "globalFooter" : {
     "componentClass" : "c-global-footer",
     "navigation" : [
       {

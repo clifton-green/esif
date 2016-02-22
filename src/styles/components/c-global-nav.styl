@@ -1,4 +1,5 @@
 .c-global-nav {
+  padding-bottom ($vspacing/2)
   li {
     display inline-block;
   }
@@ -9,5 +10,9 @@
     text-decoration none
     font-size $baseFont * 1.6
     margin-right $spacing
+    &:hover {
+      text-decoration underline
+      color: $link-hover-colour;
+    }
   }
 }
