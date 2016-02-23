@@ -24,8 +24,22 @@ reload      = browserSync.reload;
 // watch files for changes and reload
 gulp.task('serve', function() {
   'use strict';
-  browserSync({
-      proxy: 'eclaims.localhost'
+  browserSync.init({
+      server: {
+          baseDir: './dist'
+      },
+      // Change the default port
+      port: 3000,
+      // All open instances of the site will reload if the server is restarted
+      reloadOnRestart: true,
+      // // Don't show any notifications in the browser.
+      notify: false,
+      // // Sync actions between devices
+      ghostMode: {
+        clicks: true,
+        forms: true,
+        scroll: false
+      }
   });
   // Perform the site init
   runSequence('build:dev');

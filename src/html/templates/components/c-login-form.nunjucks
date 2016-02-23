@@ -8,7 +8,7 @@
       </div>
       <div class="field-container">
         <label for="login-password">Password</label>
-        <input id="login-password" name="login-password" type="text" value="">
+        <input id="login-password" name="login-password" type="password" value="">
       </div>
       <button type="submit" name="button">Login</button>
     </fieldset>

@@ -1,0 +1,28 @@
+/* All generic form styling goes here. */
+/* For specific form component styles see the appropriate component stylesheet */
+
+.field-container {
+  padding: $vspacing 0;
+  width: 50%;
+}
+
+label {
+  display block
+  margin-bottom ($vspacing/2)
+}
+
+input, textarea, select {
+  background: $white;
+  border: 3px solid $black;
+  padding: $spacing;
+  width:100%;
+  font-size $smallCopy
+  &:focus {
+    outline: 0;
+    border-color: $focus-colour;
+  }
+}
+
+button {
+  button()
+}
