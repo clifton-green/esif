@@ -1,7 +1,10 @@
 .c-headed-text {
-  margin-top: $spacing*5
-
+  +above(m) {
+    margin-top: $spacing*5
+  }
   h1 {
-    margin-bottom $spacing*=3
+    +above(m) {
+      margin-bottom $spacing*=3
+    }
   }
 }

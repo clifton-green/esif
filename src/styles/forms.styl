@@ -1,9 +1,16 @@
 /* All generic form styling goes here. */
 /* For specific form component styles see the appropriate component stylesheet */
 
+form {
+  margin-bottom $spacing*2
+}
+
 .field-container {
   padding: $vspacing 0;
-  width: 50%;
+  margin-bottom ($vspacing/2);
+  +above(m) {
+    width: 50%;
+  }
 }
 
 label {
@@ -25,4 +32,5 @@ input, textarea, select {
 
 button {
   button()
+  margin-top $vspacing
 }

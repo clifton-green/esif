@@ -2,7 +2,19 @@
   cf();
   background-color $text-colour
   margin-bottom $spacing*5
-  height: $vspacing*8
+  height: $vspacing*15
+  &:after {
+    display block
+    height: $vspacing;
+    width: 95%;
+    max-width: 1020px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color $primary
+  }
+  +above(l) {
+    height: $vspacing*8
+  }
   .logo {
     text-decoration none
     ff-title()
@@ -19,33 +31,36 @@
   }
   h1 {
     color #fff
-    font-size $baseFont*2.4
+    font-size $innerCore
+    +above(m) {
+      font-size $outerCore
+    }
   }
   .col {
-    col(2/3)
-    float right
+    +above(m) {
+      col(2/3)
+      float right
+    }
   }
   .wrapper {
-    cf();
     position relative
     padding $vspacing ($hspacing*2)
     height: 100%;
-    &:after {
-      position absolute
-      left:0;
-      bottom:-($vspacing);
-      height: $vspacing;
-      width: 100%;
-      background-color $primary
-    }
   }
   .phase {
     position absolute
-    left:0;
-    bottom: -($vspacing*4.8)
-    width 100%
-    padding: ($spacing/2) 0
+    left 0
+    bottom: -($vspacing*5)
+    width: 94.7%
+    padding: $vspacing 0 ($vspacing/1.5)
+    margin 0 $hspacing*2.5
     border-bottom 1px solid $border-colour;
+    font-size $smallCopy
+    +above(l) {
+      width: 100%
+      margin 0
+      padding: ($spacing/2) 0
+    }
 
     &:before {
       color: #fff;

@@ -1,4 +1,5 @@
 <section class="c-login-form">
+  <h1 class="vishide">Please sign in:</h1>
   <form class="#" action="index.html" method="post">
     <fieldset>
       <legend class="vishide">Please enter your login details</legend>
@@ -13,4 +14,9 @@
       <button type="submit" name="button">Login</button>
     </fieldset>
   </form>
+  <h2>Problems signing in?</h2>
+  <ul class="lined-list">
+    <li><a href="" rel="external">Forgotten user ID?</a></li>
+    <li><a href="" rel="external">Forgotten password?</a></li>
+  </ul>
 </section>
