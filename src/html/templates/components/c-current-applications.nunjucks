@@ -1,0 +1,48 @@
+<section class="c-current-applications">
+  <table>
+    <caption>Your current applications</caption>
+    <thead>
+      <tr>
+        <th>Project Name</th>
+        <th>Call Reference</th>
+        <th>Last Edited</th>
+        <th>Status</th>
+        <th>Type</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+          <td data-title="Project Name">Test Mp ERDF(F) 150930</td>
+          <td data-title="Call Reference">OC04RP0002</td>
+          <td data-title="Last Edited">07/11/2015 10:15</td>
+          <td data-title="Status">In Progress</td>
+          <td data-title="Type">Full</td>
+          <td><a href="#">Resume</a></td>
+      </tr>
+      <tr>
+          <td data-title="Project Name">Test Mp ERDF(F) 150930</td>
+          <td data-title="Call Reference">OC04RP0002</td>
+          <td data-title="Last Edited">07/11/2015 10:15</td>
+          <td data-title="Status">In Progress</td>
+          <td data-title="Type">Full</td>
+          <td><a href="#">Resume</a></td>
+      </tr>
+      <tr>
+          <td data-title="Project Name">Test Mp ERDF(F) 150930</td>
+          <td data-title="Call Reference">OC04RP0002</td>
+          <td data-title="Last Edited">07/11/2015 10:15</td>
+          <td data-title="Status">In Progress</td>
+          <td data-title="Type">Full</td>
+          <td><a href="#">Resume</a></td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="6">
+          <strong>Showing 1 to 4 of 4 entries</strong>
+        </td>
+      </tr>
+    </tfoot>
+  </table>
+</section>

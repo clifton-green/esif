@@ -1,0 +1,7 @@
+{% extends "layout.nunjucks" %}
+{% block content %}
+  <section class="page-dashboard">
+    {% include "components/c-headed-text.nunjucks" %}
+    {% include "components/c-current-applications.nunjucks" %}
+  </section>
+{% endblock %}

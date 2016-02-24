@@ -12,3 +12,6 @@ UI Completed by [Alex Ward](http://www.alexward.me.uk) working on behalf of Valt
 
 ## Technical Debt
 This project is still very much under construction, the current technical debt can be found [here](technical-debt.md)
+
+## Coding guidelines
+To get the most from this build system, please refer to the [coding guidelines](coding-guidelines.md) when building components for the site.
