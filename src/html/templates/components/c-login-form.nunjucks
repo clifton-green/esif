@@ -1,18 +1,20 @@
-<section class="c-login-form">
-  <h1 class="vishide">Please sign in:</h1>
-  <form class="#" action="index.html" method="post">
+<section class="{{context.componentClass}}">
+  <h1 class="vishide">{{context.title}}</h1>
+  <form id="{{context.formBuilder.id}}" class="{{context.formBuilder.classes}}" action="{{context.formBuilder.action}}" method="{{context.formBuilder.method}}">
+    {% for fs in context.formBuilder.fieldset %}
     <fieldset>
-      <legend class="vishide">Please enter your login details</legend>
+      <legend {%if fs.visibleLegend == false %} class="vishide" {% endif %}>fs.legend</legend>
+      {% for field in fs.fields %}
       <div class="field-container">
-        <label for="login-username">User ID</label>
-        <input id="login-username" name="login-username" type="text" value="">
+        <label for="{{field.id}}">{{field.label}}</label>
+        <input id="{{field.id}}" name="{{field.name}}" type="{{field.type}}" value="{{field.initVal}}" {% if field.placeholder%} placeholder="{{field.placeholder}}"{% endif %}>
       </div>
-      <div class="field-container">
-        <label for="login-password">Password</label>
-        <input id="login-password" name="login-password" type="password" value="">
-      </div>
-      <button type="submit" name="button">Login</button>
+      {% endfor %}
+      {% for btn in fs.buttons %}
+      <button {% if btn.classes %} class="{{ btn.classes }}" {% endif %} {% if enabled == false  %} disabled {% endif %} type="{{btn.type}}" name="{{btn.name}}" id="{{btn.id}}">{{btn.text}}</button>
+      {% endfor %}
     </fieldset>
+    {% endfor %}
   </form>
   <h2>Problems signing in?</h2>
   <ul class="lined-list">

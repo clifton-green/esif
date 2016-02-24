@@ -1,0 +1,39 @@
+{
+  "meta" : {
+    "pageTitle" : "Application overview",
+    "description" : "to be added",
+    "canonical" : "dashboard.html"
+  },
+  "contentIntro" : {
+    "componentClass" : "c-global-header",
+    "title" : "Welcome Firstname Surname,",
+    "subtitle" : "New applications:",
+    "bodyCopy" : "To start a new application you will be asked to select the call to which your organisation wishes to apply. You can create, edit and save the draft application as many times as you need before submitting it for assessment.",
+    "ctaType" : "text",
+    "ctaText" : "View the call list",
+    "ctaURL" : "#"
+  },
+  "applications" : {
+    "componentClass" : "c-current-applications",
+    "title": "Your current applications",
+    "projects" : [
+      {
+        "Project Name" : "Test Mp ERDF(F) 150930",
+        "Call Reference" : "OC04RP0002",
+        "Last Edited" : "07/11/2015 10:15",
+        "Status" : "In Progress",
+        "Type" : "Full",
+        "Link" : "#"
+      },
+      {
+        "Project Name" : "Test 2",
+        "Call Reference" : "OC04RP0002",
+        "Last Edited" : "07/11/2015 10:15",
+        "Status" : "In Progress",
+        "Type" : "Full",
+        "Link" : "#"
+      }
+    ],
+    "pagination" : "Showing [x] to [y] of [z] entries"
+  }
+}

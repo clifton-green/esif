@@ -1,41 +1,25 @@
 <section class="c-current-applications">
   <table>
-    <caption>Your current applications</caption>
+    <caption>{{ context.title }}</caption>
     <thead>
       <tr>
-        <th>Project Name</th>
-        <th>Call Reference</th>
-        <th>Last Edited</th>
-        <th>Status</th>
-        <th>Type</th>
-        <th></th>
+        {% for key, val in context.projects[0] %}
+          <th>{{ key }}</th>
+        {% endfor %}
       </tr>
     </thead>
     <tbody>
-      <tr>
-          <td data-title="Project Name">Test Mp ERDF(F) 150930</td>
-          <td data-title="Call Reference">OC04RP0002</td>
-          <td data-title="Last Edited">07/11/2015 10:15</td>
-          <td data-title="Status">In Progress</td>
-          <td data-title="Type">Full</td>
-          <td><a href="#">Resume</a></td>
-      </tr>
-      <tr>
-          <td data-title="Project Name">Test Mp ERDF(F) 150930</td>
-          <td data-title="Call Reference">OC04RP0002</td>
-          <td data-title="Last Edited">07/11/2015 10:15</td>
-          <td data-title="Status">In Progress</td>
-          <td data-title="Type">Full</td>
-          <td><a href="#">Resume</a></td>
-      </tr>
-      <tr>
-          <td data-title="Project Name">Test Mp ERDF(F) 150930</td>
-          <td data-title="Call Reference">OC04RP0002</td>
-          <td data-title="Last Edited">07/11/2015 10:15</td>
-          <td data-title="Status">In Progress</td>
-          <td data-title="Type">Full</td>
-          <td><a href="#">Resume</a></td>
-      </tr>
+      {% for row in context.projects %}
+        <tr>
+        {% for key, val in row %}
+          {% if not loop.last %}
+            <td data-title="{{key}}">{{val}}</td>
+          {% else %}
+            <td><a href="{{val}}">{{key}}</a></td>
+          {% endif %}
+        {% endfor %}
+        </tr>
+      {% endfor %}
     </tbody>
     <tfoot>
       <tr>

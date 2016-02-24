@@ -1,4 +1,5 @@
 var gulp    = require('gulp'),
+fs          = require('fs'),
 browserSync = require('browser-sync'),
 concat      = require('gulp-concat'),
 imagemin    = require('gulp-imagemin'),
@@ -160,7 +161,7 @@ gulp.task('processHTML', function() {
       { errorHandler: onError }
     ))
     .pipe(data(function(file) {
-      return require('./src/model/' + path.basename(file.path) + '.json');
+      return JSON.parse(fs.readFileSync('./src/model/' + path.basename(file.path, '.nunjucks') + '.json'));
     }))
     .pipe(data(function() {
       return require('./src/model/globals.json');
