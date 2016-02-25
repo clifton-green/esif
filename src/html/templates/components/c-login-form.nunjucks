@@ -1,3 +1,5 @@
+{# Import form builder macros #}
+{% import  "../macros/formbuilder/form-fields.nunjucks" as forms %}
 <section class="{{context.componentClass}}">
   <h1 class="vishide">{{context.title}}</h1>
   <form id="{{context.formBuilder.id}}" class="{{context.formBuilder.classes}}" action="{{context.formBuilder.action}}" method="{{context.formBuilder.method}}">
@@ -5,10 +7,7 @@
     <fieldset>
       <legend {%if fs.visibleLegend == false %} class="vishide" {% endif %}>fs.legend</legend>
       {% for field in fs.fields %}
-      <div class="field-container">
-        <label for="{{field.id}}">{{field.label}}</label>
-        <input id="{{field.id}}" name="{{field.name}}" type="{{field.type}}" value="{{field.initVal}}" {% if field.placeholder%} placeholder="{{field.placeholder}}"{% endif %}>
-      </div>
+       {{ forms.field(field.name, field.label, field.type, field.fieldid, field.initialVal, field.placeholderText, field.enabled, field.options) }}
       {% endfor %}
       {% for btn in fs.buttons %}
       <button {% if btn.classes %} class="{{ btn.classes }}" {% endif %} {% if enabled == false  %} disabled {% endif %} type="{{btn.type}}" name="{{btn.name}}" id="{{btn.id}}">{{btn.text}}</button>

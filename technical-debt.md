@@ -11,6 +11,7 @@ Any development tasks or optimisations which need to be made should be listed he
 2. Use macros for common elements (eg form fields)
 3. Use gulpif to create --prod and --dev states for styles, scripts and servers
 4. Add other fieldtypes to formBuilder (eg radio, select etc...)
+5. Add sourcemaps at some point
 
 ## Issues
-No current issues!
+1. The dev tools have stopped working.

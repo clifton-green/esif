@@ -84,7 +84,9 @@ gulp.task('styles', function(callback) {
     .pipe(plumber(
       { errorHandler: onError }
     ))
-    .pipe(stylus({use: [jeet(), rupture()]}))
+    .pipe(stylus({
+      use: [jeet(), rupture()]
+    }))
     .pipe(concat('core.min.css'))
     .pipe(cmq())
     .pipe(csso())

@@ -6,7 +6,7 @@
   },
   "contentIntro" : {
     "componentClass" : "c-headed-text",
-    "title" : "E-Claims Login",
+    "title" : "E-Claims Login page",
     "subtitle" : "",
     "bodyCopy" : "You can <a href=\"\" target=\"_blank\" rel=\"external\">register for an E-CLAIMS account <span class=\"vishide\">(link opens in a new window)</span></a> to manage your ESIF projects.",
     "ctaType" : "",
@@ -28,21 +28,50 @@
           "fields" : [
             {
               "type" : "text",
-              "id" : "login-username",
+              "fieldid" : "login-username",
               "name" : "login-username",
               "label" : "User ID",
+              "enabled" : true,
               "initialVal" : "",
-              "placeholderText" : ""
+              "placeholderText" : "Enter your username",
+              "options" : [],
+              "error" : ""
             },
             {
               "type" : "password",
-              "id" : "login-password",
+              "fieldid" : "login-password",
               "name" : "login-password",
               "label" : "Password",
+              "enabled" : true,
               "initialVal" : "",
-              "placeholderText" : ""
+              "placeholderText" : "",
+              "options" : [],
+              "error" : ""
+            },
+            {
+              "type" : "text",
+              "fieldid" : "login-select",
+              "name" : "login-select",
+              "label" : "Choose your destiny",
+              "enabled" : true,
+              "initialVal" : "",
+              "placeholderText" : "test",
+              "options" : [
+                {
+                  "name" : "option 1",
+                  "value" : "value 1"
+                },
+                {
+                  "name" : "option 2",
+                  "value" : "value 2"
+                },
+                {
+                  "name" : "option 3",
+                  "value" : "value 3"
+                }
+              ],
+              "error" : ""
             }
-
           ],
           "buttons" : [
             {

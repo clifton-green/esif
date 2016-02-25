@@ -15,3 +15,5 @@ This project is still very much under construction, the current technical debt c
 
 ## Coding guidelines
 To get the most from this build system, please refer to the [coding guidelines](coding-guidelines.md) when building components for the site.
+
+If you are building a form then please refer to the [formBuilder](how_to_use_formbuilder.md) instructions.

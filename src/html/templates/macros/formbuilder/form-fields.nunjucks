@@ -1,0 +1,28 @@
+{% macro field(name='', label='', type='', fieldid='', value='', placeholder='', enabled=true, options=[]) %}
+  <div class="field-container">
+    <label for="{{fieldid}}">{{label}}</label>
+    {% if type == "select"%}
+      <select id="{{fieldid}}" name="{{name}}" {% if enabled != true %} disabled {% endif %} >
+        {% for opt in options%}
+          <option {% if value == opt.value %} selected {% endif %} value="{{opt.value}}">{{opt.name}}</option>
+        {% endfor %}
+      </select>
+    {% elif type == "radio"%}
+      {% for opt in options%}
+        {% if opt.name != ''%}<span class="cbr_option">{{ opt.name }}</span>{% endif %}
+        <input id="{{fieldid}}" name="{{name}}" type="radio" {% if value == opt.value %} checked {% endif %} value="{{opt.value}}" {% if enabled !=true %} disabled {% endif %} />
+      {% endfor %}
+    {% elif type == "checkbox"%}
+      {% for opt in options%}
+        {% if opt.name != ''%}
+          <span class="cbr_option">{{ opt.name }}</span>
+        {% endif %}
+        <input id="{{fieldid}}" name="{{name}}" type="checkbox" {% if value == opt.value %} checked {% endif %} value="{{opt.value}}" {% if enabled !=true %} disabled {% endif %} />
+      {% endfor %}
+    {% elif type == "textarea"%}
+      <textarea id="{{fieldid}}" name="{{name}}" {% if enabled != true %} disabled {% endif %}>{% if value %}{{ value }}{% endif %}</textarea>
+    {% else %}
+      <input id="{{fieldid}}" name="{{name}}" type="{{type}}" value="{{value}}" {% if placeholder != '' %} placeholder="{{placeholder}}"{% endif %} {% if enabled !=true %} disabled {% endif %} />
+    {% endif %}
+  </div>
+{% endmacro %}
