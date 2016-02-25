@@ -1,0 +1,2 @@
+{% import  "../macros/formBuilder.nunjucks" as fb %}
+{{ fb.formBuilder(context.componentClass, context.formBuilder.id, context.formBuilder.classes, context.formBuilder.action, context.formBuilder.method, context.formBuilder.fieldset) }}

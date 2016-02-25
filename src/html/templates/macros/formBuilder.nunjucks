@@ -1,4 +1,4 @@
-{% macro field(name='', label='', type='', fieldid='', value='', placeholder='', enabled=true, options=[]) %}
+{% macro fieldBuilder(name='', label='', type='', fieldid='', value='', placeholder='', enabled=true, options=[]) %}
   <div class="field-container">
     <label for="{{fieldid}}">{{label}}</label>
     {% if type == "select"%}
@@ -25,4 +25,20 @@
       <input id="{{fieldid}}" name="{{name}}" type="{{type}}" value="{{value}}" {% if placeholder != '' %} placeholder="{{placeholder}}"{% endif %} {% if enabled !=true %} disabled {% endif %} />
     {% endif %}
   </div>
+{% endmacro %}
+
+{% macro formBuilder(componentClass, formid, classes='', action='', method='', fieldset=[]) %}
+  <form id="{{formid}}" class="{{componentClass}}, {{classes}}" action="{{action}}" method="{{method}}">
+    {% for fs in fieldset %}
+      <fieldset>
+        <legend {%if fs.visibleLegend == false %} class="vishide" {% endif %}>fs.legend</legend>
+        {% for field in fs.fields %}
+         {{ fieldBuilder(field.name, field.label, field.type, field.fieldid, field.initialVal, field.placeholderText, field.enabled, field.options) }}
+        {% endfor %}
+        {% for btn in fs.buttons %}
+          <button {% if btn.classes %} class="{{ btn.classes }}" {% endif %} {% if enabled == false  %} disabled {% endif %} type="{{btn.type}}" name="{{btn.name}}" id="{{btn.id}}">{{btn.text}}</button>
+        {% endfor %}
+      </fieldset>
+    {% endfor %}
+  </form>
 {% endmacro %}

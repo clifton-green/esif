@@ -1,20 +1,8 @@
-{# Import form builder macros #}
-{% import  "../macros/formbuilder/form-fields.nunjucks" as forms %}
 <section class="{{context.componentClass}}">
   <h1 class="vishide">{{context.title}}</h1>
-  <form id="{{context.formBuilder.id}}" class="{{context.formBuilder.classes}}" action="{{context.formBuilder.action}}" method="{{context.formBuilder.method}}">
-    {% for fs in context.formBuilder.fieldset %}
-    <fieldset>
-      <legend {%if fs.visibleLegend == false %} class="vishide" {% endif %}>fs.legend</legend>
-      {% for field in fs.fields %}
-       {{ forms.field(field.name, field.label, field.type, field.fieldid, field.initialVal, field.placeholderText, field.enabled, field.options) }}
-      {% endfor %}
-      {% for btn in fs.buttons %}
-      <button {% if btn.classes %} class="{{ btn.classes }}" {% endif %} {% if enabled == false  %} disabled {% endif %} type="{{btn.type}}" name="{{btn.name}}" id="{{btn.id}}">{{btn.text}}</button>
-      {% endfor %}
-    </fieldset>
-    {% endfor %}
-  </form>
+  {# Include the formBuilder #}
+  {% include "../components/c-formbuilder.nunjucks" %}
+  {# TODO make the below into a component #}
   <h2>Problems signing in?</h2>
   <ul class="lined-list">
     <li><a href="" rel="external">Forgotten user ID?</a></li>
