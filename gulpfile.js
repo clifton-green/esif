@@ -7,6 +7,7 @@ pngquant    = require('imagemin-pngquant'),
 plumber     = require('gulp-plumber'),
 notifier    = require('node-notifier'),
 cssnano     = require('gulp-cssnano'),
+jsonlint    = require('gulp-jsonlint'),
 eslint      = require('gulp-eslint'),
 del         = require('del'),
 stylus      = require('gulp-stylus'),
@@ -153,6 +154,14 @@ gulp.task('scripts:dev', function() {
 });
 
 
+//Make sure the json data is correctly formed
+gulp.task('testModel', function() {
+  'use strict';
+  return gulp.src('./src/model/**/*.json')
+    .pipe(jsonlint())
+    .pipe(jsonlint.reporter());
+});
+
 // Process nunjucks html files (.nunjucks)
 gulp.task('processHTML', function() {
   'use strict';
@@ -181,6 +190,7 @@ gulp.task('build', function (callback) {
     'styles',
     'extrastyles',
     'libs',
+    'testModel',
     'processHTML',
     callback
   );

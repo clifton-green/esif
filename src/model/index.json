@@ -5,7 +5,7 @@
     "canonical" : "index.html"
   },
   "contentIntro" : {
-    "componentClass" : "c-global-header",
+    "componentClass" : "c-headed-text",
     "title" : "E-Claims Login",
     "subtitle" : "",
     "bodyCopy" : "You can <a href=\"\" target=\"_blank\" rel=\"external\">register for an E-CLAIMS account <span class=\"vishide\">(link opens in a new window)</span></a> to manage your ESIF projects.",

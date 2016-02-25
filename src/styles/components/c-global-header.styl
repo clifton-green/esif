@@ -56,10 +56,20 @@
     margin 0 $hspacing*2.5
     border-bottom 1px solid $border-colour;
     font-size $smallCopy
+    span {
+      position absolute
+      top: -9999px;
+      left: -9999px;
+    }
     +above(l) {
       width: 100%
       margin 0
       padding: ($vspacing/1.3) 0
+      span {
+        position static
+        top:auto;
+        left:auto;
+      }
     }
 
     &:before {
