@@ -50,6 +50,14 @@
       }
     ]
   },
+  "globalLoggedIn" : {
+    "componentClass" : "c-global-logged-in",
+    "userFirstName" : "FirstName",
+    "userLastName" : "Surname",
+    "userCompany" : "Company Name",
+    "logoutLinkText" : "Sign out",
+    "logoutLinkURL" : "index.html"
+  },
   "globalFooter" : {
     "componentClass" : "c-global-footer",
     "navigation" : [

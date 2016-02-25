@@ -164,7 +164,7 @@ gulp.task('processHTML', function() {
       return JSON.parse(fs.readFileSync('./src/model/' + path.basename(file.path, '.nunjucks') + '.json'));
     }))
     .pipe(data(function() {
-      return require('./src/model/globals.json');
+      return JSON.parse(fs.readFileSync('./src/model/globals.json'));
     }))
     .pipe(nunjucks({
       searchPaths: ['src/html/templates']

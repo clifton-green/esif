@@ -2,6 +2,8 @@
 {% block content %}
   <section class="page-dashboard">
     {# Load components #}
+    {% set context = globalLoggedIn %}
+    {% include "components/c-global-logged-in.nunjucks" %}
     {% set context = contentIntro %}
     {% include "components/c-headed-text.nunjucks" %}
     {% set context = applications %}

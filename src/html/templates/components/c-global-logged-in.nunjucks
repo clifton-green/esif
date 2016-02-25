@@ -1,0 +1,5 @@
+<div class="{{context.componentClass}}">
+  <span class="name">{{context.userFirstName}} {{context.userLastName}}</span>
+  {% if context.userCompany %} <span class="company">, {{context.userCompany}}</span>{% endif %}
+  <a href="{{context.logoutLinkURL}}">{{context.logoutLinkText}}</a>
+</div>

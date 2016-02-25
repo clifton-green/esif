@@ -18,8 +18,8 @@
     "title": "Please sign in:",
     "formBuilder" : {
       "id" : "loginForm",
-      "action" : "",
-      "method" : "post",
+      "action" : "dashboard.html",
+      "method" : "get",
       "classes" : "",
       "fieldset" : [
         {
@@ -42,6 +42,7 @@
               "initialVal" : "",
               "placeholderText" : ""
             }
+
           ],
           "buttons" : [
             {
