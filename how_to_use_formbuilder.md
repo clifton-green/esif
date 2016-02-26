@@ -47,7 +47,7 @@ If a form exists on a page then that pages data file will have a 'formBuilder' e
 
 That might look a bit scary but all it is is a nested list of text instructions to the page.
 
-The `id`, `action`, `method` and `classes` sections can safely be ignored as they are just for the developers. However the `fieldset` item has a lot of power in it. 
+The `id`, `action`, `method` and `classes` sections can safely be ignored as they are just for the developers. However the `fieldset` item has a lot of power in it.
 
 ## What is a fieldset?
 
@@ -71,6 +71,8 @@ You can then build up your form. Inside the curly brackets, copy and paste the f
 	  "name" : "",
 	  "label" : "",
 	  "enabled" : true,
+		"required" : true,
+		"validation" : "",
 	  "initialVal" : "",
 	  "placeholderText" : "",
 	  "options" : [],
@@ -96,7 +98,7 @@ Creates tick boxes, there is one for each option. A user can select as many opti
 - **radio**  
 These are exactly the same as the checkbox type with one minor difference, the user can only selection one of these.
 
-The 'text' type is a very versatile option as it can actually be several different types. For example if instead of typing 'text' you typed 'number' then when the user clicks on that field on a mobile, they will see a number pad instead of a normal keyboard. 
+The 'text' type is a very versatile option as it can actually be several different types. For example if instead of typing 'text' you typed 'number' then when the user clicks on that field on a mobile, they will see a number pad instead of a normal keyboard.
 
 For more information on what types you can replace text with see the 'HTML5 Input Types' section on [w3schools](http://www.w3schools.com/html/html_form_input_types.asp).
 
@@ -111,13 +113,38 @@ This is what the user will see to describe what the field is. So if you are crea
 ### Enabled
 It is possible to disable form entries, by default you should leave them as `true` but if you need them to be disabled (the user can see them but can't click on them or change the data) then set this to `false`
 
+### Required
+This is is fairly straightforward. If this is set to true then the field is not optional and will display a "This field is required" error if it is not completed. If set to false then it can be left blank by the user.
+
+### Validation
+This shows how the code should be validated. The options are:
+
+- None
+The default option, no validation is performed at all.
+- Text
+This is text only, no numbers or symbols are allowed
+- Numbers
+Numbers only, no text or symbols allowed
+- Alphanumeric
+Numbers and text are allowed but no symbols
+- Phone
+Validates as a standard UK landline or mobile number
+- Postcode
+Validates as a standard UK Postcode
+- email
+Validates as a standard email address
+- url
+Validates as a standard web address
+- date
+Validates as a uk-format date dd/mm/yy or dd/mm/yyyy
+
 ### InitialVal
 Some fields require a value to be inserted by default, this is where you put it. If you have create a `select`, `radio` or `checkbox` type then this value should be the same as the value you want the user to see initially selected when the form loads.
 
 **Note:** If you add an initial value to a `text` or `textarea` type then the `placeholder` value (see below) will not be visible unless the user deletes the initial value.
 
 ### Placeholder
-This is usually a set of instructions on how to fill in the field. Not all users can see these so make sure they are not vital to the user, they should just be helpful hints. 
+This is usually a set of instructions on how to fill in the field. Not all users can see these so make sure they are not vital to the user, they should just be helpful hints.
 
 Eg for username: "Enter your username here"
 
@@ -129,27 +156,29 @@ They will appear inside the field itself and disappear when clicked.
 
 A field doesn't have to be one item, it can also be a set of items, to specify a set, then you need to have options.
 
-If you chose a `select`, `radio` or `checkbox` type then you need to add at least one option, you may have noticed the square brackets `[]` next to options, this is because, like `fields`, this is also a collection, so once again add the curly braces `{}` for each option. 
+If you chose a `select`, `radio` or `checkbox` type then you need to add at least one option, you may have noticed the square brackets `[]` next to options, this is because, like `fields`, this is also a collection, so once again add the curly braces `{}` for each option.
 
 An option looks like this:
 
 	"name" : "option 1",
     "value" : "value 1"
 
-#### Name 
+#### Name
 Name is the part that will be visible to the user, it is similar in purpose to the `label` entry above, however this is related to this particular option instead of the field itself. The label could be "What type of cake do you want" and the name of the option could be "Red Velvet"
 
 #### Value
 Value is what the selection represents. This won't be visible to the user and is usually specified as a site requirement (if you are in doubt, just make it the same as the name)
 
 ### Error
-This is what the error message should say if the user completes the field incorrectly: 
+This is what the error message should say if the user completes the field incorrectly:
 
 eg: "Your username cannot contain any special characters"
 
+**Note:** You don't need to add error messages to say a field is required.
+
 ## Adding buttons
 
-Each fieldset can have a collection of buttons to go with it. Like the fieldset they also have a pre-set method of being generated. 
+Each fieldset can have a collection of buttons to go with it. Like the fieldset they also have a pre-set method of being generated.
 
 It is unlikely that a button section doesn't already exist, in fact the chances are, only the text of a button will need to be changed in the future but if it doesn't already exist, add the following code directly after the fieldset collection (if there isn't a comma after the square brackets `[]` on fieldset then makes sure to add one)
 
@@ -163,7 +192,7 @@ It is unlikely that a button section doesn't already exist, in fact the chances 
 	    "text" : "Login"
 	  }
 	]
-	
+
 Like fields, buttons also have a type, however there are only three button types `submit`, `reset` and `button`. The `submit` tells the form to process all the fields that have been filled in, `reset` will clear all the fields the user has entered (this is hardly ever used on websites these days) and `button` doesn't really do anything unless a developer has told it to.
 
 When creating a new button just give it a `name` and an `id` (again the name and ID can be the same) an then change the `text` entry, this is the only part the user will see.

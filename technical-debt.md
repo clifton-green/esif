@@ -8,9 +8,9 @@ Any development tasks or optimisations which need to be made should be listed he
 
 ## Tasks:
 1. Set up tests (jasmine and casperjs/spooky)
+2. Add 'required' and 'validate-as' options to formBuilder
 3. Use gulpif to create --prod and --dev states for styles, scripts and servers
-4. Add other fieldtypes to formBuilder (eg radio, select etc...)
 5. Add sourcemaps at some point
 
 ## Issues
-1. The dev tools have stopped working.
+No current issues.
