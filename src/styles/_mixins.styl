@@ -17,3 +17,8 @@ button()
   &:hover {
     background: $green;
   }
+  &.disabled {
+    cursor auto;
+    background: desaturate($button-colour, 60%);
+    opacity: .6
+  }

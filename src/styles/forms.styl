@@ -13,6 +13,11 @@ form {
   }
 }
 
+legend {
+  font-size $mantle;
+  font-weight bold
+}
+
 label {
   display block
   margin-bottom ($vspacing/2)
@@ -33,4 +38,18 @@ input, textarea, select {
 button {
   button()
   margin-top $vspacing
+}
+
+.form-summary {
+  > li {
+    > a {
+      font-weight bold
+    }
+    > ul > li {
+      margin-left $hspacing*2
+      > ul > li {
+        margin-left $hspacing*2
+      }
+    }
+  }
 }

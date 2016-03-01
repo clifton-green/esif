@@ -2,10 +2,4 @@
   <h1 class="vishide">{{context.title}}</h1>
   {# Include the formBuilder #}
   {% include "../components/c-formbuilder.nunjucks" %}
-  {# TODO make the below into a component #}
-  <h2>Problems signing in?</h2>
-  <ul class="lined-list">
-    <li><a href="" rel="external">Forgotten user ID?</a></li>
-    <li><a href="" rel="external">Forgotten password?</a></li>
-  </ul>
 </section>

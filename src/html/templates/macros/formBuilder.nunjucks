@@ -3,6 +3,9 @@
     <label for="{{fieldid}}">{{label}}</label>
     {% if type == "select"%}
       <select id="{{fieldid}}" name="{{name}}" {% if enabled != true %} disabled {% endif %} >
+        {% if placeholder != '' %}
+          <option value="">{{placeholder}}</option>
+        {% endif %}
         {% for opt in options%}
           <option {% if value == opt.value %} selected {% endif %} value="{{opt.value}}">{{opt.name}}</option>
         {% endfor %}
@@ -31,12 +34,12 @@
   <form id="{{formid}}" class="{{componentClass}}, {{classes}}" action="{{action}}" method="{{method}}">
     {% for fs in fieldset %}
       <fieldset>
-        <legend {%if fs.visibleLegend == false %} class="vishide" {% endif %}>fs.legend</legend>
+        <legend {%if fs.visibleLegend == false %} class="vishide" {% endif %}>{{fs.legend}}</legend>
         {% for field in fs.fields %}
          {{ fieldBuilder(field.name, field.label, field.type, field.fieldid, field.initialVal, field.placeholderText, field.enabled, field.options) }}
         {% endfor %}
         {% for btn in fs.buttons %}
-          <button {% if btn.classes %} class="{{ btn.classes }}" {% endif %} {% if enabled == false  %} disabled {% endif %} type="{{btn.type}}" name="{{btn.name}}" id="{{btn.id}}">{{btn.text}}</button>
+          <button class="btn {% if btn.classes %}{{ btn.classes }} {% endif %}{% if btn.enabled == false%}disabled{% endif %}" {% if btn.enabled == false  %} disabled {% endif %} type="{{btn.type}}" name="{{btn.name}}" id="{{btn.id}}">{{btn.text}}</button>
         {% endfor %}
       </fieldset>
     {% endfor %}
