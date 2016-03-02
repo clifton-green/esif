@@ -16,6 +16,7 @@
   "applications" : {
     "componentClass" : "c-current-applications",
     "title": "Your current applications",
+    "resumeText" : "resume",
     "projects" : [
       {
         "Project Name" : "Test Mp ERDF(F) 150930",
@@ -23,7 +24,7 @@
         "Last Edited" : "07/11/2015 10:15",
         "Status" : "In Progress",
         "Type" : "Full",
-        "Link" : "#"
+        "resumeLink" : "full-application.html"
       },
       {
         "Project Name" : "Test 2",
@@ -31,7 +32,7 @@
         "Last Edited" : "07/11/2015 10:15",
         "Status" : "In Progress",
         "Type" : "Full",
-        "Link" : "#"
+        "resumeLink" : "full-application.html"
       }
     ],
     "pagination" : "Showing [x] to [y] of [z] entries"

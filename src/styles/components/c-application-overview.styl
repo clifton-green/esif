@@ -1,0 +1,56 @@
+.c-application-overview {
+  margin-top $vspacing*3
+  ol {
+    display:table;
+    width: 100%;
+    margin-top $vspacing*3
+    border-collapse: collapse;
+  }
+  li {
+    counter-increment: step-counter;
+    display:table-row;
+    width: 100%;
+    border-top: 1px solid $grey-2;
+    border-bottom: 1px solid $grey-2;
+
+    &:before {
+      content: counter(step-counter) '.';
+      font-weight bold
+    }
+    > span,
+    > a {
+      display:table-cell;
+      padding: $spacing;
+      font-weight bold
+    }
+  }
+
+  .status {
+    font-size: ($smallCopy/1.3);
+    span {
+      display inline-block
+      border: 1px solid $grey-1;
+      border-radius: $brad;
+      padding: ($hspacing/4) ($hspacing/2) 0
+      color: $grey-1;
+    }
+    &.complete {
+      span {
+        color: $green;
+        border-color: $green;
+      }
+    }
+    &.error {
+      span {
+        color: $red;
+        border-color: $red;
+      }
+    }
+    &.review {
+      span {
+        color: $orange;
+        border-color: $orange;
+      }
+    }
+  }
+}

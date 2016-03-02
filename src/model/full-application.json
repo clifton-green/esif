@@ -1,0 +1,113 @@
+{
+  "meta" : {
+    "pageTitle" : "Application overview",
+    "description" : "to be added",
+    "canonical" : "dashboard.html"
+  },
+  "breadcrumb" : {
+    "componentClass" : "c-breadcrumbs",
+    "items" : [
+      {
+        "text" : "Dashboard",
+        "link" : "dashboard.html"
+      },
+      {
+        "text" : "Application overview",
+        "link" : ""
+      }
+    ]
+  },
+  "applicationOverview" : {
+    "componentClass" : "c-application-overview",
+    "title" : "Application overview",
+    "callText" : "Call",
+    "callRef" : "OC04R15P0002",
+    "editLinkText" : "edit",
+    "sections" : [
+      {
+        "name" : "About your organisation",
+        "status" : "complete",
+        "editLinkUrl" : "#"
+      },
+      {
+        "name" : "Project Partners",
+        "status" : "complete",
+        "editLinkUrl" : "#"
+      },
+      {
+        "name" : "About your project",
+        "status" : "complete",
+        "editLinkUrl" : "#"
+      },
+      {
+        "name" : "Strategy",
+        "status" : "complete",
+        "editLinkUrl" : "#"
+      },
+      {
+        "name" : "Financial",
+        "status" : "complete",
+        "editLinkUrl" : "#"
+      },
+      {
+        "name" : "Deliverables",
+        "status" : "error",
+        "editLinkUrl" : "#"
+      },
+      {
+        "name" : "Project management and control",
+        "status" : "review",
+        "editLinkUrl" : "#"
+      },
+      {
+        "name" : "Compliance",
+        "status" : "not started",
+        "editLinkUrl" : "#"
+      }
+    ]
+  },
+  "applicationInfo" : {
+    "componentClass" : "c-application-info",
+    "items" : [
+      {
+        "title" : "Call reference",
+        "contents" : "OC04R15P0002"
+      },
+      {
+        "title" : "Application Type",
+        "contents" : "Full"
+      },
+      {
+        "title" : "Created",
+        "contents" : "07 November 2015"
+      },
+      {
+        "title" : "Progress",
+        "contents" : "5 of 8 sections completed"
+      },
+      {
+        "title" : "Status",
+        "contents" : "Incomplete"
+      }
+    ]
+
+  },
+  "miniDash" : {
+    "componentClass" : "c-mini-dashboard",
+    "title" : "Your dashboard",
+    "items" : [
+      {
+        "name" : "My tasks",
+        "link" : "dashboard.html"
+      },
+      {
+        "name" : "Existing applications",
+        "link" : "dashboard.html"
+      },
+      {
+        "name" : "Projects",
+        "link" : "dashboard.html"
+      }
+    ]
+  }
+}

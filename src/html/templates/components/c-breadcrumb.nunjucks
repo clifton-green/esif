@@ -1,0 +1,5 @@
+<ul class="{{context.componentClass}}">
+  {% for step in context.items %}
+  <li>{% if step.link != '' %}<a href="{{step.link}}">{% endif %}{{step.text}}{% if step.link != '' %}</a>{% endif %}</li>
+  {% endfor %}
+</ul>

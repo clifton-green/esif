@@ -1,0 +1,22 @@
+{% extends "layout.nunjucks" %}
+{% block content %}
+  <section class="page-full-application">
+    {# Load components #}
+    {% set context = globalLoggedIn %}
+    {% include "components/c-global-logged-in.nunjucks" %}
+    {% set context = breadcrumb %}
+    {% include "components/c-breadcrumb.nunjucks" %}
+    <div class="parthenon">
+      <div class="col primary">
+        {% set context = applicationOverview %}
+        {% include "components/c-application-overview.nunjucks" %}
+      </div>
+      <div class="col sidebar">
+        {% set context = applicationInfo %}
+        {% include "components/c-application-information.nunjucks" %}
+        {% set context = miniDash %}
+        {% include "components/c-mini-dashboard.nunjucks" %}
+      </div>
+    </div>
+  </section>
+{% endblock %}

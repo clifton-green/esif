@@ -1,0 +1,10 @@
+<section class="{{context.componentClass}}">
+  <ul>
+    {% for item in context.items %}
+      <li>
+        <span class="title">{{item.title}}</span>
+        <span class="contents">{{item.contents}}</span>
+      </li>
+    {% endfor %}
+  </ul>
+</section>

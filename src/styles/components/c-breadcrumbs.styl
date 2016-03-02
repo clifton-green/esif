@@ -1,0 +1,10 @@
+.c-breadcrumbs {
+  li {
+    display inline-block
+    &:not(:last-of-type) {
+      &:after {
+        content: " > "
+      }
+    }
+  }
+}

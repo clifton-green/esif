@@ -1,4 +1,4 @@
-<section class="c-current-applications">
+<section class="{{context.componentClass}}">
   <table>
     <caption>{{ context.title }}</caption>
     <thead>
@@ -15,7 +15,7 @@
           {% if not loop.last %}
             <td data-title="{{key}}">{{val}}</td>
           {% else %}
-            <td><a href="{{val}}">{{key}}</a></td>
+            <td><a href="{{val}}">{{context.resumeText}}</a></td>
           {% endif %}
         {% endfor %}
         </tr>
