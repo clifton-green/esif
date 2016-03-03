@@ -49,6 +49,7 @@
     "imagemin-pngquant": "^4.1.0",
     "jasmine-core": "^2.4.1",
     "jeet": "^6.1.2",
+    "jsoneditor": "^5.1.5",
     "karma": "^0.13.21",
     "karma-jasmine": "^0.3.7",
     "karma-phantomjs-launcher": "^1.0.0",

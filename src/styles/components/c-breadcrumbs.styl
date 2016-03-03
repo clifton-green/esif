@@ -1,9 +1,18 @@
 .c-breadcrumbs {
+  margin-top $vspacing
+  font-size $smallCopy;
   li {
     display inline-block
     &:not(:last-of-type) {
       &:after {
-        content: " > "
+        content: ''
+        display inline-block
+        width: 0;
+      	height: 0;
+        margin 0 $hspacing;
+      	border-top: ($spacing/2) solid transparent;
+      	border-bottom: ($spacing/2) solid transparent;
+      	border-left: ($spacing/2) solid $black;
       }
     }
   }

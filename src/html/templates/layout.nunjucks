@@ -21,7 +21,6 @@
 
     <!-- Initial JavaScript libraries-->
     <script src="static/libs/libs.min.js"></script>
-
     <!-- SEO tags -->
     <title>{{ meta.pageTitle }} | {{config.siteName}}</title>
     <link rel="canonical" href="//{{config.host}}/{{meta.canonical}}" />
