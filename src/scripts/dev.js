@@ -53,8 +53,9 @@ DevTools = {
 		'use strict';
 			// create the editor
 		 $('<div id="jsoneditor" style="position:absolute;top:10%;left:10%;width:80%; height: 80%;background:white;z-index:10000;"></div>').prependTo('body');
-     var c = this,
+		 var c = this,
 		 container = document.getElementById('jsoneditor'),
+		 source = c.currentJSON !== '/model/' ? c.currentJSON : '/model/index.json',
 		 options = {
 			 mode: 'form',
 			 modes: ['form', 'text'], // allowed modes
@@ -74,7 +75,7 @@ DevTools = {
 	    $.ajax({
 	        'async': false,
 	        'global': false,
-	        'url': c.currentJSON,
+	        'url': source,
 	        'dataType': 'json',
 	        'success': function (data) {
 	            json = data;

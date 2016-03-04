@@ -117,8 +117,7 @@ gulp.task('extrastyles', function(callback) {
 gulp.task('libs', function() {
   'use strict';
   return gulp.src([
-    'node_modules/jquery/dist/jquery.min.js',
-    'node_modules/lodash/lodash.js'
+    'node_modules/jquery/dist/jquery.min.js'
     ])
     .pipe(plumber(
       { errorHandler: onError }
@@ -126,6 +125,30 @@ gulp.task('libs', function() {
     .pipe(concat('libs.min.js'))
     .pipe(uglify())
     .pipe(gulp.dest('dist/static/libs'))
+});
+
+// Move jsoneditor
+gulp.task('jsoneditor', function() {
+  'use strict';
+  return gulp.src([
+    'node_modules/jsoneditor/**/*',
+    ])
+    .pipe(plumber(
+      { errorHandler: onError }
+    ))
+    .pipe(gulp.dest('dist/jsoneditor'))
+});
+
+// Move json
+gulp.task('model', function() {
+  'use strict';
+  return gulp.src([
+    'src/model/**/*',
+    ])
+    .pipe(plumber(
+      { errorHandler: onError }
+    ))
+    .pipe(gulp.dest('dist/model'))
 });
 
 // Combine JS
@@ -203,6 +226,8 @@ gulp.task('build:dev', function() {
   'use strict';
   runSequence(
     'build',
+    'jsoneditor',
+    'model',
     'scripts:dev'
   );
   notifier.notify({ title: 'Development Build', message: 'Completed', icon: 'src/images/icons/apple-touch-icon.png' });

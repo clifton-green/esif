@@ -5,7 +5,7 @@ module.exports = function(config) {
     reporters: ['spec'],
     browsers: ['PhantomJS'],
     files: [
-      'dist/static/libs/jquery.min.js',
+      'dist/static/libs/libs.min.js',
       'dist/static/scripts/core.min.js',
       'tests/**/*.js'
     ]
