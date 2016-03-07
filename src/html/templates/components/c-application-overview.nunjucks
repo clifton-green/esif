@@ -1,5 +1,5 @@
 <section class="{{context.componentClass}}">
-  <span class="call">{{ context.callText }} {{ context.callRef }}</span>
+  <span class="pretitle">{{ context.callText }} {{ context.callRef }}</span>
   <h1>{{ context.title }}</h1>
   <ol>
     {% for row in context.sections %}

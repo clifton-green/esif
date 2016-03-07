@@ -8,10 +8,9 @@ Any development tasks or optimisations which need to be made should be listed he
 
 ## Tasks:
 1. Set up tests (jasmine and casperjs/spooky)
-2. Make 'validate-as' option on formBuilder work
 3. Use gulpif to create --prod and --dev states for styles, scripts and servers
-5. Add sourcemaps at some point
-6. Finish adding vagrant into build
+5. Add sourcemaps at some
+6. Add javascript validation and custom validation messages to compliment HTML5 validation
 
 ## Issues
 No current issues.

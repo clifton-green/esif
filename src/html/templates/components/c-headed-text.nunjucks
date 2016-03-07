@@ -1,4 +1,9 @@
 <section class="c-headed-text">
+  {%if context.pretitle %}
+  <span class="pretitle">
+    {{context.pretitle}}
+  </span>
+  {% endif %}
   <h1>{{ context.title }}</h1>
   {%if context.subtitle %}
   <h2>{{ context.subtitle }}</h2>

@@ -2,25 +2,27 @@
 /* For specific form component styles see the appropriate component stylesheet */
 
 form {
-  margin-bottom $spacing*2
+  margin-bottom: $spacing*2
 }
 
 .field-container {
+  cf();
+  clear: both;
   padding: $vspacing 0;
-  margin-bottom ($vspacing/2);
+  margin-bottom: ($vspacing/2);
   +above(m) {
     width: 50%;
   }
 }
 
 legend {
-  font-size $mantle;
-  font-weight bold
+  font-size: $mantle;
+  font-weight: bold;
 }
 
 label {
-  display block
-  margin-bottom ($vspacing/2)
+  display: block;
+  margin-bottom: ($vspacing/2)
 }
 
 input, textarea, select {
@@ -28,7 +30,7 @@ input, textarea, select {
   border: 3px solid $black;
   padding: $spacing;
   width:100%;
-  font-size $smallCopy
+  font-size: $smallCopy
   &:focus {
     outline: 0;
     border-color: $focus-colour;
@@ -36,19 +38,38 @@ input, textarea, select {
 }
 
 button {
-  button()
-  margin-top $vspacing
+  button();
+  margin-top: $vspacing
+}
+
+.radio-group {
+  display: inline-block;
+  background: $panel-colour;
+  padding: $vspacing*1.5 $hspacing*2;
+  margin-right: $hspacing
+  border: 3px solid $panel-colour
+  input {
+    width: auto;
+    margin-right: $hspacing
+  }
+  &.focus {
+    border-color: $focus-colour
+  }
+  &.selected {
+    background: $white;
+    box-shadow: inset 0 0 0 1px $black
+  }
 }
 
 .form-summary {
   > li {
     > a {
-      font-weight bold
+      font-weight: bold;
     }
     > ul > li {
-      margin-left $hspacing*2
+      margin-left: $hspacing*2
       > ul > li {
-        margin-left $hspacing*2
+        margin-left: $hspacing*2
       }
     }
   }
