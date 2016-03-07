@@ -11,6 +11,7 @@ Any development tasks or optimisations which need to be made should be listed he
 2. Make 'validate-as' option on formBuilder work
 3. Use gulpif to create --prod and --dev states for styles, scripts and servers
 5. Add sourcemaps at some point
+6. Finish adding vagrant into build
 
 ## Issues
 No current issues.
