@@ -19,7 +19,7 @@
     "title": "",
     "formBuilder" : {
       "id" : "applicationForm",
-      "action" : "dashboard.html",
+      "action" : "1_applicantb.html",
       "method" : "get",
       "classes" : "",
       "fieldset" : [

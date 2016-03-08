@@ -1,0 +1,75 @@
+{
+  "meta" : {
+    "pageTitle" : "Application overview",
+    "description" : "to be added",
+    "canonical" : "index.html"
+  },
+  "contentIntro" : {
+    "componentClass" : "c-headed-text",
+    "pretitle" : "Step 2",
+    "title" : "Delivery partners",
+    "subtitle" : "",
+    "bodyCopy" : "",
+    "ctaType" : "",
+    "ctaText" : "",
+    "ctaURL" : ""
+  },
+  "projectPartners" : {
+    "componentClass" : "c-application-form",
+    "title": "",
+    "formBuilder" : {
+      "id" : "applicationForm",
+      "action" : "dashboard.html",
+      "method" : "get",
+      "classes" : "",
+      "fieldset" : [
+        {
+          "legend" : "Delivery partners question",
+          "visibleLegend" : false,
+          "fields" : [
+            {
+              "type" : "radio",
+              "fieldid" : "s2-delivery-partners",
+              "name" : "s2-delivery-partners",
+              "label" : "Will the project have delivery partners?",
+              "enabled" : true,
+              "required" : true,
+              "validation" : "default",
+              "initialVal" : "",
+              "placeholderText" : "",
+              "options" : [
+                {
+                  "name" : "Yes",
+                  "value" : 1
+                },
+                {
+                  "name" : "No",
+                  "value" : 0
+                }
+              ],
+              "error" : ""
+            }
+          ],
+          "buttons" : [
+            {
+              "type" : "submit",
+              "enabled" : true,
+              "name" : "button",
+              "id" : "save-button",
+              "classes" : "",
+              "text" : "Save and quit"
+            },
+            {
+              "type" : "submit",
+              "enabled" : true,
+              "name" : "button",
+              "id" : "continue-button",
+              "classes" : "",
+              "text" : "Continue"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{% extends "layout.nunjucks" %}
+{% block content %}
+  <section class="page-form-applicant">
+    {# Load intro text #}
+    {% set context = contentIntro %}
+    {% include "components/c-headed-text.nunjucks" %}
+    {# Load login form #}
+    {% set context = applicantb %}
+    {% include "components/c-formbuilder.nunjucks" %}
+  </section>
+{% endblock %}

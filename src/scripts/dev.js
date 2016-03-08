@@ -32,8 +32,14 @@ DevTools = {
 		var devtools = $('<div style="position:absolute;left:0;top:0;padding:1rem;background:#fff;z-index:1000;"></div>').prependTo('body');
   	$('<span style="cursor:pointer;color:#fff;display:inline-block;background:green;padding:.5rem;margin: 0 1rem;">Show Components</span>').appendTo(devtools).on('click', this.showComponents.bind(this));
 		$('<span style="cursor:pointer;color:#fff;display:inline-block;background:blue;padding:.5rem;margin: 0 1rem;">Show JSON</span>').appendTo(devtools).on('click', this.editJSON.bind(this));
-		$('<span style="cursor:pointer;color:#fff;display:inline-block;background:red;padding:.5rem;margin: 0 1rem;">Close DevTools</span>').appendTo(devtools).on('click', function() { location.reload(); });
+		$('<span style="cursor:pointer;color:#fff;display:inline-block;background:red;padding:.5rem;margin: 0 1rem;">Disable form validation</span>').appendTo(devtools).on('click', this.toggleValidation.bind(this));
+		$('<span style="cursor:pointer;color:#fff;display:inline-block;background:orange;padding:.5rem;margin: 0 1rem;">Close DevTools</span>').appendTo(devtools).on('click', function() { location.reload(); });
   },
+
+	toggleValidation: function () {
+		'use strict';
+		$('form').attr('novalidate', '')
+	},
 
 	showComponents : function () {
 		'use strict';

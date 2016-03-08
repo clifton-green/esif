@@ -1,0 +1,196 @@
+{
+  "meta" : {
+    "pageTitle" : "Application overview",
+    "description" : "to be added",
+    "canonical" : "index.html"
+  },
+  "contentIntro" : {
+    "componentClass" : "c-headed-text",
+    "pretitle" : "Step 1",
+    "title" : "About your organisation",
+    "subtitle" : "",
+    "bodyCopy" : "",
+    "ctaType" : "",
+    "ctaText" : "",
+    "ctaURL" : ""
+  },
+  "applicantb" : {
+    "componentClass" : "c-application-form",
+    "title": "",
+    "formBuilder" : {
+      "id" : "applicationForm",
+      "action" : "2_project_partners.html",
+      "method" : "get",
+      "classes" : "",
+      "fieldset" : [
+        {
+          "legend" : "Please enter your login details",
+          "visibleLegend" : false,
+          "fields" : [
+            {
+              "type" : "text",
+              "fieldid" : "s1-org-address1",
+              "name" : "s1-org-address1",
+              "label" : "Address",
+              "enabled" : true,
+              "required" : true,
+              "validation" : "default",
+              "initialVal" : "",
+              "placeholderText" : "",
+              "options" : [],
+              "error" : ""
+            },
+            {
+              "type" : "text",
+              "fieldid" : "s1-org-address2",
+              "name" : "s1-org-address2",
+              "label" : "",
+              "enabled" : true,
+              "required" : true,
+              "validation" : "default",
+              "initialVal" : "",
+              "placeholderText" : "",
+              "options" : [],
+              "error" : ""
+            },
+            {
+              "type" : "text",
+              "fieldid" : "s1-org-address3",
+              "name" : "s1-org-address3",
+              "label" : "",
+              "enabled" : true,
+              "required" : true,
+              "validation" : "default",
+              "initialVal" : "",
+              "placeholderText" : "",
+              "options" : [],
+              "error" : ""
+            },
+            {
+              "type" : "text",
+              "fieldid" : "s1-org-town",
+              "name" : "s1-org-town",
+              "label" : "Town or city",
+              "enabled" : true,
+              "required" : true,
+              "validation" : "default",
+              "initialVal" : "",
+              "placeholderText" : "",
+              "options" : [],
+              "error" : ""
+            },
+            {
+              "type" : "text",
+              "fieldid" : "s1-org-county",
+              "name" : "s1-org-county",
+              "label" : "County",
+              "enabled" : true,
+              "required" : true,
+              "validation" : "default",
+              "initialVal" : "",
+              "placeholderText" : "",
+              "options" : [],
+              "error" : ""
+            },
+            {
+              "type" : "text",
+              "fieldid" : "s1-org-postcode",
+              "name" : "s1-org-postcode",
+              "label" : "Postcode",
+              "enabled" : true,
+              "required" : true,
+              "validation" : "[A-Za-z]{1,2}[0-9Rr][0-9A-Za-z]? [0-9][ABD-HJLNP-UW-Zabd-hjlnp-uw-z]{2}",
+              "initialVal" : "",
+              "placeholderText" : "",
+              "options" : [],
+              "error" : ""
+            },
+            {
+              "type" : "url",
+              "fieldid" : "s1-org-website",
+              "name" : "s1-org-website",
+              "label" : "Website",
+              "enabled" : true,
+              "required" : true,
+              "validation" : "default",
+              "initialVal" : "",
+              "placeholderText" : "",
+              "options" : [],
+              "error" : ""
+            },
+            {
+              "type" : "text",
+              "fieldid" : "s1-org-contact-name",
+              "name" : "s1-org-contact-name",
+              "label" : "Name of main contact",
+              "enabled" : true,
+              "required" : true,
+              "validation" : "default",
+              "initialVal" : "",
+              "placeholderText" : "",
+              "options" : [],
+              "error" : ""
+            },
+            {
+              "type" : "text",
+              "fieldid" : "s1-org-contact-position",
+              "name" : "s1-org-contact-position",
+              "label" : "Position in organisation",
+              "enabled" : true,
+              "required" : true,
+              "validation" : "default",
+              "initialVal" : "",
+              "placeholderText" : "",
+              "options" : [],
+              "error" : ""
+            },
+            {
+              "type" : "email",
+              "fieldid" : "s1-org-contact-email",
+              "name" : "s1-org-contact-email",
+              "label" : "Email address",
+              "enabled" : true,
+              "required" : true,
+              "validation" : "default",
+              "initialVal" : "",
+              "placeholderText" : "",
+              "options" : [],
+              "error" : ""
+            },
+            {
+              "type" : "tel",
+              "fieldid" : "s1-org-contact-number",
+              "name" : "s1-org-contact-number",
+              "label" : "Contact number",
+              "enabled" : true,
+              "required" : true,
+              "validation" : "^\\s*\\(?(020[7,8]{1}\\)?[ ]?[1-9]{1}[0-9{2}[ ]?[0-9]{4})|(0[1-8]{1}[0-9]{3}\\)?[ ]?[1-9]{1}[0-9]{2}[ ]?[0-9]{3})\\s*$",
+              "initialVal" : "",
+              "placeholderText" : "",
+              "options" : [],
+              "error" : ""
+            }
+          ],
+          "buttons" : [
+            {
+              "type" : "submit",
+              "enabled" : true,
+              "name" : "button",
+              "id" : "save-button",
+              "classes" : "",
+              "text" : "Save and quit"
+            },
+            {
+              "type" : "submit",
+              "enabled" : true,
+              "name" : "button",
+              "id" : "continue-button",
+              "classes" : "",
+              "text" : "Continue"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

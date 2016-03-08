@@ -72,7 +72,7 @@ You can then build up your form. Inside the curly brackets, copy and paste the f
 	  "label" : "",
 	  "enabled" : true,
 		"required" : true,
-		"validation" : "",
+		"validation" : "default",
 	  "initialVal" : "",
 	  "placeholderText" : "",
 	  "options" : [],
@@ -119,24 +119,10 @@ This is is fairly straightforward. If this is set to true then the field is not 
 ### Validation
 This shows how the code should be validated. The options are:
 
-- None
-The default option, no validation is performed at all.
-- Text
-This is text only, no numbers or symbols are allowed
-- Numbers
-Numbers only, no text or symbols allowed
-- Alphanumeric
-Numbers and text are allowed but no symbols
-- Phone
-Validates as a standard UK landline or mobile number
-- Postcode
-Validates as a standard UK Postcode
-- email
-Validates as a standard email address
-- url
-Validates as a standard web address
-- date
-Validates as a uk-format date dd/mm/yy or dd/mm/yyyy
+- 'default'
+The default option, no validation is performed at all unless the input type determines it's own validation (eg, email or url)
+- Pattern Matching
+If you enter any other text into this section the code will assume that it is a regex pattern and will validate according to that. For more information on regex patterns visit http://html5pattern.com/
 
 ### InitialVal
 Some fields require a value to be inserted by default, this is where you put it. If you have create a `select`, `radio` or `checkbox` type then this value should be the same as the value you want the user to see initially selected when the form loads.
