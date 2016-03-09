@@ -26,8 +26,10 @@
   "devDependencies": {
     "browser-sync": "^2.11.0",
     "casperjs": "^1.1.0-beta5",
+    "chalk": "^1.1.1",
     "del": "latest",
     "gulp": "^3.9.0",
+    "gulp-add-src": "^0.2.0",
     "gulp-cache": "latest",
     "gulp-concat": "^2.4.3",
     "gulp-cssnano": "latest",
@@ -36,11 +38,13 @@
     "gulp-eslint": "latest",
     "gulp-ext-replace": "^0.2.0",
     "gulp-header": "^1.7.1",
+    "gulp-if": "^2.0.0",
     "gulp-imagemin": "^2.3.0",
     "gulp-jsonlint": "^1.1.2",
     "gulp-merge-media-queries": "^0.2.1",
     "gulp-notify": "^2.2.0",
     "gulp-nunjucks-html": "^2.0.0",
+    "gulp-order": "^1.1.1",
     "gulp-plumber": "^0.6.6",
     "gulp-sourcemaps": "^1.6.0",
     "gulp-strip-debug": "^1.0.2",
@@ -58,7 +62,8 @@
     "phantomjs-prebuilt": "^2.1.4",
     "run-sequence": "^1.1.5",
     "rupture": "^0.6.1",
-    "spooky": "^0.2.5"
+    "spooky": "^0.2.5",
+    "yargs": "^4.2.0"
   },
   "dependencies": {
     "express": "^4.13.4",

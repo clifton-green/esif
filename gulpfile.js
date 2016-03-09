@@ -1,27 +1,31 @@
-var gulp    = require('gulp'),
-fs          = require('fs'),
-browserSync = require('browser-sync'),
-concat      = require('gulp-concat'),
-imagemin    = require('gulp-imagemin'),
-pngquant    = require('imagemin-pngquant'),
-plumber     = require('gulp-plumber'),
-notifier    = require('node-notifier'),
-cssnano     = require('gulp-cssnano'),
-jsonlint    = require('gulp-jsonlint'),
-eslint      = require('gulp-eslint'),
-del         = require('del'),
-stylus      = require('gulp-stylus'),
-jeet        = require('jeet'),
-rupture     = require('rupture'),
-csso        = require('gulp-csso'),
-extReplace  = require('gulp-ext-replace'),
-runSequence = require('run-sequence'),
-uglify      = require('gulp-uglify'),
-cmq         = require('gulp-merge-media-queries'),
-nunjucks    = require('gulp-nunjucks-html'),
-path        = require('path'),
-data        = require('gulp-data'),
-reload      = browserSync.reload;
+var gulp        = require('gulp'),
+    gulpif      = require('gulp-if'),
+    chalk       = require('chalk'),
+    argv        = require('yargs').argv,
+    fs          = require('fs'),
+    browserSync = require('browser-sync'),
+    addsrc      = require('gulp-add-src'),
+    concat      = require('gulp-concat'),
+    imagemin    = require('gulp-imagemin'),
+    pngquant    = require('imagemin-pngquant'),
+    plumber     = require('gulp-plumber'),
+    notifier    = require('node-notifier'),
+    cssnano     = require('gulp-cssnano'),
+    jsonlint    = require('gulp-jsonlint'),
+    eslint      = require('gulp-eslint'),
+    del         = require('del'),
+    stylus      = require('gulp-stylus'),
+    jeet        = require('jeet'),
+    rupture     = require('rupture'),
+    csso        = require('gulp-csso'),
+    extReplace  = require('gulp-ext-replace'),
+    runSequence = require('run-sequence'),
+    uglify      = require('gulp-uglify'),
+    cmq         = require('gulp-merge-media-queries'),
+    nunjucks    = require('gulp-nunjucks-html'),
+    path        = require('path'),
+    data        = require('gulp-data'),
+    reload      = browserSync.reload;
 
 // watch files for changes and reload
 gulp.task('serve', function() {
@@ -44,10 +48,10 @@ gulp.task('serve', function() {
       }
   });
   // Perform the site init
-  runSequence('build:dev');
+  runSequence('build');
 
   // Compile Standard JS
-  gulp.watch('src/scripts/*.js', ['scripts:dev'], reload);
+  gulp.watch('src/scripts/*.js', ['scripts'], reload);
 
   // Compile Stylus
   gulp.watch('src/styles/**/*.styl', ['styles']);
@@ -57,7 +61,8 @@ gulp.task('serve', function() {
 
   // Compile HTML and JSON
   gulp.watch(['src/html/**/*.nunjucks', 'src/model/**/*.json'], ['processHTML'], reload);
-
+  // Show success message
+  console.log(chalk.green('✔ Server started!'))
 });
 
 var errors = 0,
@@ -80,19 +85,23 @@ onError = function (err) {
 // Combine styles
 gulp.task('styles', function(callback) {
   'use strict';
-  return gulp.src('src/styles/core.styl')
+  return gulp.src('src/styles/start.styl')
+    .pipe(gulpif(!argv.prod, addsrc('src/styles/dev.css')))
     .pipe(plumber(
       { errorHandler: onError }
     ))
     .pipe(stylus({
+      'include css': true,
       use: [jeet(), rupture()]
     }))
     .pipe(concat('core.min.css'))
     .pipe(cmq())
-    .pipe(csso())
-    .pipe(cssnano({
-      autoprefixer: {browsers: supportedBrowsers, add: true}
-    }))
+    // .pipe(csso())
+    // .pipe(
+    //   cssnano({
+    //     autoprefixer: {browsers: supportedBrowsers, add: true}
+    //   })
+    // )
     .pipe(gulp.dest('dist/static/css'))
     .pipe(reload({stream:true}))
      callback();
@@ -108,9 +117,7 @@ gulp.task('extrastyles', function(callback) {
     .pipe(stylus())
     .pipe(concat('print.min.css'))
     .pipe(gulp.dest('dist/static/css'))
-  gulp.src('src/styles/fonts.css')
-    .pipe(gulp.dest('dist/static/css'))
-     callback();
+  callback();
 });
 
 // Move libraries
@@ -123,7 +130,7 @@ gulp.task('libs', function() {
       { errorHandler: onError }
     ))
     .pipe(concat('libs.min.js'))
-    .pipe(uglify())
+    .pipe(gulpif(argv.prod, uglify()))
     .pipe(gulp.dest('dist/static/libs'))
 });
 
@@ -152,32 +159,18 @@ gulp.task('model', function() {
 });
 
 // Combine JS
-gulp.task('scripts:prod', function() {
+gulp.task('scripts', function() {
   'use strict';
-  return gulp.src(['src/scripts/**/*.js', '!src/scripts/**/dev.js'])
+  return gulp.src(argv.prod ? ['src/scripts/**/*.js', '!src/scripts/**/dev.js'] : 'src/scripts/**/*.js')
     .pipe(plumber(
       { errorHandler: onError }
     ))
-    .pipe(eslint())
+    .pipe(gulpif(argv.prod, eslint()))
     .pipe(concat('core.min.js'))
-    .pipe(uglify())
+    .pipe(gulpif(argv.prod, uglify()))
     .pipe(gulp.dest('dist/static/scripts'))
     .pipe(reload({stream:true}))
 });
-
-// Add Dev Javascript into the build
-gulp.task('scripts:dev', function() {
-  'use strict';
-  return gulp.src('src/scripts/**/*.js')
-    .pipe(plumber(
-      { errorHandler: onError }
-    ))
-    .pipe(eslint())
-    .pipe(concat('core.min.js'))
-    .pipe(gulp.dest('dist/static/scripts'))
-    .pipe(reload({stream:true}))
-});
-
 
 //Make sure the json data is correctly formed
 gulp.task('testModel', function() {
@@ -208,41 +201,24 @@ gulp.task('processHTML', function() {
     .pipe(reload({stream:true}))
 });
 
+var prodBuild = ['clean', 'styles','extrastyles','libs','scripts','images','processHTML', 'notify'],
+    devBuild = ['styles','extrastyles','libs','testModel', 'processHTML','jsoneditor','model','scripts', 'notify'],
+    buildTasks = argv.prod ? prodBuild : devBuild;
+
 // Perform Basic Build (note, don't call directly, use build:dev or build)
 gulp.task('build', function (callback) {
   'use strict';
-  runSequence(
-    'styles',
-    'extrastyles',
-    'libs',
-    'testModel',
-    'processHTML',
+  runSequence.apply(
+    null,
+    buildTasks,
     callback
   );
 });
 
-// Standard build - not deployment ready and doesn't perform a clean build
-gulp.task('build:dev', function() {
-  'use strict';
-  runSequence(
-    'build',
-    'jsoneditor',
-    'model',
-    'scripts:dev'
-  );
-  notifier.notify({ title: 'Development Build', message: 'Completed', icon: 'src/images/icons/apple-touch-icon.png' });
-})
-
-// Production Build - ready for deployment and cleans build first
-gulp.task('build:prod', ['clean'], function() {
-  'use strict';
-  runSequence(
-    'build',
-    'scripts:prod',
-    'images'
-  );
-  notifier.notify({ title: 'Production Build', message: 'Done', icon: 'src/images/icons/apple-touch-icon.png' });
-})
+gulp.task('notify', function() {
+  'use strict'
+  console.log(chalk.green('✔ Build complete!'))
+  notifier.notify({ title: 'Build', message: 'Completed', icon: 'src/images/icons/apple-touch-icon.png' });})
 
 // Compress and minify images to reduce their file size
 gulp.task('images', function() {

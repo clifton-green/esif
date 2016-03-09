@@ -2,7 +2,7 @@
 .hide {
   // This hides the content for everyone, even most screen readers
   // won't see this
-  display none;
+  display: none;
 }
 
 .vishide {
@@ -15,8 +15,8 @@
 
 .lined-list {
   li {
-    padding $vspacing 0
-    border-top 1px solid $border-colour
+    padding: $vspacing 0;
+    border-top: 1px solid $border-colour;
   }
 }
 
@@ -27,7 +27,7 @@
   color: $highlight-colour;
   background-color: $button-colour;
   border-radius: $brad;
-  font-weight: bold
+  font-weight: bold;
   &:hover {
     background-color: darken($button-colour, 10%);
   }

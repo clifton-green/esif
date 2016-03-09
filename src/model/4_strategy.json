@@ -6,20 +6,20 @@
   },
   "contentIntro" : {
     "componentClass" : "c-headed-text",
-    "pretitle" : "Step 3",
-    "title" : "About your project - key dates",
+    "pretitle" : "Step 4",
+    "title" : "Strategy",
     "subtitle" : "",
     "bodyCopy" : "",
     "ctaType" : "",
     "ctaText" : "",
     "ctaURL" : ""
   },
-  "projectb" : {
+  "strategy" : {
     "componentClass" : "c-application-form",
     "title": "",
     "formBuilder" : {
       "id" : "applicationForm",
-      "action" : "4_strategy.html",
+      "action" : "3_projectb.html",
       "method" : "get",
       "classes" : "",
       "fieldset" : [

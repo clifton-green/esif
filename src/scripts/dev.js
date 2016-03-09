@@ -16,31 +16,33 @@ DevTools = {
 
 	injectDependencies: function () {
 		'use strict';
-		$('<link href="jsoneditor/dist/jsoneditor.min.css" rel="stylesheet" type="text/css"><script src="jsoneditor/dist/jsoneditor.min.js"></script>').appendTo('head');
+		$('<link href="jsoneditor/dist/jsoneditor.min.css" rel="stylesheet" type="text/css">').appendTo('head');
+		$('<script src="jsoneditor/dist/jsoneditor.min.js"></script>').appendTo('head');
 	},
 
   toggleDevTools: function() {
     'use strict';
     var dtb = $('<span style="cursor:pointer;position:absolute;top:0;left:0;font-size:10px;background-color:dodgerBlue;opacity:.5;padding:1px 2px;color:white;display:inline-block;height:10px;width:10px;">*</span>').prependTo('body');
-    dtb.on('click', this.showDevTools.bind(this));
+		this.devtools = $('<div class="devtools" style="position:absolute;left:0;top:0;padding:1rem;background:#fff;z-index:1000;"></div>').prependTo('body');
+    dtb.on('click', this.devToolsBar.bind(this));
   },
 
-  // Outlines all components on a page and shows their classes.
-  // Note: If there are more than 12 components on a page then additional colours need to be added.
-  showDevTools: function () {
+  //Shows the devtools toolbar.
+  devToolsBar: function () {
     'use strict';
-		var devtools = $('<div style="position:absolute;left:0;top:0;padding:1rem;background:#fff;z-index:1000;"></div>').prependTo('body');
-  	$('<span style="cursor:pointer;color:#fff;display:inline-block;background:green;padding:.5rem;margin: 0 1rem;">Show Components</span>').appendTo(devtools).on('click', this.showComponents.bind(this));
-		$('<span style="cursor:pointer;color:#fff;display:inline-block;background:blue;padding:.5rem;margin: 0 1rem;">Show JSON</span>').appendTo(devtools).on('click', this.editJSON.bind(this));
-		$('<span style="cursor:pointer;color:#fff;display:inline-block;background:red;padding:.5rem;margin: 0 1rem;">Disable form validation</span>').appendTo(devtools).on('click', this.toggleValidation.bind(this));
-		$('<span style="cursor:pointer;color:#fff;display:inline-block;background:orange;padding:.5rem;margin: 0 1rem;">Close DevTools</span>').appendTo(devtools).on('click', function() { location.reload(); });
+  	$('<span style="cursor:pointer;color:#fff;display:inline-block;background:green;padding:.5rem;margin: 0 1rem;">Show Components</span>').appendTo(this.devtools).on('click', this.showComponents.bind(this));
+		$('<span style="cursor:pointer;color:#fff;display:inline-block;background:blue;padding:.5rem;margin: 0 1rem;">Show JSON</span>').appendTo(this.devtools).on('click', this.editJSON.bind(this));
+		$('<span style="cursor:pointer;color:#fff;display:inline-block;background:red;padding:.5rem;margin: 0 1rem;">Disable form validation</span>').appendTo(this.devtools).on('click', this.toggleValidation.bind(this));
+		$('<span style="cursor:pointer;color:#fff;display:inline-block;background:orange;padding:.5rem;margin: 0 1rem;">Close DevTools</span>').appendTo(this.devtools).on('click',this.devToolsBar.bind(this));
+
   },
 
 	toggleValidation: function () {
 		'use strict';
 		$('form').attr('novalidate', '')
 	},
-
+	// Outlines all components on a page and shows their classes.
+	// Note: If there are more than 12 components on a page then additional colours need to be added.
 	showComponents : function () {
 		'use strict';
     var colours = ['red', 'blue', 'orange', 'brown', 'pink', 'green', 'purple', 'deepPink', 'dodgerBlue', 'yellow', 'greenYellow', 'aqua' ];
