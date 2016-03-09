@@ -1,8 +1,10 @@
-{% macro fieldBuilder(name='', label='', type='', fieldid='', value='', placeholder='', enabled=true, options=[], required='', validation='', help='') %}
-  <div class="field-container">
-    <label for="{{fieldid}}">{{label}}</label>
-    {% if help != ''%}
-      <span class="help">{{help}}</span>
+{% macro fieldBuilder(name='', label='', type='', fieldid='', value='', placeholder='', enabled='', options=[], required='', validation='', help='', group = '') %}
+  <div class="{% if type != "group" %}field-container{% else %}field-group{% endif %}">
+    {% if type != "group" %}
+      <label for="{{fieldid}}">{{label}}</label>
+      {% if help != ''%}
+        <span class="help">{{help}}</span>
+      {% endif %}
     {% endif %}
     {% if type == "select"%}
       <select id="{{fieldid}}" name="{{name}}" {% if enabled != true %} disabled {% endif %} {%if required == true%} required {% endif %}>
@@ -27,7 +29,8 @@
       {% endfor %}
     {% elif type == "textarea"%}
       <textarea id="{{fieldid}}" name="{{name}}" {% if enabled != true %} disabled {% endif %} {%if required == true%} required {% endif %}>{% if value %}{{ value }}{% endif %}</textarea>
-    {% elif type == "dategroup"%}
+    {% elif type == "dateset"%}
+      {# Creates a set of inputs to allow the user to enter a date #}
       <div class="date-input">
         <span>Day</span>
         <input id="{{fieldid}}-day" name="{{name}}-day" type="number" value="{{value}}" {% if placeholder != '' %} placeholder="{{placeholder}}"{% endif %} {% if enabled !=true %} disabled {% endif %} pattern="[0-9]*" {%if required == true%} required {% endif %}/>
@@ -40,8 +43,26 @@
         <span>Year</span>
         <input id="{{fieldid}}-year" name="{{name}}-year" type="number" value="{{value}}" {% if placeholder != '' %} placeholder="{{placeholder}}"{% endif %} {% if enabled !=true %} disabled {% endif %} pattern="[0-9]*" {%if required == true%} required {% endif %}/>
       </div>
+    {% elif type == "group" %}
+    {# set the type to group and use a custom data set (see how_to_use_formbuilder.md) to build a grouped fieldset #}
+      <fieldset class="{{group.class}}">
+        <legend {%if group.visibleLegend == false %} class="vishide" {% endif %}>{{group.legend}}</legend>
+        {% if group.fields %}
+          {% for field in group.fields %}
+           {{ fieldBuilder(field.name, field.label, field.type, field.fieldid, field.initialVal, field.placeholderText, field.enabled, field.options, field.required, field.validation, field.help, field.group) }}
+          {% endfor %}
+        {% endif %}
+        {% if allowMultiple == true%}
+          <a href="">Add another</a>
+        {% endif %}
+      </fieldset>
     {% else %}
       <input id="{{fieldid}}" name="{{name}}" type="{{type}}" value="{{value}}" {% if placeholder != '' %} placeholder="{{placeholder}}"{% endif %} {% if enabled !=true %} disabled {% endif %} {%if validation != 'default'%} pattern="{{validation}}" {% endif %} {%if required == true%} required {% endif %}/>
+    {% endif %}
+    {% if error != '' %}
+      <div class="error">
+        <span>{{error}}</span>
+      </div>
     {% endif %}
   </div>
 {% endmacro %}
@@ -52,7 +73,7 @@
       <fieldset>
         <legend {%if fs.visibleLegend == false %} class="vishide" {% endif %}>{{fs.legend}}</legend>
         {% for field in fs.fields %}
-         {{ fieldBuilder(field.name, field.label, field.type, field.fieldid, field.initialVal, field.placeholderText, field.enabled, field.options, field.required, field.validation, field.help) }}
+         {{ fieldBuilder(field.name, field.label, field.type, field.fieldid, field.initialVal, field.placeholderText, field.enabled, field.options, field.required, field.validation, field.help, field.group) }}
         {% endfor %}
         {% for btn in fs.buttons %}
           <button class="btn {% if btn.classes %}{{ btn.classes }} {% endif %}{% if btn.enabled == false%}disabled{% endif %}" {% if btn.enabled == false  %} disabled {% endif %} type="{{btn.type}}" name="{{btn.name}}" id="{{btn.id}}">{{btn.text}}</button>

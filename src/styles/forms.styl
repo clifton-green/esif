@@ -15,6 +15,19 @@ form {
   }
 }
 
+.field-group {
+  @extend .field-container;
+  border-top: 1px solid $grey-1;
+  border-bottom: 1px solid $grey-1;
+  +above(m) {
+    width: 100%;
+  }
+  legend {
+    font-size: $mantle;
+    padding: $vspacing 0;
+  }
+}
+
 legend {
   font-size: $mantle;
   font-weight: bold;
@@ -61,11 +74,15 @@ button {
     box-shadow: inset 0 0 0 1px $black
   }
 }
+.error {
+  // Don't display errors by default
+  display: none;
+}
 
 .date-input {
   margin-top: $vspacing;
   display: inline-block;
-  col(1/3);
+  col(1/4);
   span {
     display: block;
     margin-bottom: ($vspacing/2);
