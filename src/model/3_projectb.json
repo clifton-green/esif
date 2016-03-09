@@ -75,35 +75,39 @@
                 "legend" : "List any project milestones and dates they'll be met",
                 "visibleLegend" : true,
                 "class" : "project-milestones",
-                "allowMultiple" : "true",
-                "fields" : [
+                "allowMultiple" : true,
+                "groups" : [
                   {
-                    "type" : "text",
-                    "fieldid" : "s2-project-milestone-desc",
-                    "name" : "s2-project-milestone-desc",
-                    "label" : "Milestone Description",
-                    "enabled" : true,
-                    "required" : true,
-                    "validation" : "default",
-                    "initialVal" : "",
-                    "placeholderText" : "",
-                    "options" : [],
-                    "error" : "",
-                    "help" : ""
-                  },
-                  {
-                    "type" : "dateset",
-                    "fieldid" : "s2-project-milestone-date",
-                    "name" : "s2-project-milestone-date",
-                    "label" : "Date",
-                    "enabled" : true,
-                    "required" : true,
-                    "validation" : "default",
-                    "initialVal" : "",
-                    "placeholderText" : "",
-                    "options" : [],
-                    "error" : "",
-                    "help" : ""
+                    "fields" : [
+                      {
+                        "type" : "text",
+                        "fieldid" : "s2-project-milestone-desc",
+                        "name" : "s2-project-milestone-desc",
+                        "label" : "Milestone Description",
+                        "enabled" : true,
+                        "required" : true,
+                        "validation" : "default",
+                        "initialVal" : "",
+                        "placeholderText" : "",
+                        "options" : [],
+                        "error" : "",
+                        "help" : ""
+                      },
+                      {
+                        "type" : "dateset",
+                        "fieldid" : "s2-project-milestone-date",
+                        "name" : "s2-project-milestone-date",
+                        "label" : "Date",
+                        "enabled" : true,
+                        "required" : true,
+                        "validation" : "default",
+                        "initialVal" : "",
+                        "placeholderText" : "",
+                        "options" : [],
+                        "error" : "",
+                        "help" : ""
+                      }
+                    ]
                   }
                 ]
               }

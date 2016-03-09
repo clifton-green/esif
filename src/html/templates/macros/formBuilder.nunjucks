@@ -1,4 +1,4 @@
-{% macro fieldBuilder(name='', label='', type='', fieldid='', value='', placeholder='', enabled='', options=[], required='', validation='', help='', group = '') %}
+{% macro fieldBuilder(name='', label='', type='', fieldid='', value='', placeholder='', enabled='', options=[], required='', validation='', error='', help='', group = '') %}
   <div class="{% if type != "group" %}field-container{% else %}field-group{% endif %}">
     {% if type != "group" %}
       <label for="{{fieldid}}">{{label}}</label>
@@ -47,12 +47,14 @@
     {# set the type to group and use a custom data set (see how_to_use_formbuilder.md) to build a grouped fieldset #}
       <fieldset class="{{group.class}}">
         <legend {%if group.visibleLegend == false %} class="vishide" {% endif %}>{{group.legend}}</legend>
-        {% if group.fields %}
-          {% for field in group.fields %}
-           {{ fieldBuilder(field.name, field.label, field.type, field.fieldid, field.initialVal, field.placeholderText, field.enabled, field.options, field.required, field.validation, field.help, field.group) }}
-          {% endfor %}
-        {% endif %}
-        {% if allowMultiple == true%}
+        {% for groups in group.groups %}
+          <div class="group group-{{loop.index}}">
+            {% for field in groups.fields %}
+             {{ fieldBuilder(field.name, field.label, field.type, field.fieldid, field.initialVal, field.placeholderText, field.enabled, field.options, field.required, field.validation, field.error, field.help, field.group) }}
+            {% endfor %}
+          </div>
+        {% endfor %}
+        {% if group.allowMultiple == true %}
           <a href="">Add another</a>
         {% endif %}
       </fieldset>
@@ -73,7 +75,7 @@
       <fieldset>
         <legend {%if fs.visibleLegend == false %} class="vishide" {% endif %}>{{fs.legend}}</legend>
         {% for field in fs.fields %}
-         {{ fieldBuilder(field.name, field.label, field.type, field.fieldid, field.initialVal, field.placeholderText, field.enabled, field.options, field.required, field.validation, field.help, field.group) }}
+         {{ fieldBuilder(field.name, field.label, field.type, field.fieldid, field.initialVal, field.placeholderText, field.enabled, field.options, field.required, field.validation, field.error, field.help, field.group) }}
         {% endfor %}
         {% for btn in fs.buttons %}
           <button class="btn {% if btn.classes %}{{ btn.classes }} {% endif %}{% if btn.enabled == false%}disabled{% endif %}" {% if btn.enabled == false  %} disabled {% endif %} type="{{btn.type}}" name="{{btn.name}}" id="{{btn.id}}">{{btn.text}}</button>
