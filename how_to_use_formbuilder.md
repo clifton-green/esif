@@ -45,7 +45,7 @@ If a form exists on a page then that pages data file will have a 'formBuilder' e
 	  ]
 	}
 
-That might look a bit scary but all it is is a nested list of text instructions to the page.
+If you are a content editor with no development experience, then this might look a bit scary but all it is is a nested list of text instructions to the page.
 
 The `id`, `action`, `method` and `classes` sections can safely be ignored as they are just for the developers. However the `fieldset` item has a lot of power in it.
 
@@ -76,7 +76,8 @@ You can then build up your form. Inside the curly brackets, copy and paste the f
 	  "initialVal" : "",
 	  "placeholderText" : "",
 	  "options" : [],
-	  "error" : ""
+	  "error" : "",
+		"help" : ""
 
 All of those entries must exist in every field but not all of them need to be filled in.
 
@@ -97,6 +98,8 @@ The select type allows you to create a drop-down menu so users can pick from a l
 Creates tick boxes, there is one for each option. A user can select as many options as they want.
 - **radio**  
 These are exactly the same as the checkbox type with one minor difference, the user can only selection one of these.
+- **dategroup**
+This is a custom type which creates a group of number input elements which allows you to enter a date. It's currently in the UK date format but this is easy to change if required.
 
 The 'text' type is a very versatile option as it can actually be several different types. For example if instead of typing 'text' you typed 'number' then when the user clicks on that field on a mobile, they will see a number pad instead of a normal keyboard.
 
@@ -161,6 +164,9 @@ This is what the error message should say if the user completes the field incorr
 eg: "Your username cannot contain any special characters"
 
 **Note:** You don't need to add error messages to say a field is required.
+
+### Help
+This is to offer assistance to people completing the form and will appear just below the label. So if you want to make sure people write a date correctly you could add "Please use DD/MM/YYYY" to the help field.
 
 ## Adding buttons
 

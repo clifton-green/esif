@@ -6,32 +6,32 @@
   },
   "contentIntro" : {
     "componentClass" : "c-headed-text",
-    "pretitle" : "Step 1",
-    "title" : "About your organisation",
+    "pretitle" : "Step 3",
+    "title" : "About your project - key dates",
     "subtitle" : "",
     "bodyCopy" : "",
     "ctaType" : "",
     "ctaText" : "",
     "ctaURL" : ""
   },
-  "applicant" : {
+  "projectb" : {
     "componentClass" : "c-application-form",
     "title": "",
     "formBuilder" : {
       "id" : "applicationForm",
-      "action" : "1_applicantb.html",
+      "action" : "3_projectb.html",
       "method" : "get",
       "classes" : "",
       "fieldset" : [
         {
-          "legend" : "Please enter your login details",
+          "legend" : "Key dates for your project",
           "visibleLegend" : false,
           "fields" : [
             {
-              "type" : "text",
-              "fieldid" : "s1-org-name",
-              "name" : "s1-org-name",
-              "label" : "Organisation name",
+              "type" : "dategroup",
+              "fieldid" : "s2-project-start",
+              "name" : "s2-project-start",
+              "label" : "Project start date",
               "enabled" : true,
               "required" : true,
               "validation" : "default",
@@ -42,10 +42,10 @@
               "help" : ""
             },
             {
-              "type" : "text",
-              "fieldid" : "s1-org-type",
-              "name" : "s1-org-type",
-              "label" : "Organisation type",
+              "type" : "dategroup",
+                "fieldid" : "s2-project-financial-completion",
+              "name" : "s2-project-financial-completion",
+              "label" : "Financial completion date",
               "enabled" : true,
               "required" : true,
               "validation" : "default",
@@ -56,75 +56,17 @@
               "help" : ""
             },
             {
-              "type" : "radio",
-              "fieldid" : "s1-org-sme",
-              "name" : "s1-org-sme",
-              "label" : "Is this a small or medium-sized enterprise?",
+              "type" : "dategroup",
+              "fieldid" : "s2-project-end",
+              "name" : "s2-project-end",
+              "label" : "Project end date",
               "enabled" : true,
               "required" : true,
-              "initialVal" : "",
-              "placeholderText" : "",
-              "options" : [
-                {
-                  "name" : "Yes",
-                  "value" : 1
-                },
-                {
-                  "name" : "No",
-                  "value" : 0
-                }
-              ],
-              "error" : "",
-              "help" : ""
-            },
-            {
-              "type" : "text",
-              "fieldid" : "s1-reg-no",
-              "name" : "s1-reg-no",
-              "label" : "Company or charity registration number",
-              "enabled" : true,
-              "required" : false,
               "validation" : "default",
               "initialVal" : "",
               "placeholderText" : "",
               "options" : [],
               "error" : "",
-              "help" : ""
-            },
-            {
-              "type" : "text",
-              "fieldid" : "s1-vat-no",
-              "name" : "s1-vat-no",
-              "label" : "VAT number (if applicable)",
-              "enabled" : true,
-              "required" : false,
-              "validation" : "default",
-              "initialVal" : "",
-              "placeholderText" : "",
-              "options" : [],
-              "error" : "",
-              "help" : ""
-            },
-            {
-              "type" : "radio",
-              "fieldid" : "s1-previously-worked-with",
-              "name" : "s1-previously-worked-with",
-              "label" : "Has this organisation previously worked on a project funded through ESF, ERDF or EAFRD?",
-              "enabled" : true,
-              "required" : true,
-              "initialVal" : "",
-              "placeholderText" : "",
-              "options" : [
-                {
-                  "name" : "Yes",
-                  "value" : 1
-                },
-                {
-                  "name" : "No",
-                  "value" : 0
-                }
-              ],
-              "error": "",
               "help" : ""
             }
           ],
@@ -133,9 +75,17 @@
               "type" : "submit",
               "enabled" : true,
               "name" : "button",
-              "id" : "login-button",
+              "id" : "save-button",
               "classes" : "",
-              "text" : "Login"
+              "text" : "Save and quit"
+            },
+            {
+              "type" : "submit",
+              "enabled" : true,
+              "name" : "button",
+              "id" : "continue-button",
+              "classes" : "",
+              "text" : "Continue"
             }
           ]
         }

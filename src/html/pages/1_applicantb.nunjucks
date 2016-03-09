@@ -4,8 +4,18 @@
     {# Load intro text #}
     {% set context = contentIntro %}
     {% include "components/c-headed-text.nunjucks" %}
-    {# Load login form #}
-    {% set context = applicantb %}
-    {% include "components/c-formbuilder.nunjucks" %}
+
+    <div class="parthenon">
+      <div class="col primary">
+        {% set context = applicantb %}
+        {% include "components/c-formbuilder.nunjucks" %}
+      </div>
+      <div class="col sidebar">
+        {% set context = applicationInfo %}
+        {% include "components/c-application-information.nunjucks" %}
+        {% set context = miniDash %}
+        {% include "components/c-mini-dashboard.nunjucks" %}
+      </div>
+    </div>
   </section>
 {% endblock %}

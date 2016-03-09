@@ -51,29 +51,6 @@
               "placeholderText" : "",
               "options" : [],
               "error" : ""
-            },
-            {
-              "type" : "radio",
-              "fieldid" : "login-select",
-              "name" : "login-select",
-              "label" : "Choose your destiny",
-              "enabled" : true,
-              "initialVal" : "",
-              "placeholderText" : "test",
-              "options" : [
-                {
-                  "name" : "option 1",
-                  "value" : "value 1"
-                },
-                {
-                  "name" : "option 2",
-                  "value" : "value 2"
-                },
-                {
-                  "name" : "option 3",
-                  "value" : "value 3"
-                }
-              ]
             }
           ],
           "buttons" : [

@@ -38,7 +38,8 @@
               "initialVal" : "",
               "placeholderText" : "",
               "options" : [],
-              "error" : ""
+              "error" : "",
+              "help" : ""
             },
             {
               "type" : "text",
@@ -51,7 +52,8 @@
               "initialVal" : "",
               "placeholderText" : "",
               "options" : [],
-              "error" : ""
+              "error" : "",
+              "help" : ""
             },
             {
               "type" : "text",
@@ -64,7 +66,8 @@
               "initialVal" : "",
               "placeholderText" : "",
               "options" : [],
-              "error" : ""
+              "error" : "",
+              "help" : ""
             },
             {
               "type" : "text",
@@ -77,7 +80,8 @@
               "initialVal" : "",
               "placeholderText" : "",
               "options" : [],
-              "error" : ""
+              "error" : "",
+              "help" : ""
             },
             {
               "type" : "text",
@@ -90,7 +94,8 @@
               "initialVal" : "",
               "placeholderText" : "",
               "options" : [],
-              "error" : ""
+              "error" : "",
+              "help" : ""
             },
             {
               "type" : "text",
@@ -116,7 +121,8 @@
               "initialVal" : "",
               "placeholderText" : "",
               "options" : [],
-              "error" : ""
+              "error" : "",
+              "help" : ""
             },
             {
               "type" : "text",
@@ -129,7 +135,8 @@
               "initialVal" : "",
               "placeholderText" : "",
               "options" : [],
-              "error" : ""
+              "error" : "",
+              "help" : ""
             },
             {
               "type" : "text",
@@ -142,7 +149,8 @@
               "initialVal" : "",
               "placeholderText" : "",
               "options" : [],
-              "error" : ""
+              "error" : "",
+              "help" : ""
             },
             {
               "type" : "email",
@@ -155,7 +163,8 @@
               "initialVal" : "",
               "placeholderText" : "",
               "options" : [],
-              "error" : ""
+              "error" : "",
+              "help" : ""
             },
             {
               "type" : "tel",
@@ -168,7 +177,8 @@
               "initialVal" : "",
               "placeholderText" : "",
               "options" : [],
-              "error" : ""
+              "error" : "",
+              "help" : ""
             }
           ],
           "buttons" : [
@@ -192,5 +202,49 @@
         }
       ]
     }
+  },
+  "applicationInfo" : {
+    "componentClass" : "c-application-info",
+    "items" : [
+      {
+        "title" : "Call reference",
+        "contents" : "OC04R15P0002"
+      },
+      {
+        "title" : "Application Type",
+        "contents" : "Full"
+      },
+      {
+        "title" : "Created",
+        "contents" : "07 November 2015"
+      },
+      {
+        "title" : "Progress",
+        "contents" : "5 of 8 sections completed"
+      },
+      {
+        "title" : "Status",
+        "contents" : "Incomplete"
+      }
+    ]
+
+  },
+  "miniDash" : {
+    "componentClass" : "c-mini-dashboard",
+    "title" : "Your dashboard",
+    "items" : [
+      {
+        "name" : "My tasks",
+        "link" : "dashboard.html"
+      },
+      {
+        "name" : "Existing applications",
+        "link" : "dashboard.html"
+      },
+      {
+        "name" : "Projects",
+        "link" : "dashboard.html"
+      }
+    ]
   }
 }

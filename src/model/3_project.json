@@ -6,32 +6,32 @@
   },
   "contentIntro" : {
     "componentClass" : "c-headed-text",
-    "pretitle" : "Step 1",
-    "title" : "About your organisation",
+    "pretitle" : "Step 3",
+    "title" : "About your project",
     "subtitle" : "",
     "bodyCopy" : "",
     "ctaType" : "",
     "ctaText" : "",
     "ctaURL" : ""
   },
-  "applicant" : {
+  "project" : {
     "componentClass" : "c-application-form",
     "title": "",
     "formBuilder" : {
       "id" : "applicationForm",
-      "action" : "1_applicantb.html",
+      "action" : "3_projectb.html",
       "method" : "get",
       "classes" : "",
       "fieldset" : [
         {
-          "legend" : "Please enter your login details",
+          "legend" : "Information about your project",
           "visibleLegend" : false,
           "fields" : [
             {
               "type" : "text",
-              "fieldid" : "s1-org-name",
-              "name" : "s1-org-name",
-              "label" : "Organisation name",
+              "fieldid" : "s2-project-name",
+              "name" : "s2-project-name",
+              "label" : "Project Name",
               "enabled" : true,
               "required" : true,
               "validation" : "default",
@@ -42,10 +42,38 @@
               "help" : ""
             },
             {
-              "type" : "text",
-              "fieldid" : "s1-org-type",
-              "name" : "s1-org-type",
-              "label" : "Organisation type",
+              "type" : "textarea",
+              "fieldid" : "s2-project-summary",
+              "name" : "s2-project-summary",
+              "label" : "Summary of your project",
+              "enabled" : true,
+              "required" : true,
+              "validation" : "default",
+              "initialVal" : "",
+              "placeholderText" : "",
+              "options" : [],
+              "error" : "",
+              "help" : ""
+            },
+            {
+              "type" : "textarea",
+              "fieldid" : "s2-project-beneficiaries",
+              "name" : "s2-project-beneficiaries",
+              "label" : "Who will benefit from this project?",
+              "enabled" : true,
+              "required" : true,
+              "validation" : "default",
+              "initialVal" : "",
+              "placeholderText" : "",
+              "options" : [],
+              "error" : "",
+              "help" : ""
+            },
+            {
+              "type" : "textarea",
+              "fieldid" : "s2-project-location",
+              "name" : "s2-project-location",
+              "label" : "Where is the project located?",
               "enabled" : true,
               "required" : true,
               "validation" : "default",
@@ -57,11 +85,12 @@
             },
             {
               "type" : "radio",
-              "fieldid" : "s1-org-sme",
-              "name" : "s1-org-sme",
-              "label" : "Is this a small or medium-sized enterprise?",
+              "fieldid" : "s2-project-lep-coverage",
+              "name" : "s2-project-lep-coverage",
+              "label" : "Does the project cover more than one LEP area project?",
               "enabled" : true,
               "required" : true,
+              "validation" : "default",
               "initialVal" : "",
               "placeholderText" : "",
               "options" : [
@@ -78,40 +107,13 @@
               "help" : ""
             },
             {
-              "type" : "text",
-              "fieldid" : "s1-reg-no",
-              "name" : "s1-reg-no",
-              "label" : "Company or charity registration number",
-              "enabled" : true,
-              "required" : false,
-              "validation" : "default",
-              "initialVal" : "",
-              "placeholderText" : "",
-              "options" : [],
-              "error" : "",
-              "help" : ""
-            },
-            {
-              "type" : "text",
-              "fieldid" : "s1-vat-no",
-              "name" : "s1-vat-no",
-              "label" : "VAT number (if applicable)",
-              "enabled" : true,
-              "required" : false,
-              "validation" : "default",
-              "initialVal" : "",
-              "placeholderText" : "",
-              "options" : [],
-              "error" : "",
-              "help" : ""
-            },
-            {
               "type" : "radio",
-              "fieldid" : "s1-previously-worked-with",
-              "name" : "s1-previously-worked-with",
-              "label" : "Has this organisation previously worked on a project funded through ESF, ERDF or EAFRD?",
+              "fieldid" : "s2-project-approval-conditions",
+              "name" : "s2-project-approval-conditions",
+              "label" : "Did the approval of your outline application contain any conditions or recommendations?",
               "enabled" : true,
               "required" : true,
+              "validation" : "default",
               "initialVal" : "",
               "placeholderText" : "",
               "options" : [
@@ -124,7 +126,7 @@
                   "value" : 0
                 }
               ],
-              "error": "",
+              "error" : "",
               "help" : ""
             }
           ],
@@ -133,9 +135,17 @@
               "type" : "submit",
               "enabled" : true,
               "name" : "button",
-              "id" : "login-button",
+              "id" : "save-button",
               "classes" : "",
-              "text" : "Login"
+              "text" : "Save and quit"
+            },
+            {
+              "type" : "submit",
+              "enabled" : true,
+              "name" : "button",
+              "id" : "continue-button",
+              "classes" : "",
+              "text" : "Continue"
             }
           ]
         }

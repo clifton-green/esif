@@ -12,7 +12,7 @@
         "imagePath" : "static/images/gov.uk_logotype_crown.png",
         "imageDesc" : "gov.uk crown logo",
         "text" : "gov.uk",
-        "url" : "#"
+        "url" : "/"
       }
   },
   "globalNavigation" : {

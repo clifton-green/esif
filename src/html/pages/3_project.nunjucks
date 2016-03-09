@@ -6,7 +6,7 @@
     {% include "components/c-headed-text.nunjucks" %}
     <div class="parthenon">
       <div class="col primary">
-        {% set context = applicant %}
+        {% set context = project %}
         {% include "components/c-formbuilder.nunjucks" %}
       </div>
       <div class="col sidebar">

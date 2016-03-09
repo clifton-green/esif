@@ -1,6 +1,9 @@
-{% macro fieldBuilder(name='', label='', type='', fieldid='', value='', placeholder='', enabled=true, options=[], required='', validation='') %}
+{% macro fieldBuilder(name='', label='', type='', fieldid='', value='', placeholder='', enabled=true, options=[], required='', validation='', help='') %}
   <div class="field-container">
     <label for="{{fieldid}}">{{label}}</label>
+    {% if help != ''%}
+      <span class="help">{{help}}</span>
+    {% endif %}
     {% if type == "select"%}
       <select id="{{fieldid}}" name="{{name}}" {% if enabled != true %} disabled {% endif %} {%if required == true%} required {% endif %}>
         {% if placeholder != '' %}
@@ -24,6 +27,19 @@
       {% endfor %}
     {% elif type == "textarea"%}
       <textarea id="{{fieldid}}" name="{{name}}" {% if enabled != true %} disabled {% endif %} {%if required == true%} required {% endif %}>{% if value %}{{ value }}{% endif %}</textarea>
+    {% elif type == "dategroup"%}
+      <div class="date-input">
+        <span>Day</span>
+        <input id="{{fieldid}}-day" name="{{name}}-day" type="number" value="{{value}}" {% if placeholder != '' %} placeholder="{{placeholder}}"{% endif %} {% if enabled !=true %} disabled {% endif %} pattern="[0-9]*" {%if required == true%} required {% endif %}/>
+      </div>
+      <div class="date-input">
+        <span>Month</span>
+        <input id="{{fieldid}}-month" name="{{name}}-month" type="number" value="{{value}}" {% if placeholder != '' %} placeholder="{{placeholder}}"{% endif %} {% if enabled !=true %} disabled {% endif %} pattern="[0-9]*" {%if required == true%} required {% endif %}/>
+      </div>
+      <div class="date-input">
+        <span>Year</span>
+        <input id="{{fieldid}}-year" name="{{name}}-year" type="number" value="{{value}}" {% if placeholder != '' %} placeholder="{{placeholder}}"{% endif %} {% if enabled !=true %} disabled {% endif %} pattern="[0-9]*" {%if required == true%} required {% endif %}/>
+      </div>
     {% else %}
       <input id="{{fieldid}}" name="{{name}}" type="{{type}}" value="{{value}}" {% if placeholder != '' %} placeholder="{{placeholder}}"{% endif %} {% if enabled !=true %} disabled {% endif %} {%if validation != 'default'%} pattern="{{validation}}" {% endif %} {%if required == true%} required {% endif %}/>
     {% endif %}
@@ -36,7 +52,7 @@
       <fieldset>
         <legend {%if fs.visibleLegend == false %} class="vishide" {% endif %}>{{fs.legend}}</legend>
         {% for field in fs.fields %}
-         {{ fieldBuilder(field.name, field.label, field.type, field.fieldid, field.initialVal, field.placeholderText, field.enabled, field.options, field.required, field.validation) }}
+         {{ fieldBuilder(field.name, field.label, field.type, field.fieldid, field.initialVal, field.placeholderText, field.enabled, field.options, field.required, field.validation, field.help) }}
         {% endfor %}
         {% for btn in fs.buttons %}
           <button class="btn {% if btn.classes %}{{ btn.classes }} {% endif %}{% if btn.enabled == false%}disabled{% endif %}" {% if btn.enabled == false  %} disabled {% endif %} type="{{btn.type}}" name="{{btn.name}}" id="{{btn.id}}">{{btn.text}}</button>

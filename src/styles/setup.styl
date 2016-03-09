@@ -8,16 +8,16 @@
 body {
   ff-body();
   color: $text-colour;
-  background-color $panel-colour
+  background-color: $panel-colour;
 }
 
 .page-wrapper {
-  background-color #fff
+  background-color: #fff;
 }
 
 .pretitle {
-  color $grey-1
-  font-size $mantle
+  color: $grey-1;
+  font-size: $mantle;
 }
 
 h1,
@@ -64,7 +64,7 @@ a {
     }
     &:hover {
       &:after {
-        background-position left bottom
+        background-position: left bottom;
       }
     }
   }
@@ -73,7 +73,7 @@ a {
 p {
     line-height: $lineHeight*1.2;
   +above(l) {
-    font-size $bodyCopy
+    font-size: $bodyCopy;
     line-height: $lineHeight*1.2;
   }
   margin-bottom: $vspacing;
@@ -89,8 +89,8 @@ p {
 }
 
 .wrapper {
-  position relative
-  padding: 0 $hspacing*3
+  position: relative;
+  padding: 0 $hspacing*3;
   +above(l) {
    center(1020px);
   }
@@ -98,10 +98,9 @@ p {
 
 .col {
   &.primary {
-    col(2/3)
+    col(2/3);
   }
   &.sidebar {
-    margin-top $vspacing*13
-    col(1/3)
+    col(1/3);
   }
 }
