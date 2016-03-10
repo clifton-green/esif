@@ -62,6 +62,7 @@ gulp.task('serve', function() {
 
   // Compile HTML and JSON
   gulp.watch(['src/html/**/*.nunjucks', 'src/model/**/*.json'], ['processHTML'], reload);
+
   // Show success message
   console.log(chalk.green('✔ Server started!'))
 });
@@ -77,7 +78,8 @@ var errors = 0,
 ],
 onError = function (err) {
   'use strict';
-  notifier.notify({ title: 'Development Build', message: 'Failed', icon: 'http://cdn.volcaniccreations.com/topaz/failed.png' });
+  console.log(chalk.red('✘ Build failed!'))
+  notifier.notify({ title: 'Build', message: 'Failed', icon: 'http://cdn.volcaniccreations.com/topaz/failed.png' });
   console.log(err);
   errors = errors+1
   this.emit('end');
@@ -87,7 +89,7 @@ onError = function (err) {
 gulp.task('styles', function(callback) {
   'use strict';
   return gulp.src('src/styles/start.styl')
-    .pipe(gulpif(!argv.prod, addsrc('src/styles/dev.css')))
+    .pipe(gulpif(!argv.prod, addsrc('src/styles/dev.styl')))
     .pipe(plumber(
       { errorHandler: onError }
     ))
@@ -203,7 +205,7 @@ gulp.task('processHTML', function() {
 });
 
 var prodBuild = ['clean', 'styles','extrastyles','libs','scripts','images','processHTML', 'notify'],
-    devBuild = ['styles','extrastyles','libs','testModel', 'processHTML','jsoneditor','model','scripts', 'notify'],
+    devBuild = ['styles','extrastyles','libs','testModel','processHTML','jsoneditor','model','scripts', 'notify'],
     buildTasks = argv.prod ? prodBuild : devBuild;
 
 // Perform Basic Build (note, don't call directly, use build:dev or build)
