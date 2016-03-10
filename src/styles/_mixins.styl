@@ -5,3 +5,20 @@ ff-body()
   font-family: 'nta', sans-serif;
   font-weight: normal;
   font-size: $bodyCopy;
+button()
+  display: inline-block;
+  color: $white;
+  background: $button-colour;
+  padding: $vspacing $hspacing*2
+  border: 0;
+  font-size: $smallCopy;
+  cursor: pointer;
+  border-bottom: 3px solid darken($button-colour, 40%);
+  &:hover {
+    background: $green;
+  }
+  &.disabled {
+    cursor: auto;
+    background: desaturate($button-colour, 60%);
+    opacity: .6;
+  }

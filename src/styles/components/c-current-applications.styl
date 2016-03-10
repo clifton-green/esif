@@ -1,0 +1,86 @@
+.c-current-applications {
+  margin-top $vspacing*3
+  caption {
+    ff-title();
+    font-size $mantle;
+  }
+
+  table {
+    margin-top $vspacing*2
+    width: 100%;
+  }
+
+  tr {
+    padding: $vspacing $hspacing*2;
+    +above(l) {
+      padding: 0;
+      border-bottom 1px solid $border-colour
+      display table-row
+    }
+  }
+
+  tbody {
+    background-color: $panel-colour
+    +above(l) {
+      background-color: transparent;
+      display table-row-group;
+    }
+    tr {
+      &:nth-child(even) {
+        background: $grey-4
+      }
+    }
+    a {
+        button();
+      }
+  }
+
+  td, th {
+    padding: ($vspacing/2) 0;
+    +above(l) {
+      display table-cell;
+    }
+  }
+
+  th {
+    font-weight bold
+  }
+  td {
+    text-align right
+    +above(l) {
+      text-align:left;
+    }
+  }
+  td[data-title]:before {
+      content: attr(data-title)": ";
+      float: left;
+      margin-right $spacing
+      font-weight bold
+      +above(l) {
+        content ''
+      }
+  }
+
+  thead {
+    position: absolute;
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0;
+    border: 0;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    +above(l) {
+      position: relative;
+      clip: auto;
+      height: auto;
+      width: auto;
+      overflow: auto;
+    }
+  }
+  tbody,
+  tr,
+  th,
+  td {
+    display block
+  }
+}

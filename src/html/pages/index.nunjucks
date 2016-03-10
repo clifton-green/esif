@@ -1,4 +1,11 @@
 {% extends "layout.nunjucks" %}
 {% block content %}
-  <h1>Welcome to your new site!</h1>
+  <section class="page-login">
+    {# Load intro text #}
+    {% set context = contentIntro %}
+    {% include "components/c-headed-text.nunjucks" %}
+    {# Load login form #}
+    {% set context = loginForm %}
+    {% include "components/c-login-form.nunjucks" %}
+  </section>
 {% endblock %}

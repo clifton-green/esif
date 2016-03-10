@@ -1,0 +1,32 @@
+<section class="{{context.componentClass}}">
+  <table>
+    <caption>{{ context.title }}</caption>
+    <thead>
+      <tr>
+        {% for key, val in context.projects[0] %}
+          <th>{{ key }}</th>
+        {% endfor %}
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in context.projects %}
+        <tr>
+        {% for key, val in row %}
+          {% if not loop.last %}
+            <td data-title="{{key}}">{{val}}</td>
+          {% else %}
+            <td><a href="{{val}}">{{context.resumeText}}</a></td>
+          {% endif %}
+        {% endfor %}
+        </tr>
+      {% endfor %}
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="6">
+          <strong>Showing 1 to 4 of 4 entries</strong>
+        </td>
+      </tr>
+    </tfoot>
+  </table>
+</section>

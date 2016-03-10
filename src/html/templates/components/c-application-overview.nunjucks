@@ -1,0 +1,13 @@
+<section class="{{context.componentClass}}">
+  <span class="pretitle">{{ context.callText }} {{ context.callRef }}</span>
+  <h1>{{ context.title }}</h1>
+  <ol>
+    {% for row in context.sections %}
+      <li class="js-big-target">
+        <span class="name">{{row.name}}</span>
+        <span class="status {{row.status | replace(' ', '-')}}"><span>{{row.status | upper}}</span></span>
+        <a class="edit-link" href="{{row.editLinkUrl}}">{{context.editLinkText}}</a>
+      </li>
+    {% endfor %}
+  </ol>
+</section>

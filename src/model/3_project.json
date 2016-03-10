@@ -1,0 +1,199 @@
+{
+  "meta" : {
+    "pageTitle" : "Application overview",
+    "description" : "to be added",
+    "canonical" : "index.html"
+  },
+  "contentIntro" : {
+    "componentClass" : "c-headed-text",
+    "pretitle" : "Step 3",
+    "title" : "About your project",
+    "subtitle" : "",
+    "bodyCopy" : "",
+    "ctaType" : "",
+    "ctaText" : "",
+    "ctaURL" : ""
+  },
+  "project" : {
+    "componentClass" : "c-application-form",
+    "title": "",
+    "formBuilder" : {
+      "id" : "applicationForm",
+      "action" : "3_projectb.html",
+      "method" : "get",
+      "classes" : "",
+      "fieldset" : [
+        {
+          "legend" : "Information about your project",
+          "visibleLegend" : false,
+          "fields" : [
+            {
+              "type" : "text",
+              "fieldid" : "s2-project-name",
+              "name" : "s2-project-name",
+              "label" : "Project Name",
+              "enabled" : true,
+              "required" : true,
+              "validation" : "default",
+              "initialVal" : "",
+              "placeholderText" : "",
+              "options" : [],
+              "error" : "",
+              "help" : ""
+            },
+            {
+              "type" : "textarea",
+              "fieldid" : "s2-project-summary",
+              "name" : "s2-project-summary",
+              "label" : "Summary of your project",
+              "enabled" : true,
+              "required" : true,
+              "validation" : "default",
+              "initialVal" : "",
+              "placeholderText" : "",
+              "options" : [],
+              "error" : "",
+              "help" : ""
+            },
+            {
+              "type" : "textarea",
+              "fieldid" : "s2-project-beneficiaries",
+              "name" : "s2-project-beneficiaries",
+              "label" : "Who will benefit from this project?",
+              "enabled" : true,
+              "required" : true,
+              "validation" : "default",
+              "initialVal" : "",
+              "placeholderText" : "",
+              "options" : [],
+              "error" : "",
+              "help" : ""
+            },
+            {
+              "type" : "textarea",
+              "fieldid" : "s2-project-location",
+              "name" : "s2-project-location",
+              "label" : "Where is the project located?",
+              "enabled" : true,
+              "required" : true,
+              "validation" : "default",
+              "initialVal" : "",
+              "placeholderText" : "",
+              "options" : [],
+              "error" : "",
+              "help" : ""
+            },
+            {
+              "type" : "radio",
+              "fieldid" : "s2-project-lep-coverage",
+              "name" : "s2-project-lep-coverage",
+              "label" : "Does the project cover more than one LEP area project?",
+              "enabled" : true,
+              "required" : true,
+              "validation" : "default",
+              "initialVal" : "",
+              "placeholderText" : "",
+              "options" : [
+                {
+                  "name" : "Yes",
+                  "value" : 1
+                },
+                {
+                  "name" : "No",
+                  "value" : 0
+                }
+              ],
+              "error" : "",
+              "help" : ""
+            },
+            {
+              "type" : "radio",
+              "fieldid" : "s2-project-approval-conditions",
+              "name" : "s2-project-approval-conditions",
+              "label" : "Did the approval of your outline application contain any conditions or recommendations?",
+              "enabled" : true,
+              "required" : true,
+              "validation" : "default",
+              "initialVal" : "",
+              "placeholderText" : "",
+              "options" : [
+                {
+                  "name" : "Yes",
+                  "value" : 1
+                },
+                {
+                  "name" : "No",
+                  "value" : 0
+                }
+              ],
+              "error" : "",
+              "help" : ""
+            }
+          ],
+          "buttons" : [
+            {
+              "type" : "submit",
+              "enabled" : true,
+              "name" : "button",
+              "id" : "save-button",
+              "classes" : "",
+              "text" : "Save and quit"
+            },
+            {
+              "type" : "submit",
+              "enabled" : true,
+              "name" : "button",
+              "id" : "continue-button",
+              "classes" : "",
+              "text" : "Continue"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "applicationInfo" : {
+    "componentClass" : "c-application-info",
+    "items" : [
+      {
+        "title" : "Call reference",
+        "contents" : "OC04R15P0002"
+      },
+      {
+        "title" : "Application Type",
+        "contents" : "Full"
+      },
+      {
+        "title" : "Created",
+        "contents" : "07 November 2015"
+      },
+      {
+        "title" : "Progress",
+        "contents" : "5 of 8 sections completed"
+      },
+      {
+        "title" : "Status",
+        "contents" : "Incomplete"
+      }
+    ]
+
+  },
+  "miniDash" : {
+    "componentClass" : "c-mini-dashboard",
+    "title" : "Your dashboard",
+    "items" : [
+      {
+        "name" : "My tasks",
+        "link" : "dashboard.html"
+      },
+      {
+        "name" : "Existing applications",
+        "link" : "dashboard.html"
+      },
+      {
+        "name" : "Projects",
+        "link" : "dashboard.html"
+      }
+    ]
+  }
+}

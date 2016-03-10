@@ -4,7 +4,7 @@
     "siteName" : "E-Claims",
     "phaseTag" : "<span class=\"phase__message phase__alpha\">This is a new service – <a href=\"#\">help us improve it.</a></span>"
   },
-  "header" : {
+  "globalHeader" : {
     "componentClass" : "c-global-header",
     "propositionTitle" : "Apply for European Structural and Investment Funding",
     "logo" :
@@ -12,7 +12,7 @@
         "imagePath" : "static/images/gov.uk_logotype_crown.png",
         "imageDesc" : "gov.uk crown logo",
         "text" : "gov.uk",
-        "url" : "#"
+        "url" : "/"
       }
   },
   "globalNavigation" : {
@@ -50,7 +50,15 @@
       }
     ]
   },
-  "footer" : {
+  "globalLoggedIn" : {
+    "componentClass" : "c-global-logged-in",
+    "userFirstName" : "FirstName",
+    "userLastName" : "Surname",
+    "userCompany" : "Company Name",
+    "logoutLinkText" : "Sign out",
+    "logoutLinkURL" : "index.html"
+  },
+  "globalFooter" : {
     "componentClass" : "c-global-footer",
     "navigation" : [
       {

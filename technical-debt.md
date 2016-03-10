@@ -7,11 +7,12 @@ Any development tasks or optimisations which need to be made should be listed he
 **Note:** If there is a task/bug manager in place to cover this then this file will not be updated.
 
 ## Tasks:
-- Set up tests
-- Add login/logout states and update nav accordingly
-- Use gulpif to create --prod and --dev states for styles, scripts and servers
-- Add namespacing to json files
+1. Set up tests (jasmine and casperjs/spooky)
+3. Use gulpif to create --prod and --dev states for styles, scripts and servers
+5. Add sourcemaps at some
+6. Add javascript validation and custom validation messages to compliment HTML5 validation
+7. It would be a nice to have if instead of having to insert a regex patten the user can just add 'postcode' to the validation and it would work that way. This would require adding some sort of find and replace tool to the gulpfile.
+8. Improve dev tools to be a bit more responsive
 
 ## Issues
-- The build system ignores JSON updates on watch. It will only work with a manual build.
-- Heroku is building as a node app, work out how to build as regular apache app.
+No current issues.

@@ -1,0 +1,158 @@
+{
+  "meta": {
+    "pageTitle": "Application overview",
+    "description": "to be added",
+    "canonical": "index.html"
+  },
+  "contentIntro": {
+    "componentClass": "c-headed-text",
+    "title": "Applicant",
+    "subtitle": "Introduction",
+    "bodyCopy": "<p>The Full Application must be completed by the Applicant and submitted to the Managing Authority by the deadline agreed by the Managing Authority.</p>\n<p>In order to submit a Full Application you must first have received an invitation to do so from the Managing Authority.</p>\n<p>Before submitting a Full Application, please ensure that you have read the Full Application Guidance carefully. Any queries should be addressed to the Managing Authority.</p>\n<p>The Managing Authority will use the Full Application form to carry out its appraisal of the proposal, with the aim of determining whether the application meets the relevant criteria to be considered for funding. Applicants should note that the Local Enterprise Partnership Area European Structural and Investment Funds Sub-committee will receive the Managing Authority’s appraisal, incorporating a summary of the Full Application, in order to advise on local strategic fit.</p>\n<p>If this Full Application contains commercially sensitive information which the Applicant does not want to be shared with the Local Enterprise Partnership Area European Structural and Investment Funds Sub-committee, the applicant must complete section 12, identifying the commercially sensitive information, requesting that this information is not released and explaining its reasons.</p>\n<p>The Applicant is required to verify the accuracy of the information provided in the Full Application. Therefore the Applicant is expected to undertake appropriate investigation to establish the accuracy of its representations.</p>\n<p>Further information on the application process, including on State Aid law and procurement compliance, can be found on the <a href=\"http://www.gov.uk\">www.gov.uk</a> website.</p>",
+    "ctaType": "",
+    "ctaText": "",
+    "ctaURL": ""
+  },
+  "appForm": {
+    "componentClass": "c-application",
+    "title": "Application overview:",
+    "formBuilder": {
+      "id": "application-form",
+      "action": "nav-demo-2.html",
+      "method": "get",
+      "classes": "",
+      "fieldset": [
+        {
+          "legend": "Have you submitted an application before?",
+          "visibleLegend": false,
+          "fields": [
+            {
+              "type": "radio",
+              "fieldid": "application-linked-application",
+              "name": "application-linked-application",
+              "label": "Have you submitted a linked/complementary application against another call?",
+              "enabled": true,
+              "required": true,
+              "validation": "none",
+              "initialVal": "",
+              "placeholderText": "",
+              "options": [
+                {
+                  "name": "Yes",
+                  "value": "yes"
+                },
+                {
+                  "name": "No",
+                  "value": "no"
+                }
+              ],
+              "error": ""
+            }
+          ]
+        },
+        {
+          "legend": "Applicant Details",
+          "visibleLegend": true,
+          "fields": [
+            {
+              "type": "text",
+              "fieldid": "application-org-name",
+              "name": "application-org-name",
+              "label": "Organisation name",
+              "enabled": true,
+              "required": true,
+              "validation": "none",
+              "initialVal": "",
+              "placeholderText": "",
+              "options": [],
+              "error": ""
+            },
+            {
+              "type": "select",
+              "fieldid": "application-org-type",
+              "name": "application-org-type",
+              "label": "Organisation type",
+              "enabled": true,
+              "required": true,
+              "validation": "none",
+              "initialVal": "",
+              "placeholderText": "Please select:",
+              "options": [
+                {
+                  "name": "Private Limited Company",
+                  "value": "1"
+                },
+                {
+                  "name": "NGO",
+                  "value": "2"
+                },
+                {
+                  "name": "Limited Liability Company",
+                  "value": "3"
+                },
+                {
+                  "name": "Other",
+                  "value": "4"
+                }
+              ],
+              "error": ""
+            },
+            {
+              "type": "radio",
+              "fieldid": "application-org-sme",
+              "name": "application-org-sme",
+              "label": "Is the organisation a small or medium-sized enterprise (SME)?",
+              "enabled": true,
+              "initialVal": "",
+              "placeholderText": "",
+              "options": [
+                {
+                  "name": "Yes it is an SME",
+                  "value": "0"
+                },
+                {
+                  "name": "No, it isn't an SME",
+                  "value": "1"
+                }
+              ]
+            }
+          ],
+          "buttons": [
+            {
+              "type": "submit",
+              "enabled": true,
+              "name": "prev",
+              "id": "prev-button",
+              "classes": "",
+              "text": "Previous Page"
+            },
+            {
+              "type": "submit",
+              "enabled": true,
+              "name": "save",
+              "id": "draft-button",
+              "classes": "",
+              "text": "Save progress"
+            },
+            {
+              "type": "submit",
+              "enabled": false,
+              "name": "pdf",
+              "id": "pdf-button",
+              "classes": "",
+              "text": "PDF"
+            },
+            {
+              "type": "submit",
+              "enabled": true,
+              "name": "next",
+              "id": "next-button",
+              "classes": "",
+              "text": "Next page"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

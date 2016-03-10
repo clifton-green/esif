@@ -1,0 +1,189 @@
+{
+  "meta" : {
+    "pageTitle" : "Application overview",
+    "description" : "to be added",
+    "canonical" : "index.html"
+  },
+  "contentIntro" : {
+    "componentClass" : "c-headed-text",
+    "pretitle" : "Step 1",
+    "title" : "About your organisation",
+    "subtitle" : "",
+    "bodyCopy" : "",
+    "ctaType" : "",
+    "ctaText" : "",
+    "ctaURL" : ""
+  },
+  "applicant" : {
+    "componentClass" : "c-application-form",
+    "title": "",
+    "formBuilder" : {
+      "id" : "applicationForm",
+      "action" : "1_applicantb.html",
+      "method" : "get",
+      "classes" : "",
+      "fieldset" : [
+        {
+          "legend" : "Please enter your login details",
+          "visibleLegend" : false,
+          "fields" : [
+            {
+              "type" : "text",
+              "fieldid" : "s1-org-name",
+              "name" : "s1-org-name",
+              "label" : "Organisation name",
+              "enabled" : true,
+              "required" : true,
+              "validation" : "default",
+              "initialVal" : "",
+              "placeholderText" : "",
+              "options" : [],
+              "error" : "",
+              "help" : ""
+            },
+            {
+              "type" : "text",
+              "fieldid" : "s1-org-type",
+              "name" : "s1-org-type",
+              "label" : "Organisation type",
+              "enabled" : true,
+              "required" : true,
+              "validation" : "default",
+              "initialVal" : "",
+              "placeholderText" : "",
+              "options" : [],
+              "error" : "",
+              "help" : ""
+            },
+            {
+              "type" : "radio",
+              "fieldid" : "s1-org-sme",
+              "name" : "s1-org-sme",
+              "label" : "Is this a small or medium-sized enterprise?",
+              "enabled" : true,
+              "required" : true,
+              "initialVal" : "",
+              "placeholderText" : "",
+              "options" : [
+                {
+                  "name" : "Yes",
+                  "value" : 1
+                },
+                {
+                  "name" : "No",
+                  "value" : 0
+                }
+              ],
+              "error" : "",
+              "help" : ""
+            },
+            {
+              "type" : "text",
+              "fieldid" : "s1-reg-no",
+              "name" : "s1-reg-no",
+              "label" : "Company or charity registration number",
+              "enabled" : true,
+              "required" : false,
+              "validation" : "default",
+              "initialVal" : "",
+              "placeholderText" : "",
+              "options" : [],
+              "error" : "",
+              "help" : ""
+            },
+            {
+              "type" : "text",
+              "fieldid" : "s1-vat-no",
+              "name" : "s1-vat-no",
+              "label" : "VAT number (if applicable)",
+              "enabled" : true,
+              "required" : false,
+              "validation" : "default",
+              "initialVal" : "",
+              "placeholderText" : "",
+              "options" : [],
+              "error" : "",
+              "help" : ""
+            },
+            {
+              "type" : "radio",
+              "fieldid" : "s1-previously-worked-with",
+              "name" : "s1-previously-worked-with",
+              "label" : "Has this organisation previously worked on a project funded through ESF, ERDF or EAFRD?",
+              "enabled" : true,
+              "required" : true,
+              "initialVal" : "",
+              "placeholderText" : "",
+              "options" : [
+                {
+                  "name" : "Yes",
+                  "value" : 1
+                },
+                {
+                  "name" : "No",
+                  "value" : 0
+                }
+              ],
+              "error": "",
+              "help" : ""
+            }
+          ],
+          "buttons" : [
+            {
+              "type" : "submit",
+              "enabled" : true,
+              "name" : "button",
+              "id" : "login-button",
+              "classes" : "",
+              "text" : "Login"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "applicationInfo" : {
+    "componentClass" : "c-application-info",
+    "items" : [
+      {
+        "title" : "Call reference",
+        "contents" : "OC04R15P0002"
+      },
+      {
+        "title" : "Application Type",
+        "contents" : "Full"
+      },
+      {
+        "title" : "Created",
+        "contents" : "07 November 2015"
+      },
+      {
+        "title" : "Progress",
+        "contents" : "5 of 8 sections completed"
+      },
+      {
+        "title" : "Status",
+        "contents" : "Incomplete"
+      }
+    ]
+
+  },
+  "miniDash" : {
+    "componentClass" : "c-mini-dashboard",
+    "title" : "Your dashboard",
+    "items" : [
+      {
+        "name" : "My tasks",
+        "link" : "dashboard.html"
+      },
+      {
+        "name" : "Existing applications",
+        "link" : "dashboard.html"
+      },
+      {
+        "name" : "Projects",
+        "link" : "dashboard.html"
+      }
+    ]
+  }
+}

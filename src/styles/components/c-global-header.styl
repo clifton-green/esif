@@ -1,10 +1,24 @@
 .c-global-header {
-  cf()
+  cf();
   background-color $text-colour
-  padding $spacing
+  margin-bottom $spacing*5
+  height: $vspacing*15
+  &:after {
+    display block
+    height: $vspacing;
+    width: 95%;
+    max-width: 1020px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color $primary
+  }
+  +above(l) {
+    height: $vspacing*8
+  }
   .logo {
     text-decoration none
     ff-title()
+    padding: 0 ($hspacing/2)
     text-transform uppercase
     color $white
     font-size $baseFont * 3
@@ -17,10 +31,61 @@
   }
   h1 {
     color #fff
-    font-size $baseFont*2.4
+    font-size $innerCore
+    +above(m) {
+      font-size $outerCore
+    }
   }
   .col {
-    col(2/3)
-    float right
+    +above(m) {
+      col(2/3)
+      float right
+    }
+  }
+  .wrapper {
+    position relative
+    padding $vspacing ($hspacing*2)
+    height: 100%;
+  }
+  .phase {
+    position absolute
+    left 0
+    bottom: -($vspacing*5)
+    width: 94.7%
+    padding: $vspacing 0 ($vspacing/1.5)
+    margin 0 $hspacing*2.5
+    border-bottom 1px solid $border-colour;
+    font-size $smallCopy
+    span {
+      position absolute
+      top: -9999px;
+      left: -9999px;
+    }
+    +above(l) {
+      width: 100%
+      margin 0
+      padding: ($vspacing/1.3) 0
+      span {
+        position static
+        top:auto;
+        left:auto;
+      }
+    }
+
+    &:before {
+      color: #fff;
+      font-size $smallCopy
+      font-weight bold
+      padding: 0 ($hspacing/2) 0
+      margin-right ($hspacing/2)
+    }
+    &.alpha:before {
+      content "ALPHA"
+      background-color: $alpha-colour;
+    }
+    &.beta:before {
+      content "BETA"
+      background-color: $beta-colour;
+    }
   }
 }

@@ -1,0 +1,5 @@
+<section class="{{context.componentClass}}">
+  <h1 class="vishide">{{context.title}}</h1>
+  {# Include the formBuilder #}
+  {% include "../components/c-formbuilder.nunjucks" %}
+</section>

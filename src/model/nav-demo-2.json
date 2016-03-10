@@ -1,0 +1,149 @@
+{
+  "meta": {
+    "pageTitle": "Application overview",
+    "description": "to be added",
+    "canonical": "index.html"
+  },
+  "contentIntro": {
+    "componentClass": "c-headed-text",
+    "title": "Submission",
+    "subtitle": "Application Summary",
+    "bodyCopy": "<ul class=\"form-summary\">\n\t<li><a href=\"\">Applicant [edit]</a>\n\t\t<ul>\n\t\t\t<li><a href=\"\">Applicant Details</a>\n\t\t\t\t<ul>\n\t\t\t\t\t<li><strong>Organisation name:</strong> Example LTD</li>\n\t\t\t\t\t<li><strong>Organisation Type:</strong> Limited Liability Company</li>\n\t\t\t\t\t<li><strong>SME Status:</strong>Not an SME</li>\n\t\t\t\t</ul>\n\t\t\t</li>\n\t\t\t<li><a href=\"\">Previous projects</a></li>\n\t\t\t<li><a href=\"\">Delivery Partners</a></li>\n\t\t</ul>\n\t</li>\n\t<li><a href=\"\">Project [edit]</a>\n\t\t<ul>\n\t\t\t<li><a href=\"\">Key details</a></li>\n\t\t\t<li><a href=\"\">Business Case</a></li>\n\t\t\t<li><a href=\"\">Schedule</a></li>\n\t\t\t<li><a href=\"\">Confidential Information</a></li>\n\t\t</ul>\n\t</li>\n\t<li><a href=\"\">Strategy [edit]</a>\n\t\t<ul>\n\t\t\t<li><a href=\"\">Strategic Fit</a></li>\n\t\t\t<li><a href=\"\">Cross-cutting themes</a></li>\n\t\t\t<li><a href=\"\">Justification</a></li>\n\t\t\t<li><a href=\"\">Evidence</a></li>\n\t\t</ul>\n\t</li>\n\t<li><a href=\"\">Risks and Issues [edit]</a></li>\n\t<li><a href=\"\">Financial [edit]</a>\n\t\t<ul>\n\t\t<li><a href=\"\">Details</a></li>\n\t\t<li><a href=\"\">Management</a></li>\n\t\t</ul>\n\t</li>\n\t<li><a href=\"\">Deliverables [edit]</a>\n\t\t<ul>\n\t\t<li><a href=\"\">Results and Outputs</a></li>\n\t\t</ul>\n\t</li>\n\t<li><a href=\"\">Control [edit]</a>\n\t\t<ul>\n\t\t<li><a href=\"\">Governance</a></li>\n\t\t</ul>\n\t</li>\n\t<li><a href=\"\">Compliance [edit]</a>\n\t\t<ul>\n\t\t<li><a href=\"\">National Elibility Rules</a></li>\n\t\t<li><a href=\"\">General compliance</a></li>\n\t\t<li><a href=\"\">Precurement</a></li>\n\t\t<li><a href=\"\">State Aid</a></li>\n\t\t<li><a href=\"\">Publicity</a></li>\n\t\t</ul>\n\t</li>\n\t<li><a href=\"\">Major ERDF Projects [edit]</a></li>\n\t<li><a href=\"\">Financial Instruments [edit]</a></li>\n\t<li><a href=\"\">Supporting documents checklist [edit]</a></li>\n</ul>",
+    "ctaType": "",
+    "ctaText": "",
+    "ctaURL": ""
+  },
+  "declaration1": {
+    "componentClass": "c-headed-text",
+    "title": "Data Protection Act",
+    "subtitle": "",
+    "bodyCopy": "<p>The Full Application must be completed by the Applicant and submitted to the Managing Authority by the deadline agreed by the Managing Authority.</p>\n<p>In order to submit a Full Application you must first have received an invitation to do so from the Managing Authority.</p>\n<p>Before submitting a Full Application, please ensure that you have read the Full Application Guidance carefully. Any queries should be addressed to the Managing Authority.</p>\n<p>The Managing Authority will use the Full Application form to carry out its appraisal of the proposal, with the aim of determining whether the application meets the relevant criteria to be considered for funding. Applicants should note that the Local Enterprise Partnership Area European Structural and Investment Funds Sub-committee will receive the Managing Authority’s appraisal, incorporating a summary of the Full Application, in order to advise on local strategic fit.</p>\n<p>If this Full Application contains commercially sensitive information which the Applicant does not want to be shared with the Local Enterprise Partnership Area European Structural and Investment Funds Sub-committee, the applicant must complete section 12, identifying the commercially sensitive information, requesting that this information is not released and explaining its reasons.</p>\n<p>The Applicant is required to verify the accuracy of the information provided in the Full Application. Therefore the Applicant is expected to undertake appropriate investigation to establish the accuracy of its representations.</p>\n<p>Further information on the application process, including on State Aid law and procurement compliance, can be found on the <a href=\"http://www.gov.uk\">www.gov.uk</a> website.</p>",
+    "ctaType": "",
+    "ctaText": "",
+    "ctaURL": ""
+  },
+  "declaration2": {
+    "componentClass": "c-headed-text",
+    "title": "Declaration",
+    "subtitle": "",
+    "bodyCopy": "<p>The Full Application must be completed by the Applicant and submitted to the Managing Authority by the deadline agreed by the Managing Authority.</p>\n<p>In order to submit a Full Application you must first have received an invitation to do so from the Managing Authority.</p>\n<p>Before submitting a Full Application, please ensure that you have read the Full Application Guidance carefully. Any queries should be addressed to the Managing Authority.</p>\n<p>The Managing Authority will use the Full Application form to carry out its appraisal of the proposal, with the aim of determining whether the application meets the relevant criteria to be considered for funding. Applicants should note that the Local Enterprise Partnership Area European Structural and Investment Funds Sub-committee will receive the Managing Authority’s appraisal, incorporating a summary of the Full Application, in order to advise on local strategic fit.</p>\n<p>If this Full Application contains commercially sensitive information which the Applicant does not want to be shared with the Local Enterprise Partnership Area European Structural and Investment Funds Sub-committee, the applicant must complete section 12, identifying the commercially sensitive information, requesting that this information is not released and explaining its reasons.</p>\n<p>The Applicant is required to verify the accuracy of the information provided in the Full Application. Therefore the Applicant is expected to undertake appropriate investigation to establish the accuracy of its representations.</p>\n<p>Further information on the application process, including on State Aid law and procurement compliance, can be found on the <a href=\"http://www.gov.uk\">www.gov.uk</a> website.</p>",
+    "ctaType": "",
+    "ctaText": "",
+    "ctaURL": ""
+  },
+  "appForm2_1": {
+    "componentClass": "c-application",
+    "title": "Application overview:",
+    "formBuilder": {
+      "id": "application-form",
+      "action": "nav-demo.html",
+      "method": "get",
+      "classes": "",
+      "fieldset": [
+        {
+          "legend": "Have you submitted an application before?",
+          "visibleLegend": false,
+          "fields": [
+            {
+              "type": "checkbox",
+              "fieldid": "application-linked-application",
+              "name": "application-linked-application",
+              "label": "I confirm that I have read and agree to the above information regarding the data protection act",
+              "enabled": true,
+              "required": true,
+              "validation": "none",
+              "initialVal": "",
+              "placeholderText": "",
+              "options": [
+                {
+                  "name": "",
+                  "value": "yes"
+                }
+              ],
+              "error": ""
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "appForm2_2": {
+    "componentClass": "c-application",
+    "title": "Application overview:",
+    "formBuilder": {
+      "id": "application-form",
+      "action": "nav-demo-2.html",
+      "method": "get",
+      "classes": "",
+      "fieldset": [
+        {
+        "legend" : "Have you submitted an application before?",
+        "visibleLegend": false,
+        "fields" : [
+          {
+            "type": "checkbox",
+            "fieldid": "application-linked-application",
+            "name": "application-linked-application",
+            "label": "I confirm that I have read and agree to the above declaration on behalf of the applicant organisation",
+            "enabled": true,
+            "required": true,
+            "validation": "none",
+            "initialVal": "",
+            "placeholderText": "",
+            "options": [
+              {
+                "name": "",
+                "value": "yes"
+              }
+            ],
+            "error": ""
+          }
+        ],
+        "buttons": [
+          {
+            "type": "submit",
+            "enabled": true,
+            "name": "prev",
+            "id": "prev-button",
+            "classes": "",
+            "text": "Previous Page"
+          },
+          {
+            "type": "submit",
+            "enabled": true,
+            "name": "save",
+            "id": "draft-button",
+            "classes": "",
+            "text": "Save progress"
+          },
+          {
+            "type": "submit",
+            "enabled": false,
+            "name": "pdf",
+            "id": "pdf-button",
+            "classes": "",
+            "text": "PDF"
+          },
+          {
+            "type": "submit",
+            "enabled": false,
+            "name": "next",
+            "id": "next-button",
+            "classes": "",
+            "text": "Next page"
+          },
+          {
+            "type": "submit",
+            "enabled": true,
+            "name": "next",
+            "id": "next-button",
+            "classes": "",
+            "text": "Submit"
+          }
+
+        ]
+      }
+      ]
+    }
+  }
+}

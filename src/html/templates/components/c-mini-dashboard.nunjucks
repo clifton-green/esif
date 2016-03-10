@@ -1,0 +1,10 @@
+<section class="{{context.componentClass}}">
+  <h1>{{context.title}}</h1>
+  <ul>
+    {% for item in context.items %}
+      <li>
+        <a href="{{item.link}}">{{item.name}}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</section>

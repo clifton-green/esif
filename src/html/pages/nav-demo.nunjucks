@@ -1,0 +1,11 @@
+{% extends "layout.nunjucks" %}
+{% block content %}
+  <section class="nav-demo">
+    {# Load intro text #}
+    {% set context = contentIntro %}
+    {% include "components/c-headed-text.nunjucks" %}
+    {# Load login form #}
+    {% set context = appForm %}
+    {% include "components/c-formbuilder.nunjucks" %}
+  </section>
+{% endblock %}

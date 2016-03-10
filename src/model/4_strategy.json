@@ -1,0 +1,182 @@
+{
+  "meta" : {
+    "pageTitle" : "Application overview",
+    "description" : "to be added",
+    "canonical" : "index.html"
+  },
+  "contentIntro" : {
+    "componentClass" : "c-headed-text",
+    "pretitle" : "Step 4",
+    "title" : "Strategy",
+    "subtitle" : "",
+    "bodyCopy" : "",
+    "ctaType" : "",
+    "ctaText" : "",
+    "ctaURL" : ""
+  },
+  "strategy" : {
+    "componentClass" : "c-application-form",
+    "title": "",
+    "formBuilder" : {
+      "id" : "applicationForm",
+      "action" : "3_projectb.html",
+      "method" : "get",
+      "classes" : "",
+      "fieldset" : [
+        {
+          "legend" : "Key dates for your project",
+          "visibleLegend" : false,
+          "fields" : [
+            {
+              "type" : "dategroup",
+              "fieldid" : "s2-project-start",
+              "name" : "s2-project-start",
+              "label" : "Project start date",
+              "enabled" : true,
+              "required" : true,
+              "validation" : "default",
+              "initialVal" : "",
+              "placeholderText" : "",
+              "options" : [],
+              "error" : "",
+              "help" : ""
+            },
+            {
+              "type" : "dategroup",
+                "fieldid" : "s2-project-financial-completion",
+              "name" : "s2-project-financial-completion",
+              "label" : "Financial completion date",
+              "enabled" : true,
+              "required" : true,
+              "validation" : "default",
+              "initialVal" : "",
+              "placeholderText" : "",
+              "options" : [],
+              "error" : "",
+              "help" : ""
+            },
+            {
+              "type" : "dategroup",
+              "fieldid" : "s2-project-end",
+              "name" : "s2-project-end",
+              "label" : "Project end date",
+              "enabled" : true,
+              "required" : true,
+              "validation" : "default",
+              "initialVal" : "",
+              "placeholderText" : "",
+              "options" : [],
+              "error" : "",
+              "help" : ""
+            },
+            {
+              "type" : "group",
+              "group" : {
+                "legend" : "List any project milestones and dates they'll be met",
+                "visibleLegend" : true,
+                "class" : "project-milestones",
+                "allowMultiple" : true,
+                "groups" : [
+                  {
+                    "fields" : [
+                      {
+                        "type" : "text",
+                        "fieldid" : "s2-project-milestone-desc",
+                        "name" : "s2-project-milestone-desc",
+                        "label" : "Milestone Description",
+                        "enabled" : true,
+                        "required" : true,
+                        "validation" : "default",
+                        "initialVal" : "",
+                        "placeholderText" : "",
+                        "options" : [],
+                        "error" : "",
+                        "help" : ""
+                      },
+                      {
+                        "type" : "dateset",
+                        "fieldid" : "s2-project-milestone-date",
+                        "name" : "s2-project-milestone-date",
+                        "label" : "Date",
+                        "enabled" : true,
+                        "required" : true,
+                        "validation" : "default",
+                        "initialVal" : "",
+                        "placeholderText" : "",
+                        "options" : [],
+                        "error" : "",
+                        "help" : ""
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ],
+          "buttons" : [
+            {
+              "type" : "submit",
+              "enabled" : true,
+              "name" : "button",
+              "id" : "save-button",
+              "classes" : "",
+              "text" : "Save and quit"
+            },
+            {
+              "type" : "submit",
+              "enabled" : true,
+              "name" : "button",
+              "id" : "continue-button",
+              "classes" : "",
+              "text" : "Continue"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "applicationInfo" : {
+    "componentClass" : "c-application-info",
+    "items" : [
+      {
+        "title" : "Call reference",
+        "contents" : "OC04R15P0002"
+      },
+      {
+        "title" : "Application Type",
+        "contents" : "Full"
+      },
+      {
+        "title" : "Created",
+        "contents" : "07 November 2015"
+      },
+      {
+        "title" : "Progress",
+        "contents" : "5 of 8 sections completed"
+      },
+      {
+        "title" : "Status",
+        "contents" : "Incomplete"
+      }
+    ]
+
+  },
+  "miniDash" : {
+    "componentClass" : "c-mini-dashboard",
+    "title" : "Your dashboard",
+    "items" : [
+      {
+        "name" : "My tasks",
+        "link" : "dashboard.html"
+      },
+      {
+        "name" : "Existing applications",
+        "link" : "dashboard.html"
+      },
+      {
+        "name" : "Projects",
+        "link" : "dashboard.html"
+      }
+    ]
+  }
+}

@@ -2,7 +2,7 @@ language: node_js
 node_js: stable
 before_script:
 - npm install -g gulp
-script: gulp build:prod
+script: gulp build --prod
 deploy:
   provider: heroku
   skip_cleanup: true

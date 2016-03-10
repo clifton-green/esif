@@ -2,15 +2,15 @@
   <div class="wrapper">
     <nav>
       <ul>
-        {% for nav in footer.navigation %}
+        {% for nav in globalFooter.navigation %}
           <li><a href="{{nav.url}}">{{nav.label}}</a></li>
         {% endfor %}
       </ul>
     </nav>
     <div class="copyright">
-      <img src="{{footer.copyright.imagePath}}" alt="footer.copyright.imageDesc" />
-      <a href="{{footer.copyright.link}}">
-        {{footer.copyright.text}}
+      <img src="{{globalFooter.copyright.imagePath}}" alt="globalFooter.copyright.imageDesc" />
+      <a href="{{globalFooter.copyright.link}}">
+        {{globalFooter.copyright.text}}
       </a>
     </div>
   </div>

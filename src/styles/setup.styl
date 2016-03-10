@@ -8,13 +8,22 @@
 body {
   ff-body();
   color: $text-colour;
+  background-color: $panel-colour;
+}
+
+.page-wrapper {
+  background-color: #fff;
+}
+
+.pretitle {
+  color: $grey-1;
+  font-size: $mantle;
 }
 
 h1,
 h2,
 h3 {
   ff-title();
-  color: $primary;
   a {
     color: currentColor;
   }
@@ -37,13 +46,37 @@ a {
   color: $link-colour;
   text-decoration: underline;
   &:hover {
-    $link-hover-colour;
+    color: $link-hover-colour;
+  }
+  &:focus {
+    background-color: $focus-colour
+  }
+  &[rel="external"] {
+    &:after {
+      content: ''
+      display inline-block
+      width: $hspacing*1.1
+      height: $vspacing*1.2
+      margin-left 1px //pixel value used as this is just a spacer
+      overflow hidden
+      background: url(/static/images/external-link.png);
+      background-position left top
+    }
+    &:hover {
+      &:after {
+        background-position: left bottom;
+      }
+    }
   }
 }
 
 p {
-  line-height: $lineHeight;
-  margin-bottom: $lineHeight;
+    line-height: $lineHeight*1.2;
+  +above(l) {
+    font-size: $bodyCopy;
+    line-height: $lineHeight*1.2;
+  }
+  margin-bottom: $vspacing;
   &.lead {
     font-size: $lead;
   }
@@ -56,7 +89,18 @@ p {
 }
 
 .wrapper {
+  position: relative;
+  padding: 0 $hspacing*3;
   +above(l) {
    center(1020px);
+  }
+}
+
+.col {
+  &.primary {
+    col(2/3);
+  }
+  &.sidebar {
+    col(1/3);
   }
 }

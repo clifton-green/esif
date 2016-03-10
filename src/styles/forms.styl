@@ -1,0 +1,109 @@
+/* All generic form styling goes here. */
+/* For specific form component styles see the appropriate component stylesheet */
+
+form {
+  margin-bottom: $spacing*2
+}
+
+.field-container {
+  cf();
+  clear: both;
+  padding: $vspacing 0;
+  margin-bottom: ($vspacing/2);
+  +above(m) {
+    width: 50%;
+  }
+}
+
+.field-group {
+  @extend .field-container;
+  border-top: 1px solid $grey-1;
+  border-bottom: 1px solid $grey-1;
+  +above(m) {
+    width: 100%;
+  }
+  legend {
+    font-size: $mantle;
+    padding: $vspacing 0;
+  }
+  .group {
+    &:nth-child(even) {
+      margin-top: 1px dotted $grey-1;
+    }
+  }
+}
+
+legend {
+  font-size: $mantle;
+  font-weight: bold;
+}
+
+label {
+  display: block;
+  margin-bottom: ($vspacing/2)
+  font-weight: bold;
+}
+
+input, textarea, select {
+  background: $white;
+  border: 2px solid $grey-1;
+  padding: $spacing;
+  width:100%;
+  font-size: $smallCopy
+  &:focus {
+    outline: 0;
+    border-color: $focus-colour;
+  }
+}
+
+button {
+  button();
+  margin-top: $vspacing
+}
+
+.radio-group {
+  display: inline-block;
+  background: $panel-colour;
+  padding: $vspacing*1.5 $hspacing*2;
+  margin-right: $hspacing;
+  border: 3px solid $panel-colour
+  input {
+    width: auto;
+    margin-right: $hspacing
+  }
+  &.focus {
+    border-color: $focus-colour
+  }
+  &.selected {
+    background: $white;
+    box-shadow: inset 0 0 0 1px $black
+  }
+}
+.error {
+  // Don't display errors by default
+  display: none;
+}
+
+.date-input {
+  margin-top: $vspacing;
+  display: inline-block;
+  col(1/4);
+  span {
+    display: block;
+    margin-bottom: ($vspacing/2);
+  }
+}
+
+.form-summary {
+  > li {
+    > a {
+      font-weight: bold;
+    }
+    > ul > li {
+      margin-left: $hspacing*2
+      > ul > li {
+        margin-left: $hspacing*2
+      }
+    }
+  }
+}
