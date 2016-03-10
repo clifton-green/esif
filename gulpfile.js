@@ -27,6 +27,7 @@ var gulp        = require('gulp'),
     data        = require('gulp-data'),
     reload      = browserSync.reload;
 
+
 // watch files for changes and reload
 gulp.task('serve', function() {
   'use strict';
@@ -96,12 +97,12 @@ gulp.task('styles', function(callback) {
     }))
     .pipe(concat('core.min.css'))
     .pipe(cmq())
-    // .pipe(csso())
-    // .pipe(
-    //   cssnano({
-    //     autoprefixer: {browsers: supportedBrowsers, add: true}
-    //   })
-    // )
+    .pipe(csso())
+    .pipe(
+      cssnano({
+        autoprefixer: {browsers: supportedBrowsers, add: true}
+      })
+    )
     .pipe(gulp.dest('dist/static/css'))
     .pipe(reload({stream:true}))
      callback();
@@ -218,7 +219,8 @@ gulp.task('build', function (callback) {
 gulp.task('notify', function() {
   'use strict'
   console.log(chalk.green('✔ Build complete!'))
-  notifier.notify({ title: 'Build', message: 'Completed', icon: 'src/images/icons/apple-touch-icon.png' });})
+  notifier.notify({ title: 'Build', message: 'Completed', icon: 'src/images/icons/apple-touch-icon.png' });
+})
 
 // Compress and minify images to reduce their file size
 gulp.task('images', function() {
