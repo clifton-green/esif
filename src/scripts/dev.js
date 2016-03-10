@@ -13,6 +13,7 @@ DevTools = {
 		this.currentJSON = '/model/' + this.currentPage.replace('html', 'json');
 		this.injectDependencies();
 		this.toggleDevTools();
+		this.checkCookies();
 	},
 
 	injectDependencies: function () {
@@ -26,7 +27,7 @@ DevTools = {
     var dtb = $('<span class="devButton">*</span>').prependTo('body');
 		$('<span class="show-components">Show Components</span>').appendTo(this.devtools).on('click', { mode: 'add'}, this.showComponents.bind(this));
 		$('<span class="show-json">Show JSON</span>').appendTo(this.devtools).on('click', { mode: 'add'}, this.editJSON.bind(this));
-		$('<span class="form-validation">Disable form validation</span>').appendTo(this.devtools).on('click', this.toggleValidation.bind(this));
+		$('<span class="form-validation">Disable form validation</span>').appendTo(this.devtools).on('click', { mode: 'off'}, this.toggleValidation.bind(this));
 		$('<span class="close">X</span>').appendTo(this.devtools).on('click',this.devToolsBar.bind(this));
     dtb.on('click', this.devToolsBar.bind(this));
   },
@@ -40,10 +41,26 @@ DevTools = {
 			this.devtools.addClass('visible');
 		}
   },
+	// Some functions use cookies, check the cookie to see which functions should
+	// run on page load
+	checkCookies: function () {
+		'use strict'
+		if(getCookie('validation') === 'off') {
+			$('.form-validation').trigger('click', {mode: 'off'}, this.toggleValidation.bind(this))
+		}
+	},
 
-	toggleValidation: function () {
+	toggleValidation: function (event) {
 		'use strict';
-		$('form').attr('novalidate', '')
+		if(event.data.mode === 'off') {
+			setCookie('validation', 'off')
+			$('form').attr('novalidate', '');
+			$('.form-validation').html('Enable form validation').off().on('click', { mode: 'on'}, this.toggleValidation.bind(this));
+		} else {
+			setCookie('validation', 'on')
+			$('form').removeAttr('novalidate');
+			$('.form-validation').html('Disable form validation').off().on('click', { mode: 'off'}, this.toggleValidation.bind(this));
+		}
 	},
 	// Outlines all components on a page and shows their classes.
 	// Note: If there are more than 12 components on a page then additional colours need to be added.
@@ -118,39 +135,17 @@ DevTools = {
 	}
 }
 
-// cookie getter and setter
-function createCookie(name, value, days) {
+function setCookie(key, value) {
 	'use strict'
-  var expires;
-  if (days) {
-    var date = new Date();
-    date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
-    expires = '; expires=' + date.toGMTString();
-  } else {
-      expires = '';
-  }
-  document.cookie = encodeURIComponent(name) + '=' + encodeURIComponent(value) + expires + '; path=/';
+	var expires = new Date();
+	expires.setTime(expires.getTime() + (1 * 24 * 60 * 60 * 1000));
+	document.cookie = key + '=' + value + ';expires=' + expires.toUTCString();
 }
 
-function readCookie(name) {
+function getCookie(key) {
 	'use strict'
-  var nameEQ = encodeURIComponent(name) + '=';
-  var ca = document.cookie.split(';');
-  for (var i = 0; i < ca.length; i++) {
-      var c = ca[i];
-      while (c.charAt(0) === ' ') {
-				c = c.substring(1, c.length);
-			}
-      if (c.indexOf(nameEQ) === 0) {
-				return decodeURIComponent(c.substring(nameEQ.length, c.length));
-			}
-  }
-  return null;
-}
-
-function eraseCookie(name) {
-	'use strict'
-  createCookie(name, '', -1);
+	var keyValue = document.cookie.match('(^|;) ?' + key + '=([^;]*)(;|$)');
+	return keyValue ? keyValue[2] : null;
 }
 
 $(document).ready(function() {
