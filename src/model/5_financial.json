@@ -6,32 +6,32 @@
   },
   "contentIntro" : {
     "componentClass" : "c-headed-text",
-    "pretitle" : "Step 4",
-    "title" : "Strategy",
+    "pretitle" : "Step 5",
+    "title" : "Financial information",
     "subtitle" : "",
     "bodyCopy" : "",
     "ctaType" : "",
     "ctaText" : "",
     "ctaURL" : ""
   },
-  "strategy" : {
+  "financial" : {
     "componentClass" : "c-application-form",
     "title": "",
     "formBuilder" : {
       "id" : "applicationForm",
-      "action" : "4_strategyb.html",
+      "action" : "3_projectb.html",
       "method" : "get",
       "classes" : "",
       "fieldset" : [
         {
-          "legend" : "What is the strategy for your project?",
+          "legend" : "Financial information",
           "visibleLegend" : false,
           "fields" : [
             {
               "type" : "textarea",
-              "fieldid" : "s4-call-critera",
-              "name" : "s4-call-critera",
-              "label" : "How does the project meet the call criteria?",
+              "fieldid" : "s5-budget-spending",
+              "name" : "s5-budget-spending",
+              "label" : "How will the project budget be spent?",
               "enabled" : true,
               "required" : true,
               "validation" : "default",
@@ -43,9 +43,9 @@
             },
             {
               "type" : "textarea",
-              "fieldid" : "s4-programme-objectives",
-              "name" : "s4-programme-objectives",
-              "label" : "How does the project deliver the programme's objectives?",
+              "fieldid" : "s5-cost-estimate-accuracy",
+              "name" : "s5-cost-estimate-accuracy",
+              "label" : "How accurate is your cost estimate?",
               "enabled" : true,
               "required" : true,
               "validation" : "default",
@@ -57,9 +57,9 @@
             },
             {
               "type" : "radio",
-              "fieldid" : "s4-esif-growth-strategy",
-              "name" : "s4-esif-growth-strategy",
-              "label" : "Does the project align with the growth priorities of the local ESIF strategy?",
+              "fieldid" : "s5-recoverable-vat",
+              "name" : "s5-recoverable-vat",
+              "label" : "Will the project reclaim irrecoverable VAT?",
               "enabled" : true,
               "required" : true,
               "validation" : "default",
@@ -79,10 +79,24 @@
               "help" : ""
             },
             {
+              "type" : "textarea",
+              "fieldid" : "s5-match-funding-provider",
+              "name" : "s5-match-funding-provider",
+              "label" : "Who's providing match funding for the project?",
+              "enabled" : true,
+              "required" : true,
+              "validation" : "default",
+              "initialVal" : "",
+              "placeholderText" : "",
+              "options" : [],
+              "error" : "",
+              "help" : ""
+            },
+            {
               "type" : "radio",
-              "fieldid" : "s4-environmental-benefits",
-              "name" : "s4-environmental-benefits",
-              "label" : "Will the project have environmental benefits?",
+              "fieldid" : "s5-is-match-funding-confirmed",
+              "name" : "s5-is-match-funding-confirmed",
+              "label" : "Is match funding confirmed?",
               "enabled" : true,
               "required" : true,
               "validation" : "default",
@@ -102,18 +116,56 @@
               "help" : ""
             },
             {
-              "type" : "texarea",
-              "fieldid" : "s4-equality",
-              "name" : "s4-equality",
-              "label" : "How do you plan to ensure equality across the project?",
+              "type" : "group",
+              "group" : {
+                "legend" : "Match funding confirmation date",
+                "visibleLegend" : false,
+                "class" : "match-funding-confirmation-date prev-no",
+                "allowMultiple" : true,
+                "groups" : [
+                  {
+                    "fields" : [
+                      {
+                        "type" : "dateset",
+                        "fieldid" : "s5-match-funding-confirmation-date",
+                        "name" : "s5-match-funding-confirmation-date",
+                        "label" : "Expected date for match funding confirmation",
+                        "enabled" : true,
+                        "required" : false,
+                        "validation" : "default",
+                        "initialVal" : "",
+                        "placeholderText" : "",
+                        "options" : [],
+                        "error" : "",
+                        "help" : ""
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "type" : "radio",
+              "fieldid" : "s5-will-project-generate-income",
+              "name" : "s5-will-project-generate-income",
+              "label" : "Do you expect the project to generate income?",
               "enabled" : true,
               "required" : true,
               "validation" : "default",
               "initialVal" : "",
               "placeholderText" : "",
-              "options" : [],
+              "options" : [
+                {
+                  "name" : "Yes",
+                  "value" : 1
+                },
+                {
+                  "name" : "No",
+                  "value" : 0
+                }
+              ],
               "error" : "",
-              "help" : "Include issues of sex, gender, race and religion if appropriate."
+              "help" : ""
             }
           ],
           "buttons" : [
