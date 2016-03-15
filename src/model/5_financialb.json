@@ -1,0 +1,443 @@
+{
+  "meta" : {
+    "pageTitle" : "Application overview",
+    "description" : "to be added",
+    "canonical" : "index.html"
+  },
+  "contentIntro" : {
+    "componentClass" : "c-headed-text",
+    "pretitle" : "Step 5",
+    "title" : "Financial information",
+    "subtitle" : "",
+    "bodyCopy" : "",
+    "ctaType" : "",
+    "ctaText" : "",
+    "ctaURL" : ""
+  },
+  "financialb1" : {
+    "componentClass" : "c-application-form",
+    "title": "",
+    "formBuilder" : {
+      "type" : "open",
+      "id" : "applicationForm",
+      "action" : "3_projectb.html",
+      "method" : "get",
+      "classes" : "",
+      "fieldset" : [
+        {
+          "legend" : "Add your project costs",
+          "visibleLegend" : true,
+          "fields" : [
+            {
+              "type" : "group",
+              "group" : {
+                "legend" : "Project costs",
+                "visibleLegend" : false,
+                "class" : "",
+                "allowMultiple" : true,
+                "groups" : [
+                  {
+                    "fields" : [
+                      {
+                        "type" : "text",
+                        "fieldid" : "s5-cost-category",
+                        "name" : "s5-cost-category",
+                        "label" : "Cost category",
+                        "enabled" : true,
+                        "required" : false,
+                        "validation" : "default",
+                        "initialVal" : "",
+                        "placeholderText" : "",
+                        "options" : [],
+                        "error" : "",
+                        "help" : ""
+                      },
+                      {
+                        "type" : "text",
+                        "fieldid" : "s5-cost-value",
+                        "name" : "s5-cost-value",
+                        "label" : "Value",
+                        "enabled" : true,
+                        "required" : false,
+                        "validation" : "\\d+(\\.\\d{2})?",
+                        "initialVal" : "",
+                        "placeholderText" : "",
+                        "options" : [],
+                        "error" : "",
+                        "help" : ""
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "legend" : "Add your funding sources",
+          "visibleLegend" : true,
+          "fields" : [
+            {
+              "type" : "select",
+              "fieldid" : "s5-funding-source-type",
+              "name" : "s5-funding-source-type",
+              "label" : "Funding Source",
+              "enabled" : true,
+              "required" : false,
+              "validation" : "",
+              "initialVal" : "",
+              "placeholderText" : "Select your funding type",
+              "options" : [
+                {
+                  "name" : "Local Authority Funds",
+                  "value" : "Local Authority Funds"
+                },
+                {
+                  "name" : "University Funds",
+                  "value" : "University Funds"
+                },
+                {
+                  "name" : "Bank Loan",
+                  "value" :"Bank Loan"
+                },
+                {
+                  "name" : "Private Sector Reserves",
+                  "value" :"Private Sector Reserves"
+                },
+                {
+                  "name" : "Public Sector Reserves",
+                  "value" :"Public Sector Reserves"
+                },
+                {
+                  "name" : "Regional Growth Fund",
+                  "value" :"Regional Growth Fund"
+                },
+                {
+                  "name" : "Growth Deal",
+                  "value" :"Growth Deal"
+                },
+                {
+                  "name" : "Project Income",
+                  "value" :"Project Income"
+                },
+                {
+                  "name" : "Small Medium Enterprise Contribution",
+                  "value" :"Small Medium Enterprise Contribution"
+                },
+                {
+                  "name" : "Big Lottery Fund",
+                  "value" :"Big Lottery Fund"
+                },
+                {
+                  "name" : "European Investment Bank",
+                  "value" :"European Investment Bank"
+                },
+                {
+                  "name" : "Private Sector Investment",
+                  "value" :"Private Sector Investment"
+                },
+                {
+                  "name" : "Health Service Funds",
+                  "value" :"Health Service Funds"
+                },
+                {
+                  "name" : "Renewable Energy Grant",
+                  "value" :"Renewable Energy Grant"
+                },
+                {
+                  "name" : "Renewable Energy Subsidy",
+                  "value" :"Renewable Energy Subsidy"
+                },
+                {
+                  "name" : "Third Sector Funds",
+                  "value" :"Third Sector Funds"
+                },
+                {
+                  "name" : "NDPB Funds",
+                  "value" :"NDPB Funds"
+                },
+                {
+                  "name" : "Central Government Funds",
+                  "value" :"Central Government Funds"
+                },
+                {
+                  "name" : "Volunteer Time (in kind contribution)",
+                  "value" :"Volunteer Time (in kind contribution)"
+                },
+                {
+                  "name" : "Other",
+                  "value" :"Other"
+                }
+              ],
+              "error" : "",
+              "help" : ""
+            },
+            {
+              "type" : "text",
+              "fieldid" : "s5-funding-source-name",
+              "name" : "s5-funding-source-name",
+              "label" : "Name of funding source",
+              "enabled" : true,
+              "required" : false,
+              "validation" : "",
+              "initialVal" : "",
+              "placeholderText" : "",
+              "options" : [],
+              "error" : "",
+              "help" : ""
+            },
+            {
+              "type" : "radio",
+              "fieldid" : "s5-funding-type",
+              "name" : "s5-funding-type",
+              "label" : "Type of funding",
+              "enabled" : true,
+              "required" : false,
+              "validation" : "",
+              "initialVal" : "",
+              "placeholderText" : "",
+              "options" : [
+                {
+                  "name" : "Capital",
+                  "value" :"capital"
+                },
+                {
+                  "name" : "Revenue",
+                  "value" :"revenue"
+                }
+              ],
+              "error" : "",
+              "help" : ""
+            }
+          ]
+        },
+        {
+          "legend" : "Where funding will be allocated",
+          "visibleLegend" : true,
+          "fields" : [
+            {
+              "type" : "radio",
+              "fieldid" : "s5-priority-axis",
+              "name" : "s5-priority-axis",
+              "label" : "Priority axis",
+              "enabled" : true,
+              "required" : false,
+              "validation" : "",
+              "initialVal" : "",
+              "placeholderText" : "",
+              "options" : [
+                {
+                  "name" : "PAR",
+                  "value" :"PAR"
+                }
+              ],
+              "error" : "",
+              "help" : ""
+            },
+            {
+              "type" : "radio",
+              "fieldid" : "s5-investment-priority",
+              "name" : "s5-investment-priority",
+              "label" : "Investment priority",
+              "enabled" : true,
+              "required" : false,
+              "validation" : "",
+              "initialVal" : "",
+              "placeholderText" : "",
+              "options" : [
+                {
+                  "name" : "IP1 - IP1",
+                  "value" :"IP1-IP1"
+                }
+              ],
+              "error" : "",
+              "help" : ""
+            },
+            {
+              "type" : "radio",
+              "fieldid" : "s5-lep-area",
+              "name" : "s5-lep-area",
+              "label" : "LEP area",
+              "enabled" : true,
+              "required" : false,
+              "validation" : "",
+              "initialVal" : "",
+              "placeholderText" : "",
+              "options" : [
+                {
+                  "name" : "06 - Coventrey and Warwickshire",
+                  "value" :"06"
+                }
+              ],
+              "error" : "",
+              "help" : ""
+            },
+            {
+              "type" : "radio",
+              "fieldid" : "s5-region-category",
+              "name" : "s5-region-category",
+              "label" : "Region category",
+              "enabled" : true,
+              "required" : false,
+              "validation" : "",
+              "initialVal" : "",
+              "placeholderText" : "",
+              "options" : [
+                {
+                  "name" : "More developed",
+                  "value" :"more developed"
+                },
+                {
+                  "name" : "Transitional",
+                  "value" :"transitional"
+                },
+                {
+                  "name" : "Less developed",
+                  "value" :"less developed"
+                }
+              ],
+              "error" : "",
+              "help" : ""
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "financialSummary" : {
+    "componentClass" : "c-financial-summary",
+    "title": "",
+    "updateLinkText" : "Update summary",
+    "updateLinkURL" : "#",
+    "tableBuilder" : {
+        "class" : "",
+        "rows" : [
+          {
+            "class" : "",
+            "columns" : [
+              {
+                "class" : "",
+                "headerCell" : "true",
+                "contents" : "Total (capital)(&pound;)"
+              },
+              {
+                "class" : "",
+                "headerCell" : "false",
+                "contents" : "0.00"
+              }
+            ]
+          },
+          {
+            "class" : "",
+            "columns" : [
+              {
+                "class" : "",
+                "headerCell" : "true",
+                "contents" : "Total (revenue)(&pound;)"
+              },
+              {
+                "class" : "",
+                "headerCell" : "false",
+                "contents" : "0.00"
+              }
+            ]
+          },
+          {
+            "class" : "",
+            "columns" : [
+              {
+                "class" : "",
+                "headerCell" : "true",
+                "contents" : "Total (&pound;)"
+              },
+              {
+                "class" : "",
+                "headerCell" : "false",
+                "contents" : "0.00"
+              }
+            ]
+          }
+        ]
+    }
+  },
+  "financialb2" : {
+    "componentClass" : "c-application-form",
+    "title": "",
+    "formBuilder" : {
+      "type" : "close",
+      "id" : "applicationForm",
+      "action" : "3_projectb.html",
+      "method" : "get",
+      "classes" : "",
+      "fieldset" : [
+        {
+          "legend" : "Financial information",
+          "visibleLegend" : false,
+          "fields" : [],
+          "buttons" : [
+            {
+              "type" : "submit",
+              "enabled" : true,
+              "name" : "button",
+              "id" : "save-button",
+              "classes" : "",
+              "text" : "Save and quit"
+            },
+            {
+              "type" : "submit",
+              "enabled" : true,
+              "name" : "button",
+              "id" : "continue-button",
+              "classes" : "",
+              "text" : "Continue"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "applicationInfo" : {
+    "componentClass" : "c-application-info",
+    "items" : [
+      {
+        "title" : "Call reference",
+        "contents" : "OC04R15P0002"
+      },
+      {
+        "title" : "Application Type",
+        "contents" : "Full"
+      },
+      {
+        "title" : "Created",
+        "contents" : "07 November 2015"
+      },
+      {
+        "title" : "Progress",
+        "contents" : "5 of 8 sections completed"
+      },
+      {
+        "title" : "Status",
+        "contents" : "Incomplete"
+      }
+    ]
+
+  },
+  "miniDash" : {
+    "componentClass" : "c-mini-dashboard",
+    "title" : "Your dashboard",
+    "items" : [
+      {
+        "name" : "My tasks",
+        "link" : "dashboard.html"
+      },
+      {
+        "name" : "Existing applications",
+        "link" : "dashboard.html"
+      },
+      {
+        "name" : "Projects",
+        "link" : "dashboard.html"
+      }
+    ]
+  }
+}

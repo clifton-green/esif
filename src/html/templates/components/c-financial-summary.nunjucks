@@ -1,0 +1,3 @@
+{% import  "../macros/tableBuilder.nunjucks" as tb %}
+{{ tb.tableBuilder(context.tableBuilder.class, context.tableBuilder.rows) }}
+<a href="{{context.updateLinkURL}}">{{context.updateLinkText}}</a>

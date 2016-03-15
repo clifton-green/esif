@@ -15,20 +15,32 @@ If a form exists on a page then that pages data file will have a 'formBuilder' e
 	        {
 	          "type" : "text",
 	          "fieldid" : "login-username",
-	          "name" : "login-username",
-	          "label" : "User ID",
-	          "enabled" : true,
-	          "initialVal" : "",
-	          "placeholderText" : "Enter your username"
+						"name" : "login-username",
+						"class" : "",
+						"label" : "Please enter your username",
+						"enabled" : true,
+						"required" : true,
+						"validation" : "default",
+						"initialVal" : "",
+						"placeholderText" : "",
+						"options" : [],
+						"error" : "",
+						"help" : ""
 	        },
 	        {
 	          "type" : "password",
 	          "fieldid" : "login-password",
-	          "name" : "login-password",
-	          "label" : "Password",
-	          "enabled" : true,
-	          "initialVal" : "",
-	          "placeholderText" : ""
+						"name" : "login-password",
+						"class" : "",
+						"label" : "Please enter your password",
+						"enabled" : true,
+						"required" : true,
+						"validation" : "default",
+						"initialVal" : "",
+						"placeholderText" : "",
+						"options" : [],
+						"error" : "",
+						"help" : ""
 	        }          
 	      ],
 	      "buttons" : [
@@ -69,6 +81,7 @@ You can then build up your form. Inside the curly brackets, copy and paste the f
 	  "type" : "",
 	  "fieldid" : "",
 	  "name" : "",
+	  "class" : "",
 	  "label" : "",
 	  "enabled" : true,
 		"required" : true,
@@ -111,6 +124,9 @@ For more information on what types you can replace text with see the 'HTML5 Inpu
 The name is simply the name of the form field. In order to avoid interfering with other forms which may be on the page, it's a good idea to prefix the name with the name of the form. so on our login form example if you were to create a 'username' field, you'd set the name as `login-username`
 
 The fieldid should be set to the same value as the name entry.
+
+### Class
+If a field needs to have a specific class for either CSS styling or JavaScript behaviour, you can enter it here.
 
 ### Label
 This is what the user will see to describe what the field is. So if you are creating your `login-username` field then the label would be `Username`. This can also be written as an instruction e.g: `Please enter your username:`
