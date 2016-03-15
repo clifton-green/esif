@@ -7,7 +7,7 @@
   "contentIntro" : {
     "componentClass" : "c-headed-text",
     "pretitle" : "Step 5",
-    "title" : "Financial information",
+    "title" : "Financial information - costs",
     "subtitle" : "",
     "bodyCopy" : "",
     "ctaType" : "",
@@ -20,7 +20,7 @@
     "formBuilder" : {
       "type" : "open",
       "id" : "applicationForm",
-      "action" : "3_projectb.html",
+      "action" : "5_financialc.html",
       "method" : "get",
       "classes" : "",
       "fieldset" : [
@@ -317,13 +317,13 @@
             "columns" : [
               {
                 "class" : "",
-                "headerCell" : "true",
+                "headerCell" : true,
                 "contents" : "Total (capital)(&pound;)"
               },
               {
                 "class" : "",
-                "headerCell" : "false",
-                "contents" : "0.00"
+                "headerCell" : false,
+                "contents" : 0.00
               }
             ]
           },
@@ -332,13 +332,13 @@
             "columns" : [
               {
                 "class" : "",
-                "headerCell" : "true",
+                "headerCell" : true,
                 "contents" : "Total (revenue)(&pound;)"
               },
               {
                 "class" : "",
-                "headerCell" : "false",
-                "contents" : "0.00"
+                "headerCell" : false,
+                "contents" : 0.00
               }
             ]
           },

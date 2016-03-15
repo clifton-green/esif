@@ -1,3 +1,14 @@
 {% import  "../macros/tableBuilder.nunjucks" as tb %}
-{{ tb.tableBuilder(context.tableBuilder.class, context.tableBuilder.rows) }}
-<a href="{{context.updateLinkURL}}">{{context.updateLinkText}}</a>
+<div class="{%if context.componentClass != ''%}{{context.componentClass}}{% endif %}">
+  {% if context.title != "" %} <h3>{{ context.title }}</h3> {% endif %}
+  {{ tb.tableBuilder(context.tableBuilder.class, context.tableBuilder.rows) }}
+  {% if context.updateLinkURL %}
+    <a href="{{context.updateLinkURL}}">
+      {% if context.updateLinkText %}
+        {{context.updateLinkText}}
+      {% else %}
+        {{context.updateLinkURL}}
+      {% endif %}
+    </a>
+  {% endif %}
+</div>

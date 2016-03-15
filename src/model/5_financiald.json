@@ -14,7 +14,7 @@
     "ctaText" : "",
     "ctaURL" : ""
   },
-  "financial" : {
+  "financiald" : {
     "componentClass" : "c-application-form",
     "title": "",
     "formBuilder" : {
@@ -29,9 +29,9 @@
           "fields" : [
             {
               "type" : "textarea",
-              "fieldid" : "s5-budget-spending",
-              "name" : "s5-budget-spending",
-              "label" : "How will the project budget be spent?",
+              "fieldid" : "s5-esif-authorisation",
+              "name" : "s5-esif-authorisation",
+              "label" : "How will ESIF payments be managed and authorised?",
               "enabled" : true,
               "required" : true,
               "validation" : "default",
@@ -43,46 +43,23 @@
             },
             {
               "type" : "textarea",
-              "fieldid" : "s5-cost-estimate-accuracy",
-              "name" : "s5-cost-estimate-accuracy",
-              "label" : "How accurate is your cost estimate?",
+              "fieldid" : "s5-cashflow-management",
+              "name" : "s5-cashflow-management",
+              "label" : "How will the project's cashflow be managed?",
               "enabled" : true,
               "required" : true,
               "validation" : "default",
               "initialVal" : "",
               "placeholderText" : "",
               "options" : [],
-              "error" : "",
-              "help" : ""
-            },
-            {
-              "type" : "radio",
-              "fieldid" : "s5-recoverable-vat",
-              "name" : "s5-recoverable-vat",
-              "label" : "Will the project reclaim irrecoverable VAT?",
-              "enabled" : true,
-              "required" : true,
-              "validation" : "default",
-              "initialVal" : "",
-              "placeholderText" : "",
-              "options" : [
-                {
-                  "name" : "Yes",
-                  "value" : 1
-                },
-                {
-                  "name" : "No",
-                  "value" : 0
-                }
-              ],
               "error" : "",
               "help" : ""
             },
             {
               "type" : "textarea",
-              "fieldid" : "s5-match-funding-provider",
-              "name" : "s5-match-funding-provider",
-              "label" : "Who's providing match funding for the project?",
+              "fieldid" : "s5-claim-expenditure-assurance",
+              "name" : "s5-claim-expenditure-assurance",
+              "label" : "How will you ensure only eligable and defrayed expenditure is included in claims?",
               "enabled" : true,
               "required" : true,
               "validation" : "default",
@@ -93,77 +70,30 @@
               "help" : ""
             },
             {
-              "type" : "radio",
-              "fieldid" : "s5-is-match-funding-confirmed",
-              "name" : "s5-is-match-funding-confirmed",
-              "label" : "Is match funding confirmed?",
+              "type" : "textarea",
+              "fieldid" : "s5-cost-verification",
+              "name" : "s5-cost-verification",
+              "label" : "How will costs be checked and verified?",
               "enabled" : true,
               "required" : true,
               "validation" : "default",
               "initialVal" : "",
               "placeholderText" : "",
-              "options" : [
-                {
-                  "name" : "Yes",
-                  "value" : 1
-                },
-                {
-                  "name" : "No",
-                  "value" : 0
-                }
-              ],
+              "options" : [],
               "error" : "",
               "help" : ""
             },
             {
-              "type" : "group",
-              "group" : {
-                "legend" : "Match funding confirmation date",
-                "visibleLegend" : false,
-                "class" : "match-funding-confirmation-date prev-no",
-                "allowMultiple" : true,
-                "groups" : [
-                  {
-                    "fields" : [
-                      {
-                        "type" : "dateset",
-                        "fieldid" : "s5-match-funding-confirmation-date",
-                        "name" : "s5-match-funding-confirmation-date",
-                        "label" : "Expected date for match funding confirmation",
-                        "enabled" : true,
-                        "required" : false,
-                        "validation" : "default",
-                        "initialVal" : "",
-                        "placeholderText" : "",
-                        "options" : [],
-                        "error" : "",
-                        "help" : ""
-                      }
-                    ]
-                  }
-                ]
-              }
-            },
-            {
-              "type" : "radio",
-              "fieldid" : "s5-will-project-generate-income",
-              "name" : "s5-will-project-generate-income",
-              "label" : "Do you expect the project to generate income?",
+              "type" : "textarea",
+              "fieldid" : "s5-expense-reporting",
+              "name" : "s5-expense-reporting",
+              "label" : "How will you and your partners report on ESIF expenditure?",
               "enabled" : true,
               "required" : true,
               "validation" : "default",
               "initialVal" : "",
               "placeholderText" : "",
-              "options" : [
-                {
-                  "name" : "Yes",
-                  "value" : 1
-                },
-                {
-                  "name" : "No",
-                  "value" : 0
-                }
-              ],
+              "options" : [],
               "error" : "",
               "help" : ""
             }

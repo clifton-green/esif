@@ -1,10 +1,10 @@
 {% macro tableBuilder(class='', rows=[] ) %}
-  <table class="{{class}}">
+  <table {% if class != '' %}class="{{class}}"{% endif %}>
     <tbody>
       {% for row in rows %}
         <tr {% if row.class != '' %}class="{{row.class}}" {% endif %}>
           {% for col in row.columns %}
-           {% if col.headerCell == true%}<th {% if col.class != '' %}class="{{col.class}}" {% endif %}>{% else %}<td {% if col.class != '' %}class="{{col.class}}" {% endif %}>{% endif %}{{col.contents}}{% if col.headerCell == true%}</th>{% else %}</td>{% endif %}
+           {% if col.headerCell == true %}<th {% if col.class != '' %}class="{{col.class}}" {% endif %}>{% else %}<td {% if col.class != '' %}class="{{col.class}}" {% endif %}>{% endif %}{{col.contents}}{% if col.headerCell == true%}</th>{% else %}</td>{% endif %}
           {% endfor %}
         </tr>
       {% endfor %}
