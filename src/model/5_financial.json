@@ -122,6 +122,7 @@
                 "visibleLegend" : false,
                 "class" : "match-funding-confirmation-date prev-no",
                 "allowMultiple" : true,
+                "allowMultipleText" : "Add another",
                 "groups" : [
                   {
                     "fields" : [

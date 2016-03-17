@@ -28,20 +28,20 @@
         {% if opt.name != ''%}{{ opt.name }}</label>{% endif %}
       {% endfor %}
     {% elif type == "textarea"%}
-      <textarea id="{{fieldid}}" name="{{name}}" {% if enabled != true %} disabled {% endif %} {%if required == true%} required {% endif %}>{% if value %}{{ value }}{% endif %}</textarea>
+      <textarea id="{{fieldid}}" rows="6" name="{{name}}" {% if enabled != true %} disabled {% endif %} {%if required == true%} required {% endif %}>{% if value %}{{ value }}{% endif %}</textarea>
     {% elif type == "dateset"%}
       {# Creates a set of inputs to allow the user to enter a date #}
       <div class="date-input">
         <span>Day</span>
-        <input id="{{fieldid}}-day" name="{{name}}-day" type="number" value="{{value}}" {% if placeholder != '' %} placeholder="{{placeholder}}"{% endif %} {% if enabled !=true %} disabled {% endif %} pattern="[0-9]*" {%if required == true%} required {% endif %}/>
+        <input id="{{fieldid}}-day" name="{{name}}-day" type="number" pattern="\d{2}" value="{{value}}" {% if placeholder != '' %} placeholder="{{placeholder}}"{% endif %} {% if enabled !=true %} disabled {% endif %} {%if required == true%} required {% endif %}/>
       </div>
       <div class="date-input">
         <span>Month</span>
-        <input id="{{fieldid}}-month" name="{{name}}-month" type="number" value="{{value}}" {% if placeholder != '' %} placeholder="{{placeholder}}"{% endif %} {% if enabled !=true %} disabled {% endif %} pattern="[0-9]*" {%if required == true%} required {% endif %}/>
+        <input id="{{fieldid}}-month" name="{{name}}-month" type="number" pattern="\d{2}" value="{{value}}" {% if placeholder != '' %} placeholder="{{placeholder}}"{% endif %} {% if enabled !=true %} disabled {% endif %} {%if required == true%} required {% endif %}/>
       </div>
       <div class="date-input">
         <span>Year</span>
-        <input id="{{fieldid}}-year" name="{{name}}-year" type="number" value="{{value}}" {% if placeholder != '' %} placeholder="{{placeholder}}"{% endif %} {% if enabled !=true %} disabled {% endif %} pattern="[0-9]*" {%if required == true%} required {% endif %}/>
+        <input id="{{fieldid}}-year" name="{{name}}-year" type="number" pattern="\d{4}" value="{{value}}" {% if placeholder != '' %} placeholder="{{placeholder}}"{% endif %} {% if enabled !=true %} disabled {% endif %} {%if required == true%} required {% endif %}/>
       </div>
     {% elif type == "group" %}
     {# set the type to group and use a custom data set (see how_to_use_formbuilder.md) to build a grouped fieldset #}
@@ -55,7 +55,7 @@
           </div>
         {% endfor %}
         {% if group.allowMultiple == true %}
-          <a href="">Add another</a>
+          <a href="">{{group.allowMultipleText}}</a>
         {% endif %}
       </fieldset>
     {% else %}

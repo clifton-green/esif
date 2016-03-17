@@ -11,6 +11,9 @@ form {
   padding: $vspacing 0;
   margin-bottom: ($vspacing/2);
   +above(m) {
+    .primary & {
+      width: 100%;
+    }
     width: 50%;
   }
 }
@@ -67,6 +70,7 @@ button {
   padding: $vspacing*1.5 $hspacing*2;
   margin-right: $hspacing;
   border: 3px solid $panel-colour
+  font-weight normal
   input {
     width: auto;
     margin-right: $hspacing
@@ -86,8 +90,12 @@ button {
 
 .date-input {
   margin-top: $vspacing;
+  margin-right: $hspacing;
   display: inline-block;
-  col(1/4);
+  width: $hspacing*5;
+  &:last-of-type {
+    width: $hspacing*8;
+  }
   span {
     display: block;
     margin-bottom: ($vspacing/2);

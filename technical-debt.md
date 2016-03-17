@@ -15,3 +15,4 @@ Any development tasks or optimisations which need to be made should be listed he
 
 ## Issues
 1. Responsiveness has failed on some templates
+2. Pattern validation not working on all inputs (see dateset for an example)
