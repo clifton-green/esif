@@ -68,11 +68,11 @@
               "options" : [
                 {
                   "name" : "Yes",
-                  "value" : 1
+                  "value" : "yes"
                 },
                 {
                   "name" : "No",
-                  "value" : 0
+                  "value" : "no"
                 }
               ],
               "error" : "",
@@ -91,11 +91,11 @@
               "options" : [
                 {
                   "name" : "Yes",
-                  "value" : 1
+                  "value" : "yes"
                 },
                 {
                   "name" : "No",
-                  "value" : 0
+                  "value" : "no"
                 }
               ],
               "error" : "",
