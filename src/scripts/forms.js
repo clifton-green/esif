@@ -14,7 +14,10 @@ Forms = {
     this.form.on('blur', '.radio-group input, .checkbox-group input', {class: 'blur'}, this.selectFocusClass);
 
 		// start onload events
-		this.toggleHidden();
+		var conditionalClasses = '.prev-yes, .prev-no';
+		if(this.form.find(conditionalClasses).length) {
+			this.toggleHidden(conditionalClasses);
+		}
 	},
 
   selectFocusClass : function (event) {
@@ -29,9 +32,9 @@ Forms = {
       el.parent().addClass(getClass)
     }
   },
-	toggleHidden : function () {
+	toggleHidden : function (classes) {
 		'use strict';
-		var el = this.form.find('.prev-yes, .prev-no'),
+		var el = this.form.find(classes),
 				getClass = el.attr('class'),
 				type = getClass.replace('prev-', ''),
 				getValue = function (prevInput) {

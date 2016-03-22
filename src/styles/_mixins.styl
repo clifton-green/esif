@@ -4,7 +4,10 @@ ff-title()
 ff-body()
   font-family: 'nta', sans-serif;
   font-weight: normal;
-  font-size: $bodyCopy;
+  font-size: $baseFont*1.6
+  +above(m) {
+    font-size: $bodyCopy;
+  }
 button()
   display: inline-block;
   color: $white;
