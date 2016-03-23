@@ -1,35 +1,50 @@
 .c-global-footer {
-  background-color $panel-colour
-  border-top 1px solid $border-colour
-  color $secondary-text-colour
-  margin-top $vspacing * 1.5
+  text-align: center;
+  +above(m) {
+    text-align: left;
+  }
+  background-color: $panel-colour;
+  border-top: 1px solid $border-colour;
+  color: $secondary-text-colour;
+  margin-top: $vspacing * 1.5;
   padding-top: $vspacing*2
-  cf()
+  cf();
   a {
-    display block
-    color $secondary-text-colour
-    font-size $baseFont * 1.6
+    display: block;
+    color: $secondary-text-colour;
+    font-size: $baseFont * 1.6;
   }
   nav {
-    col(4/5)
-    padding-top $vspacing*14
-    float left
+    padding-top: $vspacing*4;
+    +above(m) {
+      col(4/5);
+      padding-top: $vspacing*14;
+      float: left;
+    }
+
+
 
     li {
-      display inline-block
+      display: inline-block;
     }
 
     a {
-      margin-right $hspacing
+      margin-right: $hspacing;
     }
   }
   .copyright {
-    col(1/5)
-    text-align center
-    padding $spacing
-    float right
     img {
-      max-width 100%
+      max-width: 40%;
     }
+    +above(m) {
+      col(1/5);
+      text-align: center;
+      padding: $spacing;
+      float: right;
+      img {
+        max-width: 100%;
+      }
+    }
+
   }
 }
