@@ -1,5 +1,6 @@
 var gulp        = require('gulp'),
     gulpif      = require('gulp-if'),
+    gutil       = require('gulp-util'),
     chalk       = require('chalk'),
     argv        = require('yargs').argv,
     fs          = require('fs'),
@@ -25,6 +26,8 @@ var gulp        = require('gulp'),
     nunjucks    = require('gulp-nunjucks-html'),
     path        = require('path'),
     data        = require('gulp-data'),
+    webpack     = require('webpack-stream'),
+    WebpackDevServer = require('webpack-dev-server'),
     reload      = browserSync.reload;
 
 
@@ -164,15 +167,35 @@ gulp.task('model', function() {
 // Combine JS
 gulp.task('scripts', function() {
   'use strict';
-  return gulp.src(argv.prod ? ['src/scripts/**/*.js', '!src/scripts/**/dev.js'] : 'src/scripts/**/*.js')
+  return gulp.src(argv.prod ? ['src/scripts/loader.js'] : 'src/scripts/devloader.js')
     .pipe(plumber(
       { errorHandler: onError }
     ))
-    .pipe(gulpif(argv.prod, eslint()))
+    .pipe(webpack(require('./webpack.config.js')))
+    .pipe(eslint())
     .pipe(concat('core.min.js'))
     .pipe(gulpif(argv.prod, uglify()))
     .pipe(gulp.dest('dist/static/scripts'))
     .pipe(reload({stream:true}))
+});
+
+// Start a webpack-dev-server
+gulp.task('webpack-dev-server', function(callback) {
+    'use strict';
+    var compiler = webpack({
+        // configuration
+    });
+
+    new WebpackDevServer(compiler, {
+        // server and middleware options
+    }).listen(8080, 'localhost', function(err) {
+        if(err) { throw new gutil.PluginError('webpack-dev-server', err); }
+        // Server listening
+        gutil.log('[webpack-dev-server]', 'http://localhost:8080/webpack-dev-server/index.html');
+
+        // keep the server alive or continue?
+        // callback();
+    });
 });
 
 //Make sure the json data is correctly formed

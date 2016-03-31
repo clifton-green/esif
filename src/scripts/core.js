@@ -1,7 +1,5 @@
-/* global $, console */
-
-// Namespacing
-var Core = Core || {};
+var $ = require('jquery'),
+		Core = Core || {};
 
 Core = {
 	init: function () {
@@ -12,7 +10,6 @@ Core = {
 
     // Event activators
     $('body').on('click', '.js-big-target', this.bigTarget.bind(this))
-    $('body').on('click', '.js-nav-toggle', this.navToggle.bind(this))
 	},
 
   /**
@@ -25,17 +22,7 @@ Core = {
     'use strict';
     var link = $(el.currentTarget).find('a:last-of-type').attr('href');
     return window.location = link;
-  },
-
-	navToggle: function (el) {
-		'use strict';
-		var elparent = $(el.currentTarget).parent();
-		if(elparent.hasClass('open')) {
-			elparent.removeClass('open');
-		} else {
-			elparent.addClass('open');
-		}
-	}
+  }
 }
 
 $(document).ready(function() {

@@ -1,4 +1,4 @@
-/* global $, console */
+var $ = require('jquery');
 
 // Namespacing
 var Forms = Forms || {};
