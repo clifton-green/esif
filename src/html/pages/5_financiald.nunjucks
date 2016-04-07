@@ -1,0 +1,20 @@
+{% extends "layout.nunjucks" %}
+{% block content %}
+  <section class="page-form-applicant">
+    {# Load intro text #}
+    {% set context = contentIntro %}
+    {% include "components/c-headed-text.nunjucks" %}
+    <div class="parthenon">
+      <div class="col primary">
+        {% set context = financiald %}
+        {% include "components/c-formbuilder.nunjucks" %}
+      </div>
+      <div class="col sidebar">
+        {% set context = applicationInfo %}
+        {% include "components/c-application-information.nunjucks" %}
+        {% set context = miniDash %}
+        {% include "components/c-mini-dashboard.nunjucks" %}
+      </div>
+    </div>
+  </section>
+{% endblock %}

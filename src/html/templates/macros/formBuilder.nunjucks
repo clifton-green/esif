@@ -1,5 +1,5 @@
-{% macro fieldBuilder(name='', label='', type='', fieldid='', value='', placeholder='', enabled='', options=[], required='', validation='', error='', help='', group = '') %}
-  <div class="{% if type != "group" %}field-container{% else %}field-group{% endif %}">
+{% macro fieldBuilder(name='', label='', type='', fieldid='', value='', placeholder='', enabled='', options=[], required='', validation='', error='', help='', group = '', class='') %}
+  <div class="{% if type != "group" %}field-container{% else %}field-group{% endif %} {{class}}">
     {% if type != "group" %}
       <label for="{{fieldid}}">{{label}}</label>
       {% if help != ''%}
@@ -28,20 +28,20 @@
         {% if opt.name != ''%}{{ opt.name }}</label>{% endif %}
       {% endfor %}
     {% elif type == "textarea"%}
-      <textarea id="{{fieldid}}" name="{{name}}" {% if enabled != true %} disabled {% endif %} {%if required == true%} required {% endif %}>{% if value %}{{ value }}{% endif %}</textarea>
+      <textarea id="{{fieldid}}" rows="6" name="{{name}}" {% if enabled != true %} disabled {% endif %} {%if required == true%} required {% endif %}>{% if value %}{{ value }}{% endif %}</textarea>
     {% elif type == "dateset"%}
       {# Creates a set of inputs to allow the user to enter a date #}
       <div class="date-input">
         <span>Day</span>
-        <input id="{{fieldid}}-day" name="{{name}}-day" type="number" value="{{value}}" {% if placeholder != '' %} placeholder="{{placeholder}}"{% endif %} {% if enabled !=true %} disabled {% endif %} pattern="[0-9]*" {%if required == true%} required {% endif %}/>
+        <input id="{{fieldid}}-day" name="{{name}}-day" type="number" pattern="\d{2}" value="{{value}}" {% if placeholder != '' %} placeholder="{{placeholder}}"{% endif %} {% if enabled !=true %} disabled {% endif %} {%if required == true%} required {% endif %}/>
       </div>
       <div class="date-input">
         <span>Month</span>
-        <input id="{{fieldid}}-month" name="{{name}}-month" type="number" value="{{value}}" {% if placeholder != '' %} placeholder="{{placeholder}}"{% endif %} {% if enabled !=true %} disabled {% endif %} pattern="[0-9]*" {%if required == true%} required {% endif %}/>
+        <input id="{{fieldid}}-month" name="{{name}}-month" type="number" pattern="\d{2}" value="{{value}}" {% if placeholder != '' %} placeholder="{{placeholder}}"{% endif %} {% if enabled !=true %} disabled {% endif %} {%if required == true%} required {% endif %}/>
       </div>
       <div class="date-input">
         <span>Year</span>
-        <input id="{{fieldid}}-year" name="{{name}}-year" type="number" value="{{value}}" {% if placeholder != '' %} placeholder="{{placeholder}}"{% endif %} {% if enabled !=true %} disabled {% endif %} pattern="[0-9]*" {%if required == true%} required {% endif %}/>
+        <input id="{{fieldid}}-year" name="{{name}}-year" type="number" pattern="\d{4}" value="{{value}}" {% if placeholder != '' %} placeholder="{{placeholder}}"{% endif %} {% if enabled !=true %} disabled {% endif %} {%if required == true%} required {% endif %}/>
       </div>
     {% elif type == "group" %}
     {# set the type to group and use a custom data set (see how_to_use_formbuilder.md) to build a grouped fieldset #}
@@ -50,12 +50,12 @@
         {% for groups in group.groups %}
           <div class="group group-{{loop.index}}">
             {% for field in groups.fields %}
-             {{ fieldBuilder(field.name, field.label, field.type, field.fieldid, field.initialVal, field.placeholderText, field.enabled, field.options, field.required, field.validation, field.error, field.help, field.group) }}
+             {{ fieldBuilder(field.name, field.label, field.type, field.fieldid, field.initialVal, field.placeholderText, field.enabled, field.options, field.required, field.validation, field.error, field.help, field.group, field.class) }}
             {% endfor %}
           </div>
         {% endfor %}
         {% if group.allowMultiple == true %}
-          <a href="">Add another</a>
+          <a href="">{{group.allowMultipleText}}</a>
         {% endif %}
       </fieldset>
     {% else %}
@@ -69,18 +69,22 @@
   </div>
 {% endmacro %}
 
-{% macro formBuilder(componentClass, formid, classes='', action='', method='', fieldset=[]) %}
+{% macro formBuilder(componentClass, formid, classes='', action='', method='', fieldset=[], type='') %}
+ {% if type != 'close' %}
   <form id="{{formid}}" class="{{componentClass}}, {{classes}}" action="{{action}}" method="{{method}}">
+ {% endif %}
     {% for fs in fieldset %}
       <fieldset>
         <legend {%if fs.visibleLegend == false %} class="vishide" {% endif %}>{{fs.legend}}</legend>
         {% for field in fs.fields %}
-         {{ fieldBuilder(field.name, field.label, field.type, field.fieldid, field.initialVal, field.placeholderText, field.enabled, field.options, field.required, field.validation, field.error, field.help, field.group) }}
+         {{ fieldBuilder(field.name, field.label, field.type, field.fieldid, field.initialVal, field.placeholderText, field.enabled, field.options, field.required, field.validation, field.error, field.help, field.group, field.class) }}
         {% endfor %}
         {% for btn in fs.buttons %}
           <button class="btn {% if btn.classes %}{{ btn.classes }} {% endif %}{% if btn.enabled == false%}disabled{% endif %}" {% if btn.enabled == false  %} disabled {% endif %} type="{{btn.type}}" name="{{btn.name}}" id="{{btn.id}}">{{btn.text}}</button>
         {% endfor %}
       </fieldset>
     {% endfor %}
-  </form>
+  {% if type != 'open' %}
+    </form>
+  {% endif %}
 {% endmacro %}

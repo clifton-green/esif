@@ -1,0 +1,549 @@
+{
+  "meta" : {
+    "pageTitle" : "Application overview",
+    "description" : "to be added",
+    "canonical" : "index.html"
+  },
+  "contentIntro" : {
+    "componentClass" : "c-headed-text",
+    "pretitle" : "Step 5",
+    "title" : "Financial information - summary",
+    "subtitle" : "",
+    "bodyCopy" : "",
+    "ctaType" : "",
+    "ctaText" : "",
+    "ctaURL" : ""
+  },
+  "financialc1" : {
+    "componentClass" : "c-application-form",
+    "title": "",
+    "formBuilder" : {
+      "type" : "open",
+      "id" : "applicationForm",
+      "action" : "5_financiald.html",
+      "method" : "get",
+      "classes" : "",
+      "fieldset" : []
+    }
+  },
+  "projectCosts" : {
+    "componentClass" : "c-summary-table project-costs",
+    "sectionTitle" : "Project Costs",
+    "title": "",
+    "tableBuilder" : {
+        "class" : "",
+        "rows" : [
+          {
+            "class" : "",
+            "columns" : [
+              {
+                "class" : "",
+                "headerCell" : true,
+                "contents" : "Cost category"
+              },
+              {
+                "class" : "",
+                "headerCell" : true,
+                "contents" : "total"
+              }
+            ]
+          },
+          {
+            "class" : "",
+            "columns" : [
+              {
+                "class" : "",
+                "headerCell" : false,
+                "contents" : "Capital"
+              },
+              {
+                "class" : "",
+                "headerCell" : false,
+                "contents" : 0.00
+              }
+            ]
+          },
+          {
+            "class" : "",
+            "columns" : [
+              {
+                "class" : "",
+                "headerCell" : false,
+                "contents" : "Revenue"
+              },
+              {
+                "class" : "",
+                "headerCell" : false,
+                "contents" : 0.00
+              }
+            ]
+          },
+          {
+            "class" : "",
+            "columns" : [
+              {
+                "class" : "strong",
+                "headerCell" : false,
+                "contents" : "Total"
+              },
+              {
+                "class" : "strong",
+                "headerCell" : false,
+                "contents" : 0.00
+              }
+            ]
+          }
+        ]
+    }
+  },
+  "fundingSources" : {
+    "componentClass" : "c-summary-table funding-sources",
+    "sectionTitle" : "Funding Sources",
+    "title": "",
+    "tableBuilder" : {
+        "class" : "",
+        "rows" : [
+          {
+            "class" : "",
+            "columns" : [
+              {
+                "class" : "",
+                "headerCell" : true,
+                "contents" : "Funding type"
+              },
+              {
+                "class" : "",
+                "headerCell" : true,
+                "contents" : "Funding source"
+              },
+              {
+                "class" : "",
+                "headerCell" : true,
+                "contents" : "Source"
+              },
+              {
+                "class" : "",
+                "headerCell" : true,
+                "contents" : "Type of expenditure"
+              }
+            ]
+          }
+        ]
+    }
+  },
+  "costAndFundingAllocations" : {
+    "componentClass" : "c-summary-table funding-allocations",
+    "sectionTitle" : "Cost and Funding Allocations",
+    "title": "Priority axis"
+  },
+  "fundingAllocationsRegion" : {
+    "componentClass" : "c-summary-table funding-allocations-region",
+    "sectionTitle" : "",
+    "title": "Funding by category of region",
+    "tableBuilder" : {
+        "class" : "",
+        "rows" : [
+          {
+            "class" : "",
+            "columns" : [
+              {
+                "class" : "",
+                "headerCell" : true,
+                "contents" : "Funding source"
+              },
+              {
+                "class" : "",
+                "headerCell" : true,
+                "contents" : "More developed"
+              },
+              {
+                "class" : "",
+                "headerCell" : true,
+                "contents" : "Transitional"
+              },
+              {
+                "class" : "",
+                "headerCell" : true,
+                "contents" : "Less developed"
+              },
+              {
+                "class" : "",
+                "headerCell" : true,
+                "contents" : "Total"
+              }
+            ]
+          },
+          {
+            "class" : "",
+            "columns" : [
+              {
+                "class" : "",
+                "headerCell" : false,
+                "contents" : "ERDF (capital)"
+              },
+              {
+                "class" : "",
+                "headerCell" : false,
+                "contents" : 0.00
+              },
+              {
+                "class" : "",
+                "headerCell" : false,
+                "contents" : 0.00
+              },
+              {
+                "class" : "",
+                "headerCell" : false,
+                "contents" : 0.00
+              },
+              {
+                "class" : "",
+                "headerCell" : false,
+                "contents" : 0.00
+              }
+            ]
+          },
+          {
+            "class" : "",
+            "columns" : [
+              {
+                "class" : "",
+                "headerCell" : false,
+                "contents" : "ERDF (revenue)"
+              },
+              {
+                "class" : "",
+                "headerCell" : false,
+                "contents" : 0.00
+              },
+              {
+                "class" : "",
+                "headerCell" : false,
+                "contents" : 0.00
+              },
+              {
+                "class" : "",
+                "headerCell" : false,
+                "contents" : 0.00
+              },
+              {
+                "class" : "",
+                "headerCell" : false,
+                "contents" : 0.00
+              }
+            ]
+          },
+          {
+            "class" : "strong",
+            "columns" : [
+              {
+                "class" : "",
+                "headerCell" : false,
+                "contents" : "Subtotal capital"
+              },
+              {
+                "class" : "",
+                "headerCell" : false,
+                "contents" : 0.00
+              },
+              {
+                "class" : "",
+                "headerCell" : false,
+                "contents" : 0.00
+              },
+              {
+                "class" : "",
+                "headerCell" : false,
+                "contents" : 0.00
+              },
+              {
+                "class" : "",
+                "headerCell" : false,
+                "contents" : 0.00
+              }
+            ]
+          },
+          {
+            "class" : "strong",
+            "columns" : [
+              {
+                "class" : "",
+                "headerCell" : false,
+                "contents" : "Subtotal revenue"
+              },
+              {
+                "class" : "",
+                "headerCell" : false,
+                "contents" : 0.00
+              },
+              {
+                "class" : "",
+                "headerCell" : false,
+                "contents" : 0.00
+              },
+              {
+                "class" : "",
+                "headerCell" : false,
+                "contents" : 0.00
+              },
+              {
+                "class" : "",
+                "headerCell" : false,
+                "contents" : 0.00
+              }
+            ]
+          },
+          {
+            "class" : "strong",
+            "columns" : [
+              {
+                "class" : "",
+                "headerCell" : false,
+                "contents" : "Total"
+              },
+              {
+                "class" : "",
+                "headerCell" : false,
+                "contents" : 0.00
+              },
+              {
+                "class" : "",
+                "headerCell" : false,
+                "contents" : 0.00
+              },
+              {
+                "class" : "",
+                "headerCell" : false,
+                "contents" : 0.00
+              },
+              {
+                "class" : "",
+                "headerCell" : false,
+                "contents" : 0.00
+              }
+            ]
+          }
+        ]
+    }
+  },
+  "fundingAllocationsLEP" : {
+    "componentClass" : "c-summary-table funding-allocations-lep",
+    "sectionTitle" : "",
+    "title": "Funding by Local Enterprise Partnership",
+    "tableBuilder" : {
+        "class" : "",
+        "rows" : [
+          {
+            "class" : "",
+            "columns" : [
+              {
+                "class" : "",
+                "headerCell" : true,
+                "contents" : "Local Enterprise Partnership"
+              },
+              {
+                "class" : "",
+                "headerCell" : true,
+                "contents" : "ERDF"
+              },
+              {
+                "class" : "",
+                "headerCell" : true,
+                "contents" : "Public match funding"
+              },
+              {
+                "class" : "",
+                "headerCell" : true,
+                "contents" : "Private match funding"
+              },
+              {
+                "class" : "",
+                "headerCell" : true,
+                "contents" : "Total"
+              }
+            ]
+          },
+          {
+            "class" : "",
+            "columns" : [
+              {
+                "class" : "",
+                "headerCell" : false,
+                "contents" : "Total"
+              },
+              {
+                "class" : "",
+                "headerCell" : false,
+                "contents" : 0.00
+              },
+              {
+                "class" : "",
+                "headerCell" : false,
+                "contents" : 0.00
+              },
+              {
+                "class" : "",
+                "headerCell" : false,
+                "contents" : 0.00
+              },
+              {
+                "class" : "",
+                "headerCell" : false,
+                "contents" : 0.00
+              }
+            ]
+          }
+        ]
+    }
+  },
+  "fundingAllocationsInvestmentPriority" : {
+    "componentClass" : "c-summary-table funding-allocations-investment-priority",
+    "sectionTitle" : "",
+    "title": "Funding by investment priority",
+    "tableBuilder" : {
+        "class" : "",
+        "rows" : [
+          {
+            "class" : "",
+            "columns" : [
+              {
+                "class" : "",
+                "headerCell" : true,
+                "contents" : "Investment priority"
+              },
+              {
+                "class" : "",
+                "headerCell" : true,
+                "contents" : "ERDF"
+              },
+              {
+                "class" : "",
+                "headerCell" : true,
+                "contents" : "Public match funding"
+              },
+              {
+                "class" : "",
+                "headerCell" : true,
+                "contents" : "Private match funding"
+              },
+              {
+                "class" : "",
+                "headerCell" : true,
+                "contents" : "Total"
+              }
+            ]
+          },
+          {
+            "class" : "",
+            "columns" : [
+              {
+                "class" : "",
+                "headerCell" : false,
+                "contents" : "Total"
+              },
+              {
+                "class" : "",
+                "headerCell" : false,
+                "contents" : 0.00
+              },
+              {
+                "class" : "",
+                "headerCell" : false,
+                "contents" : 0.00
+              },
+              {
+                "class" : "",
+                "headerCell" : false,
+                "contents" : 0.00
+              },
+              {
+                "class" : "",
+                "headerCell" : false,
+                "contents" : 0.00
+              }
+            ]
+          }
+        ]
+    }
+  },
+  "financialc2" : {
+    "componentClass" : "c-application-form",
+    "title": "",
+    "formBuilder" : {
+      "type" : "close",
+      "id" : "applicationForm",
+      "action" : "3_projectb.html",
+      "method" : "get",
+      "classes" : "",
+      "fieldset" : [
+        {
+          "legend" : "Financial information",
+          "visibleLegend" : false,
+          "fields" : [],
+          "buttons" : [
+            {
+              "type" : "submit",
+              "enabled" : true,
+              "name" : "button",
+              "id" : "save-button",
+              "classes" : "",
+              "text" : "Save and quit"
+            },
+            {
+              "type" : "submit",
+              "enabled" : true,
+              "name" : "button",
+              "id" : "continue-button",
+              "classes" : "",
+              "text" : "Continue"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "applicationInfo" : {
+    "componentClass" : "c-application-info",
+    "items" : [
+      {
+        "title" : "Call reference",
+        "contents" : "OC04R15P0002"
+      },
+      {
+        "title" : "Application Type",
+        "contents" : "Full"
+      },
+      {
+        "title" : "Created",
+        "contents" : "07 November 2015"
+      },
+      {
+        "title" : "Progress",
+        "contents" : "5 of 8 sections completed"
+      },
+      {
+        "title" : "Status",
+        "contents" : "Incomplete"
+      }
+    ]
+
+  },
+  "miniDash" : {
+    "componentClass" : "c-mini-dashboard",
+    "title" : "Your dashboard",
+    "items" : [
+      {
+        "name" : "My tasks",
+        "link" : "dashboard.html"
+      },
+      {
+        "name" : "Existing applications",
+        "link" : "dashboard.html"
+      },
+      {
+        "name" : "Projects",
+        "link" : "dashboard.html"
+      }
+    ]
+  }
+}

@@ -14,12 +14,12 @@
     "ctaText" : "",
     "ctaURL" : ""
   },
-  "strategy" : {
+  "strategyb" : {
     "componentClass" : "c-application-form",
     "title": "",
     "formBuilder" : {
       "id" : "applicationForm",
-      "action" : "4_strategyb.html",
+      "action" : "5_financial.html",
       "method" : "get",
       "classes" : "",
       "fieldset" : [
@@ -29,9 +29,9 @@
           "fields" : [
             {
               "type" : "textarea",
-              "fieldid" : "s4-call-critera",
-              "name" : "s4-call-critera",
-              "label" : "How does the project meet the call criteria?",
+              "fieldid" : "s4-funding-justification",
+              "name" : "s4-funding-justification",
+              "label" : "Why should the project get funding?",
               "enabled" : true,
               "required" : true,
               "validation" : "default",
@@ -43,9 +43,9 @@
             },
             {
               "type" : "textarea",
-              "fieldid" : "s4-programme-objectives",
-              "name" : "s4-programme-objectives",
-              "label" : "How does the project deliver the programme's objectives?",
+              "fieldid" : "s4-no-funding-impact",
+              "name" : "s4-no-funding-impact",
+              "label" : "What would be the impact on the project if it didn't get ESIF funding?",
               "enabled" : true,
               "required" : true,
               "validation" : "default",
@@ -57,9 +57,9 @@
             },
             {
               "type" : "radio",
-              "fieldid" : "s4-esif-growth-strategy",
-              "name" : "s4-esif-growth-strategy",
-              "label" : "Does the project align with the growth priorities of the local ESIF strategy?",
+              "fieldid" : "s4-similar-projects",
+              "name" : "s4-similar-projects",
+              "label" : "Is any one else conducting or planning activities similar to the project?",
               "enabled" : true,
               "required" : true,
               "validation" : "default",
@@ -79,41 +79,47 @@
               "help" : ""
             },
             {
-              "type" : "radio",
-              "fieldid" : "s4-environmental-benefits",
-              "name" : "s4-environmental-benefits",
-              "label" : "Will the project have environmental benefits?",
-              "enabled" : true,
-              "required" : true,
-              "validation" : "default",
-              "initialVal" : "",
-              "placeholderText" : "",
-              "options" : [
-                {
-                  "name" : "Yes",
-                  "value" : "yes"
-                },
-                {
-                  "name" : "No",
-                  "value" : "no"
-                }
-              ],
-              "error" : "",
-              "help" : ""
-            },
-            {
-              "type" : "texarea",
-              "fieldid" : "s4-equality",
-              "name" : "s4-equality",
-              "label" : "How do you plan to ensure equality across the project?",
-              "enabled" : true,
-              "required" : true,
-              "validation" : "default",
-              "initialVal" : "",
-              "placeholderText" : "",
-              "options" : [],
-              "error" : "",
-              "help" : "Include issues of sex, gender, race and religion if appropriate."
+              "type" : "group",
+              "group" : {
+                "legend" : "Details of similar projects",
+                "visibleLegend" : false,
+                "class" : "similar-projects prev-yes",
+                "allowMultiple" : true,
+                "groups" : [
+                  {
+                    "fields" : [
+                      {
+                        "type" : "textarea",
+                        "fieldid" : "s4-similar-project-details",
+                        "name" : "s4-similar-project-details",
+                        "label" : "Give details",
+                        "enabled" : true,
+                        "required" : false,
+                        "validation" : "default",
+                        "initialVal" : "",
+                        "placeholderText" : "",
+                        "options" : [],
+                        "error" : "",
+                        "help" : ""
+                      },
+                      {
+                        "type" : "textarea",
+                        "fieldid" : "s4-similar-project-value",
+                        "name" : "s4-similar-project-value",
+                        "label" : "How will the project add value beyond these activities?",
+                        "enabled" : true,
+                        "required" : false,
+                        "validation" : "default",
+                        "initialVal" : "",
+                        "placeholderText" : "",
+                        "options" : [],
+                        "error" : "",
+                        "help" : ""
+                      }
+                    ]
+                  }
+                ]
+              }
             }
           ],
           "buttons" : [

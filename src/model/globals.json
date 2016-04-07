@@ -17,6 +17,7 @@
   },
   "globalNavigation" : {
     "componentClass" : "c-global-nav",
+    "menuText" : "Menu",
     "item" : [
       {
         "label" : "Home",

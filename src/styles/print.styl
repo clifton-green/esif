@@ -9,16 +9,20 @@ body {
 .no-print,
 .hide,
 header,
-footer { display: none }
+footer {
+  display: none;
+}
 
-.wrapper { margin: 5mm; }
+.wrapper {
+  margin: 5mm;
+}
 
 h1 {
     text-transform: uppercase;
     font-size: 6mm;
     background-color: #555;
-    border-top: 0.5mm solid #555;
-    border-bottom: 0.5mm solid #555;
+    border-top: .5mm solid #555;
+    border-bottom: .5mm solid #555;
     color: #fff;
     padding: 3mm;
     margin: 2mm 0;
@@ -28,20 +32,26 @@ dt,
 h2 {
     font-size: 5mm;
     background-color: #ccc;
-    border-bottom: 0.5mm dotted #ccc;
+    border-bottom: .5mm dotted #ccc;
     padding: 3mm;
     margin: 2mm 0;
 }
 
-dd { margin: 0 3mm; }
+dd {
+  margin: 0 3mm;
+}
 
-li, p { font-size: 4mm; }
+li,
+p {
+  font-size: 4mm;
+}
 
 form {
-    input, textarea {
+    input,
+    textarea {
         display: block;
         width: 180mm;
-        border: 0.5mm solid #333;
+        border: .5mm solid #333;
         padding:2mm;
         margin-bottom: 2mm;
         &[type="checkbox"] {
@@ -56,11 +66,21 @@ form {
             background-color: #fff;
         }
     }
-        ::-webkit-input-placeholder { color: #fff; }
-        :-moz-placeholder { color: #fff; }
-        ::-moz-placeholder { color: #fff; }
-        :-ms-input-placeholder { color: #fff; }
-    fieldset { background-color: #f3f3f3;}
+        ::-webkit-input-placeholder {
+          color: #fff;
+        }
+        :-moz-placeholder {
+          color: #fff;
+        }
+        ::-moz-placeholder {
+          color: #fff;
+        }
+        :-ms-input-placeholder {
+          color: #fff;
+        }
+    fieldset {
+      background-color: #f3f3f3;
+    }
 
     legend,
     button {

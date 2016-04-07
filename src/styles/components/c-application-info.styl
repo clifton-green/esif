@@ -1,7 +1,11 @@
 .c-application-info {
-  margin-top: $vspacing*8;
+  +above(m) {
+    margin-top: $vspacing*8;
+  }
   .page-form-applicant & {
-    margin-top: -($vspacing*8);
+    +above(m) {
+      margin-top: -($vspacing*8);
+    }
   }
   border-top: 5px solid $primary;
   padding: $vspacing 0;

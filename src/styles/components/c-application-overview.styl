@@ -1,9 +1,9 @@
 .c-application-overview {
-  margin-top $vspacing*3
+  margin-top: $vspacing*3;
   ol {
     display:table;
     width: 100%;
-    margin-top $vspacing*3
+    margin-top: $vspacing*3;
     border-collapse: collapse;
   }
   li {
@@ -15,13 +15,13 @@
 
     &:before {
       content: counter(step-counter) '.';
-      font-weight bold
+      font-weight: bold;
     }
     > span,
     > a {
       display:table-cell;
       padding: $spacing;
-      font-weight bold
+      font-weight: bold;
     }
 
     &:hover {
@@ -31,9 +31,13 @@
   }
 
   .status {
+    display: none;
+    +above(m) {
+      display: table-cell;
+    }
     font-size: ($smallCopy/1.3);
     span {
-      display inline-block
+      display: inline-block;
       border: 1px solid $grey-1;
       border-radius: $brad;
       padding: ($hspacing/4) ($hspacing/2) 0

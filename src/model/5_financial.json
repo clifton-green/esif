@@ -6,32 +6,32 @@
   },
   "contentIntro" : {
     "componentClass" : "c-headed-text",
-    "pretitle" : "Step 1",
-    "title" : "About your organisation",
+    "pretitle" : "Step 5",
+    "title" : "Financial information",
     "subtitle" : "",
     "bodyCopy" : "",
     "ctaType" : "",
     "ctaText" : "",
     "ctaURL" : ""
   },
-  "applicant" : {
+  "financial" : {
     "componentClass" : "c-application-form",
     "title": "",
     "formBuilder" : {
       "id" : "applicationForm",
-      "action" : "1_applicantb.html",
+      "action" : "5_financialb.html",
       "method" : "get",
       "classes" : "",
       "fieldset" : [
         {
-          "legend" : "Please enter your login details",
+          "legend" : "Financial information",
           "visibleLegend" : false,
           "fields" : [
             {
-              "type" : "text",
-              "fieldid" : "s1-org-name",
-              "name" : "s1-org-name",
-              "label" : "Organisation name",
+              "type" : "textarea",
+              "fieldid" : "s5-budget-spending",
+              "name" : "s5-budget-spending",
+              "label" : "How will the project budget be spent?",
               "enabled" : true,
               "required" : true,
               "validation" : "default",
@@ -42,10 +42,10 @@
               "help" : ""
             },
             {
-              "type" : "text",
-              "fieldid" : "s1-org-type",
-              "name" : "s1-org-type",
-              "label" : "Organisation type",
+              "type" : "textarea",
+              "fieldid" : "s5-cost-estimate-accuracy",
+              "name" : "s5-cost-estimate-accuracy",
+              "label" : "How accurate is your cost estimate?",
               "enabled" : true,
               "required" : true,
               "validation" : "default",
@@ -57,11 +57,12 @@
             },
             {
               "type" : "radio",
-              "fieldid" : "s1-org-sme",
-              "name" : "s1-org-sme",
-              "label" : "Is this a small or medium-sized enterprise?",
+              "fieldid" : "s5-recoverable-vat",
+              "name" : "s5-recoverable-vat",
+              "label" : "Will the project reclaim irrecoverable VAT?",
               "enabled" : true,
               "required" : true,
+              "validation" : "default",
               "initialVal" : "",
               "placeholderText" : "",
               "options" : [
@@ -78,26 +79,12 @@
               "help" : ""
             },
             {
-              "type" : "text",
-              "fieldid" : "s1-reg-no",
-              "name" : "s1-reg-no",
-              "label" : "Company or charity registration number",
+              "type" : "textarea",
+              "fieldid" : "s5-match-funding-provider",
+              "name" : "s5-match-funding-provider",
+              "label" : "Who's providing match funding for the project?",
               "enabled" : true,
-              "required" : false,
-              "validation" : "default",
-              "initialVal" : "",
-              "placeholderText" : "",
-              "options" : [],
-              "error" : "",
-              "help" : ""
-            },
-            {
-              "type" : "text",
-              "fieldid" : "s1-vat-no",
-              "name" : "s1-vat-no",
-              "label" : "VAT number (if applicable)",
-              "enabled" : true,
-              "required" : false,
+              "required" : true,
               "validation" : "default",
               "initialVal" : "",
               "placeholderText" : "",
@@ -107,11 +94,12 @@
             },
             {
               "type" : "radio",
-              "fieldid" : "s1-previously-worked-with",
-              "name" : "s1-previously-worked-with",
-              "label" : "Has this organisation previously worked on a project funded through ESF, ERDF or EAFRD?",
+              "fieldid" : "s5-is-match-funding-confirmed",
+              "name" : "s5-is-match-funding-confirmed",
+              "label" : "Is match funding confirmed?",
               "enabled" : true,
               "required" : true,
+              "validation" : "default",
               "initialVal" : "",
               "placeholderText" : "",
               "options" : [
@@ -124,7 +112,60 @@
                   "value" : "no"
                 }
               ],
-              "error": "",
+              "error" : "",
+              "help" : ""
+            },
+            {
+              "type" : "group",
+              "group" : {
+                "legend" : "Match funding confirmation date",
+                "visibleLegend" : false,
+                "class" : "prev-no",
+                "allowMultiple" : true,
+                "allowMultipleText" : "Add another",
+                "groups" : [
+                  {
+                    "fields" : [
+                      {
+                        "type" : "dateset",
+                        "fieldid" : "s5-match-funding-confirmation-date",
+                        "name" : "s5-match-funding-confirmation-date",
+                        "label" : "Expected date for match funding confirmation",
+                        "enabled" : true,
+                        "required" : false,
+                        "validation" : "default",
+                        "initialVal" : "",
+                        "placeholderText" : "",
+                        "options" : [],
+                        "error" : "",
+                        "help" : ""
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "type" : "radio",
+              "fieldid" : "s5-will-project-generate-income",
+              "name" : "s5-will-project-generate-income",
+              "label" : "Do you expect the project to generate income?",
+              "enabled" : true,
+              "required" : true,
+              "validation" : "default",
+              "initialVal" : "",
+              "placeholderText" : "",
+              "options" : [
+                {
+                  "name" : "Yes",
+                  "value" : "yes"
+                },
+                {
+                  "name" : "No",
+                  "value" : "no"
+                }
+              ],
+              "error" : "",
               "help" : ""
             }
           ],
@@ -133,9 +174,17 @@
               "type" : "submit",
               "enabled" : true,
               "name" : "button",
-              "id" : "login-button",
+              "id" : "save-button",
               "classes" : "",
-              "text" : "Login"
+              "text" : "Save and quit"
+            },
+            {
+              "type" : "submit",
+              "enabled" : true,
+              "name" : "button",
+              "id" : "continue-button",
+              "classes" : "",
+              "text" : "Continue"
             }
           ]
         }

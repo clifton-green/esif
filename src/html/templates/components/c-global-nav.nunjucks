@@ -1,4 +1,5 @@
 <nav class="c-global-nav">
+  <span class="js-nav-toggle">{{globalNavigation.menuText}}</span>
   <ul>
     {# Loop through navigation and show those which match the current authentication state #}
     {% for item in globalNavigation.item %}

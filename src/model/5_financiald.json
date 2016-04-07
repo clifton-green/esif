@@ -6,32 +6,32 @@
   },
   "contentIntro" : {
     "componentClass" : "c-headed-text",
-    "pretitle" : "Step 1",
-    "title" : "About your organisation",
+    "pretitle" : "Step 5",
+    "title" : "Financial information",
     "subtitle" : "",
     "bodyCopy" : "",
     "ctaType" : "",
     "ctaText" : "",
     "ctaURL" : ""
   },
-  "applicant" : {
+  "financiald" : {
     "componentClass" : "c-application-form",
     "title": "",
     "formBuilder" : {
       "id" : "applicationForm",
-      "action" : "1_applicantb.html",
+      "action" : "5_financialb.html",
       "method" : "get",
       "classes" : "",
       "fieldset" : [
         {
-          "legend" : "Please enter your login details",
+          "legend" : "Financial information",
           "visibleLegend" : false,
           "fields" : [
             {
-              "type" : "text",
-              "fieldid" : "s1-org-name",
-              "name" : "s1-org-name",
-              "label" : "Organisation name",
+              "type" : "textarea",
+              "fieldid" : "s5-esif-authorisation",
+              "name" : "s5-esif-authorisation",
+              "label" : "How will ESIF payments be managed and authorised?",
               "enabled" : true,
               "required" : true,
               "validation" : "default",
@@ -42,10 +42,10 @@
               "help" : ""
             },
             {
-              "type" : "text",
-              "fieldid" : "s1-org-type",
-              "name" : "s1-org-type",
-              "label" : "Organisation type",
+              "type" : "textarea",
+              "fieldid" : "s5-cashflow-management",
+              "name" : "s5-cashflow-management",
+              "label" : "How will the project's cashflow be managed?",
               "enabled" : true,
               "required" : true,
               "validation" : "default",
@@ -56,34 +56,12 @@
               "help" : ""
             },
             {
-              "type" : "radio",
-              "fieldid" : "s1-org-sme",
-              "name" : "s1-org-sme",
-              "label" : "Is this a small or medium-sized enterprise?",
+              "type" : "textarea",
+              "fieldid" : "s5-claim-expenditure-assurance",
+              "name" : "s5-claim-expenditure-assurance",
+              "label" : "How will you ensure only eligable and defrayed expenditure is included in claims?",
               "enabled" : true,
               "required" : true,
-              "initialVal" : "",
-              "placeholderText" : "",
-              "options" : [
-                {
-                  "name" : "Yes",
-                  "value" : "yes"
-                },
-                {
-                  "name" : "No",
-                  "value" : "no"
-                }
-              ],
-              "error" : "",
-              "help" : ""
-            },
-            {
-              "type" : "text",
-              "fieldid" : "s1-reg-no",
-              "name" : "s1-reg-no",
-              "label" : "Company or charity registration number",
-              "enabled" : true,
-              "required" : false,
               "validation" : "default",
               "initialVal" : "",
               "placeholderText" : "",
@@ -92,12 +70,12 @@
               "help" : ""
             },
             {
-              "type" : "text",
-              "fieldid" : "s1-vat-no",
-              "name" : "s1-vat-no",
-              "label" : "VAT number (if applicable)",
+              "type" : "textarea",
+              "fieldid" : "s5-cost-verification",
+              "name" : "s5-cost-verification",
+              "label" : "How will costs be checked and verified?",
               "enabled" : true,
-              "required" : false,
+              "required" : true,
               "validation" : "default",
               "initialVal" : "",
               "placeholderText" : "",
@@ -106,25 +84,17 @@
               "help" : ""
             },
             {
-              "type" : "radio",
-              "fieldid" : "s1-previously-worked-with",
-              "name" : "s1-previously-worked-with",
-              "label" : "Has this organisation previously worked on a project funded through ESF, ERDF or EAFRD?",
+              "type" : "textarea",
+              "fieldid" : "s5-expense-reporting",
+              "name" : "s5-expense-reporting",
+              "label" : "How will you and your partners report on ESIF expenditure?",
               "enabled" : true,
               "required" : true,
+              "validation" : "default",
               "initialVal" : "",
               "placeholderText" : "",
-              "options" : [
-                {
-                  "name" : "Yes",
-                  "value" : "yes"
-                },
-                {
-                  "name" : "No",
-                  "value" : "no"
-                }
-              ],
-              "error": "",
+              "options" : [],
+              "error" : "",
               "help" : ""
             }
           ],
@@ -133,9 +103,17 @@
               "type" : "submit",
               "enabled" : true,
               "name" : "button",
-              "id" : "login-button",
+              "id" : "save-button",
               "classes" : "",
-              "text" : "Login"
+              "text" : "Save and quit"
+            },
+            {
+              "type" : "submit",
+              "enabled" : true,
+              "name" : "button",
+              "id" : "continue-button",
+              "classes" : "",
+              "text" : "Continue"
             }
           ]
         }

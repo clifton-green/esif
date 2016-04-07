@@ -1,7 +1,5 @@
-/* global $, console */
-
-// Namespacing
-var Core = Core || {};
+var $ = require('jquery'),
+		Core = Core || {};
 
 Core = {
 	init: function () {

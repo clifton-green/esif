@@ -1,12 +1,12 @@
 .c-current-applications {
-  margin-top $vspacing*3
+  margin-top: $vspacing*3;
   caption {
     ff-title();
-    font-size $mantle;
+    font-size: $mantle;
   }
 
   table {
-    margin-top $vspacing*2
+    margin-top: $vspacing*2;
     width: 100%;
   }
 
@@ -14,8 +14,8 @@
     padding: $vspacing $hspacing*2;
     +above(l) {
       padding: 0;
-      border-bottom 1px solid $border-colour
-      display table-row
+      border-bottom: 1px solid $border-colour;
+      display: table-row;
     }
   }
 
@@ -23,11 +23,11 @@
     background-color: $panel-colour
     +above(l) {
       background-color: transparent;
-      display table-row-group;
+      display: table-row-group;
     }
     tr {
       &:nth-child(even) {
-        background: $grey-4
+        background: $grey-4;
       }
     }
     a {
@@ -38,15 +38,15 @@
   td, th {
     padding: ($vspacing/2) 0;
     +above(l) {
-      display table-cell;
+      display: table-cell;
     }
   }
 
   th {
-    font-weight bold
+    font-weight: bold;
   }
   td {
-    text-align right
+    text-align: right;
     +above(l) {
       text-align:left;
     }
@@ -54,10 +54,10 @@
   td[data-title]:before {
       content: attr(data-title)": ";
       float: left;
-      margin-right $spacing
-      font-weight bold
+      margin-right: $spacing;
+      font-weight: bold;
       +above(l) {
-        content ''
+        content: '';
       }
   }
 
@@ -81,6 +81,6 @@
   tr,
   th,
   td {
-    display block
+    display: block;
   }
 }

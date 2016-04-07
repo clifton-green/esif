@@ -1,5 +1,11 @@
 <footer class="c-global-footer">
   <div class="wrapper">
+    <div class="copyright">
+      <img src="{{globalFooter.copyright.imagePath}}" alt="globalFooter.copyright.imageDesc" />
+      <a href="{{globalFooter.copyright.link}}">
+        {{globalFooter.copyright.text}}
+      </a>
+    </div>
     <nav>
       <ul>
         {% for nav in globalFooter.navigation %}
@@ -7,11 +13,5 @@
         {% endfor %}
       </ul>
     </nav>
-    <div class="copyright">
-      <img src="{{globalFooter.copyright.imagePath}}" alt="globalFooter.copyright.imageDesc" />
-      <a href="{{globalFooter.copyright.link}}">
-        {{globalFooter.copyright.text}}
-      </a>
-    </div>
   </div>
 </footer>

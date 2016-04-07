@@ -12,6 +12,7 @@ body {
 }
 
 .page-wrapper {
+  cf();
   background-color: #fff;
 }
 
@@ -89,8 +90,9 @@ p {
 }
 
 .wrapper {
+  cf();
   position: relative;
-  padding: 0 $hspacing*3;
+  padding: 0 2.5%;
   +above(l) {
    center(1020px);
   }
@@ -98,9 +100,26 @@ p {
 
 .col {
   &.primary {
-    col(2/3);
+    +above(m) {
+      col(2/3);
+    }
   }
   &.sidebar {
-    col(1/3);
+    +above(m) {
+      col(1/3);
+    }
+  }
+}
+
+table {
+  width: 100%;
+  font-size: $baseFont*1.6
+  th,
+  td {
+    padding: $vspacing 0;
+  }
+  th {
+    font-weight: bold;
+    border-bottom: 1px solid $grey-2;
   }
 }

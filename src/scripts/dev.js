@@ -1,7 +1,7 @@
-// This file should never make it to production and is for development only.
-// Note: The file will automatically be excluded by the build
+var $ = require('jquery');
 
-/* global $, console, JSONEditor */
+// This file should never make it to production and is for development only.
+// Note: The file will automatically be excluded in a production build
 
 var DevTools = DevTools || {};
 

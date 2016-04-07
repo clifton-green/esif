@@ -15,20 +15,32 @@ If a form exists on a page then that pages data file will have a 'formBuilder' e
 	        {
 	          "type" : "text",
 	          "fieldid" : "login-username",
-	          "name" : "login-username",
-	          "label" : "User ID",
-	          "enabled" : true,
-	          "initialVal" : "",
-	          "placeholderText" : "Enter your username"
+						"name" : "login-username",
+						"class" : "",
+						"label" : "Please enter your username",
+						"enabled" : true,
+						"required" : true,
+						"validation" : "default",
+						"initialVal" : "",
+						"placeholderText" : "",
+						"options" : [],
+						"error" : "",
+						"help" : ""
 	        },
 	        {
 	          "type" : "password",
 	          "fieldid" : "login-password",
-	          "name" : "login-password",
-	          "label" : "Password",
-	          "enabled" : true,
-	          "initialVal" : "",
-	          "placeholderText" : ""
+						"name" : "login-password",
+						"class" : "",
+						"label" : "Please enter your password",
+						"enabled" : true,
+						"required" : true,
+						"validation" : "default",
+						"initialVal" : "",
+						"placeholderText" : "",
+						"options" : [],
+						"error" : "",
+						"help" : ""
 	        }          
 	      ],
 	      "buttons" : [
@@ -69,6 +81,7 @@ You can then build up your form. Inside the curly brackets, copy and paste the f
 	  "type" : "",
 	  "fieldid" : "",
 	  "name" : "",
+	  "class" : "",
 	  "label" : "",
 	  "enabled" : true,
 		"required" : true,
@@ -98,8 +111,10 @@ The select type allows you to create a drop-down menu so users can pick from a l
 Creates tick boxes, there is one for each option. A user can select as many options as they want.
 - **radio**  
 These are exactly the same as the checkbox type with one minor difference, the user can only selection one of these.
-- **dategroup**
+- **dateset**
 This is a custom type which creates a group of number input elements which allows you to enter a date. It's currently in the UK date format but this is easy to change if required.
+- **group**
+This creates a nested fieldset and allows you to build things like hidden or conditional sections. This will be documented in more detail later on in the *creating groups* section.
 
 The 'text' type is a very versatile option as it can actually be several different types. For example if instead of typing 'text' you typed 'number' then when the user clicks on that field on a mobile, they will see a number pad instead of a normal keyboard.
 
@@ -109,6 +124,9 @@ For more information on what types you can replace text with see the 'HTML5 Inpu
 The name is simply the name of the form field. In order to avoid interfering with other forms which may be on the page, it's a good idea to prefix the name with the name of the form. so on our login form example if you were to create a 'username' field, you'd set the name as `login-username`
 
 The fieldid should be set to the same value as the name entry.
+
+### Class
+If a field needs to have a specific class for either CSS styling or JavaScript behaviour, you can enter it here.
 
 ### Label
 This is what the user will see to describe what the field is. So if you are creating your `login-username` field then the label would be `Username`. This can also be written as an instruction e.g: `Please enter your username:`
@@ -188,6 +206,33 @@ It is unlikely that a button section doesn't already exist, in fact the chances 
 Like fields, buttons also have a type, however there are only three button types `submit`, `reset` and `button`. The `submit` tells the form to process all the fields that have been filled in, `reset` will clear all the fields the user has entered (this is hardly ever used on websites these days) and `button` doesn't really do anything unless a developer has told it to.
 
 When creating a new button just give it a `name` and an `id` (again the name and ID can be the same) an then change the `text` entry, this is the only part the user will see.
+
+## Creating groups
+Earlier in this document I touch upon a 'group' field type. The group type is not really a field, it is a way to add a sub-set of fields into a form. The data structure for a group looks a little bit different.
+
+	{
+		"type" : "group",
+		"group" : {
+			"legend" : "List any project milestones and dates they'll be met",
+			"visibleLegend" : true,
+			"class" : "project-milestones",
+			"allowMultiple" : true,
+			"groups" : []
+		}
+	}
+
+As you can see above, the only field which exists in both field and group types is the 'type' field. The rest of the fields are replaced by a 'group' object.
+
+As a group is rendered in HTML as a fieldset, a legend must be provided, by default this will appear in a similar style to a label on a normal field. However this can be changed in the CSS or if you set 'visibleLegend' to 'false' it will be hidden entirely.
+
+All groups have a 'class' field so that the ui developer can target each group for styling/javascript. This is how a developer could make a collapsible or conditional subset.
+
+allowMultiple will add a link at the bottom of the fieldset which says "add another", this is not hooked up to anything but can easily be added to a cms or scripted to update the page with additional sets.
+
+The groups object contains a set of 'fields' objects which behave exactly like the fields object documented above.
+
+There is no limit to how many nested groups you wish to create, as simply adding another 'group' type within a nested 'fields' object will create a subset of the subset.
+
 
 ## All done!
 That's it. Your new form should have been generated!
