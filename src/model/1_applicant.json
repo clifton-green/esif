@@ -133,9 +133,17 @@
               "type" : "submit",
               "enabled" : true,
               "name" : "button",
-              "id" : "login-button",
+              "id" : "save-button",
               "classes" : "",
-              "text" : "Login"
+              "text" : "Save and quit"
+            },
+            {
+              "type" : "submit",
+              "enabled" : true,
+              "name" : "button",
+              "id" : "continue-button",
+              "classes" : "",
+              "text" : "Continue"
             }
           ]
         }

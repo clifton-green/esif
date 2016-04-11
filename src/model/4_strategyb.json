@@ -45,7 +45,7 @@
               "type" : "textarea",
               "fieldid" : "s4-no-funding-impact",
               "name" : "s4-no-funding-impact",
-              "label" : "What would be the impact on the project if it didn't get ESIF funding?",
+              "label" : "What would be the impact on the project if it did not get ESIF funding?",
               "enabled" : true,
               "required" : true,
               "validation" : "default",
