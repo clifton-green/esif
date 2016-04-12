@@ -59,7 +59,7 @@
               "type" : "radio",
               "fieldid" : "s1-org-sme",
               "name" : "s1-org-sme",
-              "label" : "Is this a small or medium-sized enterprise?",
+              "label" : "Is this a small or medium-sized enterprise (SME)?",
               "enabled" : true,
               "required" : true,
               "initialVal" : "",
