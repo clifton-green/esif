@@ -72,7 +72,7 @@
             {
               "type" : "group",
               "group" : {
-                "legend" : "List any project milestones and dates they'll be met",
+                "legend" : "List any project milestones and dates that they will be met",
                 "visibleLegend" : true,
                 "class" : "project-milestones",
                 "allowMultiple" : true,

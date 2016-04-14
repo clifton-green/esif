@@ -87,6 +87,10 @@
                                  "value" : "Consultancy - Revenue"
                             },
                             {
+                                 "name" : "Revenue - Flat rate indirect costs",
+                                 "value" : "Flat rate indirect costs - Revenue"
+                            },
+                            {
                                  "name" : "Revenue - Marketing",
                                  "value" : "Marketing - Revenue"
                             },
@@ -109,11 +113,8 @@
                             {
                                  "name" : "Revenue - Salaries",
                                  "value" : "Salaries - Revenue"
-                            },
-                            {
-                                 "name" : "Revenue - Flat rate indirect costs",
-                                 "value" : "Flat rate indirect costs - Revenue"
                             }
+
                         ],
                         "error" : "",
                         "help" : ""
@@ -155,20 +156,48 @@
               "placeholderText" : "Select your funding type",
               "options" : [
                 {
-                  "name" : "Local Authority Funds",
-                  "value" : "Local Authority Funds"
-                },
-                {
-                  "name" : "University Funds",
-                  "value" : "University Funds"
-                },
-                {
                   "name" : "Bank Loan",
                   "value" :"Bank Loan"
                 },
                 {
+                  "name" : "Big Lottery Fund",
+                  "value" :"Big Lottery Fund"
+                },
+                {
+                  "name" : "Central Government Funds",
+                  "value" :"Central Government Funds"
+                },
+                {
+                  "name" : "European Investment Bank",
+                  "value" :"European Investment Bank"
+                },
+                {
+                  "name" : "Growth Deal",
+                  "value" :"Growth Deal"
+                },
+                {
+                  "name" : "Health Service Funds",
+                  "value" :"Health Service Funds"
+                },
+                {
+                  "name" : "Local Authority Funds",
+                  "value" : "Local Authority Funds"
+                },
+                {
+                  "name" : "NDPB Funds",
+                  "value" :"NDPB Funds"
+                },
+                {
+                  "name" : "Private Sector Investment",
+                  "value" :"Private Sector Investment"
+                },
+                {
                   "name" : "Private Sector Reserves",
                   "value" :"Private Sector Reserves"
+                },
+                {
+                  "name" : "Project Income",
+                  "value" :"Project Income"
                 },
                 {
                   "name" : "Public Sector Reserves",
@@ -179,34 +208,6 @@
                   "value" :"Regional Growth Fund"
                 },
                 {
-                  "name" : "Growth Deal",
-                  "value" :"Growth Deal"
-                },
-                {
-                  "name" : "Project Income",
-                  "value" :"Project Income"
-                },
-                {
-                  "name" : "Small Medium Enterprise Contribution",
-                  "value" :"Small Medium Enterprise Contribution"
-                },
-                {
-                  "name" : "Big Lottery Fund",
-                  "value" :"Big Lottery Fund"
-                },
-                {
-                  "name" : "European Investment Bank",
-                  "value" :"European Investment Bank"
-                },
-                {
-                  "name" : "Private Sector Investment",
-                  "value" :"Private Sector Investment"
-                },
-                {
-                  "name" : "Health Service Funds",
-                  "value" :"Health Service Funds"
-                },
-                {
                   "name" : "Renewable Energy Grant",
                   "value" :"Renewable Energy Grant"
                 },
@@ -215,16 +216,16 @@
                   "value" :"Renewable Energy Subsidy"
                 },
                 {
+                  "name" : "Small Medium Enterprise Contribution",
+                  "value" :"Small Medium Enterprise Contribution"
+                },
+                {
                   "name" : "Third Sector Funds",
                   "value" :"Third Sector Funds"
                 },
                 {
-                  "name" : "NDPB Funds",
-                  "value" :"NDPB Funds"
-                },
-                {
-                  "name" : "Central Government Funds",
-                  "value" :"Central Government Funds"
+                  "name" : "University Funds",
+                  "value" : "University Funds"
                 },
                 {
                   "name" : "Volunteer Time (in kind contribution)",
