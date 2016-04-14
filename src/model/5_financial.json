@@ -82,7 +82,7 @@
               "type" : "textarea",
               "fieldid" : "s5-match-funding-provider",
               "name" : "s5-match-funding-provider",
-              "label" : "Who's providing match funding for the project?",
+              "label" : "Who is providing match funding for the project?",
               "enabled" : true,
               "required" : true,
               "validation" : "default",
