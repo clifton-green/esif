@@ -1,35 +1,24 @@
 0 info it worked if it ends with ok
-1 verbose cli [ 'node', '/usr/local/bin/npm', 'start' ]
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'run', 'serve' ]
 2 info using npm@2.11.3
 3 info using node@v0.12.7
-4 verbose run-script [ 'prestart', 'start', 'poststart' ]
-5 info prestart E-Claims@0.0.1
-6 info start E-Claims@0.0.1
-7 verbose unsafe-perm in lifecycle true
-8 info E-Claims@0.0.1 Failed to exec start script
-9 verbose stack Error: E-Claims@0.0.1 start: `node server.js`
-9 verbose stack Exit status 1
-9 verbose stack     at EventEmitter.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/lifecycle.js:213:16)
-9 verbose stack     at EventEmitter.emit (events.js:110:17)
-9 verbose stack     at ChildProcess.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/spawn.js:24:14)
-9 verbose stack     at ChildProcess.emit (events.js:110:17)
-9 verbose stack     at maybeClose (child_process.js:1015:16)
-9 verbose stack     at Process.ChildProcess._handle.onexit (child_process.js:1087:5)
-10 verbose pkgid E-Claims@0.0.1
-11 verbose cwd /Users/alexmac/Dev/e-claims
-12 error Darwin 15.3.0
-13 error argv "node" "/usr/local/bin/npm" "start"
-14 error node v0.12.7
-15 error npm  v2.11.3
-16 error code ELIFECYCLE
-17 error E-Claims@0.0.1 start: `node server.js`
-17 error Exit status 1
-18 error Failed at the E-Claims@0.0.1 start script 'node server.js'.
-18 error This is most likely a problem with the E-Claims package,
-18 error not with npm itself.
-18 error Tell the author that this fails on your system:
-18 error     node server.js
-18 error You can get their info via:
-18 error     npm owner ls E-Claims
-18 error There is likely additional logging output above.
-19 verbose exit [ 1, true ]
+4 verbose stack Error: missing script: serve
+4 verbose stack     at run (/usr/local/lib/node_modules/npm/lib/run-script.js:142:19)
+4 verbose stack     at /usr/local/lib/node_modules/npm/lib/run-script.js:58:5
+4 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-package-json/read-json.js:345:5
+4 verbose stack     at checkBinReferences_ (/usr/local/lib/node_modules/npm/node_modules/read-package-json/read-json.js:309:45)
+4 verbose stack     at final (/usr/local/lib/node_modules/npm/node_modules/read-package-json/read-json.js:343:3)
+4 verbose stack     at then (/usr/local/lib/node_modules/npm/node_modules/read-package-json/read-json.js:113:5)
+4 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-package-json/read-json.js:300:12
+4 verbose stack     at evalmachine.<anonymous>:334:14
+4 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/graceful-fs/graceful-fs.js:102:5
+4 verbose stack     at FSReqWrap.oncomplete (evalmachine.<anonymous>:95:15)
+5 verbose cwd /Users/alexmac/Dev/e-claims
+6 error Darwin 15.3.0
+7 error argv "node" "/usr/local/bin/npm" "run" "serve"
+8 error node v0.12.7
+9 error npm  v2.11.3
+10 error missing script: serve
+11 error If you need help, you may report this error at:
+11 error     <https://github.com/npm/npm/issues>
+12 verbose exit [ 1, true ]
