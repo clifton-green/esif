@@ -12,3 +12,4 @@ Any development tasks or optimisations which need to be made should be listed he
 
 ## Issues
 2. Pattern validation not working on all inputs (see dateset for an example)
+3. Mobile menu has failed. Investigate and repair.
