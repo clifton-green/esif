@@ -1,13 +1,9 @@
 var $ = require('jquery'),
     Nav = Nav || {};
-    
+
 Nav = {
 	init: function () {
     'use strict';
-
-    // enables js related CSS
-    $('html').removeClass('no-js').addClass('js');
-
     // Event activators
     $('body').on('click', '.js-nav-toggle', this.navToggle.bind(this))
 	},
@@ -21,3 +17,8 @@ Nav = {
     }
   }
 }
+
+$(document).ready(function() {
+  'use strict';
+	Nav.init();
+})

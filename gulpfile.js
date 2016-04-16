@@ -206,6 +206,13 @@ gulp.task('testModel', function() {
     .pipe(jsonlint.reporter());
 });
 
+// Move robots.txt to site root
+gulp.task('robots', function() {
+  'use strict';
+  return gulp.src('robots.txt')
+    .pipe(gulp.dest('dist'))
+});
+
 // Process nunjucks html files (.nunjucks)
 gulp.task('processHTML', function() {
   'use strict';
@@ -227,7 +234,7 @@ gulp.task('processHTML', function() {
     .pipe(reload({stream:true}))
 });
 
-var prodBuild = ['clean', 'styles','extrastyles','libs','scripts','images','processHTML', 'notify'],
+var prodBuild = ['clean', 'styles','extrastyles','libs','scripts','images','processHTML', 'robots', 'notify'],
     devBuild = ['styles','extrastyles','libs','testModel','processHTML','jsoneditor','model','scripts', 'notify'],
     buildTasks = argv.prod ? prodBuild : devBuild;
 
